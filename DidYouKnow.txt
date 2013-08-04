@@ -1,0 +1,9 @@
+You can create an arrow pointing from one card to another. Hold Shift and left-click on the source card, then drag your mouse to the destination.
+
+Clear the arrow by shift+left-clicking on the source card again. 
+
+Pro Tip: Use this to point out which run your runner is currently approaching
+||
+You can target a card by holding shift and left-clicking on it. You clear the target the same way. You can have multiple cards targeted.
+
+When a card effect requires that you have one or more cards as targets, first target them, and then use the card effect.

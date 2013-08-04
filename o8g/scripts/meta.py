@@ -1,3 +1,95 @@
+    # Python Scripts for the Call of Cthulhu LCG definition for OCTGN
+    # Copyright (C) 2013  Jason Cline
+    # Based heavily on the scripts for Android:Netrunner and Star Wars by Konstantine Thoukydides
+
+    # This python script is free software: you can redistribute it and/or modify
+    # it under the terms of the GNU General Public License as published by
+    # the Free Software Foundation, either version 3 of the License, or
+    # (at your option) any later version.
+
+    # This program is distributed in the hope that it will be useful,
+    # but WITHOUT ANY WARRANTY; without even the implied warranty of
+    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    # GNU General Public License for more details.
+
+    # You should have received a copy of the GNU General Public License
+    # along with this script.  If not, see <http://www.gnu.org/licenses/>.
+
+###==================================================File Contents==================================================###
+# This file contains scripts which are not used to play the actual game, but is rather related to the rules of engine
+# * [Generic CoC] functions are not doing something in the game by themselves but called often by the functions that do.
+# * In the [Switches] section are the scripts which controls what automations are active.
+# * [Help] functions spawn tokens on the table with succint information on how to play the game.
+# * [Button] functions are trigered either from the menu or from the button cards on the table, and announce a specific message each.
+# * [Debug] if for helping the developers fix bugs
+# * [Online Functions] is everything which connects to online files for some purpose, such as checking the game version or displaying a message of the day
+###=================================================================================================================###
+import re, time
+#import sys # Testing
+#import dateutil # Testing
+#import elementtree # Testing
+#import decimal # Testing
+
+try:
+    import os
+    if os.environ['RUNNING_TEST_SUITE'] == 'TRUE':
+        me = object
+        table = object
+except ImportError:
+    pass
+
+Automations = {'Play, Score and Rez'    : True, # If True, game will automatically trigger card effects when playing or double-clicking on cards. Requires specific preparation in the sets.
+               'Start/End-of-Turn'      : True, # If True, game will automatically trigger effects happening at the start of the player's turn, from cards they control.
+               'Damage Prevention'      : True, # If True, game will automatically use damage prevention counters from card they control.
+               'Triggers'               : True, # If True, game will search the table for triggers based on player's actions, such as installing a card, or trashing one.
+               'WinForms'               : True, # If True, game will use the custom Windows Forms for displaying multiple-choice menus and information pop-ups
+               'Damage'                 : True}
+
+UniCode = True # If True, game will display credits, clicks, trash, memory as unicode characters
+
+debugVerbosity = -1 # At -1, means no debugging messages display
+
+startupMsg = False # Used to check if the player has checked for the latest version of the game.
+
+gameGUID = None # A Unique Game ID that is fetched during game launch.
+#totalInfluence = 0 # Used when reporting online
+#gameEnded = False # A variable keeping track if the players have submitted the results of the current game already.
+turn = 0 # used during game reporting to report how many turns the game lasted
+
+CardsAA = {} # Dictionary holding all the AutoAction scripts for all cards
+CardsAS = {} # Dictionary holding all the AutoScript scripts for all cards
+
+#---------------------------------------------------------------------------
+# Generic Netrunner functions
+#---------------------------------------------------------------------------
+def resetAll(): # Clears all the global variables in order to start a new game.
+   global Stored_Name, Stored_Type, Stored_Cost, Stored_Skill, Stored_Subtypes, Stored_Icons, Stored_Keyword, Stored_AutoActions, Stored_AutoScripts
+   global debugVerbosity, newturn, endofturn, turn
+   debugNotify(">>> resetAll(){}".format(extraASDebug())) #Debug
+   mute()
+   me.counters['Success Story 1'].value = 0
+   me.counters['Success Story 2'].value = 0
+   me.counters['Success Story 3'].value = 0
+   me.counters['Stories won'].value = 0
+   Stored_Name.clear()
+   Stored_Type.clear()
+   Stored_Cost.clear()
+   Stored_Keyword.clear()
+   Stored_Skill.clear()
+   Stored_Subtypes.clear()
+   Stored_Icons.clear()
+   Stored_AutoActions.clear()
+   Stored_AutoScripts.clear()
+   installedCount.clear()
+   newturn = False 
+   endofturn = False
+   turn = 0
+   ShowDicts()
+   if len(players) > 1: debugVerbosity = -1 # Reset means normal game.
+   elif debugVerbosity != -1 and confirm("Reset Debug Verbosity?"): debugVerbosity = -1    
+   debugNotify("<<< resetAll()") #Debug   
+
+
 #------------------------------------------------------------------------------
 #  Online Functions
 #------------------------------------------------------------------------------
@@ -14,8 +106,8 @@ def versionCheck():
 def MOTD():
    debugNotify(">>> MOTD()") #Debug
    if me.name == 'DarkSir23' : return #I can't be bollocksed
-   (MOTDurl, MOTDcode) = webRead('https://raw.github.com/db0/Android-Netrunner-OCTGN/master/MOTD.txt')
-   (DYKurl, DYKcode) = webRead('https://raw.github.com/db0/Android-Netrunner-OCTGN/master/DidYouKnow.txt')
+   (MOTDurl, MOTDcode) = webRead('https://raw.github.com/DarkSir23/CAll-of-Cthulhu-OCTGN/master/MOTD.txt')
+   (DYKurl, DYKcode) = webRead('https://raw.github.com/DarkSir23/Call-of-Cthulhu-OCTGN/master/DidYouKnow.txt')
    if (MOTDcode != 200 or not MOTDurl) or (DYKcode !=200 or not DYKurl):
       whisper(":::WARNING::: Cannot fetch MOTD or DYK info at the moment.")
       return
@@ -47,131 +139,12 @@ def MOTDdisplay(MOTD,DYK):
               \n\nWould you like to see the next tip?".format(MOTD,DYK)): return 'MORE'
    return 'STOP'
 
-def initGame(): # A function which prepares the game for online submition
-   debugNotify(">>> initGame()") #Debug
-   if getGlobalVariable('gameGUID') != 'None': return #If we've already grabbed a GUID, then just use that.
-   (gameInit, initCode) = webRead('http://84.205.248.92/slaghund/init.slag')
-   if initCode != 200:
-      #whisper("Cannot grab GameGUID at the moment!") # Maybe no need to inform players yet.
-      return
-   debugNotify("{}".format(gameInit), 2) #Debug
-   GUIDregex = re.search(r'([0-9a-f-]{36}).*?',gameInit)
-   if GUIDregex: setGlobalVariable('gameGUID',GUIDregex.group(1))
-   else: setGlobalVariable('gameGUID','None') #If for some reason the page does not return a propert GUID, we won't record this game.
-   setGlobalVariable('gameEnded','False')
-   debugNotify("<<< initGame()", 3) #Debug
-   
-def reportGame(result = 'AgendaVictory'): # This submits the game results online.
-   delayed_whisper("Please wait. Submitting Game Stats...")     
-   debugNotify(">>> reportGame()") #Debug
-   GUID = getGlobalVariable('gameGUID')
-   if GUID == 'None' and debugVerbosity < 0: return # If we don't have a GUID, we can't submit. But if we're debugging, we go through.
-   gameEnded = getGlobalVariable('gameEnded')
-   if gameEnded == 'True':
-     if not confirm("Your game already seems to have finished once before. Do you want to change the results to '{}' for {}?".format(result,me.name)): return
-   #LEAGUE = fetchLeagues()
-   LEAGUE = '' #Disabled as I don't think I need this part of the code anymore.
-   PLAYER = me.name # Seeting some variables for readability in the URL
-   id = getSpecial('Identity',me)
-   IDENTITY = id.Subtitle
-   RESULT = result
-   GNAME = currentGameName()
-   if result == 'Flatlined' or result == 'Conceded' or result == 'DeckDefeat': WIN = 0
-   else: WIN = 1
-   SCORE = me.counters['Agenda Points'].value
-   deckStats = eval(me.getGlobalVariable('Deck Stats'))
-   debugNotify("Retrieved deckStats ", 2) #Debug
-   debugNotify("deckStats = {}".format(deckStats), 2) #Debug
-   INFLUENCE = deckStats[0]
-   CARDSNR = deckStats[1]
-   AGENDASNR = deckStats[2]
-   TURNS = turn
-   VERSION = gameVersion
-   debugNotify("About to report player results online.", 2) #Debug
-   if (turn < 1 or len(players) == 1) and debugVerbosity < 1:
-      notify(":::ATTENTION:::Game stats submit aborted due to number of players ( less than 2 ) or turns played (less than 1)")
-      return # You can never win before the first turn is finished and we don't want to submit stats when there's only one player.
-   if debugVerbosity < 1: # We only submit stats if we're not in debug mode
-      (reportTXT, reportCode) = webRead('http://84.205.248.92/slaghund/game.slag?g={}&u={}&id={}&r={}&s={}&i={}&t={}&cnr={}&anr={}&v={}&w={}&lid={}&gname={}'.format(GUID,PLAYER,IDENTITY,RESULT,SCORE,INFLUENCE,TURNS,CARDSNR,AGENDASNR,VERSION,WIN,LEAGUE,GNAME),10000)
-   else: 
-      if confirm('Report URL: http://84.205.248.92/slaghund/game.slag?g={}&u={}&id={}&r={}&s={}&i={}&t={}&cnr={}&anr={}&v={}&w={}&lid={}&gname={}\n\nSubmit?'.format(GUID,PLAYER,IDENTITY,RESULT,SCORE,INFLUENCE,TURNS,CARDSNR,AGENDASNR,VERSION,WIN,LEAGUE,GNAME)):
-         (reportTXT, reportCode) = webRead('http://84.205.248.92/slaghund/game.slag?g={}&u={}&id={}&r={}&s={}&i={}&t={}&cnr={}&anr={}&v={}&w={}&lid={}&gname={}'.format(GUID,PLAYER,IDENTITY,RESULT,SCORE,INFLUENCE,TURNS,CARDSNR,AGENDASNR,VERSION,WIN,LEAGUE,GNAME),10000)
-         notify('Report URL: http://84.205.248.92/slaghund/game.slag?g={}&u={}&id={}&r={}&s={}&i={}&t={}&cnr={}&anr={}&v={}&w={}&lid={}&gname={}\n\nSubmit?'.format(GUID,PLAYER,IDENTITY,RESULT,SCORE,INFLUENCE,TURNS,CARDSNR,AGENDASNR,VERSION,WIN,LEAGUE,GNAME))
-   try:
-      if reportTXT != "Updating result...Ok!" and debugVerbosity >=0: whisper("Failed to submit match results") 
-   except: pass
-   # The victorious player also reports for their enemy
-   enemyPL = ofwhom('-ofOpponent')
-   ENEMY = enemyPL.name
-   enemyIdent = getSpecial('Identity',enemyPL)
-   E_IDENTITY = enemyIdent.Subtitle
-   debugNotify("Enemy Identity Name: {}".format(E_IDENTITY), 2) #Debug
-   if result == 'FlatlineVictory': 
-      E_RESULT = 'Flatlined'
-      E_WIN = 0
-   elif result == 'Flatlined': 
-      E_RESULT = 'FlatlineVictory'
-      E_WIN = 1
-   elif result == 'Conceded': 
-      E_RESULT = 'ConcedeVictory'
-      E_WIN = 1  
-   elif result == 'DeckDefeat': 
-      E_RESULT = 'DeckVictory'
-      E_WIN = 1  
-   elif result == 'AgendaVictory': 
-      E_RESULT = 'AgendaDefeat'
-      E_WIN = 0
-   else: 
-      E_RESULT = 'Unknown'
-      E_WIN = 0
-   E_SCORE = enemyPL.counters['Agenda Points'].value
-   debugNotify("About to retrieve E_deckStats", 2) #Debug
-   E_deckStats = eval(enemyPL.getGlobalVariable('Deck Stats'))
-   debugNotify("E_deckStats = {}".format(E_deckStats), 2) #Debug
-   E_INFLUENCE = E_deckStats[0]
-   E_CARDSNR = E_deckStats[1]
-   E_AGENDASNR = E_deckStats[2]
-   if ds == 'corp': E_TURNS = turn - 1 # If we're a corp, the opponent has played one less turn than we have.
-   else: E_TURNS = turn # If we're the runner, the opponent has played one more turn than we have.
-   E_VERSION = enemyPL.getGlobalVariable('gameVersion')
-   debugNotify("About to report enemy results online.", 2) #Debug
-   if debugVerbosity < 1: # We only submit stats if we're not debugging
-      (EreportTXT, EreportCode) = webRead('http://84.205.248.92/slaghund/game.slag?g={}&u={}&id={}&r={}&s={}&i={}&t={}&cnr={}&anr={}&v={}&w={}&lid={}&gname={}'.format(GUID,ENEMY,E_IDENTITY,E_RESULT,E_SCORE,E_INFLUENCE,E_TURNS,E_CARDSNR,E_AGENDASNR,E_VERSION,E_WIN,LEAGUE,GNAME),10000)
-   setGlobalVariable('gameEnded','True')
-   notify("Thanks for playing. Please submit any bugs or feature requests on github.\n-- https://github.com/db0/Android-Netrunner-OCTGN/issues")
-   debugNotify("<<< reportGame()", 3) #Debug
-
-def fetchLeagues():
-   debugNotify(">>> fetchLeagues()") #Debug
-   #return '' ### Code still WiP! Remove this at 1.1.16
-   (LeagueTXT, LeagueCode) = webRead('https://raw.github.com/db0/Android-Netrunner-OCTGN/master/Leagues.txt')
-   if LeagueCode != 200 or not LeagueTXT:
-      whisper(":::WARNING::: Cannot check League Details online.")
-      return ''
-   if LeagueTXT == "No Leagues Ongoing": return
-   leaguesSplit = LeagueTXT.split('-----') # Five dashes separate on league from another
-   opponent = ofwhom('onOpponent')
-   for league in leaguesSplit:
-      leagueMatches = league.split('\n')
-      debugNotify("League Linebreak Splits: {}".format(leagueMatches), 4)
-      for matchup in leagueMatches:
-         if re.search(r'{}'.format(me.name),matchup, re.IGNORECASE) and re.search(r'{}'.format(opponent.name),matchup, re.IGNORECASE): #Check if the player's name exists in the league
-            leagueDetails = league.split('=====') # Five equals separate the league name from its participants
-            timeDetails = leagueDetails[1].strip() # We grab the time after which the matchup are not valid anymore.
-            endTimes = timeDetails.split('.')
-            currenttime = time.gmtime(time.time())
-            debugNotify("Current Time:{}\n### End Times:{}".format(currenttime,endTimes), 2) #Debug
-            if endTimes[0] >= currenttime[0] and endTimes[1] >= currenttime[1] and endTimes[2] >= currenttime[2] and endTimes[3] >= currenttime[3] and endTimes[4] >= currenttime[4]:          
-               if confirm("Was this a match for the {} League?".format(leagueDetails[0])):
-                  return leagueDetails[0] # If we matched a league, the return the first entry in the list, which is the league name.
-   return '' # If we still haven't found a league name, it means the player is not listed as taking part in a league.
-   
 def fetchCardScripts(group = table, x=0, y=0): # Creates 2 dictionaries with all scripts for all cards stored, based on a web URL or the local version if that doesn't exist.
    debugNotify(">>> fetchCardScripts()") #Debug
    global CardsAA, CardsAS # Global dictionaries holding Card AutoActions and Card AutoScripts for all cards.
    whisper("+++ Fetching fresh scripts. Please Wait...")
    if (len(players) > 1 or debugVerbosity == 0) and me.name != 'dbzer0': # I put my debug account to always use local scripts.
-      try: (ScriptsDownload, code) = webRead('https://raw.github.com/db0/Android-Netrunner-OCTGN/master/o8g/Scripts/CardScripts.py',5000)
+      try: (ScriptsDownload, code) = webRead('https://raw.github.com/DarkSir23/Call-of-Cthulhu-OCTGN/master/o8g/Scripts/CardScripts.py',5000)
       except: 
          debugNotify("Timeout Error when trying to download scripts", 0)
          code = ScriptsDownload = None
@@ -180,7 +153,7 @@ def fetchCardScripts(group = table, x=0, y=0): # Creates 2 dictionaries with all
       code = 0
       ScriptsDownload = None
    debugNotify("code:{}, text: {}".format(code, ScriptsDownload), 4) #Debug
-   if code != 200 or not ScriptsDownload or (ScriptsDownload and not re.search(r'ANR CARD SCRIPTS', ScriptsDownload)) or debugVerbosity >= 0: 
+   if code != 200 or not ScriptsDownload or (ScriptsDownload and not re.search(r'COC CARD SCRIPTS', ScriptsDownload)) or debugVerbosity >= 0: 
       whisper(":::WARNING::: Cannot download card scripts at the moment. Will use localy stored ones.")
       Split_Main = ScriptsLocal.split('=====') # Split_Main is separating the file description from the rest of the code
    else: 
