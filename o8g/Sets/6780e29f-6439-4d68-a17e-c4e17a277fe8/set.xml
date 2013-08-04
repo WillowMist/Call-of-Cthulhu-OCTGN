@@ -1,0 +1,1685 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Rituals of the Order" id="6780e29f-6439-4d68-a17e-c4e17a277fe8" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
+  <cards>
+    <card id="85cdbb92-09d8-4d86-9fe0-5e9c43946544" name="Obsessive Detective">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="#%%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Investigator" />
+      <property name="Card Text" value="Obsessive Detective cannot uncommit from a story until that story is won." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8220fe9b-1081-445b-bc59-3b1575ae58b1" name="__ Holy Rosary">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a character you control. Action: Exhaust Holy Rosary to give attached character Willpower until the end of the phase. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8cdda41a-536f-460c-86a8-4b61206651d2" name="Evidence Locker">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Action: Exhaust Evidence Locker and pay X to take an Attachment support card from your discard pile an dattach it to a character you control (following all restrictions). X is the cost of the attachment." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8caf59c2-9b4b-4e9d-892e-9968f4e6fa6c" name="Bloodthirsty Star Spawn">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@##$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Disrupt: After you win a Combat struggle at a story to which Bloodthirsty Star Spawn is committed, instead of wounding a character, the opponent must choose and destroy one of his characters committed to that story card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="fc51dc23-5fbb-4ef9-9271-e89360c6829a" name="Underneath the Surface">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Disaster." />
+      <property name="Card Text" value="Action: Sacrifice 3 Cultist characters to put Cthulhu into play from your hand." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="6869369f-8d7b-4486-9f81-32b7c87f6c3c" name="Gaze of Ghatanothoa">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Curse." />
+      <property name="Card Text" value="Attach to a non-Ancient One character. Attached character cannot ready during the refresh phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="703c1163-d8b7-462b-8427-30c9d8428255" name="Demented Phrenologist">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Lunatic. Scientist." />
+      <property name="Card Text" value="Action: Drive Demented Phrenologist insane to lower the cost of the next Hastur character you play this phase by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="2e70b457-6feb-406f-b03d-1af53e8a8b7e" name="Germaphobia">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Madness." />
+      <property name="Card Text" value="Attach to a character with printed skill 2 or lower. Attached character may only commit to stories alone." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b01dba61-6197-4dd7-855d-df0152970b6a" name="Professional Counselor">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Investigator." />
+      <property name="Card Text" value="While Professional Counselor is committed to a story, @ struggles resolve after all other icon struggles at that story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c5042554-fc08-4e00-817e-0e4bcfbac022" name="Experiment Subject #613b">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Creature. Zoog." />
+      <property name="Card Text" value="Action: Pay 2 to draw a card for each Zoog character that entered play this phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4e3f37b8-673b-4bf1-8bab-c74e71736db5" name="Harvesting Mi-Go">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="#$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Mi-Go." />
+      <property name="Card Text" value="Response: After Harvesting Mi-Go enters play, choose a character card in your discard pile. Attach that card to a domain you control as a resource." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="1c7d1b94-e506-4801-86e8-d09631cdf6ca" name="Inter-dimensional Transporter">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact." />
+      <property name="Card Text" value="Lower the cost of the first Mi-Go character you play each turn by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d4edf94d-6774-4b2a-be06-bb501b44583b" name="* Dr. Baker">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Chief of Medicine" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge. Scientist." />
+      <property name="Card Text" value="Action: Pay 2 and exhaust Dr. Baker to choose a character that entered a discard pile this phase. Return that character to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="55e21793-ea45-4112-b897-53f46b4d9d38" name="Zealous Secretary">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Faculty. Lodge" />
+      <property name="Card Text" value="Lodge characters you control gain $." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a598972e-aec3-4869-8f78-968974266ef1" name="Errand Boy">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Action: Sacrifice Errand Boy to ready a Silver Twilight character" />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b5b25556-65b0-459c-9d9d-7839eeda0c20" name="Expulsion from the Order">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Sacrifice a Silver Twilight character to give its printed icons to another Silver Twilight character until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d0dd119c-7000-447e-8130-b4303d4c6c88" name="Small Time Magician">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Sorcerer." />
+      <property name="Card Text" value="Response: After Small Time Magician enters play, return a Criminal character to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="775bc9ef-3f2a-4943-9e55-b72b8b6613e1" name="Clover Club Bootlegger">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="##" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Clover Club Bootlegger can commit to story cards while exhausted." />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="745d8287-b8a2-45f7-ab8c-95e080d3d063" name="Intruder from Beyond">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After an opponent plays an event card, put Intruder from Beyond into play from your hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="18753a83-03ff-4b0b-b685-3f2b3be894bd" name="* Prism of Many Views">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Endless Visions" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact." />
+      <property name="Card Text" value="Each player plays with the top card of their deck faceup." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="497542bf-571a-4a6f-9989-214a2bd3190a" name="{ Educated Officer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Investigator. Scientist." />
+      <property name="Card Text" value="Response: After an opponent's character is wounded, draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8ee6da04-bb3f-45b8-b74e-9d2eb206e4da" name="Cover Up">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="Action: Search your deck for a conspiracy card and put it into play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a5f3c718-a98a-43b3-86ad-2fc564a95b28" name="Deep One Stowaway">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="#$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Deep One." />
+      <property name="Card Text" value="Response: After you play Deep One Stowaway, choose and wound an exhausted character with cost 2 or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b335c5aa-907c-48c7-8bc3-3cd655cb668f" name="Disguised Serpent Man">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="###" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Serpent." />
+      <property name="Card Text" value="Action: Pay 1 to change on of Disguised Serpent Man's # icons into a @ until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="341bbdb6-cbbe-4acb-a5e5-4f3ceeb72ec8" name="Sinister Clerk">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Action: Exhaust Sinister Clerk to discard the top card of an opponent's deck. If the discarded card is a character card, return Sinister Clerk its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="2900fbb6-8fa2-45b8-aea2-0b6d35062ef5" name="Twisted Choreographer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Artist." />
+      <property name="Card Text" value="Twisted Choreographer gains all printed icons of characters attached to it." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="7be547eb-be63-41de-b1a3-6469c56456ec" name="Horrifying Daydreams">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Action: Choose a character. That character goes insane." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e3cd6642-7efb-4b52-a2cb-207d071fb741" name="Medical Student">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Student." />
+      <property name="Card Text" value="Forced Response: After a character you control goes insane, Medical Student goes insane." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c3be8da2-e5c0-4a05-baf3-fab68a14f4f5" name="Dean of Admissions">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Faculty." />
+      <property name="Card Text" value="Response: After you play a Student character, exhaust Dean of Admissions to draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f29ef791-b202-410d-a8ad-09fa269eaa24" name="Flux Stabilizer">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Item." />
+      <property name="Card Text" value="Characters may not enter play through triggered effects." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f0c168a6-c847-44b7-850f-b81016e0535c" name="Predator of the Night">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Dark Young." />
+      <property name="Card Text" value="Response: After Predator of the Night commits to a story, choose a character with lower skill than Predator of the Night. That character must commit to the same story as Predator of the Night, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="79308f15-6d12-41a8-8591-e940eebe30e7" name="One of the Thousand">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@" />
+      <property name="Skill" value="0" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="Action: Shuffle One of the Thousand into its owner's deck to lower the cost of the next &gt; character you play this phase by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="20ea7df3-d3d8-4b45-9f6c-8793d0074cc1" name="Rich Widow">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After a character leaves play, put Rich Widow into play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0fbcdf4c-ec1f-4625-9679-b9fe21e31a1a" name="Master Artificer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#$$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Action: Exhaust Master Artificer to attach a Weapon support card from your hand to a character you control (following all restrictions)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4b10518a-2b02-4321-98d0-ef8a44aa19b6" name="* The Silver Lance">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Hallowed Weapon" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Weapon. Artifact." />
+      <property name="Card Text" value="Attach to a character you control.&#xD;&#xA;Response: After you succeed at a story where attached character is committed, return a character with printed cost 3 or lower to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="98b37f96-5a65-40e2-87f6-735f1a2c44dd" name="Spirit Dagger">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Weapon." />
+      <property name="Card Text" value="Attach to a character you control. Attached character gains &quot;Response: After a character enters a discard pile from play, this character gains # until the end of the phase.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5b731245-51cd-4eda-a69a-9c559559b2b4" name="* Thomas Bannano">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Tommy Bananas" />
+      <property name="Cost" value="5" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="###" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="While a character with @ is committed to the same story as Thomas Bannano, Thomas Bannano gets -2 skill and gains @## until the end of the phase." />
+      <property name="Keyword" value="Toughness +1." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9ef07105-8345-4cdc-9ef3-fcf1acb3dfa8" name="Gang Warfare">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Play during your operations phase. &#xD;&#xA;Action: Sacrifice a Criminal character to exhaust each character with skill lower than X. X is the skill of the sacrificed Criminal character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="505de501-c3bb-4545-ac6f-fee3c13778bf" name="Stalking Hound">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@#$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After an opponent's character enters play due to a triggered effect, put Stalking Hound into play from your hand or discard pile." />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9340576c-71df-4c6a-a20a-c3d2de4ab608" name="A Gate Opens">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Disaster." />
+      <property name="Card Text" value="Action: Choose an opponent. That opponent must return a character he controls to the top of its owner's deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5872b4ff-eff7-47c8-b2fd-2b516012094c" name="New Recruit">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="Response: After New Recruit enters your discard pile from play, you may shuffle him into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="197ac26e-88fb-475d-a7cd-49b6e85605be" name="Arrest Warrant">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose a character. That character loses ### and gains the Criminal subtype until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d8180f7c-6efe-4c60-b4b2-cd66af8b92c6" name="Horrific Shoggoth">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@@##" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="Toughness +1." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="@" />
+    </card>
+    <card id="e697e193-5c44-4280-8e63-0fb38e797f0d" name="* Ghatanotha">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Out Of The Aeons " />
+      <property name="Cost" value="6" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@@##$" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Ancient One." />
+      <property name="Card Text" value="Action: Reveal another copy of Ghatanotha from your hand to choose and destroy a non-Ancient One character. Then, shuffle that copy of Ghatanotha back into your deck." />
+      <property name="Keyword" value="Villainous. Invulnerability." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="07843539-0fc3-40d3-8ce6-822826f656fc" name="Bloated Leng Spider">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="@@@#" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Creature." />
+      <property name="Card Text" value="Forced Response: After Bloated Leng Spider enters play, all characters with skill 2 or lower go insane." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="174aab10-423d-4a5a-95a0-140ead8bc725" name="Come With Us">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Action: Choose an insane character your opponent controls. Restore, ready, and take control of that character until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3e4c9183-31ea-4f42-bc8b-8f7f713f9e3f" name="Board of Directors">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Faculty." />
+      <property name="Card Text" value="Response: After Board of Directors enters play, search your deck for a { Location support card and put it into play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="2b8974a4-4a2e-4609-ac6f-70d14573d27e" name="Zeiss Model C">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a { character you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="%" />
+    </card>
+    <card id="3af7e241-d766-43eb-8636-6802af614897" name="Trampling Dark Young">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@#" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor. Dark Young." />
+      <property name="Card Text" value="Forced Response: After Trampling Dark Young commits to a story, wound all characters at that story with printed skill 1 or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="54f9961a-b5ad-48a7-bd7f-3e279ad60678" name="Slime Covered Dhole">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@@#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Action: Pay 1 to attach a card from your hand to one of your domains as a resource. Then, return a resource from that domain to your hand." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c7f0b3f4-a099-44db-8905-86a33a5b9328" name="Grasping Chthonian">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@##" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Chthonian." />
+      <property name="Card Text" value="Response: After Grasping Chthonian enters play, choose and destroy a support card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="91dd6ba8-8e40-4fb9-858a-ae8971c44285" name="Protector of Secrets">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#$ " />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After Protector of Secrets enters play, choose a character with cost 3 or lower. That character cannot commit to story cards this turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d6c25506-47ad-4223-ab31-56f27704e2aa" name="Wealthy Sponsor">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Action: Discard a card from your hand to lower the cost of the next Lodge character you play this phase by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d4ea34e1-2043-4990-8dee-af125426f84c" name="* Ritual of Power">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Forced Response: At the end of each story phase, refresh all domains." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="32864621-86a4-4f9f-b3e7-60acaa756362" name="Satchel of the Void">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Item." />
+      <property name="Card Text" value="Action: Pay X and exhaust Satchel of the Void to shuffle X cards from your discard pile into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e2f1a78a-cc4e-44fa-86e2-aa58e93a66e4" name="Thief for Hire">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Response: After Thief for Hire enters play, take control of an Attachment support card with cost X or lower. X is the amount you overpaid for Thief for Hire." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0dd1b95a-4338-4a09-9e01-ac1b993d4cdb" name="* Southside Speakeasy">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Hidden Business" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Action: Exhaust Southside Speakeasy to move a } resource from a domain you control to another domain you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9e9be060-19e1-43d3-adc9-d6e09e9f44ca" name="} Expensive Guitar">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a character you control. Attached character gains &quot;Action: Exhaust Expensive Guitar to have attached character gain +3 skill until the end of the phase.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="34dcd99d-21d6-424f-9004-a864f3ff0999" name="Constricting Elder Thing">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@$%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Independent. Scientist." />
+      <property name="Card Text" value="Response: After Constricting Elder Thing enters play, choose and return a support card to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="166bbd8c-bb85-47be-922b-2d0948b1db4b" name="Evolving Shoggoth">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Action: Pay 2 and sacrifice Evolving Shoggoth to choose a non-Ancient One character attached to one of your domains as a resource and put that character into play." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="231ed6dc-3e7c-4a63-9bc5-f742d0b81bb0" name="* Special Agent Clarkston">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Can't be bought" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="##%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="Lower the cost to play Government cards by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="Loyal. Heroic. Willpower. " />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="737882dd-0fca-41f5-a598-959539d644aa" name="Secret Service Agent">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="5" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="####" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="Disrupt: Before a unique character you control is wounded, place the wound token on Secret Service Agent instead." />
+      <property name="Keyword" value="Heroic. Willpower. Toughness +2." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d0fd7318-a2eb-40a2-b7c4-a1ed402bff46" name="* G-AAMX">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Gypsy Moth" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Government. Vehicle." />
+      <property name="Card Text" value="Action: Exhaust G-AAMX to choose an opponent. Look at the top 2 cards of that opponent's deck, then put them on the top or bottom of their deck in any order." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f494f890-0c3b-4391-8e2c-0f8f80ce7b5d" name="Lurking Deep One">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="#$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Deep One." />
+      <property name="Card Text" value="If it is NIGHT, Lurking Deep One gains: &quot;Response: After an event card is played, ready Lurking Deep One.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3dfbad92-8ca9-46de-b6cf-c5ec2815cf0d" name="* Devil's Reef">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Gate to Hell" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Lower the cost to play Deep One characters by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="48c1e2d0-f812-4b64-a4b5-b97916a99f65" name="Y'ha-nthlei Statue">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact." />
+      <property name="Card Text" value="Characters with printed skill 1 or lower are destroyed." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="10f86a77-4041-4eb8-ad2c-98e25d2e0e1e" name="Shadow Eater">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="@@@" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Action: Exhaust Shadow Eater to count its skill and icons at a story where the opponent has committed a character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="7757c325-908c-4077-bce8-de81541ca33a" name="Devoured by Shadow">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Encounter." />
+      <property name="Card Text" value="Action: Put Devoured by Shadow into play as a Monster character with 2 skill and @@#. At the end of the phase, sacrifice Devoured by Shadow." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="2b4ec480-dd36-4b4a-90c4-eb1ddf5f331b" name="Obscure Linguist">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$$%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Faculty. Investigator." />
+      <property name="Card Text" value="Response: After Obscure Linguist commits to a story, choose a character. That character loses its printed icons until the end of the phase." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8cb50d06-2e0c-46df-9039-13875bcfe855" name="Rush Week">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose and ready up to 2 Miskatonic University characters." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="7988fb0e-fd70-4178-8148-d86350e907ae" name="Ia! Ia! Shudde M'ell">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Response: Characters you control gain $$ until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5ef8c40f-0651-471e-8285-103efb9a18d4" name="Wolf Hunger">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Curse." />
+      <property name="Card Text" value="Attach to a non-Ancient One character. Attached character must commit to a story each turn if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="88085639-4ed8-4350-95e0-8fc28508811e" name="Master of Blades">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="##" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="At the end of this turn, return Master of Blades to its owner's hand." />
+      <property name="Keyword" value="Willpower. Fast." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f63d4c6e-0603-44a9-aa7e-812845316dc7" name="Reckless Assault">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Choose a character you control and a character your opponent controls. Return the character with fewer # icons to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="7f38aedf-2f1d-4449-b0bb-0331907be69c" name="Elder Binding">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Spell." />
+      <property name="Card Text" value="Attach to an exhausted non-Ancient One character. Attached character cannot be readied. Forced Response: After a story card is won, destroy Elder Binding." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c46c8a81-ba28-4556-b477-165502c45ee1" name="* Johnny Valone">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="The Godfather" />
+      <property name="Cost" value="5" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="##%" />
+      <property name="Skill" value="5" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Action: Exhaust a Criminal character to exhaust a character with skill X or lower. X is the Criminal character's skill you exhausted to pay for this ability." />
+      <property name="Keyword" value="Willpower. Toughness +1." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="ffe674e5-7dcc-4a20-b411-c964dba94d7a" name="Johnny V's Dame">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Lower the cost to play your first Criminal character each turn by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="95c4e239-f052-4d7f-b1ee-5a6b63e3d2ce" name="* Glaaki">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="The Inhabitant of the Lake " />
+      <property name="Cost" value="6" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@@##$" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Ancient One." />
+      <property name="Card Text" value="Response: After Glaaki commits to a story, choose a character. That character loses all icons and must commit to the same story as Glaaki, if able." />
+      <property name="Keyword" value="Villainous. Toughness +3." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="6bc07c0a-8526-4bb2-9be4-29528f4adb60" name="Servants of Glaaki">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Servants of Glaaki gains a @ for each copy of Servants of Glaaki in play. Lower the cost to play Glaaki by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="69ec0a1f-0657-44a5-a8c0-2336a1dea9f7" name="Initiation of Glaaki">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Play during your operations phase.&#xD;&#xA;Action: Choose an opponent. That opponent must sacrifice a character, if able. Then, you may put Servents of Glaaki into play from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b0ab377e-913e-4e7e-a1bf-11c8d423be62" name="Trial Judge">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="#%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="If it is DAY reduce the cost to play Trial Judge by 2 (to a minimum of 1). Action: Exhaust Trial Judge to choose a character. That character cannot commit to stories this turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="ba1066ca-2570-468b-8c6d-5e50ab564b2e" name="Catastrophic Explosion">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="X" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Disaster." />
+      <property name="Card Text" value="Play during your operations phase.&#xD;&#xA;Action: Wound all characters in play with printed skill lower than X." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8806e70b-fc02-45d0-b741-82fc1a934ab4" name="While He Sleeps">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Action: Reveal a copy of Cthulhu from your hand to give all of your Cthulhu characters @@ until the end of the turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="1ab695f2-51dd-46e2-bdd1-5a5bcf852d07" name="Slave to the Undivided Mind">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Action: Choose a character. That character must commit to a story card this turn, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c4b495e3-5899-46f2-999a-936a696633cb" name="Moonbound Byakhee">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="#$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="All Servitor characters you control gain @." />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="930c27e9-59d4-4a47-a0dc-9193b1401ec4" name="Unhealthy Fixation">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Madness." />
+      <property name="Card Text" value="Attach to a character. Attached character cannot uncommit from a story until that story is won." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="520ae0b3-c89c-4bc0-97fa-22895d198e85" name="Scalpel">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a character you control. Action: Exhaust Scalpel to choose a character. Remove an icon from that character until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="6b0e43cd-eebf-4034-ba87-9661a33eb86e" name="* Jamie Winthrop">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Whiz Kid" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Student. Investigator." />
+      <property name="Card Text" value="Response: After you draw one or more cards, choose a character. That character loses all printed icons until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9b78533f-01f5-4056-9835-1cb5407fa71c" name="Lecturing Historian">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Faculty." />
+      <property name="Card Text" value="Action: Exhaust Lecturing Historian to choose a story. Each of your characters committed to that story gains skill equal to the number of $ icons it has." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4de12126-fc1e-4d25-a1ba-82d725d1c7e7" name="Full Ride Scholarship">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Put a Student character from your hand into play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="600dba39-8345-4472-97d8-3af71c184658" name="* Shudde M'ell">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="The Burrower Beneath " />
+      <property name="Cost" value="6" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@@#$" />
+      <property name="Skill" value="5" />
+      <property name="Subtypes" value="Ancient One." />
+      <property name="Card Text" value="Action: Pay 2 to search the top 5 cards of your deck for a Chthonian character and put it into play. Shuffle the remaining cards into your deck." />
+      <property name="Keyword" value="Villainous. Invulnerability." />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b2d3fdaf-8077-467a-8a03-d8f2716aa452" name="Telepathic Chthonian">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@##" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Chthonian." />
+      <property name="Card Text" value="Response: After a support card is destroyed, choose an opponent. That opponent must sacrifice a character, if able." />
+      <property name="Keyword" value="Toughness +1." />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4139838d-5cd4-418e-8eaf-f24351c4d086" name="Ground Tremors">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Reveal the top 5 cards of your deck. If one of those cards is a Chthonian card, put it in your hand. Shuffle the remaining cards into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c7a56979-05f3-4876-9edd-d54be334c5a1" name="Meticulous Scribe">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Faculty. Independent." />
+      <property name="Card Text" value="While there is a Tome support card in play, Meticulous Scribe gains Willpower and %." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5200a95d-2579-4482-9491-e0b4dd0ba6a5" name="Unscrupulous Acquisitionist">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: When Unscrupulous Acquistionist enters play, each opponent must drain one of his domains or return a character he controls to its owner's hand." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="39d4f191-7c38-4fee-80f7-760866882af5" name="^^ Disturbing Auction">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Each player reveals the top card of their deck. Then, the player who reveals the card with the highest printed cost adds the revealed card to his hand. The remaining cards are shuffled into their owner's decks." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4e77bd5f-2be4-4f38-a584-638c009f6c64" name="Degenerate Gambler">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Action: Pay 2 to name a card type. Then, reveal the bottom card of your deck. If the revealed card is the same as the named type, add it to your hand. Otherwise, put the card in your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9c0065be-eb08-4f8e-be67-11674697c488" name="Scandal">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Response: After you succeed at a story, discard 2 success tokens from that story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4d474f60-36d3-4bea-baf7-2168e643deb5" name="Many-angled Thing">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@$" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Response: After Many-angled Thing enters play, each opponent must choose and sacrifice a character, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="2bf83104-a0b8-4afd-a499-67fd6cde0929" name="Hermetic Text">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Tome." />
+      <property name="Card Text" value="Attach to a character. Attached character gains $ and &quot;Forced Response: After attached character commits to a story, that character's controller discards 1 card from the top of his deck.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3deff6bc-b48e-42a3-b592-a6d12803c362" name="Unlikely Informant">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Response: After Unlikely Informant commits to a story, choose an opponent. That opponent reveals his hand, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e56bb462-332a-409c-8f55-d94501d159cd" name="Fire Extinguisher">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Item." />
+      <property name="Card Text" value="Disrupt: Sacrifice Fire Extinguisher to cancel a triggered effect that would destroy a Location support card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d823b9a4-3a11-4215-996a-6cdf8c3ae1b5" name="] Somnambulant Dreamer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Dreamer. Lunatic." />
+      <property name="Card Text" value="Action: Drive Somnambulant Dreamer insane to choose and wound an exhausted character with skill 2 or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="6d9c595d-c88e-4eea-8dbc-941b02670c7f" name="Misguided Dreams">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="If it is NIGHT, lower the cost to play Misguided dreams by 2." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4315dd89-60c4-4d3a-8076-495c7101faf9" name="Final Note">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Response: After you succeed at a story, destroy all insane characters." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="599a68ca-6caa-4a89-98d0-24f8223a6000" name="Painful Reflection">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Madness." />
+      <property name="Card Text" value="Action: Choose an opponent. That opponent must discard up to X cards from his hand. X is the number of insane characters in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="908885cb-5ac0-4d0f-a9ba-1cc871b01926" name="* Elder Sign Parchment">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Scroll of Nodens " />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact." />
+      <property name="Card Text" value="Action: Sacrifice Elder Sign Parchment to choose a story. Characters with @ cannot commit to that story this phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3c1246f1-a31c-458f-a165-732525b7ae0d" name="{{ Forbidden Knowledge">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Tome." />
+      <property name="Card Text" value="Attach to a character you control. Action: Sacrifice attached character to draw 4 cards." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0d2ed6dc-71fc-42b4-9eaf-12afeec2ee4c" name="Sinkhole!">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Disaster." />
+      <property name="Card Text" value="Action: Discard the top card of your deck. If you discarded a Chthonian character, choose and destroy a non-Ancient One character. Otherwise, choose and destroy a Location support card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="61ab14c5-c0b0-4e0a-9a3a-25e7f7c49c76" name="Bast's Hunt">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose and destroy a wounded character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b04a357d-9289-45cf-935d-a03d51998fec" name="* The Mage Known as Magnus">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Master of the Arcane Arts " />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="##$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Sorcerer." />
+      <property name="Card Text" value="Action: Exhaust The Mage Known as Magnus and discard a character card from your hand to choose and destroy a non-Ancient One character with a printed cost lower than the discarded card." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="{N}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e2586f14-9f19-4e90-84a1-0473d043e565" name="Crooked Treasurer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$$$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal. Lodge." />
+      <property name="Card Text" value="If an opponent has more cards in the hand than you during your draw phase, draw 3 cards instead of 2." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="912fff59-8b4c-46df-817c-a8c0e1a500a4" name="Ritual of Inferno">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Uncontrolled Destruction " />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Action: Pay 1 and sacrifice Ritual of Inferno to destroy all Location support cards." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e3a595b2-17c0-4d45-ac6c-aee4c00b0c7d" name="Rumormill">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during your opponent's turn before characters are committed to stories. Action: Choose a story card in play. Opponents cannot commit characters to that story this turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="053f31f3-befe-444e-9c02-a0c47806d69f" name="Strung Up!">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Your opponent's characters get -1 skill until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="359988b3-e20e-410a-a6b7-36e8ed67ff7c" name="You're Outta Here!">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Exhaust a Syndicate character you control to uncommit an opponent's non-Ancient One character from a story." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="942b9571-0387-44f0-8b2a-0c0b1ef9a66a" name="Sleepin' wit' da Fishes">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose an opponent and reveal the top 4 cards of his deck. Then, put all characters revealed this way on the bottom of his deck. Return the remaining cards to the top of his deck in any order." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d912ca73-0e06-41a3-890d-90fdf2029074" name="Flesh Ward">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Spell." />
+      <property name="Card Text" value="Attach to a character. Attached character gains Toughness +2" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="bdfd3a0f-322f-42a2-a1a7-28bf5080c937" name="A Gift of Knowledge">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose a story in which you have 2 or fewer success tokens. Then, wound a character you control at that story to place a success token on that story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="9735c090-9fa8-4c8a-ba3d-3157798772f4" name="Fist of Yog-Sothoth">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell." />
+      <property name="Card Text" value="Action: Choose a character. That character gains @#$ until the end of the phase. If you overpaid for Fist of Yog-Sothoth, you may return it to your hand instead of putting it in your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+    </card>
+  </cards>
+</set>

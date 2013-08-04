@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<templates> 
+  <blocks> 
+  	<block type="overlay" id="character_overlay_agency" src="proxy/template/character_overlay_agency.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_cthulhu" src="proxy/template/character_overlay_cthulhu.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_hastur" src="proxy/template/character_overlay_hastur.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_miskatonic" src="proxy/template/character_overlay_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_shub" src="proxy/template/character_overlay_shub.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_silver_twilight" src="proxy/template/character_overlay_silver_twilight.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_syndicate" src="proxy/template/character_overlay_syndicate.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="character_overlay_yog" src="proxy/template/character_overlay_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="character_overlay_image" src="proxy/template/character_overlay_image.png">
+		<location x="0" y="0" />
+	</block>
+	  	<block type="overlay" id="event_overlay_agency" src="proxy/template/event_overlay_agency.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_cthulhu" src="proxy/template/event_overlay_cthulhu.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_hastur" src="proxy/template/event_overlay_hastur.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_miskatonic" src="proxy/template/event_overlay_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_shub" src="proxy/template/event_overlay_shub.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_silver_twilight" src="proxy/template/event_overlay_silver_twilight.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_syndicate" src="proxy/template/event_overlay_syndicate.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="event_overlay_yog" src="proxy/template/event_overlay_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="event_overlay_image" src="proxy/template/event_overlay_image.png">
+		<location x="0" y="0" />
+	</block>
+ 	<block type="overlay" id="support_overlay_agency" src="proxy/template/support_overlay_agency.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_cthulhu" src="proxy/template/support_overlay_cthulhu.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_hastur" src="proxy/template/support_overlay_hastur.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_miskatonic" src="proxy/template/support_overlay_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_shub" src="proxy/template/support_overlay_shub.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_silver_twilight" src="proxy/template/support_overlay_silver_twilight.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_syndicate" src="proxy/template/support_overlay_syndicate.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="support_overlay_yog" src="proxy/template/support_overlay_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="support_overlay_image" src="proxy/template/support_overlay_image.png">
+		<location x="0" y="0" />
+	</block>
+ 	<block type="overlay" id="conspiracy_overlay_agency" src="proxy/template/conspiracy_overlay_agency.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_cthulhu" src="proxy/template/conspiracy_overlay_cthulhu.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_hastur" src="proxy/template/conspiracy_overlay_hastur.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_miskatonic" src="proxy/template/conspiracy_overlay_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_shub" src="proxy/template/conspiracy_overlay_shub.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_silver_twilight" src="proxy/template/conspiracy_overlay_silver_twilight.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_syndicate" src="proxy/template/conspiracy_overlay_syndicate.png">
+		<location x="0" y="0" />
+	</block>
+  	<block type="overlay" id="conspiracy_overlay_yog" src="proxy/template/conspiracy_overlay_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="conspiracy_overlay_image" src="proxy/template/conspiracy_overlay_image.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_agency" src="proxy/template/symbol_agency.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_cthulhu" src="proxy/template/symbol_cthulhu.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_hastur" src="proxy/template/symbol_hastur.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_miskatonic" src="proxy/template/symbol_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_shub" src="proxy/template/symbol_shub.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_silver_twilight" src="proxy/template/symbol_silver_twilight.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_syndicate" src="proxy/template/symbol_syndicate.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="symbol_yog" src="proxy/template/symbol_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="resource_zoog" src="proxy/template/resource_zoog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="resource_transient_neutral" src="proxy/template/resource_transient_neutral.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="resource_transient_agency" src="proxy/template/resource_transient_agency.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="resource_transient_miskatonic" src="proxy/template/resource_transient_miskatonic.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="overlay" id="resource_transient_yog" src="proxy/template/resource_transient_yog.png">
+		<location x="0" y="0" />
+	</block>
+	<block type="text" id="card_name">
+		<location x="70" y="7" />
+		<text color="#000000" size="22" font="fonts/MyOldRemingtonCoC.ttf" />
+		<wordwrap width="230" height="27" align="near" shrinktofit="True" />
+	</block>
+	<block type="text" id="card_descriptor">
+		<location x="72" y="26" />
+		<text color="#000000" size="16" font="fonts/TimesNewRomanItalic.ttf" />
+		<wordwrap width="230" height="20" align="near" />
+	</block>
+	<block type="text" id="conspiracy_name">
+		<location x="100" y="6" />
+		<text color="#000000" size="18" font="fonts/MyOldRemingtonCoC.ttf" />
+		<wordwrap width="330" height="24" align="near" shrinktofit="True" />
+	</block>
+	<block type="text" id="card_type">
+		<location x="17" y="430"  rotate="270" />
+		<text color="#000000" size="18" font="fonts/TimesNewRomanCoC.ttf" />
+	</block>
+	<block type="text" id="card_cost">
+		<location x="14" y="3" />
+		<text color="#FFFFFF" size="40" font="fonts/TimesNewRomanBold.ttf" />
+	</block>
+	<block type="text" id="conspiracy_cost">
+		<location x="474" y="8" rotate="90"/>
+		<text color="#FFFFFF" size="40" font="fonts/TimesNewRomanBold.ttf" />
+	</block>
+	<block type="text" id="card_skill">
+		<location x="14" y="283" />
+		<text color="#000000" size="40" font="fonts/TimesNewRomanBold.ttf" />
+	</block>
+	<block type="text" id="card_subtypes">
+		<location x="70" y="293" />
+		<text color="#000000" size="14" font="fonts/TimesNewRomanBoldItalic.ttf" />
+		<wordwrap width="230" height="20" align="center" />
+	</block>
+	<block type="text" id="card_keyword">
+		<location x="65" y="320" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanBold.ttf" />
+	</block>
+	<block type="text" id="card_text_with_keyword">
+		<location x="65" y="345" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="90" width="260"  shrinktofit="True" />
+	</block>
+	<block type="text" id="card_text">
+		<location x="65" y="320" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="105" width="260"  shrinktofit="True" />
+	</block>
+	    <block type="text" id="support_text">
+		<location x="65" y="320" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="110" width="240"  shrinktofit="True" />
+	</block>
+	    <block type="text" id="support_text_with_keyword">
+		<location x="65" y="345" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="95" width="240"  shrinktofit="True" />
+	</block>
+	    <block type="text" id="conspiracy_text">
+		<location x="93" y="270" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="50" width="360"  shrinktofit="True" />
+	</block>
+	<block type="text" id="story_name">
+		<location x="70" y="8" />
+		<text color="#000000" size="20" font="fonts/MyOldRemingtonCoC.ttf" />
+		<wordwrap width="330" height="24" align="near" shrinktofit="True" />
+	</block>
+	<block type="text" id="story_text">
+		<location x="73" y="270" />
+		<text color="#000000" size="13" font="fonts/TimesNewRomanCoC.ttf" />
+		<wordwrap height="50" width="380"  shrinktofit="True" />
+	</block>
+	<block type="text" id="card_icons">
+		<location x="5" y="65" />
+		<text color="#DDDDDD" size="25" font="fonts/TimesNewRomanCoC.ttf" />
+		<border color="#000000" size="4" />
+		<wordwrap height="300" width="45" align="center" />
+	</block>
+	<block type="text" id="conspiracy_icons">
+		<location x="40" y="55" />
+		<text color="#4e2921" size="25" font="fonts/TimesNewRomanCoC.ttf" />
+		<border color="#d1af8c" size="6" />
+		<wordwrap height="300" width="55" align="center" />
+	</block>
+	<block type="text" id="struggle_icons">
+		<location x="30" y="405" />
+		<text color="#4e2921" size="25" font="fonts/TimesNewRomanCoC.ttf" />
+		<border color="#d1af8c" size="6" />
+		<wordwrap height="100" width="330" align="center" />
+	</block>
+  </blocks> 
+<template src="proxy/template/neutral_character.png" default="False"> 
+    <matches> 
+      <match name="Type" value="Character" /> 
+    </matches> 
+	<overlayblocks>
+			<conditional>
+			<if property="Faction" value="Hastur">
+				<link block="character_overlay_hastur" />
+				<link block="symbol_hastur" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Miskatonic University">
+				<link block="character_overlay_miskatonic" />
+				<link block="symbol_miskatonic" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Shub-Niggurath">
+				<link block="character_overlay_shub" />
+				<link block="symbol_shub" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Agency">
+				<link block="character_overlay_agency" />
+				<link block="symbol_agency" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Cthulhu">
+				<link block="character_overlay_cthulhu" />
+				<link block="symbol_cthulhu" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Order of the Silver Twilight">
+				<link block="character_overlay_silver_twilight" />
+				<link block="symbol_silver_twilight" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Syndicate">
+				<link block="character_overlay_syndicate" />
+				<link block="symbol_syndicate" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Yog-Sothoth">
+				<link block="character_overlay_yog" />
+				<link block="symbol_yog" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" value="__">
+				<link block="resource_transient_agency" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" value="{{">
+				<link block="resource_transient_miskatonic" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" value="{N}{N}">
+				<link block="resource_transient_neutral" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" value="&lt;&lt;">
+				<link block="resource_transient_yog" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" contains="Zoog">
+				<link block="resource_zoog" />
+			</if>
+		</conditional>
+		<link block="character_overlay_image" />
+	</overlayblocks>
+	<textblocks> 
+		<conditional>
+			<if property="Keyword" value="">
+				<link block="card_text">
+					<property name="Card Text" />
+				</link>
+			</if>
+			<else>
+				<link block="card_keyword">
+					<property name="Keyword" />
+				</link>
+				<link block="card_text_with_keyword">
+					<property name="Card Text" />
+				</link>
+			</else>
+		</conditional>
+		  <link block="card_name">
+			<property name="Name"  />
+		  </link>
+		  <link block="card_descriptor">
+			<property name="Descriptor" />
+		</link>
+		  <link block="card_cost">
+			<property name="Cost" />
+		  </link>
+		  <link block="card_skill">
+			<property name="Skill" />
+		  </link>
+		  <link block="card_subtypes">
+			<property name="Subtypes" />
+		</link>
+		<link block="card_icons">
+			<property name="Icons" />
+		</link>
+		<link block="struggle_icons">
+			<property name="Struggle Icons" />
+		</link>
+	</textblocks> 
+</template>
+<template src="proxy/template/event_neutral.png" default="False"> 
+    <matches> 
+      <match name="Type" value="Event" /> 
+    </matches> 
+	<overlayblocks>
+			<conditional>
+			<if property="Faction" value="Hastur">
+				<link block="event_overlay_hastur" />
+				<link block="symbol_hastur" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Miskatonic University">
+				<link block="event_overlay_miskatonic" />
+				<link block="symbol_miskatonic" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Shub-Niggurath">
+				<link block="event_overlay_shub" />
+				<link block="symbol_shub" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Agency">
+				<link block="event_overlay_agency" />
+				<link block="symbol_agency" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Cthulhu">
+				<link block="event_overlay_cthulhu" />
+				<link block="symbol_cthulhu" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Order of the Silver Twilight">
+				<link block="event_overlay_silver_twilight" />
+				<link block="symbol_silver_twilight" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Syndicate">
+				<link block="event_overlay_syndicate" />
+				<link block="symbol_syndicate" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Yog-Sothoth">
+				<link block="event_overlay_yog" />
+				<link block="symbol_yog" />
+			</if>
+		</conditional>
+		<link block="event_overlay_image" />
+	</overlayblocks>
+    <textblocks> 
+		<conditional>
+			<if property="Keyword" value="">
+				<link block="card_text">
+					<property name="Card Text" />
+				</link>
+			</if>
+			<else>
+				<link block="card_keyword">
+					<property name="Keyword" />
+				</link>
+				<link block="card_text_with_keyword">
+					<property name="Card Text" />
+				</link>
+			</else>
+		</conditional>
+      <link block="card_name">
+        <property name="Name"  />
+      </link> 
+	  <link block="card_descriptor">
+		<property name="Descriptor" />
+	</link>
+	  <link block="card_cost">
+		<property name="Cost" />
+	  </link>
+	  <link block="card_subtypes">
+		<property name="Subtypes" />
+	</link>
+	<link block="struggle_icons">
+		<property name="Struggle Icons" />
+	</link>
+    </textblocks> 
+</template> 
+<template src="proxy/template/support_neutral.png" default="False"> 
+    <matches> 
+      <match name="Type" value="Support" /> 
+    </matches> 
+	<overlayblocks>
+			<conditional>
+			<if property="Faction" value="Hastur">
+				<link block="support_overlay_hastur" />
+				<link block="symbol_hastur" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Miskatonic University">
+				<link block="support_overlay_miskatonic" />
+				<link block="symbol_miskatonic" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Shub-Niggurath">
+				<link block="support_overlay_shub" />
+				<link block="symbol_shub" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Agency">
+				<link block="support_overlay_agency" />
+				<link block="symbol_agency" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Cthulhu">
+				<link block="support_overlay_cthulhu" />
+				<link block="symbol_cthulhu" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Order of the Silver Twilight">
+				<link block="support_overlay_silver_twilight" />
+				<link block="symbol_silver_twilight" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Syndicate">
+				<link block="support_overlay_syndicate" />
+				<link block="symbol_syndicate" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Yog-Sothoth">
+				<link block="support_overlay_yog" />
+				<link block="symbol_yog" />
+			</if>
+		</conditional>
+		<conditional>
+			<if property="Resource Icon" contains="Zoog">
+				<link block="resource_zoog" />
+			</if>
+		</conditional>
+
+		<link block="support_overlay_image" />
+	</overlayblocks>
+    <textblocks> 
+ 		<conditional>
+			<if property="Keyword" value="">
+				<link block="support_text">
+					<property name="Card Text" />
+				</link>
+			</if>
+			<else>
+				<link block="card_keyword">
+					<property name="Keyword" />
+				</link>
+				<link block="support_text_with_keyword">
+					<property name="Card Text" />
+				</link>
+			</else>
+		</conditional>
+	<link block="card_name">
+        <property name="Name"  />
+      </link> 
+	  <link block="card_descriptor">
+		<property name="Descriptor" />
+	</link>
+	  <link block="card_cost">
+		<property name="Cost" />
+	  </link>
+	  <link block="card_subtypes">
+		<property name="Subtypes" />
+	</link>
+	<link block="struggle_icons">
+		<property name="Struggle Icons" />
+	</link>
+    </textblocks> 
+</template> 
+<template src="proxy/template/conspiracy_neutral.png" default="False">
+	<matches>
+		<match name="Type" value="Conspiracy" />
+	</matches>
+		<overlayblocks>
+			<conditional>
+			<if property="Faction" value="Hastur">
+				<link block="conspiracy_overlay_hastur" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Miskatonic University">
+				<link block="conspiracy_overlay_miskatonic" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Shub-Niggurath">
+				<link block="conspiracy_overlay_shub" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Agency">
+				<link block="conspiracy_overlay_agency" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Cthulhu">
+				<link block="conspiracy_overlay_cthulhu" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Order of the Silver Twilight">
+				<link block="conspiracy_overlay_silver_twilight" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="The Syndicate">
+				<link block="conspiracy_overlay_syndicate" />
+			</if>
+		</conditional>
+			<conditional>
+			<if property="Faction" value="Yog-Sothoth">
+				<link block="conspiracy_overlay_yog" />
+			</if>
+		</conditional>
+		<link block="conspiracy_overlay_image" />
+	</overlayblocks>
+	<textblocks>
+		<link block="conspiracy_icons">
+			<property name="Struggle Icons"/>
+		</link>
+		<link block="conspiracy_name">
+			<property name="Name" />
+		</link>
+		<link block="conspiracy_text">
+			<property name="Card Text" />
+		</link>
+		<link block="conspiracy_cost">
+			<property name="Cost" />
+		</link>
+	</textblocks>
+</template>
+<template src="proxy/template/story_card.png" default="False">
+	<matches>
+		<match name="Type" value="Story" />
+	</matches>
+	<textblocks>
+		<link block="story_name">
+			<property name="Name" />
+		</link>
+		<link block="story_text">
+			<property name="Card Text" />
+		</link>
+	</textblocks>
+</template>
+<template src="proxy/template/domain_1.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 1" />
+	</matches>
+</template>
+<template src="proxy/template/domain_2.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 2" />
+	</matches>
+</template>
+<template src="proxy/template/domain_3.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 3" />
+	</matches>
+</template>
+<template src="proxy/template/domain_4.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 4" />
+	</matches>
+</template>
+<template src="proxy/template/domain_5.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 5" />
+	</matches>
+</template>
+<template src="proxy/template/domain_6.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain 6" />
+	</matches>
+</template>
+<template src="proxy/template/domain.jpg" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Domain" />
+	</matches>
+</template>
+<template src="proxy/template/drain_token.png" default="False">
+	<matches>
+		<match name="Type" value="Token" />
+		<match name="Name" value="Drain Token" />
+	</matches>
+</template>
+ <template src="proxy/template/cthulhu_character.png" default="True"> 
+    <matches>
+	  <match name="Type" value="nothingmuch" />
+	</matches>
+    <textblocks> 
+        <link block="card_name"> 
+            <property name="Name" /> 
+        </link> 
+    </textblocks> 
+  </template> 
+</templates>

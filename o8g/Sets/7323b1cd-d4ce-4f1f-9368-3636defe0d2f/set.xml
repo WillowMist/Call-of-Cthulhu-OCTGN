@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="The Key and the Gate" id="7323b1cd-d4ce-4f1f-9368-3636defe0d2f" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.2" version="2.0.0.2">
+  <cards>
+    <card id="b08b4b3d-6e6c-4452-8eba-9f8240e73326" name="* Jeanne D'Ys">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="The Demoiselle" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ $ $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Action: Discard X cards from the tol of a deck (limit once perturn). X is the number of other characters committed at the same story at which Jeanne D'Ys is committed.  Then, place a success token on Jeanne D'Ys." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 01" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="d9ad4983-e3c7-4a37-b3a5-5edd91e3f46c" name="* Claud Owen">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Trying to Conquer Death" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="# $ $ $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Avatar. Scientist." />
+      <property name="Card Text" value="Action:Pay 3 to choose 1 character in each player's discard pile.  Put those characters into play under your control. At the end of thep hase, if a chosen character is still in play, return it to its owner's control. (Limit once per turn.)" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 02" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0dbec9c2-2bdb-460f-9a0f-8d4eaabeb240" name="* Nadine Eskiy">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="The Namer" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ $" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Sorcerer. Servitor." />
+      <property name="Card Text" value="Forced Response:After NadineEskiy commits to a story, exhaust and commit all ready characters with skill of 4 or more at the same story at which Nadine Eskiy is committed." />
+      <property name="Keyword" value="Toughness +1" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 03" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3a55ee5a-5775-41df-92c2-75795a5be017" name="* Nikola Tesla">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Man Out of Time" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$ $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Scientist. Independent." />
+      <property name="Card Text" value="Forced Response: After you trigger an effect from your discard pile, put a success token on Nikola Tesla.&amp;#xd;&amp;#xa;Disrupt:When Nikola Tesla would be destroyed, move all success tokens on him to any number of revealed story cards." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 04" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a44d69e7-0df3-483c-8823-fd01a78b4dae" name="* Wilbur Whateley">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Scion of Yog-Sothoth" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ # $ %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Servitor. Sorcerer." />
+      <property name="Card Text" value="Reduce the cost of the first SPELL event card you play each turn by 1. &amp;#xd;&amp;#xa;&amp;#xd;&amp;#xa;Action:Discard a SPELL event card from your hand to choose an exhausted character controlled by an opponent.  That opponent must return that character to the top of its owner's deck or discard 1 card from his hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 05" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="65605dbe-0e26-485d-bb9e-1be7e0c98d40" name="* Professor Nathaniel Peaslee">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Alien Intelligence" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="Action: Pay X (which must include at least one &lt; resource) to choose a non-ANCEINT ONE character of X skill or less.  The controller of that character gains control of Professor Nathaniel Peaslee and you gain control of that character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 06" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0c32b8a9-1006-45ef-ab94-8789aefaed53" name="* Fthaggua">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Regent of the Fire Vampires" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Servitor. Monster." />
+      <property name="Card Text" value="Fthaggua gains @ # and +1 skill for each facedown card attached to it.&amp;#xd;&amp;#xa;&amp;#xd;&amp;#xa;Forced Response: After a character is destroyed, attach that character facedown to Fthaggua. Any player may discard 2 cards from the top of his deck to cancel this effect." />
+      <property name="Keyword" value="Invulnerability." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 07" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b44d0b0a-3489-40f0-a9b2-104da9d6a287" name="* Yog-Sothoth">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="All-In-One" />
+      <property name="Cost" value="7" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ @ # $ $" />
+      <property name="Skill" value="8" />
+      <property name="Subtypes" value="Ancient One." />
+      <property name="Card Text" value="Reduce the cost to play Yog-Sothoth by 1 for each SORCERER character in your discard pile.&amp;#xd;&amp;#xa;&amp;#xd;&amp;#xa;Forced Response:  After a player places a success token on a story, choose a card controlled by that player to gain FATED 3 until the end of the phase. Then place a success token on that card." />
+      <property name="Keyword" value="Villainous. Invulnerability." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 08" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="8b3f8144-b781-42d5-8178-089bccbc2655" name="Lost Oracle">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent. Sorcerer." />
+      <property name="Card Text" value="Response:After you win an $ struggle, discard 2 cards from your deck to choose and discard a success token. This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 09" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5c6893d0-c8af-40fd-9768-abeba5316af6" name="Wentshukumishiteu">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Gug. Polar." />
+      <property name="Card Text" value="Forced Response: After Wentshukumishiteu leaves play, discard the top 3 cards from each opponent's deck." />
+      <property name="Keyword" value="Villainous. Fast. Toughness +1." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 10" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="fcfc05fa-c5fa-45a6-89cf-ab848366498d" name="Hungry Star Vampire">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Forced Response: After Hungry Star Vampire readies, choose and destroy a character with the lowest skill." />
+      <property name="Keyword" value="Toughness +1." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 11" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="e2bbf10a-6f2e-4b4a-9ad5-65742c804bcf" name="Quantum Theorist">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Scientist." />
+      <property name="Card Text" value="&lt; resources count as a resource match for SCIENTIST characters in your hand.&amp;#xd;&amp;#xa; If you control a non-&lt; SCIENTIST, Quantum Theorist gains % and FAST." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 12" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a4bf047a-5faa-4eb3-b1c1-bfebf5bc8016" name="Decrepit Wizard">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$ $ $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Cultist. Sorcerer." />
+      <property name="Card Text" value="Disrupt:Discard a resource on a domain to cancel an effect just triggered that targets a character you control. Then, place a success token on Decrepit Wizard." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 13" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a64a5232-8357-43b4-a9d6-66510d91a4c7" name="Hand of Aforgomon">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="# $ $" />
+      <property name="Skill" value="0" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="All characters committed at the same story as Hand of Aforgomon are considered to have a skill of 0." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 14" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b0f8a0b6-2131-4cc3-8413-81be3a4504a8" name="&lt;&lt; Yithian Scout">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Yithian. Investigator." />
+      <property name="Card Text" value="Response: After Yithian Scout enters the discard pile from play, search your deck for a card named Yithian Scout and put it into your hand.&amp;#xd;&amp;#xa;Action: Discard a card from each opponent's deck (Limit once per turn.) If a non-character card is discarded in this way, put Yithian Scout into play from your discard pile. This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 15" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="ad3e169f-93b0-4044-a997-3f94e7cce97a" name="Keeper of the Great Library">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="$ $ $" />
+      <property name="Skill" value="X" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="X is the number of YITHIAN cards in your discard pile.&amp;#xd;&amp;#xa;Response: After a YITHIAN card enters your discard pile, draw 1 card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 16" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c5e76210-a354-4cb3-ac40-fe1ceefaaefb" name="Scholar from Yith">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ $ $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Yithian. Investigator." />
+      <property name="Card Text" value="Action: Pay 1 to change one of Scholar from Yith's $ icons to an % icon.&amp;#xd;&amp;#xa;Action: Pay 2 to choose a character. Until the end of the phase, treat that character as if its printed text box were blank.  This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 17" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="04e6cabe-2309-461c-b3e3-75dab49227bd" name="Scientist from Yith">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ $" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Yithian. Scientist." />
+      <property name="Card Text" value="Response: After your play a YITHIAN card, choose an opponent. Reveal the top 3 cards of that player's deck and put any number of those cards on the bottom of the teck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 18" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3503a953-46d5-4379-bea0-458185105f0c" name="Displaced">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="Attach to a non-ANCIENT ONE character.&amp;#xd;&amp;#xa;Action: Place a YITHIAN character you control on the bottom of its owner's deck to take control of attached character until the end of the turn." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 19" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="7c21b18c-2d52-4617-9fb2-17fc37c98edc" name="One-In-All">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment." />
+      <property name="Card Text" value="Attach to an opponent's support card.&amp;#xd;&amp;#xa;You may trigger an effect of attached support card as if you were the controller." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 20" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5f6bc932-acef-4583-a9af-0195ffafbdb9" name="* Elder Chasm">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Abyssal Rift" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Environment. Attachment." />
+      <property name="Card Text" value="Attach to a story card.&amp;#xd;&amp;#xa;Opponents must commit more than 1 character to commit to attached story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 21" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="47d10b73-6252-41c1-918f-b56001ffcf56" name="Frozen Time">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Polar. Attachment." />
+      <property name="Card Text" value="Attach to a card.&amp;#xd;&amp;#xa;Treat attached card as if its text box were blank." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 22" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="a9083b11-ea42-4c15-b2df-bf330a961053" name="&lt;&lt;&lt; * Rite of the Silver Key">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Ritual of the Profane" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Forced Response: After your turn begins, add 1 success token to Rite of the Silver Key.  Then, discard the top card of your deck.&amp;#xd;&amp;#xa;&amp;#xd;&amp;#xa;Action: Exhaust Rite of the Silver Key and discard Xsuccess tokens from it to choose a character in your discard pile with cost X or lower and put it into play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 23" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="6ef0c337-c50a-41da-8d95-a39bd25fee66" name="* Ys">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Swallowed By The Sea" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Lost Civilization." />
+      <property name="Card Text" value="Disrupt: When an opponent's card effect would cause a character you control to leave play, instead exhaust Ys and resolve that effect on another character you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 24" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="3b503c7a-1f72-4ce7-ab0c-2c54451259e3" name="* Rite of the Silver Gate">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Rending Space-Time" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual" />
+      <property name="Card Text" value="Action: Exhaust Rite of the Silver Gate to choose a non-story card in play. The controller of that card reveals the top card of his deck and compares its cost to that of the chosen card.  Discard the card with the highest cost.  Then, place a succes token on Rite of the Silver Gate." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 25" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="16245612-01db-4960-b5d7-6fcc9df56338" name="&lt;&lt;&lt; * De Vermis Mysteriis">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Signs of the Black Stars" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tome." />
+      <property name="Card Text" value="Each character gets -1 skill for each success token on De Vermis Mysteriis.&amp;#xd;&amp;#xa;Action: Exhaust De Vermis Mysteriis to discard a card from the top of your deck.  If that card is a non-character card, add a success token to De Vermis Mysteriis." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 26" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4ef00631-38e6-49cb-a6b5-c6bc98a51392" name="* Lost City of Pnakotus">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Source of Forgotten Lore" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Lost Civilization. Yithian." />
+      <property name="Card Text" value="Response: After a YITHIAN card enters play, exhaust Lost City of Pnakotus to choose a player to draw 2 cards.  Then, that player chooses and discards 2 cards from his hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 27" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4b883a48-06ee-4d3f-baa3-e4250c9505b9" name="Dark Passenger">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment.Yithian." />
+      <property name="Card Text" value="Attach to a non-ANCIENT ONE character.&amp;#xd;&amp;#xa;Attached character loses all icons and cannot be uncommitted from a story until the story is won.&amp;#xd;&amp;#xa;Response: After Dark Passenger is discarded from a domain and you have 1 or more &lt; cards in play, attach Dark Passenger to a character in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;&lt;" />
+      <property name="Collector Info" value="F 28" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="89a01b0d-2e67-4153-af62-844976928d90" name="Song of the Spheres">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell. Attachment." />
+      <property name="Card Text" value="Attach to a character.&amp;#xd;&amp;#xa;Treat attached character as if its printed text box were blank and it loses all icons.&amp;#xd;&amp;#xa;Action: Pay X to destroy Song of the Spheres.  X is equal to the cost of attached character.  Any player may trigger this ability." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 29" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="b76b60d4-4e1e-4f34-9f95-d7ca2d55f062" name="Summon Spectral Hunter">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment.  Spell." />
+      <property name="Card Text" value="Play only if it is not DAY.  Attach to a non-ANCIENT ONE character.&amp;#xd;&amp;#xa;Attached character gets -1 skill for each success token on it, and it is destroyed if its skill os 0.&amp;#xd;&amp;#xa;Forced Response:After the beginning of its owner's turn, place a success token on attached character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 30" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0d239875-c5e9-435f-be31-4bd683b94d29" name="Temporal Slip">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell." />
+      <property name="Card Text" value="Disrupt: After an icon struggle effect resolves, choose an icon struggle.  Resolve that struggle as if you had won it." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 31" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="619d6d8a-96c1-4d33-a347-fb04d3062437" name="&lt;&lt;&lt; Mists of Lethe">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell." />
+      <property name="Card Text" value="Response:  After an opponent commits a character to a story, commit that character to a different story.&amp;#xa;&amp;#xd;Action: Choose a &lt; card in play that you control and return it to its owner's hand to put Mists of the Lethe on the bottom of your deck.  This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 32" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c545d552-2216-40f4-a834-01ffae87cfef" name="Calling the Williwaw">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell. Polar." />
+      <property name="Card Text" value="Response: After a player triggers a character or support card ability, that player must either pay 2 or sacrifice that card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 33" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f2b4340e-d757-4641-b264-fac959b5868a" name="Vortex of Time">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell. Disaster." />
+      <property name="Card Text" value="Action: Draw 2 cards.&amp;#xd;&amp;#xa;Response: After a player drains a domain, reveal the top card of that player's deck.  You may place that card on the bottom of that deck. (Limit once per turn.) This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 34" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="ffbc45ba-4049-411b-bfb7-a4f9702d22dc" name="&lt;&lt;&lt; Studying the Void">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="Action: Discard the top card of each player's deck.&amp;#xd;&amp;#xa;Response: After you win an $ struggle, reveal the top X cards of your deck.  X us the amount by which you won the $ struggle.  Discard any number of those cards and arrange the rest on top of your deck in any order.  This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 35" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="059a25f3-3fd1-49ef-a555-d850a9475c1c" name="Return to Yith">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="X" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="Action:  Choose X YITHIAN cards in your discard pile and put them in your hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 36" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="4b894b82-6623-4e88-95ad-35bd7995a757" name="Interstellar Migration">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Yithian." />
+      <property name="Card Text" value="Action: Choose a YITHIAN character and return it to its owner's hand.&amp;#xd;&amp;#xa;Action: Put Interstellar Migration on the bottom of your deck to choose a deck. Discard X cards from that deck.  X is equal to the number of YITHIAN cards in your discard pile.  This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F 37" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="5da1fd9d-7244-428d-bca7-79bc5c93a3e7" name="Prepared Alienist">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Scientist. Independent." />
+      <property name="Card Text" value="While Prepared Alienist is ready, characters cannot change control or be put into play through triggered effects." />
+      <property name="Keyword" value="Toughness +1." />
+      <property name="Resource Icon" value="[N]" />
+      <property name="Collector Info" value="F 38" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="292071ac-f251-48bd-aba3-52255c759edd" name="Visions of the Future's Past">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during any player's draw phase.&amp;#xd;&amp;#xa;Action: Place this card face up on your deck.&amp;#xd;&amp;#xa;Response: After an opponent's triggered effect removes a card you control from play, discard Visions of the Future's Past from the top of your deck to put that card into your hand and draw 1 card." />
+      <property name="Keyword" value="Prophecy." />
+      <property name="Resource Icon" value="[N]" />
+      <property name="Collector Info" value="F 39" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="23648801-ecf9-4c26-993c-1038061fb938" name="* Will of Azathoth">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell. Attachment." />
+      <property name="Card Text" value="Attach to a story card.&amp;#xd;&amp;#xa;Characters cannot be committed to attached story card.&amp;#xd;&amp;#xa;Forced Response:  After a story card is won, discard Will of Azathoth." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[N]" />
+      <property name="Collector Info" value="F 40" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="10193c66-4434-4d1d-aa76-6aff719dc260" name="Eidolon">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Response: After a character is destroyed by an opponent's card effect, return that character to play under your control and attach Eidolon to it (counts as an ATTACHMENT support card with the text 'Attached character loses all icons and gains INVULNERABILITY. No skill checks can resolve at a story at which attached character is committed.')." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[N]" />
+      <property name="Collector Info" value="F 41" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="10708c15-3664-451d-8ae9-3e675e6f0fb4" name="* Norman Blackwood, Sr.">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Crafty Veteran" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="# $ %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Investigator. Independent." />
+      <property name="Card Text" value="Disrupt: When an opponent's card effect would wound an INVESTIGATOR you control, instead wound a character of your choice.  Then, place a success token on Norman Blackwood, Sr." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F 42" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="183fb187-2e9d-4ff8-a4fe-392dc3c4c292" name="Franklin Automobile">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Vehicle." />
+      <property name="Card Text" value="Action: Pay 1 to choose a character and ready it.  That character does not exhaust to commit to stories until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F 43" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="492cf938-4124-4973-a8c0-2702a03ec3ec" name="* Castro">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Immensely Aged Mestizo" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@ # $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="Action: Discard one of your success tokens from a story card to discard a success token from a story card.  Then, place a success token on Castro." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F 44" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="76cfe376-6b87-4135-9fee-7ccda51de083" name="[ * Cyclopean Stone">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Horrifying Monolith" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Response: After a character is sacrificed, ready a character you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F 45" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="c8096e76-9d25-49a2-91ae-c1c8ea7864c2" name="* Sieur Piriou Louis">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Hastur's Huntsman" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="# # $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="Response: After Sieur Piriou Louis is committed to a story, all other characters committed at that story go insane.  Then, place a success token on Sieur Piriou Louis." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F 46" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="51203ede-b7ee-45f3-a779-b80a334be8d4" name="* The Tattered Cloak">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Regalia Dementia" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment." />
+      <property name="Card Text" value="Attach to a character.&amp;#xd;&amp;#xa;Attached character gains the SERVITOR subtype.&amp;#xd;&amp;#xa;Response:  After a LUNATIC character is driven insane, choose an opponent.  That opponent must drive a character he controls insane or choose and discard a card from his hand. (Limit once per turn.)" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F 47" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0fc0163f-b71a-4de4-9c43-aa3aeb5050e0" name="* Andrew Chapman">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Boon Companion" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="# % %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Explorer. Scientist." />
+      <property name="Card Text" value="Disrupt:  When an opponent's effect would destroy or make you sacrifice a character you control, instead discard a card from your hand.  Then, place a success token on Andrew Chapman." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F 48" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="888d67bb-ad80-46c3-91cc-cb32ebfe20a7" name="Nepenthe">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Elixer. Item." />
+      <property name="Card Text" value="Disrupt: Cancel a MONSTER or ANCIENT ONE card effect that just triggered that targeted a { character.  Then, place a success token on Nepenthe." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F 49" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="aee75e55-da35-4718-840d-fcd1eddb2ffc" name="* Slenderman">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Feaster Upon the Innocent" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@ # #" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Disrupt: When the first struggle would resolve at a story at which Slenderman is committed, all non-&gt; characters at that story with cost 2 or lower are uncommitted.  Then, place a success token on Slenderman." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F 50" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="0f5911a5-c8fd-4a3a-a6b4-d55fa7fdd6a7" name="* The Festival">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Bringer of Strange Joy" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Action: Exhaulst The Festival and sacrifice a resource to search your deck for a card and attach it to a drained domain as a resource.  Shuffle your deck.&amp;#xd;&amp;#xa;Action:  Attach The Festival to a domain as a resource (Limit 1 per turn.)  This effect can only be triggered from your discard pile." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F 51" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="f7360b96-d409-436a-a4e9-cbbf5b014632" name="* B. Ramsdale Brown">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Well Connected" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$ % %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge. Sorcerer." />
+      <property name="Card Text" value="Response:  After you play a character or support card, choose a card in your discard pile of equal or lower cost and put it into your haind.  Then place a success token on B. Ramsdale Brown." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F 52" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="574add54-ee89-43dc-b351-223d9e4009db" name="* The Black Stone">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Leyline Nexus" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Polar." />
+      <property name="Card Text" value="Disrupt:  When a card would leave play due to a card effect, exhaust The Black Stone to choose a card in play.  Treat that card as if its text box were blank until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F 53" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="165125d7-a4c0-445d-808d-1831fffe6646" name="* Arsene Renard">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Gentleman Thief" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# # %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal. Relic Hunter." />
+      <property name="Card Text" value="Response:  After an opponent plays a support card, search the top 5 cards of his deck for a support card and put that card into play under your control.  Then, place a success token on Arsene Renard.  If that card is still in play at the end of the turn, sacrifice it." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F 54" />
+      <property name="Struggle Icons" value="" />
+    </card>
+    <card id="825b6520-8d5d-4c31-b7ed-11d7b10fb0bd" name="Burglar Tools">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value=" " />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment." />
+      <property name="Card Text" value="Attach to a character you control.  Attached character gains the CRIMINAL subtype.&amp;#xd;&amp;#xa;Action: Exhaust attached character and pay 1 to reveal the top 5 cards of an opponent's deck.  Choose a revealed non-LOCATION support card and put it into play under your control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F 55" />
+      <property name="Struggle Icons" value="" />
+    </card>
+  </cards>
+</set>
