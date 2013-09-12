@@ -207,7 +207,7 @@
 			<property name="Subtypes" value="Location." />
 			<property name="Card Text" value="Treat all neutral characters in play as if their printed text boxes were blank." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>

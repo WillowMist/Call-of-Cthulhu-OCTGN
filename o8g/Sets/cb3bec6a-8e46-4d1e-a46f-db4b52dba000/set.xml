@@ -221,7 +221,7 @@
       <property name="Subtypes" value="Creature." />
       <property name="Card Text" value="Immune to POLAR events. You may play with up to 8 copies of Alaskan Sledge Dog in your deck. Alaskan Sledge Dog gains # icon and +1 skill for each card titled Alaskan Sledge Dog in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -235,7 +235,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Play during your opponent's turn, after all characters have been committed to stories. Action: Choose and wound up to X characters. X is the number of POLAR events in your discard pile." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -249,7 +249,7 @@
       <property name="Subtypes" value="Polar." />
       <property name="Card Text" value="Play during your opponent's turn, after characters have been committed to stories. Action: Exhaust a character that is not committed to a stor. Then, give that character 1 wound for each POLAR event in your discard pile." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -263,7 +263,7 @@
       <property name="Subtypes" value="Polar." />
       <property name="Card Text" value="Play during your opponent's turn. Action: Choose a character committed to a story. Remove that character from that story. Then, that character's controller must commit it to a different story, if able." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -277,7 +277,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="After a POLAR event is played, attach that card to Realm of Ice and Death. A POLAR event card a player owns can be played from Realm of Ice and Death as if it was in that player's hand by removing 1 success token from Realm of Ice and Death as a part of the cost of that event." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
     </card>
@@ -767,7 +767,7 @@
       <property name="Subtypes" value="Investigator. Sorceror." />
       <property name="Card Text" value="Response: After an opponent plays a card paying lower than its printed cost choose a story. Place a success token on that story." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -781,7 +781,7 @@
       <property name="Subtypes" value="Monster." />
       <property name="Card Text" value="Action: Pay 2 to choose a character. Attach Ghost of Perdition to that character (counts as a CURSE with the text &quot;Attached character gains @ @ @.&quot;). At the end of the phase, sacrifice Ghost of Perdition." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -795,7 +795,7 @@
       <property name="Subtypes" value="Lunatic." />
       <property name="Card Text" value="Action: Drive Arkham Inmate insane. Response: After Arkham Inmate is restored, choose a story. Until the end of the phase, opponents cannot commit more than 1 character to that story." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -809,7 +809,7 @@
       <property name="Subtypes" value="Attachment. Artifact." />
       <property name="Card Text" value="Attach to a support card. Attached card gains the ARTIFACT subtype. Response: After attached support enters a discard pile, draw 3 cards." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -823,7 +823,7 @@
       <property name="Subtypes" value="Disaster." />
       <property name="Card Text" value="Response: After you play an ANCIENT ONE character, search your deck for an ANCIENT ONE character, reveal it, and put it into your hand. Then, shuffle your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -837,7 +837,7 @@
       <property name="Subtypes" value="Disaster. Madness." />
       <property name="Card Text" value="Response: After a character goes insane, its controller discards 2 cards at random from his hand. Then, for each event or support card thus discarder, you may place 1 success token on a story." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -851,7 +851,7 @@
       <property name="Subtypes" value="Location." />
       <property name="Card Text" value="Response: After a card with the INDEPENDENT subtype is destroyed, exhaust 607 Walter Street to return that character to play under its owner's control." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -921,7 +921,7 @@
       <property name="Subtypes" value="Sorceror." />
       <property name="Card Text" value="Action: Pay 1 to choose and exhaust a character with skill 2 or lower." />
       <property name="Keyword" value="Willpower." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -935,7 +935,7 @@
       <property name="Subtypes" value="Independent." />
       <property name="Card Text" value="Response: After Granny Orne enters play, destroy all insane characters." />
       <property name="Keyword" value="Willpower." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -977,7 +977,7 @@
       <property name="Subtypes" value="Ancient One." />
       <property name="Card Text" value="Response: After Nodens enters play, wound all characters with skill 3 or lower." />
       <property name="Keyword" value="Toughness +2." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1019,7 +1019,7 @@
       <property name="Subtypes" value="Location." />
       <property name="Card Text" value="After you play The Rope and Anchor Tavern from your hand, name a SUBTYPE. Action: Exhaust The Rope and Anchor Tavern to lower the cost of the next character you play this phase with the named SUBTYPE by 1 (to a minimum of 1)." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1089,7 +1089,7 @@
       <property name="Subtypes" value="Ancient One." />
       <property name="Card Text" value="CULTIST characters get +1 skill and gain @. Action: Sacrifice a CULTIST character to choose and destroy a non-ANCIENT ONE character with skill 2 or lower." />
       <property name="Keyword" value="Villainous. Invulnerability." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1145,7 +1145,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Play on your opponent's turn after all players have committed their characters. Action: Each player who has committed at least one character to 3 or more stories this phase sacrifices all committed characters." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1173,7 +1173,7 @@
       <property name="Subtypes" value="Disaster." />
       <property name="Card Text" value="Play during your operations phase. Action: Each player may search his deck for an ANCIENT ONE character with printed cost 6 or lower and put it into play. Then, shuffle all decks searched in this way." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1187,7 +1187,7 @@
       <property name="Subtypes" value="Conspirator" />
       <property name="Card Text" value="While there is at least 1 Conspiracy card in play, Crazy Eddie gets +1 Skill and gains # $." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1229,7 +1229,7 @@
       <property name="Subtypes" value="Attachment. Item." />
       <property name="Card Text" value="Attach to a character you control. Response: After attached character commits to a story on your turn, pay 1 to choose up to two characters. Those characters must commit to that story if able." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1243,7 +1243,7 @@
       <property name="Subtypes" value="Tome." />
       <property name="Card Text" value="Action: Exhaust Kitab Al-Azif and discard a card from your hand to have each player choose a story. Until the end of the phase, all players need 1 fewer success token in order to win those stories." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1285,7 +1285,7 @@
       <property name="Subtypes" value="Conspirator." />
       <property name="Card Text" value="While there is at least 1 Conspiracy card in play, Ol' Lazy Eyes gains @. Response: After you play Ol' Lazy Eyes, search your deck for a Conspiracy card, reveal it to all players, and put it into your hand. Then, shuffle your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1523,7 +1523,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="10 success tokens are required to win this story. Characters printed cost 2 or lower cannot commit to any story other than this one." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
     </card>
@@ -1551,7 +1551,7 @@
       <property name="Subtypes" value="Attachment. Item." />
       <property name="Card Text" value="Attach to a character you control. Action: Exhaust Pocket Telescope to look at the top card of your deck. You may put this card at the bottom of your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1621,7 +1621,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Treat all characters committed to this story as if their text boxes were blank." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ #" />
     </card>
@@ -1663,7 +1663,7 @@
       <property name="Subtypes" value="Attachment. Tome." />
       <property name="Card Text" value="Attach to a character you control. Action: Pay 4 and sacrifice Whateley's Diary to redistribute in any manner all of your success tokens onto stories among your side of the story cards in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>

@@ -137,7 +137,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gains %." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ # $ % %" />
 		</card>
@@ -151,7 +151,7 @@
 			<property name="Subtypes" value="Conspirator. Independent." />
 			<property name="Card Text" value="Response: After The Red-Gloved Man enters play, search your deck for a conspiracy story card and put it into play. Then, shuffle your deck." />
 			<property name="Keyword" value="Willpower." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -165,7 +165,7 @@
 			<property name="Subtypes" value="Attachment. Item." />
 			<property name="Card Text" value="Attach to a character you control. Attached character gains &quot;Action: Pay 1 and sacrifice a character to draw 2 cards.&quot;" />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -417,7 +417,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gains $." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ # $ $ %" />
 		</card>
@@ -431,7 +431,7 @@
 			<property name="Subtypes" value="Location." />
 			<property name="Card Text" value="Your CULTIST characters gain $." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -445,7 +445,7 @@
 			<property name="Subtypes" value="Attachment. Item." />
 			<property name="Card Text" value="Attach to a character you control. Action: Exhaust attached character and return Crowbar to your hand to wound a character with skill 1 or lower." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -725,7 +725,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gains #." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ # # $ %" />
 		</card>
@@ -739,7 +739,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Action: Drive a character you control insane to put into play from your hand a MONSTER character with printed cost 3 or less. Sacrifice that MONSTER character at the end of the phase." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -991,7 +991,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gets +2 skill." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ # $ %" />
 		</card>
@@ -1005,7 +1005,7 @@
 			<property name="Subtypes" value="Attachment. Vehicle." />
 			<property name="Card Text" value="Attach to a character. Attached character gains FAST and TOUGHNESS +2." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1285,7 +1285,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gains FAST." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ # $ %" />
 		</card>
@@ -1299,7 +1299,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Response: After you win a # struglle, exhaust a character you control with at least # to choose and wound a character committed to that story." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1565,7 +1565,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Each of your characters committed to this story gains @." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="@ @ # $ %" />
 		</card>
@@ -1579,7 +1579,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Disrupt: Cancel 1 wound to a character you control. Sacrifice that character at the end of the phase." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>

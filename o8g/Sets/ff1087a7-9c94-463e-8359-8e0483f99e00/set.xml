@@ -599,7 +599,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Action: Choose a character. That character gets -2 skill and loses a # icon until the end of this phase." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -613,7 +613,7 @@
 			<property name="Subtypes" value="Creature." />
 			<property name="Card Text" value="Forced Response: After you play Diseased Sewer Rats, choose a character with skill 2 or lower. Wound that character." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -627,7 +627,7 @@
 			<property name="Subtypes" value="Attachment. Item." />
 			<property name="Card Text" value="Attach to a character. Attached character gains %." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -641,7 +641,7 @@
 			<property name="Subtypes" value="Ancient One." />
 			<property name="Card Text" value="Response: After Azathoth enters play, each player must sacrifice all characters not named Azathoth and all support cards he controls. At the end of the turn, you are eliminated from the game." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -655,7 +655,7 @@
 			<property name="Subtypes" value="Cultist." />
 			<property name="Card Text" value="Lower the cost for you to play characters with a printed cost of 5 or higher by 1 (to a minimum of 1)." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -669,7 +669,7 @@
 			<property name="Subtypes" value="Disaster. Madness." />
 			<property name="Card Text" value="Response: After a character goes insane, its controller discards 2 cards at random from his hand. Then, for each event or support card thus discarded, you may place 1 success token on a story." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -683,7 +683,7 @@
 			<property name="Subtypes" value="Environment." />
 			<property name="Card Text" value="Forced Response: After you play this card, destroy all DAY cards in play. Response: After an opponent plays a card from his hand, he must discard the top card of his deck." />
 			<property name="Keyword" value="Night. It is Night." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -697,7 +697,7 @@
 			<property name="Subtypes" value="Location." />
 			<property name="Card Text" value="Action: Exhaust, pay 3 and sacrifice Dimensional Rift to destroy all characters and support cards in play." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>

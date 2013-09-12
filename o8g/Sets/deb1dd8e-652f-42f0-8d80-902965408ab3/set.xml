@@ -1,122 +1,148 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set xmlns:noNamespaceSchemaLocation="CardSet.xsd" name="Markers" id="deb1dd8e-652f-42f0-8d80-902965408ab3" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
-	<markers>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Markers" id="deb1dd8e-652f-42f0-8d80-902965408ab3" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
+  	<markers>
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f61" name="Wound" />
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f62" name="Success" />
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f63" name="Drain" />
+		<marker id="a5173cd9-bafe-4be2-ae6f-11464f7260cf" name="Cthulhu Resource" />
+		<marker id="3911052d-c25b-471d-92af-8aae4a18cce1" name="Hastur Resource" />
+		<marker id="c9e080cd-fa2e-4397-a054-031945af4d8e" name="Shub-Niggurath Resource" />
+		<marker id="807d0966-15d7-4e45-88b3-87c77fc25288" name="Yog-Sothoth Resource" />
+		<marker id="590456bb-17bc-4831-a08c-380def83486f" name="Agency Resource" />
+		<marker id="93ec59f4-0a91-43bc-92da-210a16f20274" name="Miskatonic Resource" />
+		<marker id="d5ff5bee-09cc-44bb-b78c-c1c19b586028" name="Syndicate Resource" />
+		<marker id="f5cfe322-21a4-4427-91ff-cd5b880c5848" name="Silver Twilight Resource" />
+		<marker id="e6d100e4-f79b-4b91-9853-16974ea47fb0" name="Neutral Resource" />
+		<marker id="94dc59b3-409e-419d-be97-cb4877cdd507" name="Zoog Resource" />
 	</markers>
-	<cards>
-		<card id="f22ee55c-8f47-4174-a7a4-985731a74d30" name="Domain 1">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="a8cec1b8-1121-4612-80c4-c66a437cc2e0" name="Domain 2">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="d8a151e4-28c8-4653-b826-ebda237b776b" name="Domain 3">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="0054c047-1887-4a5d-b11b-b70f3cff3a0a" name="Domain 4">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="593da3cb-290b-426e-9eec-1b3fd3465a2d" name="Domain 5">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="46cfc241-12ea-4d15-91f5-0facf26a9d82" name="Domain 6">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="33dd6531-5aa0-45f7-a752-56e1029c5de1" name="Domain">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>	
-		<card id="d42706b4-2721-439e-a41f-0611d6beb449" name="Drain Token">
-			<property name="Type" value="Token" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="" />
-			<property name="Faction" value="" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-	</cards>
+<cards>
+    <card id="f22ee55c-8f47-4174-a7a4-985731a74d30" name="Domain 1">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="a8cec1b8-1121-4612-80c4-c66a437cc2e0" name="Domain 2">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d8a151e4-28c8-4653-b826-ebda237b776b" name="Domain 3">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="0054c047-1887-4a5d-b11b-b70f3cff3a0a" name="Domain 4">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="593da3cb-290b-426e-9eec-1b3fd3465a2d" name="Domain 5">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="46cfc241-12ea-4d15-91f5-0facf26a9d82" name="Domain 6">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="33dd6531-5aa0-45f7-a752-56e1029c5de1" name="Domain">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d42706b4-2721-439e-a41f-0611d6beb449" name="Drain Token">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+  </cards>
 </set>

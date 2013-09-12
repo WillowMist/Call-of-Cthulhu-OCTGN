@@ -36,12 +36,7 @@ playerside = None # Variable to keep track on which side each player is
 playeraxis = None # Variable to keep track on which axis the player is
 
 ### Variables that hold the properties of a card.
-Stored_Name = {}
-Stored_Type = {}
-Stored_Keywords = {}
-Stored_Cost = {}
-Stored_AutoActions = {}
-Stored_AutoScripts = {}
+
 
 #---------------------------------------------------------------------------
 # Custom Windows Forms
@@ -483,56 +478,66 @@ def numOrder(num):
     return int_to_ordinal(num + 1)
 
 def chooseSide(): # Called from many functions to check if the player has chosen a side for this game.
-   debugNotify(">>> chooseSide(){}".format(extraASDebug())) #Debug
-   mute()
-   global playerside, playeraxis
-   if playerside == None:  # Has the player selected a side yet? If not, then...
-     if me.hasInvertedTable():
-        playeraxis = Yaxis
-        playerside = -1
-     else:
-        playeraxis = Yaxis
-        playerside = 1
-   debugNotify("<<< chooseSide(){}".format(extraASDebug()), 4) #Debug
+	debugNotify(">>> chooseSide()") #Debug
+	mute()
+	global playerside, playeraxis
+	if playerside == None:
+		# Has the player selected a side yet? If not, then...
+		debugNotify(">>> Playerside")
+		if me.hasInvertedTable():
+			debugNotify(">>> Inverted Yes")
+			playeraxis = Yaxis
+			playerside = -1
+		else:
+			playeraxis = Yaxis
+			debugNotify(">>> Inverted No")
+			playerside = 1
+	debugNotify("<<< chooseSide()", 3) #Debug
 
 def displaymatch(match):
    if match is None:
       return None
    return '<Match: {}, groups={}>'.format(match.group(), match.groups())
    
-def storeProperties(card, forced = False): # Function that grabs a cards important properties and puts them in a dictionary
-   mute()
-   try:
-      debugNotify(">>> storeProperties(){}".format(extraASDebug())) #Debug
-      global Stored_Name, Stored_Cost, Stored_Type, Stored_Keywords, Stored_AutoActions, Stored_AutoScripts, identName
-      if (card.Name == '?' and Stored_Name.get(card._id,'?') == '?') or forced:
-         if not card.isFaceUp and card.group == table and (card.owner == me or forced): # If card is not ours and it's face down, we cannot store its properties without revealing it to the player via the full game log
-                                                                                             # See https://github.com/kellyelton/OCTGN/issues/879
-            debugNotify("Peeking Card at storeProperties()", 2)
-            card.peek()
-            loopChk(card)
-      if (Stored_Name.get(card._id,'?') == '?' and card.Name != '?') or (Stored_Name.get(card._id,'?') != card.Name and card.Name != '?') or forced:
-         debugNotify("{} not stored. Storing...".format(card), 3)
-         Stored_Name[card._id] = card.Name
-         Stored_Cost[card._id] = card.Cost
-         Stored_Type[card._id] = card.Type
-         getKeywords(card)
-         Stored_AutoActions[card._id] = CardsAA.get(card.model,'')
-         Stored_AutoScripts[card._id] = CardsAS.get(card.model,'')
-         if card.Type == 'Identity' and card.owner == me: identName = card.Name
-      elif card.Name == '?':
-         debugNotify("Could not store card properties because it is hidden from us")
-         return 'ABORT'
-      debugNotify("<<< storeProperties()", 3)
-   except: notify("!!!ERROR!!! In storeProperties()")
+def storeProperties(card, forced = False): # Function that grabs a cards important properties and puts them in a dictionary -- REMOVE POSSIBLY
+	mute()
+	try:
+		debugNotify(">>> storeProperties(){}".format(extraASDebug())) #Debug
+		global Stored_Name, Stored_Cost, Stored_Type, Stored_Keyword, Stored_Subtypes, Stored_Icons, Stored_Skill, Stored_AutoActions, Stored_AutoScripts, identName
+		if (card.Name == '?' and Stored_Name.get(card._id,'?') == '?') or forced:
+			if not card.isFaceUp and card.group == table and (card.owner == me or forced): # If card is not ours and it's face down, we cannot store its properties without revealing it to the player via the full game log
+				debugNotify("Peeking Card at storeProperties()", 2)
+				card.peek()
+				loopChk(card)
+		if (Stored_Name.get(card._id,'?') == '?' and card.Name != '?') or (Stored_Name.get(card._id,'?') != card.Name and card.Name != '?') or forced:
+			 debugNotify("Stored name: {}".format(Stored_Name.get(card._id,'?')), 3)
+			 debugNotify("{} not stored. Storing...".format(card), 3)
+			 Stored_Name[card._id] = card.Name
+			 Stored_Cost[card._id] = card.Cost
+			 Stored_Type[card._id] = card.Type
+			 getKeywords(card)
+			 Stored_Skill[card._id] = card.Skill
+			 Stored_Subtypes[card._id] = card.Subtypes
+			 Stored_Icons[card._id] = card.Icons
+			 Stored_AutoActions[card._id] = card.AutoAction
+			 Stored_AutoScripts[card._id] = card.AutoScript
+			 if card.Type == 'Identity' and card.owner == me: identName = card.Name
+		elif card.Name == '?':
+			 debugNotify("Could not store card properties because it is hidden from us")
+			 return 'ABORT'
+		debugNotify("<<< storeProperties()", 3)
+	except: notify("!!!ERROR!!! In storeProperties()")
 
-def fetchProperty(card, property): 
+def fetchProperty(card, property): # REMOVE POSSIBLY
    mute()
    debugNotify(">>> fetchProperty(){}".format(extraASDebug())) #Debug
    if property == 'name' or property == 'Name': currentValue = Stored_Name.get(card._id,'?')
    elif property == 'Cost': currentValue = Stored_Cost.get(card._id,'?')
    elif property == 'Type': currentValue = Stored_Type.get(card._id,'?')
-   elif property == 'Keywords': currentValue = Stored_Keywords.get(card._id,'?')
+   elif property == 'Keyword': currentValue = Stored_Keyword.get(card._id,'?')
+   elif property == 'Skill': currentValue = Stored_Skill.get(card._id,'?')
+   elif property == 'Subtypes': currentValue = Stored_Subtypes.get(card._id,'?')
+   elif property == 'Icons': currentValue = Stored_Icons.get(card._id,'?')
    elif property == 'AutoScripts': currentValue = Stored_AutoScripts.get(card._id,'?')
    elif property == 'AutoActions': currentValue = Stored_AutoActions.get(card._id,'?')
    else: currentValue = card.properties[property]
@@ -635,7 +640,7 @@ def chkModulator(card, modulator, scriptType = 'onPlay'): # Checks the card's au
    debugNotify(">>> chkModulator() looking for {}".format(modulator)) #Debug
    debugNotify("scriptType = {}".format(scriptType)) #Debug
    ModulatorExists = False
-   Autoscripts = CardsAS.get(card.model,'').split('||')
+   Autoscripts = card.AutoScript.split('||')
    for autoS in Autoscripts:
       debugNotify("Checking {}'s AS: {}".format(card,autoS))
       if not re.search(r'{}'.format(scriptType),autoS): 

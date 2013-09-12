@@ -529,7 +529,7 @@
       <property name="Subtypes" value="Servitor." />
       <property name="Card Text" value="Immune to triggered effects.&#xD;&#xA;Response: After a Tactic card is played, ready The Claret Knight." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -543,7 +543,7 @@
       <property name="Subtypes" value="Servitor." />
       <property name="Card Text" value="Response: After Aliki Zoni Uperetria exhausts to commit to a story, choose and drain 1 domain." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -557,7 +557,7 @@
       <property name="Subtypes" value="Conspirator. Servitor." />
       <property name="Card Text" value="Amaranth may commit to conspiracy cards while exhausted.&#xD;&#xA;Response: After you succeed at a story where Amaranth is committed, search your deck for a conspiracy card and add it to your hand. Then, shuffle your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -571,7 +571,7 @@
       <property name="Subtypes" value="Ancient One." />
       <property name="Card Text" value="Er'nrawr's text box cannot be blanked or treated as if it were blank.&#xD;&#xA;At the beginning of a player's turn, that player must wound a character he controls or drain one of his domains." />
       <property name="Keyword" value="Invulnerability. Fast." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>

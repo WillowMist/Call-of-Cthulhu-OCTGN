@@ -1971,7 +1971,7 @@
       <property name="Subtypes" value="Sorcerer." />
       <property name="Card Text" value="Action: Sacrifice Mystic Bounty Hunter to return to their owner's hands all ATTACHMENT cards in all discard piles." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1985,7 +1985,7 @@
       <property name="Subtypes" value="Investigator." />
       <property name="Card Text" value="While Freelance Agent is committed to a story, it gains # # for each character with lower skill committed by your opponents." />
       <property name="Keyword" value="Fast." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -1999,7 +1999,7 @@
       <property name="Subtypes" value="Attachment. Item. Weapon." />
       <property name="Card Text" value="Attach to a character. Attached character gains a # Icon." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2013,7 +2013,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Response: After you win an icon struggle by at least 2 icons, choose and destroy a support card." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2027,7 +2027,7 @@
       <property name="Subtypes" value="Cultist." />
       <property name="Card Text" value="Action: Sacrifice Overzealous Initiate to put the top card of your deck into play, face down, as a domain." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2041,7 +2041,7 @@
       <property name="Subtypes" value="Location." />
       <property name="Card Text" value="Action: Pay 1 to choose an insane character. Restore and ready that character." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2055,7 +2055,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Response: After you win an icon struggle by at least 2 icons, move a success token from on side of a story to another." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2069,7 +2069,7 @@
       <property name="Subtypes" value="Government." />
       <property name="Card Text" value="Response: After Military Advisor is wounded, pay 2 to choose and wound a character with skill lower than Military Advisor." />
       <property name="Keyword" value="Toughness +2." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2083,7 +2083,7 @@
       <property name="Subtypes" value="Monster." />
       <property name="Card Text" value="Forced Response: After Serpent of Yoth enters your discard pile, each opponent must choose and sacrifice a character." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2097,7 +2097,7 @@
       <property name="Subtypes" value="Attachment. Item." />
       <property name="Card Text" value="Attach to a character you control. Attached character gains @ @. Response: After Tcho-Tcho Talisman is placed into any discard pile from play, pay 1 to return it to its owner's hand." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2111,7 +2111,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Action: Choose a story. Until the end of the phase, that story loses a struggle icon of your choice." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2125,7 +2125,7 @@
       <property name="Subtypes" value="Cultist." />
       <property name="Card Text" value="Action: Sacrifice Dabbler in the Unknown to put a success token on a story card with no success token." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2139,7 +2139,7 @@
       <property name="Subtypes" value="Location." />
       <property name="Card Text" value="Action: Exhaust and pay 2 to draw a card." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2153,7 +2153,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Action: Gain a Domain, then attach the top card of your deck to it as a resource." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -2167,7 +2167,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Treat all characters committed to this story as if their text boxes were blank." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
     </card>

@@ -1551,7 +1551,7 @@
       <property name="Subtypes" value="Sorcerer." />
       <property name="Card Text" value="Action: Exhaust The Mage Known as Magnus and discard a character card from your hand to choose and destroy a non-Ancient One character with a printed cost lower than the discarded card." />
       <property name="Keyword" value="Willpower." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
     </card>

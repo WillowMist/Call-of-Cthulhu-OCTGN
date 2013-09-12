@@ -39,7 +39,7 @@ except ImportError:
     pass
 
 Automations = {'Play, Score and Rez'    : True, # If True, game will automatically trigger card effects when playing or double-clicking on cards. Requires specific preparation in the sets.
-               'Start/End-of-Turn'      : True, # If True, game will automatically trigger effects happening at the start of the player's turn, from cards they control.
+               'Start/End-of-Turn/Phase'      : True, # If True, game will automatically trigger effects happening at the start of the player's turn, from cards they control.
                'Damage Prevention'      : True, # If True, game will automatically use damage prevention counters from card they control.
                'Triggers'               : True, # If True, game will search the table for triggers based on player's actions, such as installing a card, or trashing one.
                'WinForms'               : True, # If True, game will use the custom Windows Forms for displaying multiple-choice menus and information pop-ups
@@ -47,7 +47,7 @@ Automations = {'Play, Score and Rez'    : True, # If True, game will automatical
 
 UniCode = True # If True, game will display credits, clicks, trash, memory as unicode characters
 
-debugVerbosity = -1 # At -1, means no debugging messages display
+debugVerbosity = 0 # At -1, means no debugging messages display
 
 startupMsg = False # Used to check if the player has checked for the latest version of the game.
 
@@ -55,15 +55,167 @@ gameGUID = None # A Unique Game ID that is fetched during game launch.
 #totalInfluence = 0 # Used when reporting online
 #gameEnded = False # A variable keeping track if the players have submitted the results of the current game already.
 turn = 0 # used during game reporting to report how many turns the game lasted
-
-CardsAA = {} # Dictionary holding all the AutoAction scripts for all cards
-CardsAS = {} # Dictionary holding all the AutoScript scripts for all cards
+Stored_Name = {}
+Stored_Attachments = {}
+Stored_Resource = {}
+gatheredCardList = False
+costModifiers = []
 
 #---------------------------------------------------------------------------
-# Generic Netrunner functions
+# Generic functions
 #---------------------------------------------------------------------------
+
+def ofwhom(Autoscript, controller = me): 
+   if debugVerbosity >= 1: notify(">>> ofwhom(){}".format(extraASDebug(Autoscript))) #Debug
+   targetPL = None
+   if re.search(r'o[fn]Opponent', Autoscript):
+      if len(players) > 1:
+         if controller == me: # If we're the current controller of the card who's scripts are being checked, then we look for our opponent
+            for player in players:
+               if player.getGlobalVariable('Side') == '': continue # This is a spectator 
+               elif player != me and player.getGlobalVariable('Side') != Side:
+                  targetPL = player # Opponent needs to be not us, and of a different type. 
+                                    # In the future I'll also be checking for teams by using a global player variable for it and having players select their team on startup.
+         else: targetPL = me # if we're not the controller of the card we're using, then we're the opponent of the player (i.e. we're trashing their card)
+      else: 
+         if debugVerbosity >= 1: whisper("There's no valid Opponents! Selecting myself.")
+         targetPL = me
+   else: 
+      if len(players) > 1:
+         if controller != me: targetPL = controller         
+         else: targetPL = me
+      else: targetPL = me
+   if debugVerbosity >= 3: notify("<<< ofwhom() returns {}".format(targetPL))
+   return targetPL
+   
+def chooseWell(limit, choiceText, default = None):
+   debugNotify(">>> chooseWell(){}".format(extraASDebug())) #Debug
+   if default == None: default = 0# If the player has not provided a default value for askInteger, just assume it's the max.
+   choice = limit # limit is the number of choices we have
+   if limit > 1: # But since we use 0 as a valid choice, then we can't actually select the limit as a number
+      while choice >= limit:
+         choice = askInteger("{}".format(choiceText), default)
+         if not choice: return False
+         if choice > limit: whisper("You must choose between 0 and {}".format(limit - 1))
+   else: choice = 0 # If our limit is 1, it means there's only one choice, 0.
+   return choice
+
+def findMarker(card, markerDesc): # Goes through the markers on the card and looks if one exist with a specific description
+   debugNotify(">>> findMarker(){}".format(extraASDebug())) #Debug
+   foundKey = None
+   if markerDesc in mdict: markerDesc = mdict[markerDesc][0] # If the marker description is the code of a known marker, then we need to grab the actual name of that.
+   for key in card.markers:
+      debugNotify("Key: {}\nmarkerDesc: {}".format(key[0],markerDesc), 3) # Debug
+      if re.search(r'{}'.format(markerDesc),key[0]) or markerDesc == key[0]:
+         foundKey = key
+         debugNotify("Found {} on {}".format(key[0],card), 2)
+         break
+   debugNotify("<<< findMarker() by returning: {}".format(foundKey), 3)
+   return foundKey
+   
+def getKeywords(card): # A function which combines the existing card keywords, with markers which give it extra ones. - REMOVE POSSIBLY
+   debugNotify(">>> getKeywords(){}".format(extraASDebug())) #Debug
+  #confirm("getKeywords") # Debug
+   keywordsList = []
+   cKeywords = card.Keyword # First we try a normal grab, if the card properties cannot be read, then we flip face up.
+   if cKeywords == '?': cKeywords = fetchProperty(card, 'Keywords')
+   strippedKeywordsList = cKeywords.split('-')
+   for cardKW in strippedKeywordsList:
+      strippedKW = cardKW.strip() # Remove any leading/trailing spaces between traits. We need to use a new variable, because we can't modify the loop iterator.
+      if strippedKW: keywordsList.append(strippedKW) # If there's anything left after the stip (i.e. it's not an empty string anymrore) add it to the list.   
+   if card.markers:
+      for key in card.markers:
+         markerKeyword = re.search('Keyword:([\w ]+)',key[0])
+         if markerKeyword:
+            #confirm("marker found: {}\n key: {}".format(markerKeyword.groups(),key[0])) # Debug
+            #if markerKeyword.group(1) == 'Barrier' or markerKeyword.group(1) == 'Sentry' or markerKeyword.group(1) == 'Code Gate': #These keywords are mutually exclusive. An Ice can't be more than 1 of these
+               #if 'Barrier' in keywordsList: keywordsList.remove('Barrier') # It seems in ANR, they are not so mutually exclusive. See: Tinkering
+               #if 'Sentry' in keywordsList: keywordsList.remove('Sentry') 
+               #if 'Code Gate' in keywordsList: keywordsList.remove('Code Gate')
+            #if re.search(r'Breaker',markerKeyword.group(1)):
+               #if 'Barrier Breaker' in keywordsList: keywordsList.remove('Barrier Breaker')
+               #if 'Sentry Breaker' in keywordsList: keywordsList.remove('Sentry Breaker')
+               #if 'Code Gate Breaker' in keywordsList: keywordsList.remove('Code Gate Breaker')
+            keywordsList.append(markerKeyword.group(1))
+   keywords = ''
+   for KW in keywordsList:
+      keywords += '{}-'.format(KW)
+   debugNotify("<<< getKeywords() by returning: {}.".format(keywords[:-1]), 3)
+   return keywords[:-1] # We need to remove the trailing dash '-'
+   
+def pileName(group):
+   debugNotify(">>> pileName()") #Debug
+   debugNotify("pile name {}".format(group.name), 2) #Debug   
+   debugNotify("pile player: {}".format(group.player), 2) #Debug
+   name = group.name
+   debugNotify("<<< pileName() by returning: {}".format(name), 3)
+   return name
+
+def storeSpecial(card): 
+# Function stores into a shared variable some special cards that other players might look up.
+   try:
+      debugNotify(">>> storeSpecial(){}".format(extraASDebug())) #Debug
+      specialCards = eval(me.getGlobalVariable('specialCards'))
+      if card.name == 'HQ' or card.name == 'R&D' or card.name == 'Archives':
+         specialCards[card.name] = card._id # The central servers we find via name
+      else: specialCards[card.Type] = card._id
+      me.setGlobalVariable('specialCards', str(specialCards))
+   except: notify("!!!ERROR!!! In storeSpecial()")
+
+def getSpecial(cardType,player = me):
+# Functions takes as argument the name of a special card, and the player to whom it belongs, and returns the card object.
+   debugNotify(">>> getSpecial() for player: {}".format(me.name)) #Debug
+   specialCards = eval(player.getGlobalVariable('specialCards'))
+   cardID = specialCards.get(cardType,None)
+   if not cardID: 
+      debugNotify("No special card of type {} found".format(cardType),2)
+      card = None
+   else:
+      card = Card(specialCards[cardType])
+   debugNotify("<<< getSpecial() by returning: {}".format(card), 3)
+   return card
+
+
+def storeAttachment(card, attachee, forced = False):
+	mute()
+	try:
+		global Stored_Attachments, Stored_Name, Stored_Resource
+		if (card.Name == '?' and Stored_Name.get(card._id,'?') == '?') or forced:
+			if not card.isFaceUp and card.group == table and (card.owner == me or forced):
+				debugNotify("Peeking Card at storeAttachment()",2)
+				card.peek()
+				loopChk(card)
+		if (Stored_Name.get(card._id,'?') == '?' and card.Name != '?') or (Stored_Name.get(card._id,'?') != card.Name and card.Name != '?') or forced:
+			debugNotify("{} not stored.  Storing...".format(card),4)
+			Stored_Name[card._id] = card.Name
+			# debugNotify(">>> Step 1",4)
+			Stored_Resource[card._id] = card.properties["Resource Icon"]
+			# debugNotify(">>> Step 2",4)
+			Stored_Attachments[card._id] = attachee._id
+			# debugNotify("Storing: {} - {} - {}".format(Stored_Name.get(card._id, '?'),Stored_Resource.get(card._id,'?'),Stored_Attachments.get(card._id,'?')),4)
+		elif card.Name == '?':
+			debugNotify("Could not store attachment because it is hidden from us")
+			return 'ABORT'
+	except: notify("!!!ERROR!!! In storeAttachment()")
+			
+def getAttachments(card):
+	global Stored_Attachments
+	att = [c for c in table if c._id in Stored_Attachments and Stored_Attachments.get(c._id,'?') == card._id]
+	attachments = []
+	for c in att:
+		
+		attachments.append(c._id)
+	debugNotify(">>> Attachments: {}".format(attachments))
+	return attachments
+
+def getAttached(card):
+	global Stored_Attachments
+	if (card._id in Stored_Attachments and not Stored_Attachments.get(card._id,'?') == '?'):
+		return Card(Stored_Attachments.get(card._id,'?'))
+	else:
+		return 
+	
 def resetAll(): # Clears all the global variables in order to start a new game.
-   global Stored_Name, Stored_Type, Stored_Cost, Stored_Skill, Stored_Subtypes, Stored_Icons, Stored_Keyword, Stored_AutoActions, Stored_AutoScripts
    global debugVerbosity, newturn, endofturn, turn
    debugNotify(">>> resetAll(){}".format(extraASDebug())) #Debug
    mute()
@@ -71,23 +223,360 @@ def resetAll(): # Clears all the global variables in order to start a new game.
    me.counters['Success Story 2'].value = 0
    me.counters['Success Story 3'].value = 0
    me.counters['Stories won'].value = 0
-   Stored_Name.clear()
-   Stored_Type.clear()
-   Stored_Cost.clear()
-   Stored_Keyword.clear()
-   Stored_Skill.clear()
-   Stored_Subtypes.clear()
-   Stored_Icons.clear()
-   Stored_AutoActions.clear()
-   Stored_AutoScripts.clear()
-   installedCount.clear()
+   me.handSize = 5
    newturn = False 
    endofturn = False
    turn = 0
-   ShowDicts()
+   selectedAbility = eval(getGlobalVariable('Stored Effects'))
+   selectedAbility.clear()
+   setGlobalVariable('Stored Effects',str(selectedAbility))
    if len(players) > 1: debugVerbosity = -1 # Reset means normal game.
    elif debugVerbosity != -1 and confirm("Reset Debug Verbosity?"): debugVerbosity = -1    
    debugNotify("<<< resetAll()") #Debug   
+
+def cardStatus(card):
+	debugNotify(">>> cardStatus() - {} - {} - {} - {}".format(card.type, card.name, card.orientation, card.isFaceUp),4)
+	cS = "InPlay"
+	if (card.type == "Token" and re.search(r'\bDomain\b',card.name)): cS = "Domain"
+	if (card.orientation == Rot0 and not card.isFaceUp): cS = "Domain"
+	if (card.orientation == Rot90 and not card.isFaceUp): cS = "Insane"
+	if (card.orientation == Rot90 and card.isFaceUp): cS = "Exhausted"
+	return cS
+	
+def addResource(domainCard,resourceCard):
+	debugNotify(">>> remResource\nAmount: {}".format(len(resourceCard.properties['Resource Icon'])),3)
+	amount = len(resourceCard.properties['Resource Icon'])
+	addRemResource(domainCard,resourceCard,amount)
+def remResource(domainCard,resourceCard):
+	debugNotify(">>> remResource\nAmount: {}".format(len(resourceCard.properties['Resource Icon'])),3)
+	amount = len(resourceCard.properties['Resource Icon'])
+	amount = amount - (amount * 2)
+	addRemResource(domainCard,resourceCard,amount)	
+def addRemResource(domainCard,resourceCard, amount=1):
+	if cardStatus(domainCard):
+		debugNotify(">>> addRemResource()\nFaction: {}\nDomain: {}\nResource: {}\nAmount: {}".format(resourceCard.faction,domainCard.name,resourceCard.name,amount),3)
+		if resourceCard.Faction=="Yog-Sothoth":domainCard.markers[resdict['Resource:Yog-Sothoth']] += amount
+		elif resourceCard.Faction=="Cthulhu":domainCard.markers[resdict['Resource:Cthulhu']] += amount
+		elif resourceCard.Faction=="Hastur":domainCard.markers[resdict['Resource:Hastur']] += amount
+		elif resourceCard.Faction=="Shub-Niggurath":domainCard.markers[resdict['Resource:Shub-Niggurath']] += amount
+		elif resourceCard.Faction=="The Agency":domainCard.markers[resdict['Resource:The Agency']] += amount
+		elif resourceCard.Faction=="Miskatonic University":domainCard.markers[resdict['Resource:Miskatonic University']] += amount
+		elif resourceCard.Faction=="The Syndicate":domainCard.markers[resdict['Resource:The Syndicate']] += amount
+		elif resourceCard.Faction=="The Order of the Silver Twilight":domainCard.markers[resdict['Resource:The Order of the Silver Twilight']] += amount
+		elif resourceCard.properties["Resource Icon"] =="Z":domainCard.markers[resdict['Resource:Zoog']] += amount
+		else: domainCard.markers[mdict['NResource']] += amount
+	else:
+		debugNotify("### Tried to add resources to a non-domain target.")
+		return
+def countResources(card):
+	# debugNotify(">>> Count Resources",3)
+	resources = 0
+	keys = mdict.viewkeys()
+	for key in keys:
+		if re.search('Resource', key):
+			# debugNotify("Key: {}".format(key),4)
+			resources += card.markers[mdict[key]]
+			# debugNotify("Resource Count: {}".format(resources),4)
+	return resources
+	
+def arrangeAttachments(card):
+	debugNotify(">>> arrangeAttachments: {}".format(card.name),3)
+	x,y = card.position
+	attachments = getAttachments(card)
+	debugNotify("Returned: {}".format(attachments),4)
+	for attachment in attachments:
+		debugNotify("Attachment: {}".format(attachment),3)
+		exists = False
+		for c in table:
+			debugNotify("{} | {}".format(c._id, attachment),4)
+			if c._id == attachment: exists = True
+		if exists:
+			debugNotify("Does Exist",4)
+			if Card(attachment).name == "Drain Token":
+				Card(attachment).moveToTable(x,y)
+				Card(attachment).sentToFront()
+			else:
+				if me.hasInvertedTable() == True: y += 8
+				else: y -= 8
+				Card(attachment).moveToTable(x,y)
+				Card(attachment).sendToBack()
+		else: del Stored_Attachments[attachment]
+		
+		
+def verifyAttachment(attached, attachee):
+	attacheeExists = False
+	attachedExists = False
+	for c in table:
+		if c._id == attached: attachedExists = True
+		if c._id == attachee: attacheeExists = True
+	if attacheeExists and attachedExists: return True
+	else: return False
+			
+def gameReady():
+	gR = True
+	for player in players:
+		if not eval(player.getGlobalVariable('gameReady')): gR = False
+	return gR
+	
+def gameStarted():
+	if turnNumber() > 0: return True
+	else: return False
+	
+def hasSubType(card,matchType):
+	debugNotify("hasSubtype({}) - {}".format(matchType,card.Subtypes))
+	if re.search(r'{}'.format(matchType),card.Subtypes):
+		debugNotify("Is an Attachment.")
+		return True
+	else: return False
+def parseIcons(STRING, dictReturn = False):
+	if debugVerbosity >= 1: notify(">>> parseIcons() with STRING: {}".format(STRING)) #Debug
+	Terror = STRING.count('@')
+	Combat = STRING.count('#')
+	Arcane = STRING.count('$')
+	Investigation = STRING.count('$')
+	if not dictReturn:
+		parsedIcons = ''
+		if Terror: parsedIcons += 'Terror:{}. '.format(Terror)
+		if Combat: parsedIcons += 'Combat:{}. '.format(Combat)
+		if Arcane: parsedIcons += 'Arcane:{}. '.format(Arcane)
+		if Investigation: parsedIcons += 'Investigation:{}. '.format(Investigation)
+		if debugVerbosity >= 3: notify("<<< parseIcons() with return: {}".format(parsedIcons)) # Debug
+	else:
+		parsedIcons = {}
+		parsedIcons[Terror] = Terror
+		parsedIcons[Combat] = Combat
+		parsedIcons[Arcane] = Arcane
+		parsedIcons[Investigation] = Investigation
+		if debugVerbosity >= 3: notify("<<< parseIcons() with dictReturn: {}".format(parsedIcons)) # Debug
+	return parsedIcons
+def chkDummy(Autoscript, card): # Checks if a card's effect is only supposed to be triggered for a (non) Dummy card
+   if debugVerbosity >= 4: notify(">>> chkDummy()") #Debug
+   if re.search(r'onlyforDummy',Autoscript) and card.highlight != DummyColor: return False
+   if re.search(r'excludeDummy', Autoscript) and card.highlight == DummyColor: return False
+   return True
+
+def reduceCost(card, action = 'PLAY', fullCost = 0, dryRun = False):
+# A Functiona that scours the table for cards which reduce the cost of other cards.
+# if dryRun is set to True, it means we're just checking what the total reduction is going to be and are not actually removing or adding any counters.
+   type = action.capitalize()
+   if debugVerbosity >= 1: notify(">>> reduceCost(). Action is: {}. FullCost = {}. dryRyn = {}".format(type,fullCost,dryRun)) #Debug
+   fullCost = abs(fullCost)
+   reduction = 0
+   costReducers = []
+   ### First we check if the card has an innate reduction. 
+   Autoscripts = card.AutoScript.split('||') 
+   if debugVerbosity >= 2: notify("### About to check if there's any onPay triggers on the card")
+   if len(Autoscripts): 
+      for autoS in Autoscripts:
+         if not re.search(r'onPay', autoS): 
+            if debugVerbosity >= 2: notify("### No onPay trigger found in {}!".format(autoS))
+            continue
+         elif debugVerbosity >= 2: notify("### onPay trigger found in {}!".format(autoS))
+         reductionSearch = re.search(r'Reduce([0-9]+)Cost({}|All)'.format(type), autoS)
+         if debugVerbosity >= 2: #Debug
+            if reductionSearch: notify("!!! self-reduce regex groups: {}".format(reductionSearch.groups()))
+            else: notify("!!! No self-reduce regex Match!")
+         count = num(reductionSearch.group(1))
+         targetCards = findTarget(autoS,card = card)
+         multiplier = per(autoS, card, 0, targetCards)
+         reduction += (count * multiplier)
+         maxRegex = re.search(r'-maxReduce([1-9])', autoS) # We check if the card will only reduce its cast by a specific maximum (e.g. Weequay Elite)
+         if maxRegex and reduction > num(maxRegex.group(1)): reduction = num(maxRegex.group(1))
+         fullCost -= reduction
+         if reduction > 0 and not dryRun: notify("-- {}'s full cost is reduced by {}".format(card,reduction))
+   if debugVerbosity >= 2: notify("### About to gather cards on the table")
+   ### Now we check if any card on the table has an ability that reduces costs
+   if not gatheredCardList: # A global variable that stores if we've scanned the tables for cards which reduce costs, so that we don't have to do it again.
+      global costModifiers
+      del costModifiers[:]
+      RC_cardList = sortPriority([c for c in table if c.isFaceUp])
+      reductionRegex = re.compile(r'(Reduce|Increase)([0-9#X]+)Cost({}|All)-affects([A-Z][A-Za-z ]+)(-not[A-Za-z_& ]+)?'.format(type)) # Doing this now, to reduce load.
+      for c in RC_cardList: # Then check if there's other cards in the table that reduce its costs.
+         Autoscripts = c.AutoScript.split('||')
+         if len(Autoscripts) == 0: continue
+         for autoS in Autoscripts:
+            if debugVerbosity >= 2: notify("### Checking {} with AS: {}".format(c, autoS)) #Debug
+            if not chkPlayer(autoS, c.controller, False): continue
+            reductionSearch = reductionRegex.search(autoS) 
+            if debugVerbosity >= 2: #Debug
+               if reductionSearch: notify("!!! Regex is {}".format(reductionSearch.groups()))
+               else: notify("!!! No reduceCost regex Match!") 
+            #if re.search(r'ifInstalled',autoS) and (card.group != table or card.highlight == RevealedColor): continue
+            if reductionSearch: # If the above search matches (i.e. we have a card with reduction for Rez and a condition we continue to check if our card matches the condition)
+               if debugVerbosity >= 3: notify("### Possible Match found in {}".format(c)) # Debug         
+               if not chkDummy(autoS, c): continue   
+               if not checkOriginatorRestrictions(autoS,c): continue  
+               if not chkSuperiority(autoS, c): continue
+               if reductionSearch.group(1) == 'Reduce': 
+                  debugNotify("Adding card to cost Reducers list")
+                  costReducers.append((c,reductionSearch,autoS)) # We put the costReducers in a different list, as we want it to be checked after all the increasers are checked
+               else:
+                  debugNotify("Adding card to cost Modifiers list")
+                  costModifiers.append((c,reductionSearch,autoS)) # Cost increasing cards go into the main list we'll check in a bit, as we need to check them first. 
+                                                                  # In each entry we store a tuple of the card object and the search result for its cost modifying abilities, so that we don't regex again later. 
+      if len(costReducers): costModifiers.extend(costReducers)
+   for cTuple in costModifiers: # Now we check what kind of cost modification each card provides. First we check for cost increasers and then for cost reducers
+      if debugVerbosity >= 4: notify("### Checking next cTuple") #Debug
+      c = cTuple[0]
+      reductionSearch = cTuple[1]
+      autoS = cTuple[2]
+      if debugVerbosity >= 2: notify("### cTuple[0] (i.e. card) is: {}".format(c)) #Debug
+      if debugVerbosity >= 4: notify("### cTuple[2] (i.e. autoS) is: {}".format(autoS)) #Debug
+      if reductionSearch.group(4) == 'All' or checkCardRestrictions(gatherCardProperties(card), prepareRestrictions(autoS,seek = 'reduce')):
+         if debugVerbosity >= 3: notify(" ### Search match! Reduction Value is {}".format(reductionSearch.group(2))) # Debug
+         if re.search(r'onlyOnce',autoS):
+            if dryRun: # For dry Runs we do not want to add the "Activated" token on the card. 
+               if oncePerTurn(c, act = 'dryRun') == 'ABORT': continue 
+            else:
+               if oncePerTurn(c, act = 'automatic') == 'ABORT': continue # if the card's effect has already been used, check the next one
+         if reductionSearch.group(2) == '#': 
+            markersCount = c.markers[mdict['Credits']]
+            markersRemoved = 0
+            while markersCount > 0:
+               if debugVerbosity >= 2: notify("### Reducing Cost with and Markers from {}".format(c)) # Debug
+               if reductionSearch.group(1) == 'Reduce':
+                  if fullCost > 0: 
+                     reduction += 1
+                     fullCost -= 1
+                     markersCount -= 1
+                     markersRemoved += 1
+                  else: break
+               else: # If it's not a reduction, it's an increase in the cost.
+                  reduction -= 1
+                  fullCost += 1                     
+                  markersCount -= 1
+                  markersRemoved += 1
+            if not dryRun and markersRemoved != 0: 
+               c.markers[mdict['Credits']] -= markersRemoved # If we have a dryRun, we don't remove any tokens.
+               notify(" -- {} credits are used from {}".format(markersRemoved,c))
+         elif reductionSearch.group(2) == 'X':
+            markerName = re.search(r'-perMarker{([\w ]+)}', autoS)
+            try: 
+               marker = findMarker(c, markerName.group(1))
+               if marker:
+                  for iter in range(c.markers[marker]):
+                     if reductionSearch.group(1) == 'Reduce':
+                        if fullCost > 0:
+                           reduction += 1
+                           fullCost -= 1
+                     else: 
+                        reduction -= 1
+                        fullCost += 1
+            except: notify("!!!ERROR!!! ReduceXCost - Bad Script")
+         else:
+            orig_reduction = reduction
+            for iter in range(num(reductionSearch.group(2))):  # if there is a match, the total reduction for this card's cost is increased.
+               if reductionSearch.group(1) == 'Reduce': 
+                  if fullCost > 0: 
+                     reduction += 1
+                     fullCost -= 1
+               else: 
+                  reduction -= 1
+                  fullCost += 1
+            if orig_reduction != reduction: # If the current card actually reduced or increased the cost, we want to announce it
+               if reduction > 0 and not dryRun: notify(" -- {} reduces cost by {}".format(c,reduction - orig_reduction))
+               elif reduction < 0 and dryRun: notify(" -- {} increases cost by {}".format(c,abs(reduction - orig_reduction)))
+   if debugVerbosity >= 3: notify("<<< reduceCost(). final reduction = {}".format(reduction)) #Debug
+   return reduction
+
+def chkSuperiority(Autoscript, card):
+   if debugVerbosity >= 1: notify(">>> chkSuperiority()") #Debug
+   if debugVerbosity >= 3: notify("### AS = {}. Card = {}".format(Autoscript, card)) #Debug
+   haveSuperiority = True # The default is True, which means that if we do not have a relevant autoscript, it's always True
+   supRegex = re.search(r'-ifSuperiority([\w ]+)',Autoscript)
+   if supRegex:
+      supPlayers = compareObjectiveTraits(supRegex.group(1))
+      if len(supPlayers) > 1 or supPlayers[0] != card.controller: haveSuperiority = False # If the controller of the card requiring superiority does not have the most objectives with that trait, we return False
+   if debugVerbosity >= 3: notify("<<< chkSuperiority(). Return: {}".format(haveSuperiority)) #Debug
+   return haveSuperiority
+#------------------------------------------------------------------------------
+#  Card Effects
+#------------------------------------------------------------------------------
+
+def clearStoredEffects(card, silent = False,continuePath = True): # A function which clears a card's waiting-to-be-activated scripts
+   debugNotify(">>> clearStoredEffects with card: {}".format(card))
+   selectedAbility = eval(getGlobalVariable('Stored Effects'))
+   forcedTrigger = False
+   if selectedAbility.has_key(card._id):
+      debugNotify("Card's selectedAbility: {}".format(selectedAbility))
+      if re.search(r'-isForced',selectedAbility[card._id][0]):
+         if not silent and not confirm("This units effect is forced which means you have to use it if possible. Are you sure you want to ignore it?"): return
+         else: forcedTrigger = True
+   else: debugNotify("Card has no selectedAbility entry")
+   debugNotify("Clearing Highlight",3)
+   if card.highlight == ReadyEffectColor or card.highlight == UnpaidAbilityColor: 
+      if not selectedAbility.has_key(card._id): card.highlight = None
+      else: card.highlight = selectedAbility[card._id][2]  # We don't want to change highlight if it was changed already by another effect.
+   debugNotify("Sending card to its final destination if it has any")
+   if continuePath: continueOriginalEvent(card,selectedAbility)
+   debugNotify("Deleting selectedAbility tuple",3)
+   if selectedAbility.has_key(card._id): del selectedAbility[card._id]
+   debugNotify("Uploading selectedAbility tuple",3)
+   setGlobalVariable('Stored Effects',str(selectedAbility))
+   cardsLeaving(card,'remove')
+   if not silent: 
+      if forcedTrigger: notify(":::WARNING::: {} has chosen to ignore the FORCED trigger of {}.".format(me,card))
+      else: notify("{} chose not to activate {}'s ability".format(me,card))
+   debugNotify("<<< clearStoredEffects")
+
+def clearAllEffects(silent = False): # A function which clears all card's waiting-to-be-activated scripts. This is not looping clearStoredEffects() to avoid too many setGlobalVariable calls
+   debugNotify(">>> clearAllEffects")
+   selectedAbility = eval(getGlobalVariable('Stored Effects'))   
+   for cID in selectedAbility:
+      debugNotify("Clearing Effects for {}".format(Card(cID)),3)
+      debugNotify("selectedAbility[cID] = {}".format(selectedAbility[cID]),3)
+      if not re.search(r'-isForced',selectedAbility[cID][0]):
+         if Card(cID).highlight == ReadyEffectColor or Card(cID).highlight == UnpaidAbilityColor: Card(cID).highlight = selectedAbility[cID][2] # We do not clear Forced Triggers so that they're not forgotten.
+         debugNotify("Sending card to its final destination if it has any",3)
+         continueOriginalEvent(Card(cID),selectedAbility)
+         debugNotify("Now Deleting card's dictionary entry",4)
+         del selectedAbility[cID]
+         cardsLeaving(Card(cID),'remove')
+      elif Card(cID).group != table:
+         debugNotify("Card was not in table. Assuming player monkeyed around and clearing",3)
+         del selectedAbility[cID]
+         cardsLeaving(Card(cID),'remove')         
+      else: 
+         notify(":::WARNING::: {}'s FORCED Trigger is still remaining.".format(Card(cID)))
+   debugNotify("Clearing all highlights from cards not waiting for their abilities")
+   for card in table:
+      if card.highlight == ReadyEffectColor and not selectedAbility.has_key(card._id): card.highlight = None # If the card is still in the selectedAbility, it means it has a forced effect we don't want to clear.
+   setGlobalVariable('Stored Effects',str(selectedAbility))
+   if not silent: notify(":> All existing card effect triggers were ignored.".format(card))
+   debugNotify("<<< clearAllEffects")
+
+def continueOriginalEvent(card,selectedAbility):
+   debugNotify(">>> continueOriginalEvent with card: {}".format(card))
+   if selectedAbility.has_key(card._id):
+      debugNotify("selectedAbility action = {}".format(selectedAbility[card._id][3]),2)
+      if selectedAbility[card._id][3] == 'STRIKE': # If the action is a strike, it means we interrupted a strike for this effect, in which case we want to continue with the strike effects now.
+         strike(card, Continuing = True)
+      if re.search(r'LEAVING',selectedAbility[card._id][3]) or selectedAbility[card._id][3] == 'THWART': 
+         if re.search(r'-DISCARD',selectedAbility[card._id][3]) or selectedAbility[card._id][3] == 'THWART': discard(card,Continuing = True)
+         elif re.search(r'-HAND',selectedAbility[card._id][3]): returnToHand(card,Continuing = True) 
+         elif re.search(r'-DECKBOTTOM',selectedAbility[card._id][3]): sendToBottom(Continuing = True) # This is not passed a specific card as it uses a card list, which we've stored in a global variable already
+         elif re.search(r'-EXILE',selectedAbility[card._id][3]): exileCard(card, Continuing = True)
+         elif re.search(r'-CAPTURE',selectedAbility[card._id][3]): capture(targetC = card, Continuing = True)
+   else: debugNotify("No selectedAbility entry")
+   debugNotify("<<< continueOriginalEvent with card: {} and selectedAbility {}".format(card,selectedAbility))  
+
+   
+def storeCardEffects(card,Autoscript,cost,previousHighlight,actionType,preTargetCard,count = 0):
+   debugNotify(">>> storeCardEffects()")
+   # A function which store's a bunch of variables inside a shared dictionary
+   # These variables are recalled later on, when the player clicks on a triggered card, to recall the script to execute and it's peripheral variables.
+   selectedAbility = eval(getGlobalVariable('Stored Effects'))   
+   selectedAbility[card._id] = (Autoscript,cost,previousHighlight,actionType,preTargetCard,count)
+   # We set a tuple of variables for when we come back to executre the scripts
+   # The first variable is tracking which script is going to be used
+   # The Second is the amount of resource payment 
+   # The third entry in the tuple is the card's previous highlight if it had any.
+   # The fourth entry in the tuple is the type of autoscript this is. In this case it's a 'USE' script, which means it was manually triggered by the player
+   # The fifth is used to parse pre-selected targets for the card effects. Primarily used in autoscriptOtherPlayers()
+   # The sixth entry is used to pass an amount some scripts require (e.g. the difference in edge ranks for Bounty)
+   setGlobalVariable('Stored Effects',str(selectedAbility))
+   debugNotify("<<< storeCardEffects()")
+   
 
 
 #------------------------------------------------------------------------------
@@ -95,7 +584,7 @@ def resetAll(): # Clears all the global variables in order to start a new game.
 #------------------------------------------------------------------------------
 
 def versionCheck():
-   debugNotify(">>> versionCheck()") #Debug
+   debugNotify(">>> versionCheck()", 3) #Debug
    global startupMsg
    me.setGlobalVariable('gameVersion',gameVersion)
    if not startupMsg: MOTD() # If we didn't give out any other message , we give out the MOTD instead.
@@ -105,7 +594,7 @@ def versionCheck():
       
 def MOTD():
    debugNotify(">>> MOTD()") #Debug
-   if me.name == 'DarkSir23' : return #I can't be bollocksed
+   if me.name == 'darksir23' : return #I can't be bollocksed
    (MOTDurl, MOTDcode) = webRead('https://raw.github.com/DarkSir23/CAll-of-Cthulhu-OCTGN/master/MOTD.txt')
    (DYKurl, DYKcode) = webRead('https://raw.github.com/DarkSir23/Call-of-Cthulhu-OCTGN/master/DidYouKnow.txt')
    if (MOTDcode != 200 or not MOTDurl) or (DYKcode !=200 or not DYKurl):
@@ -139,56 +628,11 @@ def MOTDdisplay(MOTD,DYK):
               \n\nWould you like to see the next tip?".format(MOTD,DYK)): return 'MORE'
    return 'STOP'
 
-def fetchCardScripts(group = table, x=0, y=0): # Creates 2 dictionaries with all scripts for all cards stored, based on a web URL or the local version if that doesn't exist.
-   debugNotify(">>> fetchCardScripts()") #Debug
-   global CardsAA, CardsAS # Global dictionaries holding Card AutoActions and Card AutoScripts for all cards.
-   whisper("+++ Fetching fresh scripts. Please Wait...")
-   if (len(players) > 1 or debugVerbosity == 0) and me.name != 'dbzer0': # I put my debug account to always use local scripts.
-      try: (ScriptsDownload, code) = webRead('https://raw.github.com/DarkSir23/Call-of-Cthulhu-OCTGN/master/o8g/Scripts/CardScripts.py',5000)
-      except: 
-         debugNotify("Timeout Error when trying to download scripts", 0)
-         code = ScriptsDownload = None
-   else: # If we have only one player, we assume it's a debug game and load scripts from local to save time.
-      debugNotify("Skipping Scripts Download for faster debug", 0)
-      code = 0
-      ScriptsDownload = None
-   debugNotify("code:{}, text: {}".format(code, ScriptsDownload), 4) #Debug
-   if code != 200 or not ScriptsDownload or (ScriptsDownload and not re.search(r'COC CARD SCRIPTS', ScriptsDownload)) or debugVerbosity >= 0: 
-      whisper(":::WARNING::: Cannot download card scripts at the moment. Will use localy stored ones.")
-      Split_Main = ScriptsLocal.split('=====') # Split_Main is separating the file description from the rest of the code
-   else: 
-      #WHAT THE FUUUUUCK? Why does it gives me a "value cannot be null" when it doesn't even come into this path with a broken connection?!
-      #WHY DOES IT WORK IF I COMMENT THE NEXT LINE. THIS MAKES NO SENSE AAAARGH!
-      #ScriptsLocal = ScriptsDownload #If we found the scripts online, then we use those for our scripts
-      Split_Main = ScriptsDownload.split('=====')
-   if debugVerbosity >= 5:  #Debug
-      notify(Split_Main[1])
-      notify('=====')
-   Split_Cards = Split_Main[1].split('.....') # Split Cards is making a list of a different cards
-   if debugVerbosity >= 5: #Debug
-      notify(Split_Cards[0]) 
-      notify('.....')
-   for Full_Card_String in Split_Cards:
-      if re.search(r'ENDSCRIPTS',Full_Card_String): break # If we have this string in the Card Details, it means we have no more scripts to load.
-      Split_Details = Full_Card_String.split('-----') # Split Details is splitting the card name from its scripts
-      if debugVerbosity >= 5:  #Debug
-         notify(Split_Details[0])
-         notify('-----')
-      # A split from the Full_Card_String always should result in a list with 2 entries.
-      debugNotify(Split_Details[0].strip(), 2) # If it's the card name, notify us of it.
-      Split_Scripts = Split_Details[2].split('+++++') # List item [1] always holds the two scripts. AutoScripts and AutoActions.
-      CardsAS[Split_Details[1].strip()] = Split_Scripts[0].strip()
-      CardsAA[Split_Details[1].strip()] = Split_Scripts[1].strip()
-   if turn > 0: whisper("+++ All card scripts refreshed!")
-   if debugVerbosity >= 4: # Debug
-      notify("CardsAS Dict:\n{}".format(str(CardsAS)))
-      notify("CardsAA Dict:\n{}".format(str(CardsAA))) 
-   debugNotify("<<< fetchCardScripts()", 3) #Debug
+
 
 def concede(group=table,x=0,y=0):
    mute()
    if confirm("Are you sure you want to concede this game?"): 
-      reportGame('Conceded')
       notify("{} has conceded the game".format(me))
    else: 
       notify("{} was about to concede the game, but thought better of it...".format(me))
@@ -197,75 +641,26 @@ def concede(group=table,x=0,y=0):
 #------------------------------------------------------------------------------
    
 def TrialError(group, x=0, y=0): # Debugging
-   global ds, debugVerbosity
+   global debugVerbosity
    mute()
-   #test()
    delayed_whisper("## Checking Debug Verbosity")
    if debugVerbosity >=0: 
-      if debugVerbosity == 0: 
-         debugVerbosity = 1
-         ImAProAtThis() # At debug level 1, we also disable all warnings
+      if debugVerbosity == 0: debugVerbosity = 1
       elif debugVerbosity == 1: debugVerbosity = 2
       elif debugVerbosity == 2: debugVerbosity = 3
       elif debugVerbosity == 3: debugVerbosity = 4
       else: debugVerbosity = 0
-      whisper("Debug verbosity is now: {}".format(debugVerbosity))
+      delayed_whisper("Debug verbosity is now: {}".format(debugVerbosity))
       return
    delayed_whisper("## Checking my Name")
-   if me.name == 'db0' or me.name == 'dbzer0': 
+   if me.name == 'DarkSir232': 
       debugVerbosity = 0
-      fetchCardScripts()
    delayed_whisper("## Checking players array size")
    if not (len(players) == 1 or debugVerbosity >= 0): 
       whisper("This function is only for development purposes")
       return
    ######## Testing Corner ########
    ###### End Testing Corner ######
-   delayed_whisper("## Defining Test Cards")
-   testcards = [
-                "bc0f047c-01b1-427f-a439-d451eda03055", 
-                "bc0f047c-01b1-427f-a439-d451eda03041", 
-                "bc0f047c-01b1-427f-a439-d451eda03041", 
-                "bc0f047c-01b1-427f-a439-d451eda03041", 
-                "bc0f047c-01b1-427f-a439-d451eda01005", 
-                "bc0f047c-01b1-427f-a439-d451eda02086", 
-                # "bc0f047c-01b1-427f-a439-d451eda02107", 
-                # "bc0f047c-01b1-427f-a439-d451eda02108", 
-                # "bc0f047c-01b1-427f-a439-d451eda02109", 
-                # "bc0f047c-01b1-427f-a439-d451eda02110", 
-                # "bc0f047c-01b1-427f-a439-d451eda02111", 
-                # "bc0f047c-01b1-427f-a439-d451eda02112", 
-                # "bc0f047c-01b1-427f-a439-d451eda02113", 
-                # "bc0f047c-01b1-427f-a439-d451eda02114", 
-                # "bc0f047c-01b1-427f-a439-d451eda02115", 
-                # "bc0f047c-01b1-427f-a439-d451eda02116", 
-                # "bc0f047c-01b1-427f-a439-d451eda02117", 
-                # "bc0f047c-01b1-427f-a439-d451eda02118", 
-                # "bc0f047c-01b1-427f-a439-d451eda02119", 
-                # "bc0f047c-01b1-427f-a439-d451eda02120"
-                ] 
-   if not ds: 
-      if confirm("corp?"): ds = "corp"
-      else: ds = "runner"
-   me.setGlobalVariable('ds', ds) 
-   me.counters['Credits'].value = 50
-   me.counters['Hand Size'].value = 5
-   me.counters['Tags'].value = 1
-   me.counters['Agenda Points'].value = 0
-   me.counters['Bad Publicity'].value = 10
-   me.Clicks = 15
-   notify("Variables Reset") #Debug   
-   if not playerside:  # If we've already run this command once, don't recreate the cards.
-      notify("Playerside not chosen yet. Doing now") #Debug   
-      chooseSide()
-      notify("About to create starting cards.") #Debug   
-      createStartingCards()
-   notify("<<< TrialError()") #Debug
-   if confirm("Spawn Test Cards?"):
-      for idx in range(len(testcards)):
-         test = table.create(testcards[idx], (70 * idx) - 150, 0, 1, True)
-         storeProperties(test)
-         if test.Type == 'ICE' or test.Type == 'Agenda' or test.Type == 'Asset': test.isFaceUp = False
 
 def debugChangeSides(group=table,x=0,y=0):
    global ds
@@ -281,36 +676,6 @@ def debugChangeSides(group=table,x=0,y=0):
          notify("Corp Now")
    else: whisper("Sorry, development purposes only")
 
-
-def ShowDicts():
-   if debugVerbosity < 0: return
-   notify("Stored_Names:\n {}".format(str(Stored_Name)))
-   notify("Stored_Types:\n {}".format(str(Stored_Type)))
-   notify("Stored_Costs:\n {}".format(str(Stored_Cost)))
-   notify("Stored_Keywords: {}".format(str(Stored_Keywords)))
-   debugNotify("Stored_AA: {}".format(str(Stored_AutoActions)), 4)
-   debugNotify("Stored_AS: {}".format(str(Stored_AutoScripts)), 4)
-   notify("installedCounts: {}".format(str(installedCount)))
-
-def DebugCard(card, x=0, y=0):
-   whisper("Stored Card Properties\
-          \n----------------------\
-          \nStored Name: {}\
-          \nPrinted Name: {}\
-          \nStored Type: {}\
-          \nPrinted Type: {}\
-          \nStored Keywords: {}\
-          \nPrinted Keywords: {}\
-          \nCost: {}\
-          \nCard ID: {}\
-          \n----------------------\
-          ".format(Stored_Name.get(card._id,'NULL'), card.Name, Stored_Type.get(card._id,'NULL'), card.Type, Stored_Keywords.get(card._id,'NULL'), card.Keywords, Stored_Cost.get(card._id,'NULL'),card._id))
-   if debugVerbosity >= 4: 
-      #notify("Stored_AS: {}".format(str(Stored_AutoScripts)))
-      notify("Downloaded AA: {}".format(str(CardsAA)))
-      notify("Card's AA: {}".format(CardsAA.get(card.model,'???')))
-   storeProperties(card, True)
-   if Stored_Type.get(card._id,'?') != 'ICE': card.orientation = Rot0
    
 def extraASDebug(Autoscript = None):
    if Autoscript and debugVerbosity >= 3: return ". Autoscript:{}".format(Autoscript)
@@ -329,3 +694,20 @@ def ShowPosC(card, x=0,y=0):
 def controlChange(card,x,y):
    if card.controller != me: card.setController(me)
    else: card.setController(findOpponent())
+   
+def DebugCard(card, x=0, y=0):
+	debugNotify("<<< getAttached {}".format(card.name))
+	if getAttached(card): tmp = getAttached(card).name
+	else: tmp = "None"
+	whisper("Attached to: {}".format(tmp))
+	debugNotify("<<< getAttachments {}".format(card.name))
+	whisper("Attachments: {}".format(getAttachments(card)))
+#-------------------------------------------
+#  Event Handlers
+#-------------------------------------------
+
+def triggerMoveCard(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove):
+	if card.controller == me and not isScriptMove:
+		arrangeAttachments(card)
+		
+	

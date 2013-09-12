@@ -6,11 +6,41 @@ import re
 #---------------------------------------------------------------------------
 # These are constant global variables in ANR: They should not be modified by the scripts at all.
 #---------------------------------------------------------------------------
+phases = [
+    "Opponent's Turn",
+    "=== Refresh Phase: {} ===".format(me),
+    "=== Draw Phase: {} ===".format(me),
+    "=== Resource Phase: {} ===".format(me),
+    "=== Operations Phase: {} ===".format(me),
+    "=== Story Phase: {} ===".format(me)]
+    
+storyPhases = [
+    "+++ Story: Active Player Commits +++",
+    "+++ Story: Opponent Commits +++",
+    "+++ Story: Resolve Icon Struggles +++",
+    "+++ Story: Determine Success +++",
+    "+++ Story: Reward Unopposed +++",
+    "+++ Story: Resolve Completed Stories +++"]
 
+    
 mdict = dict( # A dictionary which holds all the hard coded markers (in the markers file)
-             Wound =            ("Wound", "4a247d69-b2cc-4de9-b4d1-c447bea01f61"),
-             Success =                  ("Success", "4a247d69-b2cc-4de9-b4d1-c447bea01f62"),
-             Drain =                   ("Drain", "4a247d69-b2cc-4de9-b4d1-c447bea01f63"))
+	     Wound = ("Wound", "4a247d69-b2cc-4de9-b4d1-c447bea01f61"),
+	     Success = ("Success", "4a247d69-b2cc-4de9-b4d1-c447bea01f62"),
+	     Drain = ("Drain", "4a247d69-b2cc-4de9-b4d1-c447bea01f63"),
+	     Activation = ("Activation", "ea7418bc-6847-4e8a-9cc3-0230dc27d19b")
+	     )
+	     
+resdict = {
+		'Resource:Cthulhu':						("Cthulhu Resource", "a5173cd9-bafe-4be2-ae6f-11464f7260cf"),
+		'Resource:Hastur':						("Hastur Resource", "3911052d-c25b-471d-92af-8aae4a18cce1"),
+		'Resource:Shub-Niggurath':				("Shub-Niggurath Resource", "c9e080cd-fa2e-4397-a054-031945af4d8e"),
+		'Resource:Yog-Sothoth':					("Yog-Sothoth Resource", "807d0966-15d7-4e45-88b3-87c77fc25288"),
+		'Resource:The Agency':					("Agency Resource", "590456bb-17bc-4831-a08c-380def83486f"),
+		'Resource:Miskatonic University':			("Miskatonic Resource", "93ec59f4-0a91-43bc-92da-210a16f20274"),
+		'Resource:The Syndicate':					("Syndicate Resource", "d5ff5bee-09cc-44bb-b78c-c1c19b586028"),
+		'Resource:The Order of the Silver Twilight':	("Silver Twilight Resource", "f5cfe322-21a4-4427-91ff-cd5b880c5848"),
+		'Resource:Neutral':						("Neutral Resource", "e6d100e4-f79b-4b91-9853-16974ea47fb0"),
+		'Resource:Zoog':						("Zoog Resource", "94dc59b3-409e-419d-be97-cb4877cdd507")}
 
 regexHooks = dict( # A dictionary which holds the regex that then trigger each core command. 
                    # This is so that I can modify these "hooks" only in one place as I add core commands and modulators.
@@ -37,3 +67,16 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
 				  
 automatedMarkers = [] #Used in the Inspect() command to let the player know if the card has automations based on the markers it puts out.
 
+ScoredColor = "#00ff44"
+SelectColor = "#009900"
+EmergencyColor = "#fff600"
+DummyColor = "#9370db" # Marks cards which are supposed to be out of play, so that players can tell them apart.
+RevealedColor = "#ffffff"
+PriorityColor = "#ffd700"
+InactiveColor = "#888888" # Cards which are in play but not active yer (e.g. see the shell traders)
+StealthColor = "#000000" # Cards which are in play but not active yer (e.g. see the shell traders)
+UnpaidColor = "#ffd700"
+UnpaidAbilityColor = "#40e0d0"
+
+Xaxis = 'x'
+Yaxis = 'y'

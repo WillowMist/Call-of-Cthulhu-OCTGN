@@ -207,7 +207,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="If it is DAY, Furtive Zoog gains %. If it is NIGHT, Furtive Zoog gains @. Response: After you drain a domain to which Furtive Zoog is attached as a resource, unattach Furtive Zoog from that domain and put it into play." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -221,7 +221,7 @@
 			<property name="Subtypes" value="Ritual." />
 			<property name="Card Text" value="Action: Until the end of the phase, treat all DAY and all NIGHT cards currently in play as if their text boxes were blank. Then, draw a card." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -235,7 +235,7 @@
 			<property name="Subtypes" value="Dreamer." />
 			<property name="Card Text" value="After The Day Dreamer comes into play, destroy all NIGHT cards. Action: Pay 2 to put The Day Dreamer into play from your hand. If The Day Dreamer is still in play at the end of the phase, sacrifice it." />
 			<property name="Keyword" value="Day. It is Day." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -249,7 +249,7 @@
 			<property name="Subtypes" value="Dreamer." />
 			<property name="Card Text" value="After Dreamlands Wanderer comes into play, destroy all DAY cards. Action: Pay 2 to put Dreamlands Wanderer into play from your hand, If Dreamlands Wanderer is still in play at the end of the phase, sacrifice it." />
 			<property name="Keyword" value="Night. It is Night." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -263,7 +263,7 @@
 			<property name="Subtypes" value="Environment." />
 			<property name="Card Text" value="After The Rays of Dawn comes into play, destroy all NIGHT cards. Each non-unique character loses a @ icon." />
 			<property name="Keyword" value="Day. It is Day." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -277,7 +277,7 @@
 			<property name="Subtypes" value="Environment." />
 			<property name="Card Text" value="After The Setting Sun comes into play, Destroy all DAY cards. Each non-unique character loses an % icons." />
 			<property name="Keyword" value="Night. It is Night." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -305,7 +305,7 @@
 			<property name="Subtypes" value="Attachment. Item. Weapon." />
 			<property name="Card Text" value="Attach to an _ character. Attached character gains #. Action: Exhaust Prize Pistol and pay 1 to choose and wound one character with lower skill than the number of # icons attached character has." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -319,7 +319,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Action: Destroy all NIGHT cards in play and attach Daybreak! to a story card. (Counts as an ENVIRONMENT support card with the text: &quot;DAY. It is DAY. @ struggles do not resolve at this story.&quot;)" />
 			<property name="Keyword" value="Day." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -501,7 +501,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="Response: After you drain a domain to which Secretive Zoog is attached as a resource, unattach Secretive Zoog from that domain and put it into play to choose one other ZOOG card you control. Attach that card to any of your domains." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -515,7 +515,7 @@
 			<property name="Subtypes" value="Location. Dreamlands." />
 			<property name="Card Text" value="If you control more DREAMLANDS support cards than each individual opponent, @ icons do not protect characters from insanity." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -529,7 +529,7 @@
 			<property name="Subtypes" value="Independent." />
 			<property name="Card Text" value="If you control Nasht, Kaman-Thah gains +3 skill, and # $." />
 			<property name="Keyword" value="Toughness +1." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -543,7 +543,7 @@
 			<property name="Subtypes" value="Independent." />
 			<property name="Card Text" value="If you control Kaman-Thah, Nasht gains +3 skill and @ %." />
 			<property name="Keyword" value="Toughness +1." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -557,7 +557,7 @@
 			<property name="Subtypes" value="Monster." />
 			<property name="Card Text" value="Action: Sacrifice Slime Mold to wound all wounded characters." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -767,7 +767,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="Response: After you drain a domain to which Ancient Zoog is attached as a resource, unattach Ancient Zoog from that domain and attach it to a non-ZOOG character. (Counts as an ATTACHMENT ZOOG support card with the text: &quot;Attached character gains the DREAMER subtype and $.&quot;)" />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -781,7 +781,7 @@
 			<property name="Subtypes" value="Dreamlands. Location." />
 			<property name="Card Text" value="Response: After you draw a ZOOG character, exhaust Zoog Burrow to reveal that card to each opponent and attach it as a resource to one of your domains. Then, you may immediately drain that domain to draw 1 card." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -795,7 +795,7 @@
 			<property name="Subtypes" value="Monster." />
 			<property name="Card Text" value="If it is NIGHT, reduce the cost to play The Night by 3. If it is NIGHT, treat all exhausted non-unique characters as if their printed text boxes were blank." />
 			<property name="Keyword" value="Villainous." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -809,7 +809,7 @@
 			<property name="Subtypes" value="Attachment. Item. Weapon." />
 			<property name="Card Text" value="Attached character gains #. (@ # # $ instead if attached character is a DREAMER). Action: Pay 1 to unattach Dream Dagger, and attach it to a different character you control." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -823,7 +823,7 @@
 			<property name="Subtypes" value="Curse." />
 			<property name="Card Text" value="If it is NIGHT, reduce the cost to play Blasphemous Dreams by 2. Action: Ready a DREAMER character you control to choose and exhaust a non-DREAMER character." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -837,7 +837,7 @@
 			<property name="Subtypes" value="Spell." />
 			<property name="Card Text" value="If it is NIGHT, reduce the cost to play Assist Dreamer by 2. Action: Choose and ready a unique character. Until the end of the phase, that character gains the DREAMER subtype and $ $ $." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1047,7 +1047,7 @@
 			<property name="Subtypes" value="Monster." />
 			<property name="Card Text" value="Halflings of D'haz can only commit to stories on your turn. The loser of any # struggle in which Halflings of D'haz participated must receive an additional wound for each icon by which the struggle was lost." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1061,7 +1061,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="Response: After you drain a domain to wich Curious Zoog is attached as a resource, unattach Curious Zoog from that domain and return it to your hand to look at the top card of each player's deck. You may discard those cards or put them back on top of their owner's decks." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1075,7 +1075,7 @@
 			<property name="Subtypes" value="Attachment." />
 			<property name="Card Text" value="Attach to a non-ANCIENT ONE character. Attached character cannot trigger its effects." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1089,7 +1089,7 @@
 			<property name="Subtypes" value="Dreamlands. Location. Mutable." />
 			<property name="Card Text" value="If you control more DREAMLANDS support cards than any opponent, you may exhaust Guardian Pillar to commit it to a story as a character with 4 skill, @ # # #, and INVULNERABILITY." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1103,7 +1103,7 @@
 			<property name="Subtypes" value="Attachment. Tome." />
 			<property name="Card Text" value="Attach to a character you control. Action: Exhaust the Book of Black Stones to discard the top card of each player's deck." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1117,7 +1117,7 @@
 			<property name="Subtypes" value="Environment." />
 			<property name="Card Text" value="The player who controls the fewest DREAMLANDS support cards must play with the top card of his deck revealed." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1327,7 +1327,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="Response: After you drain a domain to which Inconspicuous Zoog is attached as a resource, unattach Inconspicuous Zoog from that domain and attach it to a story card. (Counts as an ATTACHMENT ZOOG support card with the text: &quot;Count Inconspicuous Zoog's skill and icons at attached story each time it resolves. If you win this story, return Inconspicuous Zoog to your hand.&quot;)" />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1341,7 +1341,7 @@
 			<property name="Subtypes" value="Creature. Monster." />
 			<property name="Card Text" value="Forced Response: At the end of your turn. deal 2 wounds to all other characters you control or sacrifice Basilisk." />
 			<property name="Keyword" value="Fast. Toughness +3." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1355,7 +1355,7 @@
 			<property name="Subtypes" value="Ghoul. Monster." />
 			<property name="Card Text" value="Richard Upton Pickman gains the icons of each attached GHOUL character. If Richard Upton Pickman would be wounded, you may discard an attached GHOUL character instead. Action: Pay 2 to attach a GHOUL character to Richard Upton Pickman from your hand or discard pile." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1369,7 +1369,7 @@
 			<property name="Subtypes" value="Investigator. Creature." />
 			<property name="Card Text" value="If you control more DREAMLANDS support cards than any opponent, reduce the cost to play Moon-Beast Captain by 2." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1383,7 +1383,7 @@
 			<property name="Subtypes" value="Dreamlands." />
 			<property name="Card Text" value="If you control more DREAMLANDS support cards than any opponent, refresh all DREAMER characters at the beginning of each player's turn." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1397,7 +1397,7 @@
 			<property name="Subtypes" value="Curse." />
 			<property name="Card Text" value="Play at the end of your story phase. Action: Choose up to 2 characters. Those characters do not refresh during the next refresh phase." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1607,7 +1607,7 @@
 			<property name="Subtypes" value="Zoog. Creature." />
 			<property name="Card Text" value="Response: After you drain a domain to which Stealthy Zoog is attached as a resource, unattach Stealthy Zoog from that domain and attach it to a story. (Counts as an ATTACHMENT ZOOG support card with the text: &quot;If attached story is won. its effect must resolve.&quot;)" />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="Zoog Resource" />
+			<property name="Resource Icon" value="Z" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1621,7 +1621,7 @@
 			<property name="Subtypes" value="Creature." />
 			<property name="Card Text" value="Action: During the Story phase, pay 3 to put The Cats of Ulthar into play from your hand, committed to a story of your choice. Action: Pay 1 to destroy 1 ZOOG card in play. Then, return The Cats of Ulthar to your hand." />
 			<property name="Keyword" value="Fast." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1635,7 +1635,7 @@
 			<property name="Subtypes" value="Ancient One." />
 			<property name="Card Text" value="During the resource phase, if an opponent wishes to attach a resource to a domain, the resource must be chosen at random from his hand. (Choose the domain first, then randomly determine the resource.) " />
 			<property name="Keyword" value="Villainous. Toughness +2." />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1649,7 +1649,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="If it is DAY, the cost to play The Light Side of the Moon is 0. Response: After an opponent wins a story card, each player chooses up to  3 characters he controls. Shuffle all characters not chosen back into their owner's decks." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1663,7 +1663,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="If it is NIGHT, the cost to play The Dark Side of the Moon is 0. Response: After an opponent wins a story card, each player chooses a character controlled by one of his opponents. Shuffle all chosen characters back into their owner's decks." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1677,7 +1677,7 @@
 			<property name="Subtypes" value="Dreamlands. Location." />
 			<property name="Card Text" value="Action: Exhaust Unknown Kadath to choose an opponent. That opponent must choose a DAY or NIGHT card in your discard pile and return it to your hand." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>

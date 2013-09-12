@@ -26,12 +26,155 @@ import collections
 #---------------------------------------------
 # Global Variables
 #---------------------------------------------
-
+gameSetup = False
+firstTurn = True
+restoredInsane = 0
+opponent = None
+unpaidCard = None
 
 #---------------------------------------------
-# Start/End of Turn
+# Phases
 #---------------------------------------------
 
+def showCurrentPhase(): # Just say a nice notification about which phase you're on.
+   committedStory = eval(getGlobalVariable('Committed Story'))
+   if committedStory != []:
+      notify(storyPhases[num(getGlobalVariable('Story Phase'))])
+   else: 
+      notify(phases[num(me.getGlobalVariable('Phase'))])
+
+def nextPhase(group = table, x = 0, y = 0, setTo = None):  
+	# Function to take you to the next phase. 
+	global firstTurn
+	if not gameReady():
+		whisper("One or more players have not completed setup yet.")
+		return
+	if not gameStarted():
+		whisper("The game has not yet been started.")
+		return
+	debugNotify(">>> nextPhase()") #Debug
+	mute()
+	committedStory = eval(getGlobalVariable('Committed Story'))
+	if committedStory != []:
+		debugNotify("We got committed story: {}".format(committedStory))
+		phase = num(getGlobalVariable('Story Phase'))
+		if setTo: phase = setTo
+		else: phase += 1
+		#if phase == 4: revealEdge(forceCalc = True) # Just to make sure it wasn't forgotten.
+		setGlobalVariable('Story Phase',str(phase))
+		showCurrentPhase()
+		if not setTo:
+			if phase == 1: delayed_whisper(":::NOTE::: You can now start selecting engagement participants by double-clicking on them")
+			elif phase == 5: finishEngagement() # If it's the reward unopposed phase, we simply end the engagement immediately after
+	else:
+		debugNotify("Normal Phase change")
+		phase = num(me.getGlobalVariable('Phase'))
+		if not me.isActivePlayer:
+			debugNotify("Not currently the active player")
+			#if debugVerbosity >= 2: notify("### Active Player: {}".format(getGlobalVariable('Active Player'))) #Debug
+			if not confirm("Your opponent has not finished their turn yet. Are you sure you want to jump to your turn?"): return
+			me.setActivePlayer() # new in OCTGN 3.0.5.47 
+			me.setGlobalVariable('Phase','1')
+			#setGlobalVariable('Active Player', me.name)
+			phase = 1
+		else: 
+			debugNotify("Normal Phase change")
+			if phase == -1: phase = 1 # This is for the first phase of the LS player.
+			else: phase += 1
+			me.setGlobalVariable('Phase',str(phase)) # Otherwise, just move up one phase
+		if phase == 1: goToRefresh()
+		elif phase == 2: goToDraw()
+		elif phase == 3: goToResource()
+		elif phase == 4: goToOperations()
+		elif phase == 5: 
+			if firstTurn:
+				notify(":::NOTICE::: {} skips their first story phase".format(me))
+				firstTurn = False
+				debugNotify("Turn End - Skipping Story Phase")
+				me.setGlobalVariable('Phase','0')
+				atTimedEffects(Time = 'End')
+				notify("=== {} has ended their turn ===.".format(me))
+				me.setGlobalVariable('resourcesToPlay','1')
+				opponent.setActivePlayer()
+				for card in table:
+					if card.markers[mdict['Activation']]: card.markers[mdict['Activation']] = 0
+			else: goToStory()
+		elif phase == 6:
+			me.setGlobalVariable('Phase','0')
+			atTimedEffects(Time = 'End')
+			notify("=== {} has ended their turn ===.".format(me))
+			me.setGlobalVariable('resourcesToPlay','1')
+			opponent.setActivePlayer()
+			for card in table:
+				if card.markers[mdict['Activation']]: card.markers[mdict['Activation']] = 0
+			
+			
+def goToRefresh(group = table, x = 0, y = 0): # Go directly to the Refresh phase
+	global restoredInsane
+	if debugVerbosity >= 1: notify(">>> goToRefresh(){}".format(extraASDebug())) #Debug
+	atTimedEffects(Time = 'Start')   
+	mute()
+	global firstTurn
+	me.setGlobalVariable('Phase','1')
+	showCurrentPhase()
+	if not Automations['Start/End-of-Turn/Phase']: return
+	insaneCards = [card for card in table if card.controller == me and cardStatus(card) == "Insane"]
+	exhaustedCards = [card for card in table if card.controller == me and cardStatus(card) == "Exhausted"]
+	myDomains = [card for card in table if card.controller == me and cardStatus(card) == "Domain"]
+	debugNotify("Insane card count: {}".format(len(insaneCards)))
+	if len(insaneCards) == 1 and restoredInsane == 0:
+		notify("Automatically restoring {} (Only insane character)".format(insaneCards[0]))
+		restoreCard(insaneCards[0])
+		restoredInsane += 1
+	elif len(insaneCards) > 1:
+		whisper("You may restore one of your insane characters before moving to the next phase")
+	if not firstTurn: notify(":> {} readied all their eligible cards".format(me))
+	for card in exhaustedCards:
+		readyCard(card)
+	for card in myDomains:
+		clearedDomains = 0
+		att = getAttachments(card)
+		if len(att) > 0:
+			for subatt in att:
+				if Card(subatt).name == "Drain Token":
+					Stored_Attachment[subatt] = ""
+					subatt.moveTo(me.piles['Discard Pile'])
+					clearedDomains += 1
+			if clearedDomains: notify("{} refreshed {} domains.".format(me,clearedDomains))
+	atTimedEffects(Time = 'afterCardRefreshing') 
+	
+def goToDraw(group = table, x = 0, y = 0): # Go directly to the Draw phase
+	global firstTurn
+	if debugVerbosity >= 1: notify(">>> goToDraw(){}".format(extraASDebug())) #Debug
+	atTimedEffects(Time = 'afterRefresh') # We put "afterRefresh" in the refresh phase, as cards trigger immediately after refreshing. Not after the refresh phase as a whole.
+	mute()
+	me.setGlobalVariable('Phase','2')
+	showCurrentPhase()
+	if not Automations['Start/End-of-Turn/Phase']: return
+	if firstTurn: draw()
+	else: drawMany(count=2)
+
+
+def goToResource(group = table, x = 0, y = 0):
+	if debugVerbosity >= 1: notify(">>> goToResource(){}".format(extraASDebug())) #Debug
+	atTimedEffects(Time = 'afterDraw')   
+	mute()
+	me.setGlobalVariable('Phase','3')
+	showCurrentPhase()
+	
+def goToOperations(group = table, x = 0, y = 0):
+	if debugVerbosity >= 1: notify(">>> goToOperations(){}".format(extraASDebug())) #Debug
+	atTimedEffects(Time = 'afterResource')   
+	mute()
+	me.setGlobalVariable('Phase','4')
+	showCurrentPhase()
+	
+def goToStory(group = table, x = 0, y = 0):
+	if debugVerbosity >= 1: notify(">>> goToStory(){}".format(extraASDebug())) #Debug
+	atTimedEffects(Time = 'afterOperations')   
+	mute()
+	me.setGlobalVariable('Phase','5')
+	showCurrentPhase()
 #---------------------------------------------
 # Game Setup
 #---------------------------------------------
@@ -39,26 +182,29 @@ def createStartingCards():
 	try:
 		debugNotify(">>> createStartingCards()") #Debug
 		if me.hasInvertedTable() == True: 
-			table.create("a8cec1b8-1121-4612-80c4-c66a437cc2e0", -50, 50, 1)
-			table.create("f22ee55c-8f47-4174-a7a4-985731a74d30", -150, 50, 1)
-			table.create("d8a151e4-28c8-4653-b826-ebda237b776b", -250, 50, 1)
+			table.create("a8cec1b8-1121-4612-80c4-c66a437cc2e0", -31, -300, 1)
+			table.create("f22ee55c-8f47-4174-a7a4-985731a74d30", -131, -300, 1)
+			table.create("d8a151e4-28c8-4653-b826-ebda237b776b", 69, -300, 1)
 		else: 
-			table.create("0054c047-1887-4a5d-b11b-b70f3cff3a0a", -300, 170, 1)
-			table.create("593da3cb-290b-426e-9eec-1b3fd3465a2d", -200, 170, 1)
-			table.create("46cfc241-12ea-4d15-91f5-0facf26a9d82", -100, 170, 1)
+			table.create("0054c047-1887-4a5d-b11b-b70f3cff3a0a", -31, 212, 1)
+			table.create("593da3cb-290b-426e-9eec-1b3fd3465a2d", -131, 212, 1)
+			table.create("46cfc241-12ea-4d15-91f5-0facf26a9d82", 69, 212, 1)
 	except: notify("!!!ERROR!!! {} - In createStartingCards()\n!!! PLEASE INSTALL MARKERS SET FILE !!!".format(me))
 
 def intSetup(group, x = 0, y = 0):
    debugNotify(">>> intSetup(){}".format(extraASDebug())) #Debug
+   global gameSetup, opponent
    mute()
-   if not startupMsg: fetchCardScripts() # We only download the scripts at the very first setup of each play session.
    versionCheck()
-   if not confirm("Are you sure you want to setup for a new game? (This action should only be done after a table reset)"): return
+   cardsOnTable = [card for card in table if card.controller == me]
+   debugNotify("cardsOnTable: {}".format(len(cardsOnTable)))
+   if len(cardsOnTable) and not confirm("Are you sure you want to setup for a new game? (This action should only be done after a table reset)"): return
    if not table.isTwoSided() and not confirm(":::WARNING::: This game is designed to be played on a two-sided table. Things will be extremely uncomfortable otherwise!! Please start a new game and makde sure the  the appropriate button is checked. Are you sure you want to continue?"): return
    chooseSide()
+   opponent = ofwhom('ofOpponent')
    #for type in Automations: switchAutomation(type,'Announce') # Too much spam.
    deck = me.piles['Deck']
-   debugNotify("Checking Deck", 3)
+   debugNotify("Checking Deck ({})".format(len(deck)), 3)
    if len(deck) == 0:
       whisper ("Please load a deck first!")
       return
@@ -70,7 +216,8 @@ def intSetup(group, x = 0, y = 0):
          continue
    debugNotify("Checking Illegality", 3)
    deckStatus = checkDeck(deck)
-   if not deckStatus[0]:
+   debugNotify("Deck Status: {}".format(deckStatus))
+   if not deckStatus:
       if not confirm("We have found illegal cards in your deck. Bypass?"): return
       else:
          notify("{} has chosen to proceed with an illegal deck.".format(me))
@@ -83,7 +230,10 @@ def intSetup(group, x = 0, y = 0):
    drawMany(me.piles['Deck'], 8)
    debugNotify("Reshuffling Deck", 3)
    shuffle(me.piles['Deck']) # And another one just to be sure
-   executePlayScripts(Identity,'STARTUP')
+   me.resourcesToPlay = 3
+   gameSetup == True
+   whisper("Target each domain, and play a card to it as a resource.  Once all players have done this, the game can begin.")
+  # executePlayScripts(Identity,'STARTUP')
 
 def checkDeck(group):
 	debugNotify(">>> checkDeck(){}".format(extraASDebug())) #Debug
@@ -111,5 +261,390 @@ def checkDeck(group):
 	if ok: notify("-> Deck of {} is OK!".format(me))
 	debugNotify("<<< checkDeckNoLimit() with return: {}.".format(ok), 3) #Debug
 	return (ok)
+	
+def startGameRandom(group, x = 0, y = 0):
+	if not gameReady():
+		whisper("One or more players have not completed setup yet.")
+		return
+	if gameStarted():
+		whisper("The game has already begun.")
+		return
+	n = rnd(1, len(players))
+	players[n-1].setActivePlayer()
+	for player in players:
+		player.setGlobalVariable('resourcesToPlay','1')
+	notify("{} has started the game, selecting a random start player.  {} will take the first turn.".format(me,players[n-1].name))
 
+def startGameMe(group, x = 0, y = 0):	
+	if not gameReady():
+		whisper("One or more players have not completed setup yet.")
+		return
+	if gameStarted():
+		whisper("The game has already begun.")
+		return
+	if not confirm("Are you sure you want to start the game as first player?"): return
+	me.setActivePlayer()
+	notify("{} has started the game, and has opted to take the first turn.".format(me))
+	
 
+#---------------------------------------------
+# Pile Actions
+#---------------------------------------------
+def shuffle(group):
+   debugNotify(">>> shuffle(){}".format(extraASDebug())) #Debug
+   group.shuffle()
+
+def draw(group=me.piles['Deck']):
+	debugNotify(">>> draw(){}".format(extraASDebug())) #Debug
+	global newturn
+	mute()
+	if len(group) == 0:
+		whisper(":::ERROR::: No more cards in your stack")
+	card = group.top()
+	card.moveTo(me.hand)
+	notify("{} draws a card.".format(me))
+
+def drawMany(group = me.piles['Deck'], count = None, destination = None, silent = False):
+	debugNotify(">>> drawMany(){}".format(extraASDebug())) #Debug
+	debugNotify("source: {}".format(group.name), 2)
+	if destination: debugNotify("destination: {}".format(destination.name), 2)
+	mute()
+	if destination == None: destination = me.hand
+	SSize = len(group)
+	if SSize == 0: return 0
+	if count == None: count = askInteger("Draw how many cards?", 5)
+	if count == None: return 0
+	if count > SSize :
+		count = SSize
+		whisper("You do not have enough cards in your deck to complete this action. Will draw as many as possible")
+	for c in group.top(count):
+		c.moveTo(destination)
+	if not silent: notify("{} draws {} cards.".format(me, count))
+	debugNotify("<<< drawMany() with return: {}".format(count), 3)
+	return count
+
+#------------------------------------------------------------------------------
+# Card Actions
+#------------------------------------------------------------------------------
+def restoreCharacter(card, x = 0, y = 0):
+	global restoredInsane
+	phase=getGlobalVariable('Phase')
+	if phase != 0:
+		whisper("You may only restore a character during your Refresh Phase.")
+		return
+	if restoredInsane > 0:
+		whisper("You may only restore one insane character during your Refresh Phase.")
+		return
+	if cardStatus(card) != "Insane":
+		whisper("This card is not Insane.")
+		return
+	if card.controller != me:
+		whisper("Please choose one of your own Insane cards to restore.")
+		return
+	restoreCard(card)
+	restoredInsane += 1
+	notify("{} restored {} to sanity.".format(me,card.name))
+
+def clear(card, x = 0, y = 0, silent = False):
+   debugNotify(">>> clear() card: {}".format(card), ) #Debug
+   mute()
+   if not silent: notify("{} clears {}.".format(me, card))
+   if card.highlight != DummyColor and card.highlight != RevealedColor and card.highlight != InactiveColor: card.highlight = None
+   card.markers[mdict['BaseLink']] = 0
+   card.markers[mdict['PlusOne']] = 0
+   card.markers[mdict['MinusOne']] = 0
+   card.target(False)
+   debugNotify("<<< clear()", 3)
+   
+def clearAll(markersOnly = False, allPlayers = False): # Just clears all the player's cards.
+   debugNotify(">>> clearAll()") #Debug
+   for card in table:
+      if allPlayers: clear(card,silent = True)
+      if card.controller == me: clear(card,silent = True)
+      if not markersOnly:
+         hostCards = eval(getGlobalVariable('Host Cards'))
+         if card.isFaceUp and (card.Type == 'Operation' or card.Type == 'Event') and card.highlight != DummyColor and card.highlight != RevealedColor and card.highlight != InactiveColor and not card.markers[mdict['Scored']] and not hostCards.has_key(card._id): # We do not trash "scored" events (e.g. see Notoriety) or cards hosted on others card (e.g. see Oversight AI)
+            intTrashCard(card,0,"free") # Clearing all Events and operations for players who keep forgeting to clear them.
+   debugNotify("<<< clearAll()", 3)
+
+def restoreCard(card, x = 0, y = 0): # Restores an insane character.
+	if cardStatus(card) == "Insane":
+		card.isFaceup == True
+		card.orientation == Rot90
+	else: debugNotify("Tried to restore a non-insane card: {}".format(card.name))
+
+def makeInsane(card, x = 0, y = 0):
+	global Stored_Attachments
+	debugNotify(">>> makeInsane({})".format(card.name))
+	if cardStatus(card) == "InPlay" or cardStatus(card) == "Exhausted":
+		card.isFaceup == False
+		card.orientation == Rot90
+		for att in getAttachments(card):
+			discardedCard = Card(att)
+			if verifyAttachment(discardedCard, card):
+				notify("{}'s {} is destroyed when {} is driven insane.".format(discardedCard.controller, discardedCard.name, card.name))
+				discardedCard.moveTo(discardedCard.controller.piles['Discard Pile'])
+			Stored_Attachments[att] == ""
+	else: debugNofity("Tried to drive an inappropriate card insane: {}".format(card.name))
+
+def readyCard(card, x = 0, y = 0):
+	if cardStatus(card) == "Exhausted":
+		card.orientation == Rot0
+	else: debugNotify("Tried to ready a non-exhausted card: {}".format(card.name))
+
+def exhaustCard(card, x=0, y=0):
+	if cardStatus(card) == "InPlay":
+		card.orientation == Rot90
+	else: debugNotify("Tried to exhaust a non-ready card: {}".format(card.name))
+def defaultAction(card, x = 0, y = 0):
+   if debugVerbosity >= 1: notify(">>> defaultAction(){}".format(extraASDebug())) #Debug
+   mute()
+   selectedAbility = eval(getGlobalVariable('Stored Effects'))
+   if card.Type == 'Button': # The Special button cards.
+      if card.name == 'Wait!': BUTTON_Wait()
+      elif card.name == 'Actions?': BUTTON_Actions()
+      else: BUTTON_OK()
+      return
+   elif card.highlight == FateColor: 
+      #whisper(":::ATTENTION::: No fate card automation yet I'm afraid :-(\nPlease do things manually for now.")
+      notify("{} resolves the ability of fate card {}".format(me,card))
+      executePlayScripts(card, 'RESOLVEFATE')
+      autoscriptOtherPlayers('ResolveFate',card)
+      card.highlight = EdgeColor
+   elif card.highlight == ObjectiveSetupColor:
+      myObjectives = [c for c in table if c.controller == me and c.highlight == ObjectiveSetupColor]
+      for c in myObjectives: 
+         c.highlight = None
+         c.orientation = Rot0
+         c.isFaceUp = True # First we turn them all face up (We do two different loops to give the cards time to flip completely, so that we can grab their properties without having to put rnd(1,10) every time.
+      for c in myObjectives: 
+         loopChk(c,'Type') # We make sure we can read the card's properties first
+         executePlayScripts(c, 'PLAY')
+      notify("{} of the {} has revealed their starting objectives".format(me,Affiliation))
+      if rnd(1,10) == 10 or me.name == 'db0': # Finally, we do some randomness :) 
+         Affiliation.switchTo('FullBleed')
+         if Affiliation.name == 'Sith': notify("{} has embraced their rage!".format(me))
+         if Affiliation.name == 'Imperial Navy': notify("{}'s weapons are at full power!".format(me))
+         if Affiliation.name == 'Scum and Villainy': notify("There's a price on your head and {} aims to collect.".format(me))
+         if Affiliation.name == 'Jedi': notify("{} has become one with the force...".format(me))
+         if Affiliation.name == 'Rebel Alliance': notify("{} is accelerating to attack speed".format(me))
+         if Affiliation.name == 'Smugglers and Spies': notify("{} is going in against all odds.".format(me))
+      if Side == 'Dark': 
+         me.setGlobalVariable('Phase','0') # We now allow the dark side to start
+         notify("--> {} of the Dark Side has the initiative".format(me))
+         me.setActivePlayer() # If we're DS, set ourselves as the current player, since the Dark Side goes first.
+   elif card.highlight == EdgeColor: revealEdge()
+   elif selectedAbility.has_key(card._id): # we check via the dictionary, as this can be then used without a highlight via the "Hardcore mode"
+      if card.highlight != ReadyEffectColor: # If the card has a selectedAbility entry but no highlight, it means the player is in hardcore mode, so we need to light up the card to allow their opponent to react.
+         readyEffect(card,True)
+         return
+      debugNotify("selectedAbility Tuple = {}".format(selectedAbility[card._id]),4)
+      if selectedAbility[card._id][4]: preTargets = [Card(selectedAbility[card._id][4])] # The 5th value of the tuple is special target card's we'll be using for this run.
+      else: preTargets = None
+      debugNotify("preTargets = {}".format(preTargets),3)
+      if findMarker(card, "Effects Cancelled"): 
+         notify("{}'s effects have been cancelled".format(card))
+      else: 
+         splitTargets = selectedAbility[card._id][0].split('$$')
+         for targetSeek in splitTargets:
+            if re.search(r'(?<!Auto)Targeted', targetSeek) and re.search(r'onPlay', targetSeek) and findTarget(targetSeek,card = card) == []: 
+               if card.Type == 'Event': bracketInfo = "(Cancelling will abort the effect and return this card back to your hand. Saying NO will allow you to target and double click this card to try again.)"
+               else: bracketInfo = "(Cancelling will dismiss this react trigger. Saying NO will allow you to target and double click this card to try again.)"
+               if confirm(":::ERROR::: Required Targets for this effect not found! You need to target with shift-click accordingly\
+                       \n\nWould you like to completely cancel this effect?\
+                         \n{}".format(bracketInfo)):
+                  clearStoredEffects(card,True,False) # Now that we won't cancel anymore, we clear the card's resident effect now, whatever happens, so that it can remove itself from play.
+                  if card.Type == 'Event': card.moveTo(card.owner.hand)
+                  notify("{} has aborted using {}".format(me,card))
+                  return
+               else: return # If the script needs a target but we don't have any, abort.
+         notify("{} resolves the effects of {}".format(me,card)) 
+         clearStoredEffects(card,True,False) # Now that we won't cancel anymore, we clear the card's resident effect now, whatever happens, so that it can remove itself from play.
+                                             # We don't remove it from play yet though, we do it after we've executed all its scripts
+         if re.search(r'LEAVING',selectedAbility[card._id][3]): 
+            cardsLeaving(card,'append')
+         if executeAutoscripts(card,selectedAbility[card._id][0],count = selectedAbility[card._id][5], action = selectedAbility[card._id][3],targetCards = preTargets) == 'ABORT': 
+            # If we have an abort, we need to restore the card to its triggered mode so that the player may change targets and try again. 
+            # Since we've already cleared the card to avoid it's "in-a-trigger" state from affecting effects which remove it from play, we need to re-store it now.
+            # Since we already have its tuple stored locally, we just use storeCardEffects to save it back again.
+            storeCardEffects(card,selectedAbility[card._id][0],selectedAbility[card._id][1],selectedAbility[card._id][2],selectedAbility[card._id][3],selectedAbility[card._id][4],selectedAbility[card._id][5])
+            readyEffect(card,True)
+            return
+      debugNotify("selectedAbility action = {}".format(selectedAbility[card._id][3]),2)
+      continueOriginalEvent(card,selectedAbility)
+      if card.Type == 'Event': 
+         autoscriptOtherPlayers('CardPlayed',card)
+         if findMarker(card, "Destination:Command Deck"):
+            notify(" -- {} is moved to the top of {}'s command deck".format(card,card.owner))
+            rnd(1,100) # To allow any notifications to announce the card correctly first.
+            card.moveTo(card.owner.piles['Command Deck'])
+         else: card.moveTo(card.owner.piles['Discard Pile']) # We discard events as soon as their effects are resolved.      
+   elif card.highlight == UnpaidColor: purchaseCard(card) # If the player is double clicking on an unpaid card, we assume they just want to bypass complete payment.
+   elif num(card.Resources) > 0 and findUnpaidCard(): 
+      if debugVerbosity >= 2: notify("Card has resources") # Debug
+      generate(card)
+   elif card.Type == 'Character' and getGlobalVariable('Engaged Objective') != 'None' and not findMarker(card, "isAttachment"): 
+      if debugVerbosity >= 2: notify("Card is Unit and it's engagement time") # Debug
+      if card.orientation == Rot0: participate(card)
+      else: strike(card)
+   elif card.AutoAction != '': useAbility(card)
+   else: whisper(":::ERROR::: There is nothing to do with this card at this moment!")
+   if debugVerbosity >= 3: notify("<<< defaultAction()") #Debug
+
+#------------------------------------------------------------------------------
+# Hand Actions
+#------------------------------------------------------------------------------
+def currentHandSize(player = me):
+   debugNotify(">>> currentHandSize(){}".format(extraASDebug())) #Debug
+   #if specialCard.markers[mdict['BrainDMG']]: currHandSize =  player.counters['Hand Size'].value - specialCard.markers[mdict['BrainDMG']]
+   #else: currHandSize = player.counters['Hand Size'].value
+   currHandSize = player.handSize
+   return currHandSize
+   
+def playresource(card, x = 0, y = 0):
+	mute()
+	src = card.group
+	resourcesToPlay = num(me.getGlobalVariable('resourcesToPlay'))
+	currentPhase = num(me.getGlobalVariable('Phase'))
+	if currentPhase != -1 and currentPhase != 3:
+		whisper("You may only play resources before the game begins and during your Resource phase.")
+		return
+	if resourcesToPlay > 0:
+		target = [c for c in table if c.targetedBy and c.controller == me and c.targetedBy == me and cardStatus(c) == "Domain"]
+		debugNotify("Target: {}".format(len(target)),4)
+		if len(target) == 1:
+			debugNotify(">>> ResourceCount: {}".format(countResources(target[0])),4)
+			if turnNumber() == 0 and countResources(target[0]) > 0: 
+				whisper("Before game begins, you may only play one resource per domain.")
+				return
+			x,y = target[0].position
+			card.moveToTable(x,y)
+			card.orientation ^= Rot180
+			addResource(target[0],card)
+			resourcesToPlay -= 1
+			storeAttachment(card,target[0])
+			debugNotify("Arranging",2)
+			arrangeAttachments(target[0])
+			target[0].target(False)
+			if turnNumber() == 0:
+				if resourcesToPlay > 0:
+					notify("{} brings in an initial {} resource from their hand.  {} to go.".format(me, card.faction, resourcesToPlay))
+					me.setGlobalVariable('gameReady',False)
+				else:
+					notify("{} brings in an initial {} resource from their hand.  They are ready to begin.".format(me, card.faction))
+					me.setGlobalVariable('gameReady',True)
+			else: 		
+				notify("{} brings in a {} resource from their hand.".format(me, card.Faction))				
+			me.setGlobalVariable('resourcesToPlay',resourcesToPlay)
+		else: whisper("Please target one of your domains.")
+	else: whisper("You've already played all your resources this turn.")
+	
+def play(card):
+   if debugVerbosity >= 1: notify(">>> play(){}".format(extraASDebug())) #Debug
+   global unpaidCard
+   mute()
+   extraTXT = ''
+   if ((card.Type == 'Character' or card.Type == 'Support')
+      and (me.getGlobalVariable('Phase') != '4')
+      and not confirm(":::WARNING:::\n\nNormally this type of card cannot be played outside the Operations phase. Are you sure you want to continue?")):
+         return 
+   if card.Type == 'Support' and hasSubType(card, 'Attachment.'):
+      debugNotify("### Checking for host type",2)
+      hostType = re.search(r'Placement:([A-Za-z1-9:_ ]+)', card.AutoScript)
+      if hostType:
+         if debugVerbosity >= 2: notify("### hostType: {}.".format(hostType.group(1))) #Debug
+         host = findTarget('Targeted-at{}'.format(hostType.group(1)))
+         if host == []: 
+            whisper("ABORTING!")
+            return
+         else: extraTXT = ' on {}'.format(host[0])
+   if re.search(r'[*]',card.Name):
+      foundUnique = None
+      debugNotify("### Card is Unique",2)
+      for c in table:
+         if c.name == card.name: 
+            foundUnique = c
+            break
+      if foundUnique:
+         if foundUnique.owner == me: confirmTXT = "This card is unique and you already have a copy of {} in play.\n\nBypass uniqueness restriction?".format(foundUnique.name)
+         else: confirmTXT = "This card is unique and {} already has a copy of {} in play.\n\nBypass uniqueness restriction?".format(foundUnique.owner.name,foundUnique.name)
+         if confirm(confirmTXT):
+            extraTXT += " (Bypassing Uniqueness Restriction!)"
+         else: return         
+   debugNotify("About to move card to table")
+   card.moveToTable(0, 0 + yaxisMove(card))
+   if checkPaidResources(card) == 'NOK':
+      card.highlight = UnpaidColor 
+      unpaidCard = card
+      notify("{} attempts to play {}{}.".format(me, card,extraTXT))
+      # if num(card.Cost) == 0 and card.Type == 'Event': readyEffect(card)
+   else: 
+      if card.Type == 'Event':
+         playEventSound(card)
+         executePlayScripts(card, 'PLAY') # We do not trigger events automatically, in order to give the opponent a chance to play counter cards
+      else:
+         placeCard(card)
+         notify("{} plays {}{}.".format(me, card,extraTXT))
+         executePlayScripts(card, 'PLAY') # We execute the play scripts here only if the card is 0 cost.
+         autoscriptOtherPlayers('CardPlayed',card)
+
+def checkPaidResources(card):
+   if debugVerbosity >= 1: notify(">>> checkPaidResources()") #Debug
+   count = 0
+   affiliationMatch = False
+   for cMarkerKey in card.markers: #We check the key of each marker on the card
+      for resdictKey in resdict:  #against each resource type available
+         if debugVerbosity >= 2: notify("About to compare marker keys: {} and {}".format(resdict[resdictKey],cMarkerKey)) #Debug
+         if resdict[resdictKey] == cMarkerKey: # If the marker is a resource
+            count += card.markers[cMarkerKey]  # We increase the count of how many resources have been paid for this card
+            if debugVerbosity >= 2: notify("About to check found resource affiliaton") #Debug
+            if 'Resource:{}'.format(card.Faction) == resdictKey: # if the card's affiliation also matches the currently checked resource
+               if debugVerbosity >= 3: notify("### Affiliation match. Affiliation = {}. Marker = {}.".format(card.Faction,resdictKey))
+               affiliationMatch = True # We set that we've also got a matching resource affiliation
+      if cMarkerKey[0] == "Ignores Affiliation Match": 
+         if debugVerbosity >= 3: notify("### Ignoring affiliation match due to marker on card. Marker = {}".format(cMarkerKey))
+         affiliationMatch = True # If we have a marker that ignores affiliations, we can start ignoring this card's as well
+   for c in table:
+      debugNotify("Checking: {}".format(c.Name))
+      if c.controller == me and re.search("IgnoreAffiliationMatch",c.AutoScript) and chkDummy(c.AutoScript, c): 
+         notify(":> Affiliation match ignored due to {}.".format(c))
+         affiliationMatch = True
+   if debugVerbosity >= 2: notify("About to check successful cost. Count: {}, Faction: {}".format(count,card.Faction)) #Debug
+   if card.highlight == UnpaidAbilityColor:
+      selectedAbility = eval(getGlobalVariable('Stored Effects'))
+      reduction = reduceCost(card, 'USE', selectedAbility[card._id][1] - count, dryRun = True) # We do a dry run first. We do not want to trigger once-per turn abilities until the point where we've actually paid the cost.
+      if count >= selectedAbility[card._id][1] - reduction:
+         if debugVerbosity >= 3: notify("<<< checkPaidResources(). Return USEOK") #Debug
+         reduceCost(card, 'USE', selectedAbility[card._id][1] - count) # Now that we've actually made sure we've paid the cost, we use any ability that reduces costs.
+         return 'USEOK'
+      else:
+         if count >= selectedAbility[card._id][1] - reduction and not affiliationMatch:
+            notify(":::WARNING::: Ability cost reached but there is no affiliation match!")
+         if debugVerbosity >= 3: notify("<<< checkPaidResources(). Return NOK 1") #Debug
+         return 'NOK'      
+   else:
+      reduction = reduceCost(card, 'PLAY', num(card.Cost) - count, dryRun = True) # We do a dry run first. We do not want to trigger once-per turn abilities until the point where we've actually paid the cost.
+      if count >= num(card.Cost) - reduction and (card.Faction == 'Neutral' or affiliationMatch or (not affiliationMatch and (num(card.Cost) - reduction) == 0)):
+         if debugVerbosity >= 3: notify("<<< checkPaidResources(). Return OK") #Debug
+         reduceCost(card, 'PLAY', num(card.Cost) - count) # Now that we've actually made sure we've paid the cost, we use any ability that reduces costs.
+         return 'OK'
+      else:
+         if count >= num(card.Cost) - reduction and not affiliationMatch:
+            notify(":::WARNING::: Card cost reached but there is no affiliation match!")
+         if debugVerbosity >= 3: notify("<<< checkPaidResources(). Return NOK 2") #Debug
+         return 'NOK'
+#------------------------------------------------------------------------------
+# Button and Announcement functions
+#------------------------------------------------------------------------------
+
+def BUTTON_OK(group = None,x=0,y=0):
+   notify("--- {} has no further reactions.".format(me))
+
+def BUTTON_Wait(group = None,x=0,y=0):  
+   notify("--- Wait! {} wants to react.".format(me))
+
+def BUTTON_Actions(group = None,x=0,y=0):  
+   notify("--- {} is waiting for opposing actions.".format(me))
+
+def declarePass(group, x=0, y=0):
+   notify("--- {} Passes".format(me))    

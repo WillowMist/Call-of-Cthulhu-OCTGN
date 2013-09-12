@@ -306,7 +306,7 @@
 			</if>
 		</conditional>
 		<conditional>
-			<if property="Resource Icon" value="{N}{N}">
+			<if property="Resource Icon" value="??">
 				<link block="resource_transient_neutral" />
 			</if>
 		</conditional>
@@ -316,7 +316,7 @@
 			</if>
 		</conditional>
 		<conditional>
-			<if property="Resource Icon" contains="Zoog">
+			<if property="Resource Icon" value="Z">
 				<link block="resource_zoog" />
 			</if>
 		</conditional>
@@ -503,7 +503,7 @@
 			</if>
 		</conditional>
 		<conditional>
-			<if property="Resource Icon" contains="Zoog">
+			<if property="Resource Icon" value="Z">
 				<link block="resource_zoog" />
 			</if>
 		</conditional>

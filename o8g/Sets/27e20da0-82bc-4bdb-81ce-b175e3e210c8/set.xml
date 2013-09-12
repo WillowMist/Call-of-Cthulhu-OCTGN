@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Terror in Venice" id="27e20da0-82bc-4bdb-81ce-b175e3e210c8" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="3.0.0.1" version="3.0.0.1">
+  <cards>
+    <card id="13811d01-43f7-484a-b25f-746169f9a6d9" name="* Abbess Allegria Di Biase">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Most Blessed" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="$ $ $ $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Conspirator." />
+      <property name="Card Text" value="While there is at least 1 Conspiracy card in play, Abbess Allegria Di Biase gains FAST, WILLPOWER, and &quot;Cannot be wounded by card effects.&quot;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action:Pay 1 to change one of Abbess Allegria Di Biase's $ icons into the icon of your choice until the end of the phase." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F01" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="f9ad2145-1e3b-4c6b-b48f-4930edad8ecc" name="Pious Carabiniere">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="# # %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Conspirator. Government." />
+      <property name="Card Text" value="Response: After a conspiracy card enters play, search your deck for an event card, reveal it and put it into your hand.  Then shuffle your deck." />
+      <property name="Keyword" value="Willower." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F02" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="50a73492-8b36-47ac-bc75-0529db47085b" name="Church Operative">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="While it is DAY, each opponent must discard a card from his hand in order to target a _ character you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F03" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="af4154b4-9d08-451f-8c1b-41fa4a9af06f" name="* San Marco Basilica">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="The Church of Gold" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="It is Day. After San Maro Basilica comes into play, destroy all NIGHT cards. San Marco Basilica is immune to non-NIGHT card effects.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action:Exhause San Marco Basilica or pay 1 to ready an exhausted character. Then, that character gains WILLPOWER until the end of the phase." />
+      <property name="Keyword" value="Day." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F04" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="799d4cb2-f7bf-4355-997f-3f58df05401d" name="* The Iron Cross">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Symbol of Authority" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Artifact. Item." />
+      <property name="Card Text" value="Attach to a _ character you control.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Disrupt: ExhaustThe Iron Cross to make The Iron Cross and attached character immune to triggered effects until the end of the phase.  Then add a success token to The Iron Cross." />
+      <property name="Keyword" value="Fated 4." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F05" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="ad23cd66-5688-4fe8-ba05-0e58e11aad6b" name="Hand of Fate">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Blessing." />
+      <property name="Card Text" value="Disrupt: When 1 or more characters would be put into your discard pile from play, you may instead put those characters on top of your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F06" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="91c363ba-a458-4714-8d4a-bebea2ef75ef" name="* Don Lagorio">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Secret Servant" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@ # $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor. Conspirator." />
+      <property name="Card Text" value="Response: After you commit 1 or more characters to a conspiracy, search your deck for a [ event card.  Reveal it and then add it to your hand.  Then, add a success token to Don Lagorio." />
+      <property name="Keyword" value="Fated 3." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F07" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d6631eb4-4e14-47c5-a075-8a9b9af2351c" name="Poleman">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Deep One." />
+      <property name="Card Text" value="Action:If it is NIGHT, pay 2 to give Poleman @ @ $ until the end of the phase. Limit once per turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F08" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="4bcd9e47-f2fe-48b0-8d74-f66cbdee4992" name="* San Giurgio in Alga">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="No Longer Abandoned" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="It is NIGHT. After San Giorgio in Alga comes into play destroy all DAY cards.  San Giorgio in Alga is immune to non-DAY card effects.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;When you would draw a card, instead reveal 2 cards.  Put one of those cards on the bottom of your deck and add the other to your hand." />
+      <property name="Keyword" value="Night." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F09" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="cc1ba490-fbf0-4844-8426-cc7a272c8c18" name="Flooded Vault">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Action:  Sacrifice Flooded Vault to search your deck for a non-Location support card.  Then, pay its printed cost and put it into play, if able.  Then, shuffle your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F10" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="a1f27efe-597a-48a5-b7fd-30b75e2cf62a" name="Swimming in the Deep">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action:  Commit a [ character you control to a story, even if it is exhausted.  Sacrifice that character at the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F11" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="9625cf0a-9fdd-48ca-8934-40fb90fcd904" name="Solar Eclipse">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Destroy all DAY cards. Until the end of the phase it is NIGHT.  Until the end of the phase, all [ characters gain @ #." />
+      <property name="Keyword" value="Night." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F12" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="9cb3423d-3afd-45a4-8f6b-42ce75c97e5c" name="*Doctor Lomboso">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Finder of Madness" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="@ # $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Servitor. Scientist." />
+      <property name="Card Text" value="Forced Response:  After a character goes insane, choose a card in that player's discard pile and put it on top of his deck, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F13" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="7dcc2971-4b72-4bb0-9354-5ef3005e0142" name="Cunning Mascheraro">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="@" />
+      <property name="Skill" value="0" />
+      <property name="Subtypes" value="Conspirator. Artist." />
+      <property name="Card Text" value="Cunning Mascheraro counts its icons at each conspiracy card in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F14" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="2e50b8ff-81a7-4cb6-903f-39a8cd72c4bc" name="* San Servolo">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="It is NIGHT. After San Servolo comes into play destroy all DAY cards.  San Servolo is immune to non-DAY cards.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Response:  After a character is made to go insane, exhaust San Servolo to choose another character controlled by the same player to go insane unless its controller pays 1." />
+      <property name="Keyword" value="Night." />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F15" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="9c29e7c9-9352-40ad-8605-8e692fcaaab5" name="Return to Carcosa">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Response:  After a character is restored, shuffle that character into its owner's deck." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F16" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="8d16d258-8ecc-4a3d-97e1-47d1bc482adb" name="At Night they Roam">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Curse." />
+      <property name="Card Text" value="Play during the story phase.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: Choose and take control of an insane character (if it is NIGHT, instead take control of each insane character).  Then, restore and commit that character to a single story.  At the end of the phase drive that character insane and return it to its owner's control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F17" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="b63e56cf-648e-4887-9c37-d4d4f58b7a7a" name="The Unspeakable Oath">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Disrupt:  Cancel the effects of an event card just played and then put it on the top of its owner's deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F18" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+  </cards>
+</set>

@@ -585,7 +585,7 @@
 			<property name="Subtypes" value="Servitor." />
 			<property name="Card Text" value="Forced Response: When you succeed at a story to which Tzu San Niang is committed, return all characters committed to that story to their owners' hands." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1159,7 +1159,7 @@
 			<property name="Subtypes" value="Location. Polar." />
 			<property name="Card Text" value="Action: Sacrifice Ice SHaft to choose and destroy a character with skill 3 or lower." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1439,7 +1439,7 @@
 			<property name="Subtypes" value="" />
 			<property name="Card Text" value="Response: After you succeed at a story without losing any struggles, return a character you control to your hand. Then resolve the effects of any story in any player's won pile." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>
@@ -1733,7 +1733,7 @@
 			<property name="Subtypes" value="Servitor." />
 			<property name="Card Text" value="Action: Pay X to look at the top X cards of an opponent's deck. Return those cards to the top of that deck in any order." />
 			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{N}" />
+			<property name="Resource Icon" value="?" />
 			<property name="Collector Info" value="F" />
 			<property name="Struggle Icons" value="" />
 		</card>

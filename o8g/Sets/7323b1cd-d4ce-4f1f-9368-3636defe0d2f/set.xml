@@ -529,7 +529,7 @@
       <property name="Subtypes" value="Scientist. Independent." />
       <property name="Card Text" value="While Prepared Alienist is ready, characters cannot change control or be put into play through triggered effects." />
       <property name="Keyword" value="Toughness +1." />
-      <property name="Resource Icon" value="[N]" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F 38" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -543,7 +543,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Play during any player's draw phase.&amp;#xd;&amp;#xa;Action: Place this card face up on your deck.&amp;#xd;&amp;#xa;Response: After an opponent's triggered effect removes a card you control from play, discard Visions of the Future's Past from the top of your deck to put that card into your hand and draw 1 card." />
       <property name="Keyword" value="Prophecy." />
-      <property name="Resource Icon" value="[N]" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F 39" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -557,7 +557,7 @@
       <property name="Subtypes" value="Spell. Attachment." />
       <property name="Card Text" value="Attach to a story card.&amp;#xd;&amp;#xa;Characters cannot be committed to attached story card.&amp;#xd;&amp;#xa;Forced Response:  After a story card is won, discard Will of Azathoth." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="[N]" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F 40" />
       <property name="Struggle Icons" value="" />
     </card>
@@ -571,7 +571,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Response: After a character is destroyed by an opponent's card effect, return that character to play under your control and attach Eidolon to it (counts as an ATTACHMENT support card with the text 'Attached character loses all icons and gains INVULNERABILITY. No skill checks can resolve at a story at which attached character is committed.')." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="[N]" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F 41" />
       <property name="Struggle Icons" value="" />
     </card>

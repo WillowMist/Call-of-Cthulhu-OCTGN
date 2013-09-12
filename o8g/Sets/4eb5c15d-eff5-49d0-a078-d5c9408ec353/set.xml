@@ -257,7 +257,7 @@
 			<property name="Type" value="Support" />
 			<property name="Descriptor" value="Repository of Philosophies" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="Library." />
@@ -271,7 +271,7 @@
 			<property name="Type" value="Support" />
 			<property name="Descriptor" value="Honoring Warriors Past and Present" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="Location." />
@@ -537,7 +537,7 @@
 			<property name="Type" value="Support" />
 			<property name="Descriptor" value="Place of Ancient Wisdom" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="Library." />
@@ -551,7 +551,7 @@
 			<property name="Type" value="Character" />
 			<property name="Descriptor" value="Finder of Lost Things" />
 			<property name="Cost" value="3" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="$ $ %" />
 			<property name="Skill" value="3" />
 			<property name="Subtypes" value="Independent. Relic Hunter." />
@@ -817,7 +817,7 @@
 			<property name="Type" value="Support" />
 			<property name="Descriptor" value="Site of Celestial Learning" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="Library." />
@@ -831,7 +831,7 @@
 			<property name="Type" value="Event" />
 			<property name="Descriptor" value="" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="" />
@@ -1097,7 +1097,7 @@
 			<property name="Type" value="Support" />
 			<property name="Descriptor" value="The First Library of Man" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="" />
 			<property name="Skill" value="" />
 			<property name="Subtypes" value="Library." />
@@ -1111,7 +1111,7 @@
 			<property name="Type" value="Character" />
 			<property name="Descriptor" value="Shrewd Archivist" />
 			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
+			<property name="Faction" value="?" />
 			<property name="Icons" value="%" />
 			<property name="Skill" value="2" />
 			<property name="Subtypes" value="Independent. Relic Hunter." />

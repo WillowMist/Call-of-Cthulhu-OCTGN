@@ -267,7 +267,7 @@
       <property name="Subtypes" value="Investigator." />
       <property name="Card Text" value="Julia Brown gains +1 skill for each insane character in play. Disrupt: If Julia Brown would go insane as the result of a @ struggle, sacrifice her instead. Then search your deck for a card titled &quot;Julia Brown&quot; or &quot;The Sleepwalker&quot;, put it into play committed to the same story, and then shuffle your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -283,7 +283,7 @@
       <property name="Subtypes" value="Servitor." />
       <property name="Card Text" value="Disrupt: After you win a @ struggle, the loser of the struggle discards a card from the top of his deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -299,7 +299,7 @@
       <property name="Subtypes" value="Madness." />
       <property name="Card Text" value="Play during your story phase, before characters are committed to stories. Action: Resolve an additional @ struggle at all stories this phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -315,7 +315,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="If you win this conspiracy, you may cause all characters in play to lose WILLPOWER and then go insane, if able." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ @ # $ %" />
       <property name="AutoScript" value="" />
@@ -587,7 +587,7 @@
       <property name="Subtypes" value="Criminal." />
       <property name="Card Text" value="Forced Response: After a player plays a card, raise the cost for that player to play cards by 1 until the end of the phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -603,7 +603,7 @@
       <property name="Subtypes" value="Research." />
       <property name="Card Text" value="Play during your story phase, before characters are committed. Action: Choose a story. Until the end of the phase, if you win an % struggle by at least 3 icons at that story, win that story immediately." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -619,7 +619,7 @@
       <property name="Subtypes" value="Research." />
       <property name="Card Text" value="Play during your story phase, before characters are committed to stories. Action: Resolve an additional % struggle at all stories this phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -635,7 +635,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="If you win this conspiracy, you may search your deck for any conspiracy card and put it into play, if able. Then, shuffle your deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ % %" />
       <property name="AutoScript" value="" />
@@ -907,7 +907,7 @@
       <property name="Subtypes" value="Investigator." />
       <property name="Card Text" value="Disrupt: After you win a # struggle in which The Cornered Man participated, wound The Cornered Man to immediately resolve another # struggle at that story." />
       <property name="Keyword" value="Toughness +2. Heroic." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -923,7 +923,7 @@
       <property name="Subtypes" value="Attachment. Weapon." />
       <property name="Card Text" value="Attach to a character you control. Disrupt: After you win a # struggle by at least 3 icons at a story to which attached character is committed, pay 2 to choose and wound a character controlled by the losing opponent." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -939,7 +939,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Play during your story phase, before characters are committed to stories. Action: Resolve an additional # struggle at all stories this phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -955,7 +955,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="If you win this conspiracy, you may wound all characters in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # # $ %" />
       <property name="AutoScript" value="" />
@@ -1195,7 +1195,7 @@
       <property name="Subtypes" value="Sorcerer." />
       <property name="Card Text" value="Action: Discard 1 of your success tokens to put Descendant of Eibon into play from your hand or into your hand from your discard pile. At the end of the phase, if he is still in play from this effect, return Descendant of Eibon to your hand." />
       <property name="Keyword" value="Willpower. Fast." />
-      <property name="Resource Icon" value="{N}{N}" />
+      <property name="Resource Icon" value="??" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1211,7 +1211,7 @@
       <property name="Subtypes" value="Creature." />
       <property name="Card Text" value="Other characters you control at the same story as Clever Zoog gain $." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1227,7 +1227,7 @@
       <property name="Subtypes" value="Sorcerer." />
       <property name="Card Text" value="$ struggles are resolved first at any story to which Struggling Artist is committed. Disrupt: After you win an $ struggle in which Struggling Artist participated, choose a struggle at that story. Skip that struggle at this story this turn." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1243,7 +1243,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Play during your story phase, before characters are committed to stories. Action: Resolve an additional $ struggle at all stories this phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1259,7 +1259,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Action: Choose a story. Until the end of the phase, you may place 1 success token on that story for each $ struggle you win at thay story." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1275,7 +1275,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="If you win this conspiracy, you may restore and ready all characters in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ $ %" />
       <property name="AutoScript" value="" />
@@ -1515,7 +1515,7 @@
       <property name="Subtypes" value="Independent." />
       <property name="Card Text" value="Raise the cost to play all cards with printed cost 2 or lower by 1." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1531,7 +1531,7 @@
       <property name="Subtypes" value="Faculty." />
       <property name="Card Text" value="Each player needs an additional story card in order to win the game." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1547,7 +1547,7 @@
       <property name="Subtypes" value="Independent." />
       <property name="Card Text" value="Obsessive Inmate does not un-commit from a story until that story is won." />
       <property name="Keyword" value="Willpower." />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1563,7 +1563,7 @@
       <property name="Subtypes" value="Environment. Attachment." />
       <property name="Card Text" value="Action: Pay 1 to attach Parallel Universe from your hand to a story card. When resolving struggles at attached story, count the total skill of all participating characters instead of the icos to determine the winner of each struggle." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1579,7 +1579,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Response: After you succeed at a story in which you were opposed, undrain all domains in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1595,7 +1595,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="Resolve the skill comparison at this conspiracy before any of its struggles occur. If you win this conspiracy before any struggles occur, you may choose which of its struggles resolve." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
       <property name="AutoScript" value="" />
@@ -1851,7 +1851,7 @@
       <property name="Subtypes" value="Independent." />
       <property name="Card Text" value="Action: Exhaust Old Sea Dog to choose a character. Until the end of the phase, that character loses all faction affiliations and becomes neutral." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1867,7 +1867,7 @@
       <property name="Subtypes" value="Investigator." />
       <property name="Card Text" value="Players cannot win the game by winning story cards unless at least one of their won story cards is also a conspiracy card, or unless there are no story cards left in the story deck." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1883,7 +1883,7 @@
       <property name="Subtypes" value="Attachment." />
       <property name="Card Text" value="Attach to a character or support card. Any Phase: Exhaust Strange Delusions to gice attached card a faction affiliation of your choice until the end of the phase." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1899,7 +1899,7 @@
       <property name="Subtypes" value="Attachment." />
       <property name="Card Text" value="Attach to a story card. Treat attached story as it its text box were blank." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
@@ -1915,7 +1915,7 @@
       <property name="Subtypes" value="" />
       <property name="Card Text" value="If you win this conspiracy, you may trigger the effect of any story card currently in play." />
       <property name="Keyword" value="" />
-      <property name="Resource Icon" value="{N}" />
+      <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
       <property name="AutoScript" value="" />
