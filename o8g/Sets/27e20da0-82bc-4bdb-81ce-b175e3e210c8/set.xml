@@ -289,5 +289,597 @@
       <property name="AutoScript" value="" />
       <property name="AutoAction" value="" />
     </card>
+    <card id="facc655d-e7ee-4548-a576-3769d7d59610" name="* Bruno Carioli">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Hatching a Plan" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Conspirator. Faculty." />
+      <property name="Card Text" value="Response: After Bruno Carioli is committed to a conspiracy, choose an icon struggle at that conspiracy.  Icon struggles of the chosen type do not resolve this phase at any story card.  Then, add a success token to Bruni Carioli." />
+      <property name="Keyword" value="Fated 2." />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F19" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="eae9d41e-59cb-4cc1-9b39-65ba8f8e6fc4" name="Urban Trailblazer">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="% %" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Explorer. Student." />
+      <property name="Card Text" value="Response: After a LOCATION support card enters or leaves play, pay 1 to reveal the top 5 cards of your deck.  Choose 1 revealed ATTACHMENT support card and add it to your hand, returning the rest of the cards to your deck in the same order." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F20" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="ab879e24-7935-44ab-9cd9-a1321e661ea6" name="Puzzled Exchange Student">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="% %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Student." />
+      <property name="Card Text" value="Forced Response:  After your opponent has committed characters to stories, if Puzzled Exchange Student is not committed to a story, commit it to a story with the most characters, even if it is exhausted." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F21" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="b0548d8e-0a05-4833-aa2a-2f4f6ea2a026" name="Medico Della Peste">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item. Mask." />
+      <property name="Card Text" value="Attach to a characer.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Day. It is Day.  After Medico Della Peste comes into play destroy all NIGHTcards.  Medico Della Peste is immune to non-NIGHT card effects.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Attached character doesn't exhaust to commit to stories." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F22" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="02f5db75-525d-4eb3-9b91-ba54e483c886" name="Desperate Search">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Discard X cards from your hand to choose X other cards in your discard pile and add them to your hand.  Then, if it is DAY, draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F23" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="fa943819-5fce-41da-9082-9fc097c0bf50" name="Mass Hysteria">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="@ icons do not protect characters from insanity while committed to this conspiracy.  When a player commits 1 or more characters to this conspiracy he may choose and restore a character he controls." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F24" />
+      <property name="Struggle Icons" value="@ @ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="f4902c43-0347-4dd7-989a-c21e3fb139d1" name="Death Comes for All">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="All characters commotted to this conspiracy lose all TOUGHNESS and INVULNERABILITY.  After this conspiracy card is won each player must wound each character he controls not committed to this conspiracy." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F25" />
+      <property name="Struggle Icons" value="@ # # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="496e04c3-deca-45fb-b4bc-f83c8da89905" name="Purity of Purpose">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="While this conspiracy is in your won pile, it gains &quot;Disrupt:Discard 2 cards from the top of your deck to cancel an effect that would sacrifice a character you control.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F26" />
+      <property name="Struggle Icons" value="# $ % %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="49a1856b-4054-45f4-831d-c8ccd268b490" name="The Guardian">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="When you play this conspiracy, search your deck for a DAY or NIGHT card, reveal it and add it to your hand.  Then, shuffle your deck.  While this conspiracy is in your won pile, increase the cost of any opponent's triggered effect that target characters you control by 1." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F27" />
+      <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="b76ac061-5b3d-47e9-93de-1f4a1dced159" name="Before the Fast">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="When a player succeeds at this conspiracy, that player gains a domain." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F28" />
+      <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="35eaac48-c517-49d7-84e0-f1260de77c46" name="Unending Festivities">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="While this conspiracy card is in play, players cannot ready more than 1 character during the refresh phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F29" />
+      <property name="Struggle Icons" value="@ # $ $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d2b3f0bb-f285-4d08-9c5b-1e3dbaaa73b1" name="The Mage's Machinations">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="When The Mage's Machinations enters play, each player must choose 1 character controlled by the player to his left, if able.  Remove those characters from the game.  If you win this conspiracy return those characters removed from the game to play under your control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F30" />
+      <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="e43156b1-baf7-4896-acc3-dc3223eeee90" name="* The Supernal Prism">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Holy Shard" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Relic. Item." />
+      <property name="Card Text" value="Day.  It is DAY.  After The Supernal Prism comes into play destroy all NIGHT cards.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;After The Supernal Prism leaves play, shuffle it into its owner's deck.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: Sacrifice The Supernal to have each player discard his hand, if able.  Then each player who discarded his hand draws five cards, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F31" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="3fa1fdd1-89d5-40d3-a19a-a6d97b5570b7" name="* The Plague Stone">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Sweet Release" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Relic. Item." />
+      <property name="Card Text" value="Night. It is NIGHT. After The Plague Stone comes into play destory all DAY cards.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;After The Plague Stone leaves play, shuffle it into its owner's deck.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action:  Sacrifice The Plague Stone and pay 2 to destroy all characters in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F32" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="c838d600-fee7-4b5c-bde9-a7380c1913c7" name="* Malocchio">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="An Eye for Death" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Ghoul. Servitor." />
+      <property name="Card Text" value="For each type of icon on a character card in any discard pile, Mallochio gains 1 icon of that type." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F33" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="5ddfd4b0-e5e3-4a51-a9b8-c25ccd2bc015" name="* Savio Corvi">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Dark Lurker" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Conspirator. Cultist." />
+      <property name="Card Text" value="While there is at least 1 CONSPIRACY card in play, Savio Corvi gains &quot;Night. It is NIGHT. Destroy all DAY cards. Savio Corvi is immune to all non-DAY card effects.&quot;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;While it is NIGHT characters you control gain FAST and @." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F34" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="ce5a8a80-7f51-4c43-9b0d-ba09edad18b0" name="Ghoulish Scavenger">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Ghoul. Monster." />
+      <property name="Card Text" value="Ghoulish Scavenger gets +1 skill and # # for each face down card attached to it.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: Instead of resourcing a card, you may attach a card from your hand face down to Ghoulish Scavenger as an ATTACHMENT support card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F35" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="e79fc0be-9be0-4591-b380-a72e1f6b5e5d" name="Baleful Reveler">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="If it is NIGHT, Baleful Reveler gains # #." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F36" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="1b692b01-7a05-4d24-b96c-049126ade771" name="Dark Rebirth">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play only if it is NIGHT.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: Choose a non-ANCIENT ONE subtype and search your discard pile for any number of character cards that have that subtype.  Ply those characters into play." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F37" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="05a4f014-297f-4b92-a53b-6ec37c27cffd" name="Untimely Burial">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Search your deck for a &gt; character and put it into your discard pile.  Then shuffle your deck.  If it is NIGHT return Untimely Burial to your hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F38" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="0deab031-6ddd-4e03-8631-f9f9b0a17261" name="^^ * Elisabetta Magro">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="High Servant of the Order" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Conspirator. Lodge." />
+      <property name="Card Text" value="If there is a conspiracy card in play, Elisabetta Magro gains &quot;Response: After a player succeeds at a story, each player chooses a character he controls committed to that story and returns it to its owner's hand, if able. Then place a success token on Elisabetta Magro.&quot;" />
+      <property name="Keyword" value="Fated 4." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F39" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="92733a60-3263-4555-b473-37991284334d" name="Guardian of the Dawn">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="If it is DAY, Guardian of Dawn gains # $" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F40" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d1deb543-d80f-4940-b855-ce70bf7cfeda" name="Zanni">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="In order to commit to a story where Zanni is committed, opponents must commit more than 1 character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F41" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="568cd451-b3aa-42d4-898b-0da6aadcbcb7" name="Hermetic Seal">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact. Item." />
+      <property name="Card Text" value="Day. It is DAY. After Hermetic Seal comes into play, destory all NIGHT cards.  Hermetic Seal is immune to non-NIGHT card effects.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Disrupt: Return Hermetic Seal to your hand to cancel the response or forced response effect of a card that just entered play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F42" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="81588cf5-c7eb-4d60-b6d9-6df7ddd98695" name="^^ Volto">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item. Mask." />
+      <property name="Card Text" value="Attach to a character you control.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Response: After attached character commits to a story, choose a character without 1 or more MASK support cards attached to it committed to the same story and uncommit that character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F43" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="51ed79ad-6e9a-40f1-8532-a4eeae6448b4" name="^^^ Look to the Future!">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: If it is DAY, choose and return a character you control to its owner's hand to draw X cards.  Then put X cards from your hand on top of your deck in any order.  X is the cost of the chosen character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F44" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="6234b1a3-d73d-44b8-9dc5-37c8fa2b7ec9" name="* Cascio Di Boerio">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Don Morto" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# # %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Conspirator. Crimelord." />
+      <property name="Card Text" value="Other characters you control committed to a conspiracy gain +1 skill.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Characters your opponents control committed to a conspiracy get -1 skill." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F45" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="b8175404-860f-4f12-99e7-fc4a6b69d9ea" name="Restless Caporione">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="While it is DAY, Restless Caporione gains FAST.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;While it is NIGHT, Restless Caporione does not exhaust to commit to stories." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F46" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="7bfb4a0d-3c2e-422a-87b9-4d094a06be52" name="Carnevale Sentinel">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="%" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="If it is DAY, Carnevale Sentinel gains $ % and WILLPOWER.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;If it is NIGHT, Carnevale Sentinel gains @ # and TOUGHNESS +1." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F47" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="ed4769d1-4233-452e-9fc3-28220565c4c9" name="Bauta">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item. Mask." />
+      <property name="Card Text" value="If it is DAY, attached character gains $ % and +1 skill.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;If it is NIGHT, attached character gains @ # and +1 skill." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F48" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="f5f5e054-2c8c-44d6-b701-2ed5ee4cd666" name="* The Gold Pocket Watch">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Item." />
+      <property name="Card Text" value="Action: Pay 1 to have The Gold Pocket Watch gain &quot;Day. It is DAY. Then destroy all NIGHT cards in play&quot; until the end of the turn.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: Pay 1 to have The Gold Pocket Watch gain &quot;Night. It is NIGHT. Then destroy all DAY cards in play&quot; until the end of the turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F49" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="c4013c16-8017-4d90-9e6b-f2bff32ca742" name="Early Start">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play only before or after all players have committed characters to stories.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: If it is DAY, ready all characters in play.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Action: If it is NIGHT, exhaust all characters in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F50" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="3963e282-be81-4835-920f-1f1eea89869f" name="Tenebrous Nightgaunt">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Monster. Servitor." />
+      <property name="Card Text" value="Night.  It is NIGHT. After Tenebrous Nightgaunt comes into play, destroy all DAY cards.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Response: After you succeed at a story where Tenebrous Nightgaunt is committed, choose an opponent.  That opponent must choose and return a character he controls to the top of its owner's deck. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F51" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="ee7ca097-2064-4109-87f3-9064a4eb3144" name="* Salvatore Neri">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Master of Illusion" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="# $" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Conspirator. Sorcerer." />
+      <property name="Card Text" value="While there is a conspiracy card in play, Salvatore Neri gains, &quot;Action: Pay 1 to choose a character.  Salvatore Neri gains the text box of the character until the end of the turn.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F52" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="75904eb2-a646-4a1b-bca2-85ed283f8381" name="Devious Nightgaunt">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Monster." />
+      <property name="Card Text" value="Each opponent's character with skill 2 or less (if it is NIGHT, instead with skill 4 or less) committed to the same story as Devious Nightgaunt is treated as if its text box was blank." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F53" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="465e8a4c-0c84-416c-974d-fea3226c4c83" name="&lt;&lt;&lt;&lt;&lt; The Black">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Curse." />
+      <property name="Card Text" value="Attach to a character.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Attached character's controller must pay 1 each time he wishes to commit attached character to a story trigger attached character's ability." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F54" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
+    <card id="d427bf1a-45e8-4c0b-9457-9f6ca361ce21" name="Fleeting Guise">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell." />
+      <property name="Card Text" value="Action: Choose a character you control.  Until the end of the phase, that character becomes a printed copy of a chosen non-unique character card in play." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F55" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
   </cards>
 </set>
