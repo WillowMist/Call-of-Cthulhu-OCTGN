@@ -77,6 +77,7 @@ InactiveColor = "#888888" # Cards which are in play but not active yer (e.g. see
 StealthColor = "#000000" # Cards which are in play but not active yer (e.g. see the shell traders)
 UnpaidColor = "#ffd700"
 UnpaidAbilityColor = "#40e0d0"
+ReadyEffectColor = "#eeeeee"
 
 Xaxis = 'x'
 Yaxis = 'y'

@@ -5,7 +5,7 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.182"
-	version="2.1.0.46"
+	version="2.1.0.110"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -78,6 +78,8 @@
 			<groupaction menu="Declare End of Turn" default="False" shortcut="F12" execute="goToEndTurn" />
 		</groupactions>
 		<cardaction menu="Smart Action (Action/Drain/Participate...)" default="True" shortcut="Ctrl+S" execute="defaultAction" />
+		<cardaction menu="Make (in)Sane" default="False" shortcut="Ctrl+I" execute="insaneOrSane" />
+		<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
 		<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
 	</table>
 	<player summary="{#Success Story 1} / {#Success Story 2} / {#Success Story 3} / {#Stories Won} / {#Hand}">
@@ -85,10 +87,11 @@
 		<globalvariable name="resourcesToPlay" value="3" />
 		<globalvariable name="gameReady" value="False" />
 		<globalvariable name="Phase" value="-1" />
+	          <globalvariable name="freePositions" value="[]" /> 
 		<hand name="Hand" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">
 			<groupaction menu="Random Discard" default="False" execute="randomDiscard" />
 			<groupaction menu="Mulligan" default="False" shortcut="Ctrl+M" execute="mulligan" />
-			<cardaction menu="Play as Resource" default="False" shortcut="Ctrl+Q" execute="playresource" />
+			<cardaction menu="Play as Resource" default="False" shortcut="Ctrl+Q" execute="playResource" />
 			<cardaction menu="Play Card" default="True" shortcut="Ctrl+W" execute="play" />
 		</hand>
 		<group name="Deck" visibility="none" ordered="False" width="63" height="88" icon="groups/drawpile.png" collapsed="False">
@@ -99,7 +102,7 @@
 		<group name="Discard Pile" visibility="all" ordered="False" width="63" height="88" icon="groups/discardpile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
 		</group>
-		<group name="Story Deck" visibility="none" ordered="False" width="88" height="63" icon="groups/storypile.png" collapsed="False">
+		<group name="Story Deck" visibility="none" ordered="False" width="63" height="88" icon="groups/storypile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
 		</group>
 		<group name="ScriptingPile" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png" collapsed="True" />

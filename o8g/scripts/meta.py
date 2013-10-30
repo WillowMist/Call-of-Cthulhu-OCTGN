@@ -39,11 +39,12 @@ except ImportError:
     pass
 
 Automations = {'Play, Score and Rez'    : True, # If True, game will automatically trigger card effects when playing or double-clicking on cards. Requires specific preparation in the sets.
-               'Start/End-of-Turn/Phase'      : True, # If True, game will automatically trigger effects happening at the start of the player's turn, from cards they control.
-               'Damage Prevention'      : True, # If True, game will automatically use damage prevention counters from card they control.
-               'Triggers'               : True, # If True, game will search the table for triggers based on player's actions, such as installing a card, or trashing one.
-               'WinForms'               : True, # If True, game will use the custom Windows Forms for displaying multiple-choice menus and information pop-ups
-               'Damage'                 : True}
+		'Start/End-of-Turn/Phase'      : True, # If True, game will automatically trigger effects happening at the start of the player's turn, from cards they control.
+		'Damage Prevention'      : True, # If True, game will automatically use damage prevention counters from card they control.
+		'Triggers'               : True, # If True, game will search the table for triggers based on player's actions, such as installing a card, or trashing one.
+		'WinForms'               : True, # If True, game will use the custom Windows Forms for displaying multiple-choice menus and information pop-ups
+		'Damage'                 : True,
+		'Placement'		:True}
 
 UniCode = True # If True, game will display credits, clicks, trash, memory as unicode characters
 
@@ -176,7 +177,7 @@ def getSpecial(cardType,player = me):
    return card
 
 
-def storeAttachment(card, attachee, forced = False):
+def storeAttachment(card, attachee, forced = False, resource = False):
 	mute()
 	try:
 		global Stored_Attachments, Stored_Name, Stored_Resource
@@ -189,7 +190,7 @@ def storeAttachment(card, attachee, forced = False):
 			debugNotify("{} not stored.  Storing...".format(card),4)
 			Stored_Name[card._id] = card.Name
 			# debugNotify(">>> Step 1",4)
-			Stored_Resource[card._id] = card.properties["Resource Icon"]
+			if resource: Stored_Resource[card._id] = card.properties["Resource Icon"]
 			# debugNotify(">>> Step 2",4)
 			Stored_Attachments[card._id] = attachee._id
 			# debugNotify("Storing: {} - {} - {}".format(Stored_Name.get(card._id, '?'),Stored_Resource.get(card._id,'?'),Stored_Attachments.get(card._id,'?')),4)
@@ -210,13 +211,15 @@ def getAttachments(card):
 
 def getAttached(card):
 	global Stored_Attachments
+	debugNotify(">>> Checking for attachment host - {}".format(card._id),4)
 	if (card._id in Stored_Attachments and not Stored_Attachments.get(card._id,'?') == '?'):
+		debugNotify(">>> Returning {}".format(Stored_Attachments.get(card._id,'?')),4)
 		return Card(Stored_Attachments.get(card._id,'?'))
 	else:
 		return 
 	
 def resetAll(): # Clears all the global variables in order to start a new game.
-   global debugVerbosity, newturn, endofturn, turn
+   global debugVerbosity, newturn, endofturn, turn, firstTurn
    debugNotify(">>> resetAll(){}".format(extraASDebug())) #Debug
    mute()
    me.counters['Success Story 1'].value = 0
@@ -226,10 +229,13 @@ def resetAll(): # Clears all the global variables in order to start a new game.
    me.handSize = 5
    newturn = False 
    endofturn = False
+   firstTurn = True
    turn = 0
    selectedAbility = eval(getGlobalVariable('Stored Effects'))
    selectedAbility.clear()
    setGlobalVariable('Stored Effects',str(selectedAbility))
+   me.setGlobalVariable('freePositions',str([]))
+   me.setGlobalVariable('resourcesToPlay',3)
    if len(players) > 1: debugVerbosity = -1 # Reset means normal game.
    elif debugVerbosity != -1 and confirm("Reset Debug Verbosity?"): debugVerbosity = -1    
    debugNotify("<<< resetAll()") #Debug   
@@ -264,21 +270,26 @@ def addRemResource(domainCard,resourceCard, amount=1):
 		elif resourceCard.Faction=="The Syndicate":domainCard.markers[resdict['Resource:The Syndicate']] += amount
 		elif resourceCard.Faction=="The Order of the Silver Twilight":domainCard.markers[resdict['Resource:The Order of the Silver Twilight']] += amount
 		elif resourceCard.properties["Resource Icon"] =="Z":domainCard.markers[resdict['Resource:Zoog']] += amount
-		else: domainCard.markers[mdict['NResource']] += amount
+		else: domainCard.markers[resdict['Resource:Neutral']] += amount
 	else:
 		debugNotify("### Tried to add resources to a non-domain target.")
 		return
-def countResources(card):
+def countResources(card,faction = 'All'):
 	# debugNotify(">>> Count Resources",3)
 	resources = 0
-	keys = mdict.viewkeys()
+	keys = resdict.viewkeys()
 	for key in keys:
-		if re.search('Resource', key):
+		if re.search('Resource', key) and (re.search(faction, key) or faction == 'All'):
 			# debugNotify("Key: {}".format(key),4)
-			resources += card.markers[mdict[key]]
+			resources += card.markers[resdict[key]]
 			# debugNotify("Resource Count: {}".format(resources),4)
 	return resources
-	
+def countAllResources(faction = 'All'):
+   domainList = [c for c in table if c.controller == me and cardStatus(c) == 'Domain']
+   resources = 0
+   for c in domainList:
+      resources += countResources(c,faction)
+   return resources
 def arrangeAttachments(card):
 	debugNotify(">>> arrangeAttachments: {}".format(card.name),3)
 	x,y = card.position
@@ -287,19 +298,24 @@ def arrangeAttachments(card):
 	for attachment in attachments:
 		debugNotify("Attachment: {}".format(attachment),3)
 		exists = False
+		targetCard = None
 		for c in table:
 			debugNotify("{} | {}".format(c._id, attachment),4)
-			if c._id == attachment: exists = True
+			if c._id == attachment: 
+				exists = True
+				targetCard = c
 		if exists:
 			debugNotify("Does Exist",4)
-			if Card(attachment).name == "Drain Token":
-				Card(attachment).moveToTable(x,y)
-				Card(attachment).sentToFront()
+			
+			if targetCard.name == "Drain Token":
+				debugNotify("Drain Token",4)
+				targetCard.moveToTable(x,y)
+				targetCard.sendToFront()
 			else:
 				if me.hasInvertedTable() == True: y += 8
 				else: y -= 8
-				Card(attachment).moveToTable(x,y)
-				Card(attachment).sendToBack()
+				targetCard.moveToTable(x,y)
+				targetCard.sendToBack()
 		else: del Stored_Attachments[attachment]
 		
 		
@@ -325,9 +341,15 @@ def gameStarted():
 def hasSubType(card,matchType):
 	debugNotify("hasSubtype({}) - {}".format(matchType,card.Subtypes))
 	if re.search(r'{}'.format(matchType),card.Subtypes):
-		debugNotify("Is an Attachment.")
+		debugNotify(">> Has Subtype: {}".format(matchType))
 		return True
 	else: return False
+def hasKeyword(card,matchType):
+   debugNotify("hasKeyword({}) - {}".format(matchType,card.Keywords))
+   if re.search(r'{}'.format(matchType),card.Keywords):
+      debugNotify(">> Has Keyword: {}".format(matchType))
+      return True
+   else: return False
 def parseIcons(STRING, dictReturn = False):
 	if debugVerbosity >= 1: notify(">>> parseIcons() with STRING: {}".format(STRING)) #Debug
 	Terror = STRING.count('@')
@@ -476,7 +498,7 @@ def reduceCost(card, action = 'PLAY', fullCost = 0, dryRun = False):
             if orig_reduction != reduction: # If the current card actually reduced or increased the cost, we want to announce it
                if reduction > 0 and not dryRun: notify(" -- {} reduces cost by {}".format(c,reduction - orig_reduction))
                elif reduction < 0 and dryRun: notify(" -- {} increases cost by {}".format(c,abs(reduction - orig_reduction)))
-   if debugVerbosity >= 3: notify("<<< reduceCost(). final reduction = {}".format(reduction)) #Debug
+   if debugVerbosity >= 1: notify("<<< reduceCost(). final reduction = {}".format(reduction)) #Debug
    return reduction
 
 def chkSuperiority(Autoscript, card):
@@ -579,6 +601,64 @@ def storeCardEffects(card,Autoscript,cost,previousHighlight,actionType,preTarget
    
 
 
+def placeCard(card): 
+   mute()
+   try:
+      debugNotify(">>> placeCard() for card: {}".format(card)) #Debug
+      if Automations['Placement']:
+         debugNotify("We have placement automations",2) #Debug
+         if card.Type == 'Character': # For now we only place Units
+            unitAmount = len([c for c in table if c.Type == 'Character' and c.controller == me and c.highlight != UnpaidColor and c.highlight != DummyColor and c.orientation != Rot180]) - 1 # we reduce by 1, because it will always count the unit we're currently putting in the game
+            debugNotify("my unitAmount is: {}.".format(unitAmount)) #Debug
+            freePositions = eval(me.getGlobalVariable('freePositions')) # We store the currently released position
+            debugNotify(" my freePositions is: {}.".format(freePositions),2) #Debug
+            if freePositions != []: # We use this variable to see if there were any discarded units and we use their positions first.
+               positionC = freePositions.pop() # This returns the last position in the list of positions and deletes it from the list.
+               if debugVerbosity >= 2: notify("### positionC is: {}.".format(positionC)) #Debug
+               card.moveToTable(positionC[0],positionC[1])
+               me.setGlobalVariable('freePositions',str(freePositions))
+            else:
+               loopsNR = unitAmount / 7
+               loopback = 7 * loopsNR                  
+               xoffset = (playerside * (100 + cheight(card,0))) - (playerside * cheight(card,0) * (unitAmount - loopback)) - 25
+               # notify("xoffset: {} - cheight: {} - unitamount: {} - loopback: {}".format(xoffset,cheight(card,0),unitAmount,loopback))
+               if debugVerbosity >= 2: notify("### xoffset is: {}.".format(xoffset)) #Debug
+               yoffset = yaxisMove(card) + (cheight(card,3) * (loopsNR) * playerside) + (35 * playerside)                  
+               card.moveToTable(xoffset,yoffset)
+         elif card.Type == 'Support':
+            hostType = re.search(r'Placement:([A-Za-z1-9:_ ]+)', card.AutoScript)
+            if hostType:
+               if debugVerbosity >= 2: notify("### hostType: {}.".format(hostType.group(1))) #Debug
+               host = findTarget('Targeted-at{}'.format(hostType.group(1)))
+               if host == []: 
+                  whisper("ABORTING!")
+                  return
+               else:
+                  if debugVerbosity >= 2: notify("### We have a host") #Debug
+                  storeAttachment(card,host[0])
+                  if debugVerbosity >= 2: notify("### About to move into position") #Debug
+                  arrangeAttachments(host[0])
+                  host[0].target = False
+            else:
+               supportAmount = len([c for c in table if c.Type == 'Support' and c.controller == me and c.orientation != Rot180 and not hasSubType(c,'Attachment.')])
+               loopsNR = supportAmount / 7
+               loopback = 7 * loopsNR                  
+               xoffset = (playerside * (-550 + cheight(card,0))) + (playerside * cheight(card,0) * (supportAmount - loopback)) - 25
+               # notify("xoffset: {} - cheight: {} - supportamount: {} - loopback: {}".format(xoffset,cheight(card,0),supportAmount,loopback))
+               if debugVerbosity >= 2: notify("### xoffset is: {}.".format(xoffset)) #Debug
+               yoffset = yaxisMove(card) + (cheight(card,3) * (loopsNR) * playerside) + (135 * playerside)                  
+               card.moveToTable(xoffset,yoffset)
+
+      else: debugNotify("No Placement Automations. Doing Nothing",2)
+      if debugVerbosity >= 3: notify("<<< placeCard()") #Debug
+   except: notify("!!! ERROR !!! in placeCard()")
+
+def freeUnitPlacement(card): # A function which stores a unit's position when it leaves play, so that it can be re-used by a different unit
+   if Automations['Placement'] and card.Type == 'Character' and card.orientation != Rot180:
+      if card.owner == me and card.highlight != DummyColor and card.highlight != UnpaidColor:
+         freePositions = eval(me.getGlobalVariable('freePositions')) # We store the currently released position
+         freePositions.append(card.position)
+         me.setGlobalVariable('freePositions',str(freePositions))
 #------------------------------------------------------------------------------
 #  Online Functions
 #------------------------------------------------------------------------------
@@ -696,12 +776,23 @@ def controlChange(card,x,y):
    else: card.setController(findOpponent())
    
 def DebugCard(card, x=0, y=0):
-	debugNotify("<<< getAttached {}".format(card.name))
-	if getAttached(card): tmp = getAttached(card).name
-	else: tmp = "None"
-	whisper("Attached to: {}".format(tmp))
-	debugNotify("<<< getAttachments {}".format(card.name))
-	whisper("Attachments: {}".format(getAttachments(card)))
+   whisper("Position: {}".format(card.position))
+   debugNotify("<<< getAttached {}".format(card.name))
+   if getAttached(card): tmp = getAttached(card).name
+   else: tmp = "None"
+   whisper("Attached to: {}".format(tmp))
+   debugNotify("<<< getAttachments {}".format(card.name))
+   whisper("Attachments: {}".format(getAttachments(card)))
+def clrResourceMarkers(card):
+   for cMarkerKey in card.markers: 
+      if debugVerbosity >= 3: notify("### Checking marker {}.".format(cMarkerKey[0]))
+      for resdictKey in resdict:
+         if resdict[resdictKey] == cMarkerKey or cMarkerKey[0] == 'Ignores Affiliation Match': 
+            card.markers[cMarkerKey] = 0
+            break
+def cardSteadfast(card):
+   steadfast = card.Name.count(card.properties['Resource Icon'])
+   return steadfast
 #-------------------------------------------
 #  Event Handlers
 #-------------------------------------------

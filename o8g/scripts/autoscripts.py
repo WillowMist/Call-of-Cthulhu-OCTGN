@@ -381,7 +381,6 @@ def useAbility(card, x = 0, y = 0): # The start of autoscript activation.
          targetC = findTarget(activeAutoscript)
          ### Warning the player in case we need to
          if chkWarn(card, activeAutoscript) == 'ABORT': return
-         if chkTagged(activeAutoscript) == 'ABORT': return
          ### Checking the activation cost and preparing a relevant string for the announcement
          actionCost = re.match(r"A([0-9]+)B([0-9]+)G([0-9]+)T([0-9]+):", activeAutoscript) 
          # This is the cost of the card.  It starts with A which is the amount of Clicks needed to activate
@@ -536,7 +535,7 @@ def autoscriptOtherPlayers(lookup, origin_card = "Temp", count = 1): # Function 
    if not Automations['Play, Score and Rez']: return # If automations have been disabled, do nothing.
    for card in table:
       debugNotify('Checking {}'.format(card), 2) # Debug
-      if not card.isFaceUp: continue # Don't take into accounts cards that are not rezzed.
+      if not card.isFaceUp and not card.orientation == Rot180: continue # Don't take into accounts cards that are not rezzed.
       if card.highlight == InactiveColor: continue # We don't take into account inactive cards.
       costText = '{} activates {} to'.format(card.controller, card) 
       Autoscripts = card.AutoScript.split('||')
@@ -546,7 +545,6 @@ def autoscriptOtherPlayers(lookup, origin_card = "Temp", count = 1): # Function 
          if not re.search(r'while(Rezzed|Scored|Running|Installed|InPlay)', autoS): 
             debugNotify("Card does not have triggered ability while in play. Aborting", 2) #Debug
             Autoscripts.remove(autoS)
-         if not chkRunningStatus(autoS): Autoscripts.remove(autoS) # If the script only works while running a specific server, and we're not, then abort.
       if len(Autoscripts) == 0: continue
       for autoS in Autoscripts:
          debugNotify('Checking autoS: {}'.format(autoS), 2) # Debug
@@ -556,7 +554,6 @@ def autoscriptOtherPlayers(lookup, origin_card = "Temp", count = 1): # Function 
          if chkPlayer(autoS, card.controller,False) == 0: continue # Check that the effect's origninator is valid.
          if not ifHave(autoS,card.controller,silent = True): continue # If the script requires the playet to have a specific counter value and they don't, do nothing.
          if re.search(r'whileScored',autoS) and card.controller.getGlobalVariable('ds') != 'corp': continue # If the card is only working while scored, then its controller has to be the corp.
-         if chkTagged(autoS, True) == 'ABORT': continue
          if not checkCardRestrictions(gatherCardProperties(origin_card), prepareRestrictions(autoS, 'type')): continue #If we have the '-type' modulator in the script, then need ot check what type of property it's looking for
          if not checkSpecialRestrictions(autoS,origin_card): continue #If we fail the special restrictions on the trigger card, we also abort.
          if re.search(r'onlyOnce',autoS) and oncePerTurn(card, silent = True, act = 'automatic') == 'ABORT': continue # If the card's ability is only once per turn, use it or silently abort if it's already been used
@@ -634,7 +631,6 @@ def atTimedEffects(Time = 'Start'): # Function which triggers card effects at th
             else: continue
          if chkPlayer(effect.group(2), card.controller,False) == 0: continue # Check that the effect's origninator is valid. 
          if not ifHave(autoS,card.controller,silent = True): continue # If the script requires the playet to have a specific counter value and they don't, do nothing.
-         if chkTagged(autoS, True) == 'ABORT': continue
          if effect.group(1) != Time: continue # If the effect trigger we're checking (e.g. start-of-run) does not match the period trigger we're in (e.g. end-of-turn)
          debugNotify("split Autoscript: {}".format(autoS), 3)
          if debugVerbosity >= 2 and effect: notify("!!! effects: {}".format(effect.groups()))
@@ -1096,7 +1092,7 @@ def DrawX(Autoscript, announceText, card, targetCards = None, notification = Non
       debugNotify("About to check for Draw Prevention",2)
       for c in table:
          if preventDraw: break #If we already found a card effect which prevents draws, don't check any more cards on the table.
-         Autoscripts = CardsAS.get(c.model,'').split('||')
+         Autoscripts = c.AutoScript.split('||')
          for autoS in Autoscripts:
             debugNotify("Checking autoS {}".format(autoS),2)
             if re.search(r'\bPreventDraw', autoS) and chkPlayer(autoS,targetPL,False) and checkOriginatorRestrictions(autoS,c):
@@ -1426,10 +1422,6 @@ def ModifyStatus(Autoscript, announceText, card, targetCards = None, notificatio
             targetCard.setController(me)
             targetCard.moveToTable(0, 0 + yaxisMove(card))
          elif action.group(1) == 'Rescue': rescue(targetCard,silent = True)
-         elif action.group(1) == 'Uncommit':
-            if targetCard.Side == 'Light': commitColor = LightForceColor
-            else: commitColor = DarkForceColor
-            if targetCard.highlight == commitColor: targetCard.highlight = None
          else: return 'ABORT'
          if action.group(2) != 'Multi': break # If we're not doing a multi-targeting, abort after the first run.
    debugNotify("Finished Processing Modifications. About to announce",2)
@@ -1578,310 +1570,6 @@ def CustomScript(card, action = 'PLAY'): # Scripts that are complex and fairly u
       shuffle(objectives)
       if debugVerbosity >= 2: notify("#### About to announce")
       notify("{} uses the ability of {} to replace it with {}".format(me,card,Card(objList[choice])))
-   elif card.name == 'Black Squadron Pilot' and action == 'PLAY':
-      if len(findTarget('AutoTargeted-atFighter_and_Unit-byMe')) > 0 and confirm("This unit has an optional ability which allows it to be played as an enchantment on a fighter. Do so now?"):
-         fighter = findTarget('AutoTargeted-atFighter_and_Unit-byMe-choose1')
-         if len(fighter) == 0: return
-         hostCards = eval(getGlobalVariable('Host Cards'))
-         hostCards[card._id] = fighter[0]._id
-         setGlobalVariable('Host Cards',str(hostCards))
-         cardAttachementsNR = len([att_id for att_id in hostCards if hostCards[att_id] == fighter[0]._id])
-         if debugVerbosity >= 2: notify("### About to move into position") #Debug
-         x,y = fighter[0].position
-         card.moveToTable(x, y - ((cwidth(card) / 4 * playerside) * cardAttachementsNR))
-         card.sendToBack()
-         TokensX('Put1isEnhancement-isSilent', '', card)
-   elif card.name == 'Wedge Antilles' and action == 'PLAY':
-      if len(findTarget('AutoTargeted-atFighter_or_Speeder-byMe')) > 0 and confirm("This unit has an optional ability which allows it to be played as an enchantment on a Fighter or Speeder. Do so now?"):
-         fighter = findTarget('AutoTargeted-atFighter_or_Speeder-byMe-choose1')
-         if len(fighter) == 0: return
-         hostCards = eval(getGlobalVariable('Host Cards'))
-         hostCards[card._id] = fighter[0]._id
-         setGlobalVariable('Host Cards',str(hostCards))
-         cardAttachementsNR = len([att_id for att_id in hostCards if hostCards[att_id] == fighter[0]._id])
-         if debugVerbosity >= 2: notify("### About to move into position") #Debug
-         x,y = fighter[0].position
-         card.moveToTable(x, y - ((cwidth(card) / 4 * playerside) * cardAttachementsNR))
-         card.sendToBack()
-         TokensX('Put1isEnhancement-isSilent', '', card)
-   elif card.name == 'Cruel Interrogations' and action == 'PLAY':
-      #if not confirm("Do you wish to use Cruel Interrogations' Reaction?"): return
-      while len(opponent.hand) == 0: 
-         if not confirm("Your opponent has no cards in their hand.\n\nRetry?"): return
-      turn = num(getGlobalVariable('Turn'))
-      captureTarget = opponent.hand.random()
-      capture(chosenObj = card, targetC = captureTarget)
-   elif card.name == 'Rancor' and action == 'afterCardRefreshing' and card.controller == me:
-      possibleTargets = [c for c in table if c.Type == 'Unit' and not re.search('Vehicle',c.Traits)]
-      if len(possibleTargets) == 0: return 'ABORT' # Nothing to kill
-      minCost = 10 
-      currTargets = []
-      for c in possibleTargets:
-         if debugVerbosity >= 4: notify("### Checking {}".format(c))
-         if num(c.Cost) < minCost:
-            del currTargets[:]
-            currTargets.append(c)
-            minCost = num(c.Cost)
-         elif num(c.Cost) == minCost: currTargets.append(c)
-         else: pass
-      if debugVerbosity >= 2: notify("### Finished currTargets") #Debug         
-      if debugVerbosity >= 4 and len(currTargets) > 0: notify("### Minimum Cost Targets = {}".format([c.name for c in currTargets])) #Debug
-      if len(currTargets) == 1: finalTarget = currTargets[0]
-      else: 
-         choice = SingleChoice("Choose one unit to be destroyed by the Rancor", makeChoiceListfromCardList(currTargets), type = 'button', default = 0)
-         if choice == 'ABORT': 
-            notify(":::NOTICE::: {} has skipped Rancor's effects this turn".format(me))
-            return
-         finalTarget = currTargets[choice]
-      if debugVerbosity >= 2: notify("### finalTarget = {}".format(finalTarget)) #Debug
-      discard(finalTarget,silent = True)
-      if finalTarget == card: notify("{}'s Rancor destroys itself in its wild rampage".format(me))
-      else: notify("{}'s Rancor rampages and destroys {}".format(me,finalTarget))
-   elif card.name == 'Rescue Mission' and action == 'PLAY':
-      currentTargets = findTarget('Targeted-isCaptured')
-      if len(currentTargets) == 0: return
-      targetC = currentTargets[0] # We always only have one target.
-      targetC.isFaceUp = True
-      loopChk(targetC,'Type')
-      removeCapturedCard(targetC) 
-      targetC.highlight = None
-      if targetC.Type == 'Unit' and confirm("You have rescued {}. Do you want to put immediately into play?".format(targetC.name)): 
-         placeCard(targetC)
-         notify("{} has rescued {} and put them straight into action".format(me,targetC))
-      else: 
-         targetC.moveTo(targetC.owner.hand)
-         notify("{} has rescued a card".format(me))
-   elif card.name == 'Return of the Jedi' and action == 'PLAY':
-      if debugVerbosity >= 2: notify("### Return of the Jedi")
-      discardList = []
-      if debugVerbosity >= 2: notify("### Moving Force Users to 'removed from game' pile from discard pile")
-      for c in discardPile:
-         c.moveTo(me.ScriptingPile)
-         discardList.append(c._id)
-      rnd(1,10)
-      unitNames = []
-      unitDetails = []
-      ForceUserList = []
-      if debugVerbosity >= 2: notify("### Storing unit properties and moving them back")
-      for unit in discardList:
-         if debugVerbosity >= 3: notify("#### Card Name: {}".format(Card(unit).name))
-         if not Card(unit).name in unitNames and re.search(r'Force User',Card(unit).Traits):
-            ForceUserList.append(unit)
-            unitNames.append(Card(unit).name)
-            unitDetails.append((Card(unit).properties['Damage Capacity'],Card(unit).Traits,parseCombatIcons(Card(unit).properties['Combat Icons']),Card(unit).Text)) # Creating a tuple with some details per objective
-         if debugVerbosity >= 3: notify("#### Finished Storing. Moving back")
-         Card(unit).moveTo(discardPile)
-      if len(ForceUserList) == 0: 
-         whisper("::ERROR::: There is no force user in your discard pile!")
-         return
-      elif len(ForceUserList) == 1:
-         choice = 0
-      else:
-         unitChoices = []
-         for iter in range(len(ForceUserList)):
-            unitChoices.append("{}\
-                             \nDamage Capacity: {}\
-                             \nTraits {}\
-                             \nIcons: {}\
-                             \nText: {}\
-                             ".format(unitNames[iter], unitDetails[iter][0], unitDetails[iter][1], unitDetails[iter][2],unitDetails[iter][3]))
-         choice = SingleChoice("Which Force User unit do you want to put into play from your discard pile?", unitChoices, type = 'button', default = 0, cancelButton = False)
-      placeCard(Card(ForceUserList[choice]))
-      if debugVerbosity >= 2: notify("#### About to announce")
-      notify("{} returns into play".format(Card(ForceUserList[choice])))
-   elif card.name == 'Superlaser Engineer' and action == 'PLAY': 
-      cardList = []
-      sendToBottomList = []
-      iter = 0
-      for c in deck.top(5):
-         c.moveToTable((cwidth(c) * 2) - (iter * cwidth(c)),0)
-         cardList.append(c._id)
-         c.highlight = DummyColor
-         iter += 1
-      rnd(1,10)
-      revealedCards = ''
-      for cid in cardList: revealedCards += '{}, '.format(Card(cid))
-      notify("{} activates the ability of their Superlaser Engineer and reveals the top 5 cards of their deck: {}".format(me,revealedCards))
-      rnd(1,10)      
-      for cid in cardList:
-         if (Card(cid).Type == 'Event' or Card(cid).Type == 'Enhancement') and Card(cid).Affiliation == 'Imperial Navy' and num(Card(cid).Cost) >= 3:
-            notify(":> {} moves {} to their hand".format(me,Card(cid)))
-            Card(cid).moveTo(me.hand)
-         else:
-            sendToBottomList.append(Card(cid))
-      sendToBottom(sendToBottomList)
-   elif card.name == 'Take Them Prisoner' and action == 'PLAY': 
-      debugNotify("Enterring 'Take Them Prisoner' Automation",1)
-      turn = num(getGlobalVariable('Turn'))
-      cardList = []
-      cardNames = []
-      cardDetails = []
-      debugNotify("About to move cards to me.ScriptingPile",2)
-      for c in opponent.piles['Command Deck'].top(3):
-         c.moveTo(me.ScriptingPile)
-         cardList.append(c._id)
-      rnd(1,10)
-      for cid in cardList:
-         if debugVerbosity >= 3: notify("#### Card Name: {}".format(Card(cid).name))
-         cardNames.append(Card(cid).name)
-         cardDetails.append((Card(cid).Type,Card(cid).properties['Damage Capacity'],Card(cid).Resources,Card(cid).Traits,parseCombatIcons(Card(cid).properties['Combat Icons']),Card(cid).Text)) # Creating a tuple with some details per objective
-         if debugVerbosity >= 3: notify("#### Finished Storing.")
-      ChoiceTXT = []
-      for iter in range(len(cardList)):
-         ChoiceTXT.append("{}\
-                          \nType: {}\
-                          \nDamage Capacity: {}, Resources: {}\
-                          \nTraits: {}\
-                          \nIcons: {}\
-                          \nText: {}\
-                          ".format(cardNames[iter], cardDetails[iter][0], cardDetails[iter][1], cardDetails[iter][2],cardDetails[iter][3],cardDetails[iter][4],cardDetails[iter][5]))
-      choice = SingleChoice("Which card do you wish to capture?", ChoiceTXT, type = 'button', default = 0,cancelButton = False)
-      capturedC = Card(cardList.pop(choice))
-      capturedC.moveTo(opponent.piles['Command Deck']) # We move it back to the deck, so that the capture function can announce the correct location from which it was taken.
-      if debugVerbosity >= 3: notify("#### About to capture.")
-      capture(chosenObj = card,targetC = capturedC, silent = True)
-      if debugVerbosity >= 3: notify("#### Removing choice text")
-      ChoiceTXT.pop(choice) # We also remove the choice text entry at that point.
-      choice = SingleChoice("Which card do you wish to leave on top of your opponent's command deck?", ChoiceTXT, type = 'button', default = 0,cancelButton = False)
-      for iter in range(len(cardList)):
-         if debugVerbosity >= 2: confirm("#### Moving {} (was at position {}. choice was {})".format(Card(cardList[iter]).name, iter,choice))
-         if iter == choice: Card(cardList[iter]).moveTo(opponent.piles['Command Deck'],0)
-         else: Card(cardList[iter]).moveTo(opponent.piles['Command Deck'],1)
-      notify(":> {} activates Takes Them Prisoner to capture one card from the top 3 cards of {}'s command deck".format(me,opponent))
-   elif card.name == 'Trench Run' and action == 'PLAY': # We move this card to the opponent's exile in order to try and give control to them automatically.
-      card.moveTo(opponent.ScriptingPile)
-      rnd(1,10)
-      if me.hasInvertedTable(): card.moveToTable(0,0)
-      else:  card.moveToTable(0,-cheight(card))
-      if debugVerbosity >= 2: notify("About to whisper") # Debug
-      whisper(":::IMPORTANT::: Please make sure that the controller for this card is always the Dark Side player")
-   elif card.name == 'Twist of Fate' and action == 'RESOLVEFATE': 
-      for card in table:
-         if card.highlight == EdgeColor or card.highlight == FateColor:
-            card.moveTo(card.owner.piles['Discard Pile'])
-      notify(":> {} discards all edge cards and restarts the edge battle".format(card))
-   elif card.name == "Vader's TIE Advanced" and action == 'STRIKE':
-      delayed_whisper("-- Calculating Vader's TIE Advanced Combat Icons. Please wait...")
-      TokensX('Remove999Vaders TIE Advance:UD-isSilent', '', card)
-      TokensX('Remove999Vaders TIE Advance:BD-isSilent', '', card)
-      TokensX('Remove999Vaders TIE Advance:Tactics-isSilent', '', card)
-      if not confirm("Do you want to use Vader's TIE Advanced reaction?"): return
-      disCard = deck.top()
-      disCard.moveTo(discardPile)
-      rnd(1,10)
-      Unit_Damage, Blast_Damage, Tactics = calculateCombatIcons(card = disCard)
-      if Unit_Damage: TokensX('Put{}Vaders TIE Advance:UD-isSilent'.format(Unit_Damage), '', card)
-      if Blast_Damage: TokensX('Put{}Vaders TIE Advance:BD-isSilent'.format(Blast_Damage), '', card)
-      if Tactics: TokensX('Put{}Vaders TIE Advance:Tactics-isSilent'.format(Tactics), '', card)
-      if Unit_Damage or Blast_Damage or Tactics:
-         notify("{} discards {} and Vader's TIE Advanced strike is boosted by {}".format(me,disCard,parseCombatIcons(disCard.properties['Combat Icons'])))
-      else: 
-         notify("{} discards {} and Vader's TIE Advanced strike is not boosted".format(me,disCard,parseCombatIcons(disCard.properties['Combat Icons'])))
-   elif (card.name == "Yoda" or card.name == "Rogue Three") and action == 'STRIKE':
-      delayed_whisper("-- Calculating Extra Combat Icons from enhancements. Please wait...")
-      TokensX('Remove999Enhancement Bonus:UD-isSilent', '', card)
-      TokensX('Remove999Enhancement Bonus:BD-isSilent', '', card)
-      hostCards = eval(getGlobalVariable('Host Cards'))
-      cardAttachementsNR = len([att_id for att_id in hostCards if hostCards[att_id] == card._id])
-      if cardAttachementsNR and gotEdge():
-         TokensX('Put{}Enhancement Bonus:UD-isSilent'.format(cardAttachementsNR), '', card)
-         TokensX('Put{}Enhancement Bonus:BD-isSilent'.format(cardAttachementsNR), '', card)
-   elif card.name == "Secret Informant" and action == 'USE':
-      if card.orientation != Rot90:
-         whisper(":::ERROR::: Secret Informant must be participating in the engagement to use her ability")
-         return
-      if len([c for c in table if c.highlight == FateColor and c.Type == 'Fate' and c.owner == me]) and not confirm("You are supposed to use this effect once you're already used all your fate cards on the table (i.e. they all should have a silver highlight now)\
-                  \n\nHave you done this already?"): return
-      for c in table:
-         if c.highlight == EdgeColor and c.Type == 'Fate' and c.owner == me:
-            c.highlight = FateColor
-      notify("{}'s secret informant allows them to resolve all their fate cards an extra time this battle".format(me))
-   elif card.name == "The Secret of Yavin 4" and action == 'USE':
-      EngagedObjective = getGlobalVariable('Engaged Objective')
-      if EngagedObjective == 'None': 
-         whisper(":::Error::: No Engagement Currently ongoing")
-         return
-      else:
-         currentTarget = Card(num(EngagedObjective))     
-         if currentTarget.controller != me or currentTarget == card:
-            whisper(":::Error::: Current engagement not at another on of your objectives.")
-            return
-      currentTarget.highlight = None
-      card.highlight = DefendColor
-      setGlobalVariable('Engaged Objective',str(card._id))
-      notify("{} activates {} and moves the engagement to it".format(me,card))
-   elif card.name == "Echo Caverns" and action == 'USE':
-      if (card.markers[mdict['Focus']]
-            and card.markers[mdict['Focus']] >= 1
-            and not confirm("Card is already exhausted. Bypass?")):
-         return 
-      currentTargets = findTarget('Targeted-atUnit')
-      if len(currentTargets) != 2:
-         delayed_whisper(":::ERROR::: You must target exactly 2 units to use this ability")
-         return
-      cardATraits = currentTargets[0].Traits.split('-')
-      cardBTraits = currentTargets[1].Traits.split('-')
-      commonTrait = False
-      for TraitA in cardATraits:
-         if TraitA == 'Unique': continue # "Unique" is not an actual trait.
-         if TraitA in cardBTraits: commonTrait = True
-      if not commonTrait: 
-         delayed_whisper(":::ERROR::: The two target units must share a common Trait.")
-         return
-      targetChoices = makeChoiceListfromCardList(currentTargets)
-      choiceC = SingleChoice("Choose from which card to remove a combat icon", targetChoices, type = 'button', default = 0)
-      if choiceC == 'ABORT': return
-      if debugVerbosity >= 4: notify("### choiceC = {}".format(choiceC)) # Debug
-      if debugVerbosity >= 4: notify("### currentTargets = {}".format([currentTarget.name for currentTarget in currentTargets])) # Debug
-      sourceCard = currentTargets.pop(choiceC)
-      if debugVerbosity >= 2: notify("### sourceCard = {}".format(sourceCard)) # Debug
-      targetCard = currentTargets[0] # After we pop() the choice card, whatever remains is the target card.
-      if debugVerbosity >= 2: notify("### targetCard = {}".format(targetCard)) # Debug
-      printedIcons = parseCombatIcons(sourceCard.properties['Combat Icons'])
-      IconChoiceList = ["Unit Damage","Edge-Enabled Unit Damage","Blast Damage","Edge-Enabled Blast Damage","Tactics","Edge-Enabled Tactics"] # This list is a human readable one for the user to choose an icon
-      IconList = ["UD","EE-UD","BD","EE-BD","Tactics","EE-Tactics"] # This list has the same icons as the above, but uses the keywords that the game expects in a marker, so it makes it easier to figure out which icon the user selected.
-      if debugVerbosity >= 2: notify("### About to select combat icon to steal")
-      choiceIcons = SingleChoice("The card has the following printed Combat Icons: {}.\nChoose a combat icon to steal.\n(We leave the choice open, in case the card has received a combat icon from a card effect)".format(printedIcons), IconChoiceList, type = 'button', default = 0)
-      #card.markers[mdict['Focus']] += 1
-      addMarker(card, 'Focus',1, True)
-      TokensX('Put1Echo Caverns:minus{}-isSilent'.format(IconList[choiceIcons]), '', sourceCard)
-      TokensX('Put1Echo Caverns:{}-isSilent'.format(IconList[choiceIcons]), '', targetCard)
-      notify("{} activates {} to move one {} icon from {} to {}".format(me,card,IconChoiceList[choiceIcons],sourceCard,targetCard))
-   elif card.name == "Prophet of the Dark Side" and action == 'PLAY':
-         cardView = me.piles['Command Deck'][1]
-         ScriptingPile
-         cardView.moveTo(me.ScriptingPile)
-         #cardView.isFaceUp = True
-         rnd(1,10)
-         if not haveForce():
-            delayed_whisper(":> The Prophet foresees that {} is upcoming!".format(cardView)) # If the player doesn't have the force, we just announce the card
-         else: # If the player has the force, he has a chance to draw the card in their hand.
-            StackTop = [cardView]
-            cardDetails = makeChoiceListfromCardList(StackTop, True)
-            if confirm("The Prophet Foresees:\n{}\n\nDo you want to draw this card".format(cardDetails[0])):
-               cardView.moveTo(me.hand)
-               notify("The Prophet of the Dark Side has drawn 1 card for {}".format(me))
-         if cardView.group == me.ScriptingPile: cardView.moveTo(me.piles['Command Deck'])
-         rnd(1,10)
-   elif card.name == "Z-95 Headhunter" and action == 'STRIKE':
-      opponent = findOpponent()
-      shownCards = showatrandom(targetPL = opponent, silent = True)
-      if len(shownCards) == 0:
-         notify("{} has no cards in their hand".format(opponent))
-         return
-      notify("{} discovers {} in an surprise strike!".format(card,shownCards[0]))
-      rnd(1,10)
-      if fetchProperty(shownCards[0], 'Type') == 'Unit': 
-         capture(targetC = shownCards[0], silent = True)
-         notify("{} has captured a unit.".format(card))
-      else: shownCards[0].moveTo(shownCards[0].owner.hand)
-      rnd(1,10)
-   elif card.name == "Last Defense of Hoth" and action == 'USE':
-      if oncePerTurn(card, silent = True, act = 'manual') == 'ABORT': return
-      if confirm("Do you want to use Last Defence of Hoth's special ability?"):
-         topCard = me.piles['Command Deck'].top()
-         if playEdge(topCard,True) != 'ABORT':
-            notify("{} used {} to play an edge card from the top of their command deck".format(me,card))
    else: notify("{} uses {}'s ability".format(me,card)) # Just a catch-all.
 #------------------------------------------------------------------------------
 # Helper Functions
@@ -1907,10 +1595,10 @@ def findTarget(Autoscript, fromHand = False, card = None): # Function for findin
          targetGroups = prepareRestrictions(Autoscript)
          if debugVerbosity >= 2: notify("### About to start checking all targeted cards.\n### targetGroups:{}".format(targetGroups)) #Debug
          for targetLookup in group: # Now that we have our list of restrictions, we go through each targeted card on the table to check if it matches.
-            if ((targetLookup.targetedBy and targetLookup.targetedBy == me) or re.search(r'AutoTargeted', Autoscript)) and targetLookup.highlight != EdgeColor and targetLookup.highlight !=FateColor: 
+            if ((targetLookup.targetedBy and targetLookup.targetedBy == me) or re.search(r'AutoTargeted', Autoscript)): 
             # OK the above target check might need some decoding:
             # Look through all the cards on the group and start checking only IF...
-            # * Card is targeted and targeted by the player OR target search has the -AutoTargeted modulator and it is NOT highlighted as a Fate, Edge or Captured.
+            # * Card is targeted and targeted by the player OR target search has the -AutoTargeted modulator.
             # * The player who controls this card is supposed to be me or the enemy.
                if debugVerbosity >= 2: notify("### Checking {}".format(targetLookup))
                if card:
@@ -1930,17 +1618,6 @@ def findTarget(Autoscript, fromHand = False, card = None): # Function for findin
                         if debugVerbosity >= 2: notify("### Host found! {}".format(targetLookup))
                         isHost = True
                   if not isHost: continue
-               #if re.search(r'-isJailer',Autoscript): # With this modulator, we're trying to target only cards which are captured by a specific objective
-                  #if debugVerbosity >= 2: notify("### Looking for Captured Cards")
-                  #if not card: continue # If this targeting script targets only a captured card's Jailer and we have not passed what the attachment is, we cannot find the Jailer, so we abort.
-                  #if debugVerbosity >= 2: notify("### Captured Card is: {}".format(card))
-                  #capturedCards = eval(getGlobalVariable('Captured Cards'))
-                  #isJailer = False
-                  #for capturedC in capturedCards:
-                     #if capturedCards[capturedC] == card._id and capturedC == targetLookup._id: 
-                        #if debugVerbosity >= 2: notify("### Captured Card found! {}".format(targetLookup))
-                        #isJailer = True
-                  #if not isJailer: continue
                if checkCardRestrictions(gatherCardProperties(targetLookup), targetGroups): 
                   if not targetLookup in foundTargets: 
                      if debugVerbosity >= 3: notify("### About to append {}".format(targetLookup)) #Debug
@@ -1999,7 +1676,7 @@ def findTarget(Autoscript, fromHand = False, card = None): # Function for findin
                else: choice = SingleChoice(choiceTitle, targetChoices, type = 'button', default = 0)
                if choice == 'ABORT': del foundTargets[:]
                else: foundTargets = [foundTargets.pop(choice)] # if we select the target we want, we make our list only hold that target
-      if debugVerbosity >= 3: # Debug
+      if debugVerbosity >= 0: # Debug
          tlist = [] 
          for foundTarget in foundTargets: tlist.append(foundTarget.name) # Debug
          notify("<<< findTarget() by returning: {}".format(tlist))
@@ -2100,10 +1777,10 @@ def checkSpecialRestrictions(Autoscript,card):
    if debugVerbosity >= 1: notify("### Card: {}".format(card)) #Debug
    validCard = True
    Autoscript = scrubTransferTargets(Autoscript)
-   if re.search(r'isCurrentObjective',Autoscript) and card.highlight != DefendColor: 
+   if re.search(r'isCurrentObjective',Autoscript): 
       debugNotify("!!! Failing because it's not current objective", 2)
       validCard = False
-   if re.search(r'isParticipating',Autoscript) and card.orientation != Rot90 and card.highlight != DefendColor: 
+   if re.search(r'isParticipating',Autoscript) and card.orientation != Rot90: 
       debugNotify("!!! Failing because it's not participating", 2)
       validCard = False
    if re.search(r'isAlone',Autoscript): # If OrigAlone means that the originator of the scipt needs to be alone in the engagement.
@@ -2111,30 +1788,6 @@ def checkSpecialRestrictions(Autoscript,card):
          if c != card and c.orientation == Rot90 and c.controller == card.controller: 
             debugNotify("!!! Failing because it's not participating alone", 2)
             validCard = False
-   if re.search(r'isCaptured',Autoscript):
-      if card.highlight != CapturedColor: 
-         debugNotify("!!! Failing because we werelooking for a captured card but this ain't it", 2)
-         validCard = False
-      elif re.search(r'isCapturedCurrentObjective',Autoscript):
-         try:
-            capturedCards = eval(getGlobalVariable('Captured Cards'))
-            debugNotify("capturedCards = {}".format(capturedCards.get(card._id,None)))
-            currentTarget = Card(num(getGlobalVariable('Engaged Objective')))
-            debugNotify("currentTarget = {}".format(currentTarget))
-            if capturedCards[card._id] != currentTarget._id:
-               debugNotify("!!! Failing because we were looking for a captured card at the current objective but this isn't one", 2)
-               validCard = False           
-         except: 
-            debugNotify("!!! Failing because we crashed while looking for isCapturedCurrentObjective. Not in conflict?", 2)
-            validCard = False           
-   if not re.search(r'isCaptured',Autoscript) and card.highlight == CapturedColor:
-         debugNotify("Failing because the current target is captured but we're not targeting captured card explicitly.", 2)
-         validCard = False      
-   if re.search(r'hasCaptures',Autoscript):
-      capturedCards = eval(getGlobalVariable('Captured Cards'))
-      if card._id not in capturedCards.values():
-         debugNotify("!!! Failing because we were looking for card that has captured other cards but this doesn't", 2)
-         validCard = False
    if re.search(r'isUnpaid',Autoscript) and card.highlight != UnpaidColor: 
       debugNotify("!!! Failing because card is not Unpaid", 2)
       validCard = False
@@ -2146,7 +1799,7 @@ def checkSpecialRestrictions(Autoscript,card):
       if not plAffiliation.markers[mdict['Edge']]:
          debugNotify("!!! Failing because card's controller is not the edge winner")
          validCard = False
-   if re.search(r'isNotParticipating',Autoscript) and (card.orientation == Rot90 or card.highlight == DefendColor): 
+   if re.search(r'isNotParticipating',Autoscript) and (card.orientation == Rot90): 
       debugNotify("!!! Failing because unit is participating", 2)
       validCard = False
    if re.search(r'isAttacking',Autoscript) or re.search(r'isDefending',Autoscript):
@@ -2178,22 +1831,6 @@ def checkSpecialRestrictions(Autoscript,card):
             try: debugNotify("Requires Damaged objective but {} Damage Markers found on {}".format(currentTarget.markers[mdict['Damage']],currentTarget),2)
             except: debugNotify("Oops! I guess markers were null", 2)
             validCard = False
-   if re.search(r'isCommited',Autoscript) and card.highlight != LightForceColor and card.highlight != DarkForceColor: 
-      debugNotify("!!! Failing because card is not committed to the force", 2)
-      validCard = False
-   if re.search(r'isNotCommited',Autoscript) and (card.highlight == LightForceColor or card.highlight == DarkForceColor): 
-      debugNotify("!!! Failing because card is committed to the force", 2)
-      validCard = False
-   if re.search(r'ifhasEdge',Autoscript) and not gotEdge(card.controller): 
-      if len(players) == 1 and debugVerbosity >= 0: notify("!!! Bypassing have-edge fail because we're debugging")
-      else: 
-         debugNotify("!!! Failing because card's controller does not have the edge", 2)
-         validCard = False
-   if re.search(r'ifhasntEdge',Autoscript) and gotEdge(card.controller): 
-      if len(players) == 1 and debugVerbosity >= 0: notify("!!! Bypassing hasn't-edge fail because we're debugging")
-      else: 
-         debugNotify("!!! Failing because card's controller has the edge", 2)
-         validCard = False
    if not chkPlayer(Autoscript, card.controller, False, True): 
       debugNotify("!!! Failing because not the right controller", 2)
       validCard = False
@@ -2230,9 +1867,6 @@ def checkSpecialRestrictions(Autoscript,card):
       markerSeek = findMarker(card, MarkerReq.group(1))
       if markerSeek:
          validCard = compareValue(MarkerReq.group(2), card.markers[markerSeek], num(MarkerReq.group(3)))
-   # Checking if the DS Dial needs to be at a specific value
-   DialReq = re.search(r'-ifDial(eq|le|ge|gt|lt)([0-9]+)',Autoscript)
-   if DialReq and validCard: validCard = compareValue(DialReq.group(1), me.counters['Death Star Dial'].value, num(DialReq.group(2)))
    if debugVerbosity >= 1: notify("<<< checkSpecialRestrictions() with return {}".format(validCard)) #Debug
    return validCard
 
@@ -2251,28 +1885,12 @@ def checkOriginatorRestrictions(Autoscript,card):
          if currObjID == 'None' or Card(num(currObjID)) != Card(hostCards[card._id]): 
             debugNotify("!!! Failing because originator card's host is not the current objective", 2)
             validCard = False
-      elif card.highlight != DefendColor:
-         debugNotify("!!! Failing because originator is not the current objective", 2)
-         validCard = False
    if re.search(r'ifOrigCaptures',Autoscript):
       capturedCards = eval(getGlobalVariable('Captured Cards'))
       if card._id not in capturedCards.values(): validCard = False
-   if re.search(r'ifOrigParticipating',Autoscript):
-      if re.search(r'-ifOrigParticipatingHost', Autoscript): # This submodulator fires only if the card being checked for scripts is currently hosted on a participating card.
-         hostCards = eval(getGlobalVariable('Host Cards'))        
-         try: # We use a try because if the card being checked has bot been attached (say because some monkey moved it manually to the table), the script will crash
-            origHost = Card(hostCards[card._id])
-            if origHost.orientation != Rot90 and origHost.highlight != DefendColor: 
-               debugNotify("!!! Failing because originator card's host is not participating", 2)
-               validCard = False
-         except:
-               debugNotify("!!! Failing crash when checking if originator card's host is participating", 2)
-               validCard = False
-      elif card.orientation != Rot90 and card.highlight != DefendColor: validCard = False
    if re.search(r'ifOrigAlone',Autoscript): # If OrigAlone means that the originator of the scipt needs to be alone in the engagement.
       for c in table:
          if c != card and c.orientation == Rot90 and c.controller == card.controller: validCard = False
-   if re.search(r'ifOrigNotParticipating',Autoscript) and (card.orientation == Rot90 or card.highlight == DefendColor): validCard = False
    if re.search(r'ifOrigEdgeWinner',Autoscript):
       plAffiliation = getSpecial('Affiliation',card.controller)
       if not plAffiliation.markers[mdict['Edge']]:
@@ -2306,14 +1924,6 @@ def checkOriginatorRestrictions(Autoscript,card):
             try: debugNotify("Requires Damaged objective but {} Damage Markers found on {}".format(currentTarget.markers[mdict['Damage']],currentTarget),2)
             except: debugNotify("Oops! I guess markers were null", 2)
             validCard = False
-   if re.search(r'ifOrigCommited',Autoscript) and card.highlight != LightForceColor and card.highlight != DarkForceColor: validCard = False
-   if re.search(r'ifOrigNotCommited',Autoscript) and (card.highlight == LightForceColor or card.highlight == DarkForceColor): validCard = False
-   if re.search(r'ifOrighasEdge',Autoscript) and not gotEdge(card.controller): 
-      if len(players) == 1 and debugVerbosity >= 0: notify("!!! Bypassing have-edge fail because we're debugging")
-      else: validCard = False
-   if re.search(r'ifOrighasntEdge',Autoscript) and gotEdge(card.controller): 
-      if len(players) == 1 and debugVerbosity >= 0: notify("!!! Bypassing hasn't-edge fail because we're debugging")
-      else: validCard = False
    #if not chkPlayer(Autoscript, card.controller, False, False): validCard = False
    markerName = re.search(r'-ifOrigHasMarker{([\w :]+)}',Autoscript) # Checking if we need specific markers on the card.
    if markerName: #If we're looking for markers, then we go through each targeted card and check if it has any relevant markers
@@ -2493,7 +2103,7 @@ def per(Autoscript, card = None, count = 0, targetCards = None, notification = N
                else: multiplier += 1 # If there's no special conditions, then we just add one multiplier per valid (auto)target. Ef. "-perEvery-AutoTargeted-onICE" would give 1 multiplier per ICE on the table
          if per.group(2) == 'Every': # If we're checking every card of a specific trait, we may have cards that give bonus to that amount (e.g. Echo base), so we look for those bonuses now.
             for c in table: # We check for cards for give bonus objective traits (e.g. Echo Base)
-               Autoscripts = CardsAS.get(c.model,'').split('||')
+               Autoscripts = c.AutoScript.split('||')
                for autoS in Autoscripts:
                   if debugVerbosity >= 2: notify("### Checking {} for Objective Trait boosting AS: {}".format(c,autoS))
                   TraitRegex = re.search(r'Trait\{([A-Za-z_ ]+)\}([0-9])Bonus',autoS)
