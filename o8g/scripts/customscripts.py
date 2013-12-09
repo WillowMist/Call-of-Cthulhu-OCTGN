@@ -21,3 +21,21 @@
 # * UseCustomAbility() is used among other scripts, and it just one custom ability among other normal core commands
 # * CustomScipt() is a completely specialized effect, that is usually so unique, that it's not worth updating my core commands to facilitate it for just one card.
 ###=================================================================================================================###
+
+def UseCustomAbility(Autoscript, announceText, card, targetCards = None, notification = None, n = 0): # not used yet.
+    announceString = announceText 
+    return announceString
+
+def CustomScript(card, action = 'PLAY'): # Scripts that are complex and fairly unique to specific cards, not worth making a whole generic function for them.
+    if debugVerbosity >= 1: notify(">>> CustomScript() with action: {}".format(action)) #Debug
+    mute()
+    discardPile = me.piles['Discard Pile']
+    objectives = me.piles['Objective Deck']
+    deck = me.piles['Deck']
+    if card.name == '* Professor Hermann Mulder' and action == 'CardPlayed' and card.owner == me:
+        if debugVerbosity >= 2: notify("### Professor Hermann Mulder")
+        characterList = [c for c in table if c.type == 'Character' and c.orientation != Rot270]
+        if len(characterList) >= 6:
+            notify("There are too many characters in play.  {} is driven insane.")
+            makeInsane(card,verbose=False)
+    else: notify("{} uses {}'s ability".format(me,card)) # Just a catch-all.

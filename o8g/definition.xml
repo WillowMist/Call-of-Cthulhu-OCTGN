@@ -4,8 +4,8 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
-	octgnVersion="3.1.72.182"
-	version="2.1.0.110"
+	octgnVersion="3.1.72.183"
+	version="2.1.0.23"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -20,21 +20,37 @@
 		<script src="scripts/constants.py" />
 		<script src="scripts/meta.py" />
 		<script src="scripts/generic.py" />
-		<script src="scripts/scripts1.py" />
+		<script src="scripts/random.py" />
 	</scripts>
 	<events>
 		<event name="OnMoveCard" action="triggerMoveCard"/>
+		<event name="OnGameStart" action="triggerTableLoad" />
+		<event name="OnTurn" action="triggerNewTurn" />
+		<event name="OnLoadDeck" action="loadDeck" />
 	</events>
-		<proxygen definitionsrc="proxy/proxydef.xml">
+	<proxygen definitionsrc="proxy/proxydef.xml">
 	</proxygen>
-     <globalvariables> 
+	  <globalvariables> 
 		<globalvariable name="status" value="" /> 
 		<globalvariable name="gameEnded" value="False" /> 
-		<globalvariable name="gameGUID" value="None" /> 
-		<globalvariable name="Committed Story" value="[]" />
+		<globalvariable name="gameGUID" value="None" />
+		<globalvariable name="Committed Stories" value="[]" />
+		<globalvariable name="Current Story" value="None" />
 		<globalvariable name="Story Phase" value="-1" />
+		<globalvariable name="struggleIcons" value="[]" />
 		<globalvariable name="Stored Effects" value="{}" />
-     </globalvariables>
+		<globalvariable name="activeStories" value="{}" />
+		<globalvariable name="Stored_Name" value = "{}" />
+		<globalvariable name="Stored_Resource" value = "{}" />
+		<globalvariable name="Stored_Attachments" value = "{}" />
+		<globalvariable name="iconResolution" value = "" />
+		<globalvariable name="resolutionPending" value = "False" />
+		<globalvariable name="awaitingPlayers" value = "False" />
+		<globalvariable name="storyResolve" value = "False" />
+        <globalvariable name="cardModifiers" value = "{}" />
+
+
+	  </globalvariables>
 	<card back="card\back.jpg" front="card\front.jpg" width="63" height="88" cornerRadius="0">
 		<property name="Type" type="String" hidden="False" ignoreText="False" />
 		<property name="Descriptor" type="String" hidden="False" ignoreText="False" />
@@ -48,8 +64,9 @@
 		<property name="Resource Icon" type="String" hidden="False" ignoreText="False" />
 		<property name="Collector Info" type="String" hidden="False" />
 		<property name="Struggle Icons" type="String" hidden="False" ignoreText="False" />
-		<property name="AutoScript" type="String" hidden="True" ignoreText="True" />
+		<property name="AutoScript" type="String" hidden="False" ignoreText="True" />
 		<property name="AutoAction" type="String" hidden="True" ignoreText="True" />
+		<property name="Instructions" type="String" hidden="True" ignoreText="True" />
 	</card>
 	<table name="Table" visibility="undefined" ordered="False" width="800" height="600" board="Table/tabletop.png" boardPosition="-400,-300,800,600" background="table/background.jpg" backgroundStyle="uniformToFill">
 		<groupactions menu="Game...">
@@ -58,6 +75,14 @@
 			<groupaction menu="Start Game (Me)" default="False" execute="startGameMe" />
 			<groupaction menu="Concede" default="False" shortcut="Ctrl+Shift+C" execute="concede" />
 			<groupaction menu="Debug" default="False" shortcut="Ctrl+Shift+D" execute="TrialError" /> 
+             <groupaction menu="Switch Play Automation ON/OFF" default="False" execute="switchPlayAutomation" />  
+             <groupaction menu="Switch Automatic Triggers ON/OFF" default="False" execute="switchTriggersAutomation" /> 
+             <groupaction menu="Switch Damage/Scoring Automations ON/OFF" default="False" execute="switchDamageAutomation" /> 
+             <groupaction menu="Switch Payment Automations ON/OFF" default="False" execute="switchPaymentAutomation" /> 
+             <groupaction menu="Switch Start/End-of-Turn/Phase Automation ON/OFF" default="False" execute="switchStartEndAutomation" />  
+             <groupaction menu="Switch Automatic Placement ON/OFF" default="False" execute="switchPlacement" />  
+             <groupaction menu="Switch All Automations ON/OFF" default="False" execute="switchAll" />  
+
 		</groupactions>
 		<groupaction menu="Move to Next phase." default="False" shortcut="Ctrl+Enter" execute="nextPhase" />
 		<groupactions menu="Phases...">
@@ -78,16 +103,38 @@
 			<groupaction menu="Declare End of Turn" default="False" shortcut="F12" execute="goToEndTurn" />
 		</groupactions>
 		<cardaction menu="Smart Action (Action/Drain/Participate...)" default="True" shortcut="Ctrl+S" execute="defaultAction" />
-		<cardaction menu="Make (in)Sane" default="False" shortcut="Ctrl+I" execute="insaneOrSane" />
-		<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
-		<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
+		<cardactions menu="Manual Card Actions">
+			<cardaction menu="Ready/Exhaust" default="False" shortcut= "Ctrl+R" execute="toggleExhausted" />
+			<cardaction menu="Make (in)Sane" default="False" shortcut="Ctrl+I" execute="insaneOrSane" />
+               <cardaction menu="Add Wound" default="False" shortcut="Ctrl+W" execute="addWound" />
+               <cardaction menu="Remove Wound" default="False" execute="remWound" />
+               <cardaction menu="Add Success" default="False" execute="addSuccess" />
+               <cardaction menu="Remove Success" default="False" execute="remSuccess" />
+			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
+			<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
+		</cardactions>
 	</table>
 	<player summary="{#Success Story 1} / {#Success Story 2} / {#Success Story 3} / {#Stories Won} / {#Hand}">
 		<globalvariable name="handSize" value="" />
 		<globalvariable name="resourcesToPlay" value="3" />
 		<globalvariable name="gameReady" value="False" />
 		<globalvariable name="Phase" value="-1" />
-	          <globalvariable name="freePositions" value="[]" /> 
+		<globalvariable name="freePositions" value="[]" />
+		<globalvariable name="freeSupportPositions" value = "[]" />
+		<globalvariable name="Side" value="" />
+		<globalvariable name="playerside" value="0" />
+		<globalvariable name="costModifiers" value = "[]" />
+		<globalvariable name="gatheredCardList" value = "False" />
+		<globalvariable name="failedRequirement" value = "True" />
+		<globalvariable name="reversePlayerChk" value = "False" />
+		<globalvariable name="restoredInsane" value = "0" />
+		<globalvariable name="debugVerbosity" value = "0" />
+		<globalvariable name="unpaidCard" value = "None" />
+		<globalvariable name="activeDomains" value = "{}" />
+		<globalvariable name="committedCharacters" value = "{}" />
+		<globalvariable name="iconTotal" value = "-1" />
+		<globalvariable name="storyScores" value = "{}" />
+		<globalvariable name="hasFast" value = "False" />
 		<hand name="Hand" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">
 			<groupaction menu="Random Discard" default="False" execute="randomDiscard" />
 			<groupaction menu="Mulligan" default="False" shortcut="Ctrl+M" execute="mulligan" />
@@ -102,17 +149,24 @@
 		<group name="Discard Pile" visibility="all" ordered="False" width="63" height="88" icon="groups/discardpile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
 		</group>
+		<group name="ScoringPile" visibility="all" ordered="False" width="63" height="88" icon="groups/story.png" collapsed="True" />
+		<group name="ScriptingPile" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png" collapsed="True" />
+		<counter name="Story 1" default="0" reset="False" icon="counters/story1.png" />
+		<counter name="Story 2" default="0" reset="False" icon="counters/story2.png" />
+		<counter name="Story 3" default="0" reset="False" icon="counters/story3.png" />
+          <counter name="Conspiracy 1" default="0" reset="False" icon="counters/wins.png" />
+          <counter name="Conspiracy 2" default="0" reset="False" icon="counters/wins.png" />
+		<counter name="Stories Won" default="0" reset="False" icon="counters/wins.png" />
+	</player>
+	<shared>
 		<group name="Story Deck" visibility="none" ordered="False" width="63" height="88" icon="groups/storypile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
 		</group>
-		<group name="ScriptingPile" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png" collapsed="True" />
-		<counter name="Success Story 1" default="0" reset="False" icon="counters/story1.png" />
-		<counter name="Success Story 2" default="0" reset="False" icon="counters/story2.png" />
-		<counter name="Success Story 3" default="0" reset="False" icon="counters/story3.png" />
-		<counter name="Stories Won" default="0" reset="False" icon="counters/wins.png" />
-	</player>
+	</shared>
 	<deck>
 		<section name="Draw Deck" group="Deck" />
-		<section name="Story Deck" group="Story Deck" />
 	</deck>
+	<sharedDeck>
+		<section name="Story Deck" group="Story Deck" />
+	</sharedDeck>
 </game>

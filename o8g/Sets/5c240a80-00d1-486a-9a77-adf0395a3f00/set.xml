@@ -1,775 +1,942 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set xmlns:noNamespaceSchemaLocation="CardSet.xsd" name="The Order of the Silver Twilight" id="5c240a80-00d1-486a-9a77-adf0395a3f00" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
-	<cards>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f01" name="* Sister Sofia">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Nun with a Gun" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Agency" />
-			<property name="Icons" value="# #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Independent." />
-			<property name="Card Text" value="Response: After you win a COMBAT struggle at a story to which Sister Sofia is committed, choose and wound X of your opponent's characters at that story. X is the number of drained domains your opponent has." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="_" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f02" name="Call for Backup">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Agency" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Tactic." />
-			<property name="Card Text" value="Action: Exhaust a character you control to put into play from your hand an [The Agency] character with printed cost 3 or lower. Return that character to your hand at the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="_" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f03" name="Distraught Shopkeeper">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Syndicate" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Independent." />
-			<property name="Card Text" value="Forced Response: After Distraught Shopkeeper enters play, exhaust all characters with printed skill 1 or lower." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="}" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f04" name="} An Offer You Can't Refuse">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="0" />
-			<property name="Faction" value="The Syndicate" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Ready an exhausted character you control. Then each opponent draws a card." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="}" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f05" name="* Dr. Bartlett">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Conspiracy Theorist" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="Miskatonic University" />
-			<property name="Icons" value="$ %" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Conspirator. Scientist." />
-			<property name="Card Text" value="While you have a conspiracy card in play, Dr. Bartlett gains WILLPOWER and INVULNERABILITY." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f06" name="* Pnakotic Manuscripts">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Mind Expanding Ideas" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="Miskatonic University" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Attachment. Tome." />
-			<property name="Card Text" value="Attach to a [Miskatonic University] character you control. Action: Exhaust Pnakotic Manuscripts to choose a character you control. Attached character gains all of that characters printed icons until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="{" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f07" name="Faceless Abductor">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="Yog-Sothoth" />
-			<property name="Icons" value="@ #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Servitor." />
-			<property name="Card Text" value="Action: Shuffle Faceless Abductor into your deck to choose a non-ANCIENT ONE character with skill 3 or lower. Return that character to it's owner's hand." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="&lt;" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f08" name="Curse of the Putrid Husk">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="Yog-Sothoth" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Attachment. Curse." />
-			<property name="Card Text" value="Attach to a non-ANCIENT ONE character. Attached character loses all keywords." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="&lt;" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f09" name="Collector of Sacrifices">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="Shub-Niggurath" />
-			<property name="Icons" value="@ #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Dark Young. Servitor." />
-			<property name="Card Text" value="Response: After a character enters your discard pile from play, ready Collector of Sacrifices." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value=">" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f10" name="Come to the Altar">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="Shub-Niggurath" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Sacrifice a character to put into play from your hand a > character with printed cost 3 or lower." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value=">" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f11" name="Sweet Old Lady">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="Hastur" />
-			<property name="Icons" value="@" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Cultist." />
-			<property name="Card Text" value="While Sweet Old Lady is committed to a story alone, opponents must pay 2 to commit characters to that story." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="]" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f12" name="Old Man of the Woods">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="Hastur" />
-			<property name="Icons" value="# #" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lunatic." />
-			<property name="Card Text" value="Action: Drive Old Man of the Woods insane to choose and destroy an insane character." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="]" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f13" name="* Joe Sargent">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Rattletrap Bus Driver" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="Cthulhu" />
-			<property name="Icons" value="# $" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Servitor." />
-			<property name="Card Text" value="Action: Exhaust Joe Sargent and pay 2 to choose and destroy a non-ANCIENT ONE character with skill X or lower commited to a story. X is the number of DEEP ONE characters you control." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="[" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f14" name="In the Wake of the Sleeper">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="Cthulhu" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Disaster." />
-			<property name="Card Text" value="Play during your operations phase. Action: Choose a non-ANCIENT ONE character. Destroy all copies of that character." />
-			<property name="Keyword" value="Loyal." />
-			<property name="Resource Icon" value="[" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f15" name="Neutral Ground">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="Neutral" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Location." />
-			<property name="Card Text" value="Treat all neutral characters in play as if their printed text boxes were blank." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="?" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f16" name="* Clifton Rosenberg">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Mastermind" />
-			<property name="Cost" value="6" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# # $ $" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After you play Clifton Rosenberg, return all HEROIC and VILLAINOUS characters to their owners' hands." />
-			<property name="Keyword" value="Willpower. Toughness +2." />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f17" name="* Senator Nathaniel Rhodes">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Adept Politician" />
-			<property name="Cost" value="4" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# $ $ %" />
-			<property name="Skill" value="4" />
-			<property name="Subtypes" value="Lodge. Government." />
-			<property name="Card Text" value="Response: After you discard 1 or more cards from your hand, pay 1 to draw a card." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f18" name="* Lord Jeffrey Farrington">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Mysterious Benefactor" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# $ %" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lodge. Independent." />
-			<property name="Card Text" value="Forced Response: After Lord Jeffrey Farrington enters play, choose and return a character to its owner's hand." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f19" name="Silver Twilight Enforcer">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# # #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="At the end of this turn, return Silver Twilight Enforcer to its owner's hand. " />
-			<property name="Keyword" value="Willpower. Toughness +1." />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="#" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f20" name="Keeper of the Silver Sphere">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="#" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge. Conspirator." />
-			<property name="Card Text" value="While there is a conspiracy card in play, Keeper of the Silver Sphere gains # # $ %." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f21" name="Young Initiate">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After Young Initiate enters play, choose another ^ character. That character gains WILLPOWER until the end of the turn." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f22" name="Arcane Hunter">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Sorcerer." />
-			<property name="Card Text" value="Forced Response: After a character enters a discard pile from play, Arcane Hunter gains WILLPOWER and FAST until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f23" name="Knight of the Outer Void">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# # $" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Forced Response: During your refresh phase, choose and return a ^ character you control to its owner's hand." />
-			<property name="Keyword" value="Willpower." />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f24" name="High Wizard of the Order">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="4" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="$ $ %" />
-			<property name="Skill" value="4" />
-			<property name="Subtypes" value="Lodge. Sorcerer." />
-			<property name="Card Text" value="Response: After High Wizard of the Order enters play, choose and return a non-ANCIENT ONE character to its owner's hand." />
-			<property name="Keyword" value="Willpower." />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f25" name="Lodge Librarian">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="$ $ %" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After you win an ARCANE struggle, discard a card from your hand to draw a card." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f26" name="Disgruntled Chef">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# #" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Independent." />
-			<property name="Card Text" value="Response: After a character leaves play, Disgruntled Chef gains # until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f27" name="^ Dedicated Butler">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="0" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="$" />
-			<property name="Skill" value="1" />
-			<property name="Subtypes" value="Independent." />
-			<property name="Card Text" value="Forced Response: After Dedicated Butler enters play, discard a card from your hand or sacrifice Dedicated Butler. Action: Sacrifice Dedicated Butler to choose and shuffle a card from your discard pile back into your deck." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f28" name="* Mayor Atkinson">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="Resourceful Manipulator" />
-			<property name="Cost" value="5" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# $ %" />
-			<property name="Skill" value="4" />
-			<property name="Subtypes" value="Lodge. Government." />
-			<property name="Card Text" value="While you have no cards in hand, Mayor Atkinson gains &quot;Action: Pay 2 to choose a character with printed skill 2 or lower. Return that character to its owner's hand.&quot;" />
-			<property name="Keyword" value="Willpower. Toughness +1" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f29" name="Devious Architect">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# %" />
-			<property name="Skill" value="3" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="While you have no cards in hand, Devious Architect gains # $ $." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f30" name="} Lodge Barkeep">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# $" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After a character is readied, exhaust Lodge Barkeep to exhaust that character." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f31" name="Failed Initiate">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="$ %" />
-			<property name="Skill" value="1" />
-			<property name="Subtypes" value="Cultist." />
-			<property name="Card Text" value="Forced Response: After an event card is played, sacrifice Failed Initiate." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f32" name="The Groundskeeper">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="# #" />
-			<property name="Skill" value="1" />
-			<property name="Subtypes" value="Independent." />
-			<property name="Card Text" value="Action: Discard a card from your hand to lower the cost of the next support card you play this phase by 1 (to a minimum of 1)." />
-			<property name="Keyword" value="Willpower." />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f33" name="Silver Twilight Collector">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="#" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Silver Twilight Collector gains # for each success token on it. Forced Response: After a MONSTER or CREATURE character is destroyed, place a succss token on Silver Twilight Collector." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f34" name="Lodge Housekeeper">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="$ %" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After Lodge Housekeeper enters play, choose and return a support card to its owner's hand." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f35" name="Recruiter of the Lodge">
-			<property name="Type" value="Character" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="2" />
-			<property name="Subtypes" value="Lodge." />
-			<property name="Card Text" value="Response: After Recruiter for the Lodge enters play, reveal the top 5 cards of your deck. Add a reveaked ^ character to your hand. Then, shuffle the remaining cards into your deck." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f36" name="* Silver Twilight Lodge">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Nexus of Power" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Location." />
-			<property name="Card Text" value="Lower the cost of the first ^ character you play by 1 (to a minimum of 1)." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f37" name="Key to the Inner Sanctum">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Attachment. Item." />
-			<property name="Card Text" value="Attach to a LODGE character you control. Attached character gains $. Action: Sacrifice Key to the Inner Sanctum to reveal the top 5 cards of your deck. Add a revealed RITUAL card to your hand. Then, shuffle the remaining cards into your deck." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f38" name="Crescent Blade">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Attachment. Weapon." />
-			<property name="Card Text" value="Attach to a character tou control. Attached character gains &quot;Action: Exhaust this character to choose and wound a neutral non-ANCIENT ONE character.&quot;" />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f39" name="Sigil of the Order">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Attachment. Item." />
-			<property name="Card Text" value="Attach to a ^ character you control. Action: Exhaust Sigil of the Order and discard a card from your hand to ready attached character." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f40" name="* The Oubliettes">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Secret Chambers" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Location." />
-			<property name="Card Text" value="Characters with printed skill 1 or lower cannot commit to stories." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f41" name="* Ritual of the Construct">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Mystical Summons" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual." />
-			<property name="Card Text" value="Response: After you discard 1 or more cards from your hand, place a success token on Ritual of the Construct. Action: Exhaust Ritual of the Construct and discard X success tokens from it to choose an opponent. That opponent must sacrifice a character with cost X or lower." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f42" name="* Ritual of the Lance">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Utter Annihilation" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual." />
-			<property name="Card Text" value="Response: After you sacrifice a character, place a success token on Ritual of the Lance. Action: Sacrifice Ritual of the Lance and discard 5 success tokens from it to destroy all characters." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f43" name="* Crystal of the Elder Things">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Radiant Gem" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Artifact." />
-			<property name="Card Text" value="Response: After a character leaves play, exhaust Crystal of the Elder Things to choose and refresh a domain with 1 resource." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f44" name="^^ Initiation">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="0" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual." />
-			<property name="Card Text" value="Action: Sacrifice a character you control to lower the cost of the next ^ character you play this phase by 2 (to a minimum of 1)." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f45" name="Lodge Meeting">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Response: After you commit 3 LODGE characters to the same story, drain one of your opponent's domains." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f46" name="Dark Secrets of the Order">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Refresh a domain with a number of resources equal to or lower than the number of characteristics that left play this phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f47" name="Secret Handshake">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual." />
-			<property name="Card Text" value="Action: Choose a ^ character you control. That character gains # $ until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f48" name="You Know Too Much">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Play during your operations phase. Action: Choose a player. That player must place two cards from his hand on top of his deck or sacrifice a character." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f49" name="^^ Unbound!">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual. Disaster." />
-			<property name="Card Text" value="Action: Discard X cards from your hand to destroy a character with printed skill X or lower." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f50" name="Fine Dining">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="2" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Sacrifice a character to choose a character with printed cost 2 or higher. That character gains # # $ $ and INVULNERABILITY until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f51" name="*Ritual of Summoning">
-			<property name="Type" value="Support" />
-			<property name="Descriptor" value="Horrific Methods" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Ritual." />
-			<property name="Card Text" value="Action: Sacrifice a character to place a success token on this card. Action: Discard 5 success tokens from Ritual of Summoning to put a character into play from your hand." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f52" name="Steal the Soul">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Choose a character you control and a character an opponent controls. Choose one of those characters to gain the icon of the other character until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f53" name="Pose Mundane">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="3" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Play during your operations phase. Action: Choose and destroy a MONSTER or CREATURE character. Then , put a ^ character into play from your hand." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f54" name="Friendly to the Order">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="" />
-			<property name="Card Text" value="Action: Choose a ^ character. That character gains # $ for each character that left play this phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-		<card id="5c240a80-00d1-486a-9a77-adf0395a3f55" name="^^^Brazier Enchantment">
-			<property name="Type" value="Event" />
-			<property name="Descriptor" value="" />
-			<property name="Cost" value="1" />
-			<property name="Faction" value="The Order of the Silver Twilight" />
-			<property name="Icons" value="" />
-			<property name="Skill" value="" />
-			<property name="Subtypes" value="Spell." />
-			<property name="Card Text" value="Action: ^ characters you control gain INVULNERABILITY until the end of the phase." />
-			<property name="Keyword" value="" />
-			<property name="Resource Icon" value="^" />
-			<property name="Collector Info" value="F" />
-			<property name="Struggle Icons" value="" />
-		</card>
-	</cards>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="The Order of the Silver Twilight" id="5c240a80-00d1-486a-9a77-adf0395a3f00" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
+  <packaging />
+  <markers />
+  <cards>
+    <card name="* Sister Sofia" id="5c240a80-00d1-486a-9a77-adf0395a3f01">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Nun with a Gun" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After you win a COMBAT struggle at a story to which Sister Sofia is committed, choose and wound X of your opponent's characters at that story. X is the number of drained domains your opponent has." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Call for Backup" id="5c240a80-00d1-486a-9a77-adf0395a3f02">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Exhaust a character you control to put into play from your hand an [The Agency] character with printed cost 3 or lower. Return that character to your hand at the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Distraught Shopkeeper" id="5c240a80-00d1-486a-9a77-adf0395a3f03">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Forced Response: After Distraught Shopkeeper enters play, exhaust all characters with printed skill 1 or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="} An Offer You Can't Refuse" id="5c240a80-00d1-486a-9a77-adf0395a3f04">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Ready an exhausted character you control. Then each opponent draws a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Dr. Bartlett" id="5c240a80-00d1-486a-9a77-adf0395a3f05">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Conspiracy Theorist" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Conspirator. Scientist." />
+      <property name="Card Text" value="While you have a conspiracy card in play, Dr. Bartlett gains WILLPOWER and INVULNERABILITY." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Pnakotic Manuscripts" id="5c240a80-00d1-486a-9a77-adf0395a3f06">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Mind Expanding Ideas" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Tome." />
+      <property name="Card Text" value="Attach to a [Miskatonic University] character you control. Action: Exhaust Pnakotic Manuscripts to choose a character you control. Attached character gains all of that characters printed icons until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_Miskatonic_University" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Faceless Abductor" id="5c240a80-00d1-486a-9a77-adf0395a3f07">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Action: Shuffle Faceless Abductor into your deck to choose a non-ANCIENT ONE character with skill 3 or lower. Return that character to it's owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Curse of the Putrid Husk" id="5c240a80-00d1-486a-9a77-adf0395a3f08">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Curse." />
+      <property name="Card Text" value="Attach to a non-ANCIENT ONE character. Attached character loses all keywords." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_nonAncient One" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Collector of Sacrifices" id="5c240a80-00d1-486a-9a77-adf0395a3f09">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Dark Young. Servitor." />
+      <property name="Card Text" value="Response: After a character enters your discard pile from play, ready Collector of Sacrifices." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Come to the Altar" id="5c240a80-00d1-486a-9a77-adf0395a3f10">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Sacrifice a character to put into play from your hand a &gt; character with printed cost 3 or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Sweet Old Lady" id="5c240a80-00d1-486a-9a77-adf0395a3f11">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="@" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="While Sweet Old Lady is committed to a story alone, opponents must pay 2 to commit characters to that story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Old Man of the Woods" id="5c240a80-00d1-486a-9a77-adf0395a3f12">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lunatic." />
+      <property name="Card Text" value="Action: Drive Old Man of the Woods insane to choose and destroy an insane character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Joe Sargent" id="5c240a80-00d1-486a-9a77-adf0395a3f13">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Rattletrap Bus Driver" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="# $" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Servitor." />
+      <property name="Card Text" value="Action: Exhaust Joe Sargent and pay 2 to choose and destroy a non-ANCIENT ONE character with skill X or lower commited to a story. X is the number of DEEP ONE characters you control." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="In the Wake of the Sleeper" id="5c240a80-00d1-486a-9a77-adf0395a3f14">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Disaster." />
+      <property name="Card Text" value="Play during your operations phase. Action: Choose a non-ANCIENT ONE character. Destroy all copies of that character." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Neutral Ground" id="5c240a80-00d1-486a-9a77-adf0395a3f15">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Treat all neutral characters in play as if their printed text boxes were blank." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Clifton Rosenberg" id="5c240a80-00d1-486a-9a77-adf0395a3f16">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Mastermind" />
+      <property name="Cost" value="6" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# # $ $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After you play Clifton Rosenberg, return all HEROIC and VILLAINOUS characters to their owners' hands." />
+      <property name="Keyword" value="Willpower. Toughness +2." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Senator Nathaniel Rhodes" id="5c240a80-00d1-486a-9a77-adf0395a3f17">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Adept Politician" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $ $ %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Lodge. Government." />
+      <property name="Card Text" value="Response: After you discard 1 or more cards from your hand, pay 1 to draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Lord Jeffrey Farrington" id="5c240a80-00d1-486a-9a77-adf0395a3f18">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Mysterious Benefactor" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $ %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge. Independent." />
+      <property name="Card Text" value="Forced Response: After Lord Jeffrey Farrington enters play, choose and return a character to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Silver Twilight Enforcer" id="5c240a80-00d1-486a-9a77-adf0395a3f19">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# # #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="At the end of this turn, return Silver Twilight Enforcer to its owner's hand. " />
+      <property name="Keyword" value="Willpower. Toughness +1." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="#" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Keeper of the Silver Sphere" id="5c240a80-00d1-486a-9a77-adf0395a3f20">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge. Conspirator." />
+      <property name="Card Text" value="While there is a conspiracy card in play, Keeper of the Silver Sphere gains # # $ %." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Young Initiate" id="5c240a80-00d1-486a-9a77-adf0395a3f21">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After Young Initiate enters play, choose another ^ character. That character gains WILLPOWER until the end of the turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Arcane Hunter" id="5c240a80-00d1-486a-9a77-adf0395a3f22">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Sorcerer." />
+      <property name="Card Text" value="Forced Response: After a character enters a discard pile from play, Arcane Hunter gains WILLPOWER and FAST until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Knight of the Outer Void" id="5c240a80-00d1-486a-9a77-adf0395a3f23">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# # $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Forced Response: During your refresh phase, choose and return a ^ character you control to its owner's hand." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="High Wizard of the Order" id="5c240a80-00d1-486a-9a77-adf0395a3f24">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$ $ %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Lodge. Sorcerer." />
+      <property name="Card Text" value="Response: After High Wizard of the Order enters play, choose and return a non-ANCIENT ONE character to its owner's hand." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Lodge Librarian" id="5c240a80-00d1-486a-9a77-adf0395a3f25">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$ $ %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After you win an ARCANE struggle, discard a card from your hand to draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Disgruntled Chef" id="5c240a80-00d1-486a-9a77-adf0395a3f26">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After a character leaves play, Disgruntled Chef gains # until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="^ Dedicated Butler" id="5c240a80-00d1-486a-9a77-adf0395a3f27">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Forced Response: After Dedicated Butler enters play, discard a card from your hand or sacrifice Dedicated Butler. Action: Sacrifice Dedicated Butler to choose and shuffle a card from your discard pile back into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Mayor Atkinson" id="5c240a80-00d1-486a-9a77-adf0395a3f28">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Resourceful Manipulator" />
+      <property name="Cost" value="5" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $ %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Lodge. Government." />
+      <property name="Card Text" value="While you have no cards in hand, Mayor Atkinson gains &quot;Action: Pay 2 to choose a character with printed skill 2 or lower. Return that character to its owner's hand.&quot;" />
+      <property name="Keyword" value="Willpower. Toughness +1" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Devious Architect" id="5c240a80-00d1-486a-9a77-adf0395a3f29">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="While you have no cards in hand, Devious Architect gains # $ $." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="} Lodge Barkeep" id="5c240a80-00d1-486a-9a77-adf0395a3f30">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After a character is readied, exhaust Lodge Barkeep to exhaust that character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Failed Initiate" id="5c240a80-00d1-486a-9a77-adf0395a3f31">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Cultist." />
+      <property name="Card Text" value="Forced Response: After an event card is played, sacrifice Failed Initiate." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="The Groundskeeper" id="5c240a80-00d1-486a-9a77-adf0395a3f32">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Action: Discard a card from your hand to lower the cost of the next support card you play this phase by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="Willpower." />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Silver Twilight Collector" id="5c240a80-00d1-486a-9a77-adf0395a3f33">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Silver Twilight Collector gains # for each success token on it. Forced Response: After a MONSTER or CREATURE character is destroyed, place a succss token on Silver Twilight Collector." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Lodge Housekeeper" id="5c240a80-00d1-486a-9a77-adf0395a3f34">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After Lodge Housekeeper enters play, choose and return a support card to its owner's hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Recruiter of the Lodge" id="5c240a80-00d1-486a-9a77-adf0395a3f35">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Lodge." />
+      <property name="Card Text" value="Response: After Recruiter for the Lodge enters play, reveal the top 5 cards of your deck. Add a reveaked ^ character to your hand. Then, shuffle the remaining cards into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Silver Twilight Lodge" id="5c240a80-00d1-486a-9a77-adf0395a3f36">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Nexus of Power" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Lower the cost of the first ^ character you play by 1 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Key to the Inner Sanctum" id="5c240a80-00d1-486a-9a77-adf0395a3f37">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a LODGE character you control. Attached character gains $. Action: Sacrifice Key to the Inner Sanctum to reveal the top 5 cards of your deck. Add a revealed RITUAL card to your hand. Then, shuffle the remaining cards into your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_Lodge" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Crescent Blade" id="5c240a80-00d1-486a-9a77-adf0395a3f38">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Weapon." />
+      <property name="Card Text" value="Attach to a character you control. Attached character gains &quot;Action: Exhaust this character to choose and wound a neutral non-ANCIENT ONE character.&quot;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Sigil of the Order" id="5c240a80-00d1-486a-9a77-adf0395a3f39">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a ^ character you control. Action: Exhaust Sigil of the Order and discard a card from your hand to ready attached character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine_and_The Order of the Silver Twilight" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* The Oubliettes" id="5c240a80-00d1-486a-9a77-adf0395a3f40">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Secret Chambers" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Characters with printed skill 1 or lower cannot commit to stories." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Ritual of the Construct" id="5c240a80-00d1-486a-9a77-adf0395a3f41">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Mystical Summons" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Response: After you discard 1 or more cards from your hand, place a success token on Ritual of the Construct. Action: Exhaust Ritual of the Construct and discard X success tokens from it to choose an opponent. That opponent must sacrifice a character with cost X or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Ritual of the Lance" id="5c240a80-00d1-486a-9a77-adf0395a3f42">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Utter Annihilation" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Response: After you sacrifice a character, place a success token on Ritual of the Lance. Action: Sacrifice Ritual of the Lance and discard 5 success tokens from it to destroy all characters." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Crystal of the Elder Things" id="5c240a80-00d1-486a-9a77-adf0395a3f43">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Radiant Gem" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Artifact." />
+      <property name="Card Text" value="Response: After a character leaves play, exhaust Crystal of the Elder Things to choose and refresh a domain with 1 resource." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="^^ Initiation" id="5c240a80-00d1-486a-9a77-adf0395a3f44">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Action: Sacrifice a character you control to lower the cost of the next ^ character you play this phase by 2 (to a minimum of 1)." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Lodge Meeting" id="5c240a80-00d1-486a-9a77-adf0395a3f45">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Response: After you commit 3 LODGE characters to the same story, drain one of your opponent's domains." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Dark Secrets of the Order" id="5c240a80-00d1-486a-9a77-adf0395a3f46">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Refresh a domain with a number of resources equal to or lower than the number of characteristics that left play this phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Secret Handshake" id="5c240a80-00d1-486a-9a77-adf0395a3f47">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Action: Choose a ^ character you control. That character gains # $ until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="You Know Too Much" id="5c240a80-00d1-486a-9a77-adf0395a3f48">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during your operations phase. Action: Choose a player. That player must place two cards from his hand on top of his deck or sacrifice a character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="^^ Unbound!" id="5c240a80-00d1-486a-9a77-adf0395a3f49">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual. Disaster." />
+      <property name="Card Text" value="Action: Discard X cards from your hand to destroy a character with printed skill X or lower." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Fine Dining" id="5c240a80-00d1-486a-9a77-adf0395a3f50">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Sacrifice a character to choose a character with printed cost 2 or higher. That character gains # # $ $ and INVULNERABILITY until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="*Ritual of Summoning" id="5c240a80-00d1-486a-9a77-adf0395a3f51">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Horrific Methods" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Ritual." />
+      <property name="Card Text" value="Action: Sacrifice a character to place a success token on this card. Action: Discard 5 success tokens from Ritual of Summoning to put a character into play from your hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Steal the Soul" id="5c240a80-00d1-486a-9a77-adf0395a3f52">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose a character you control and a character an opponent controls. Choose one of those characters to gain the icon of the other character until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Pose Mundane" id="5c240a80-00d1-486a-9a77-adf0395a3f53">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during your operations phase. Action: Choose and destroy a MONSTER or CREATURE character. Then , put a ^ character into play from your hand." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Friendly to the Order" id="5c240a80-00d1-486a-9a77-adf0395a3f54">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Choose a ^ character. That character gains # $ for each character that left play this phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="^^^Brazier Enchantment" id="5c240a80-00d1-486a-9a77-adf0395a3f55">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell." />
+      <property name="Card Text" value="Action: ^ characters you control gain INVULNERABILITY until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+  </cards>
 </set>

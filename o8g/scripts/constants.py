@@ -1,10 +1,10 @@
 ###==================================================File Contents==================================================###
-# This file contains global variables in ANR. They should not be modified by the scripts at all.
+# This file contains global variables in CoC. They should not be modified by the scripts at all.
 ###=================================================================================================================###
 
 import re
 #---------------------------------------------------------------------------
-# These are constant global variables in ANR: They should not be modified by the scripts at all.
+# These are constant global variables in CoC: They should not be modified by the scripts at all.
 #---------------------------------------------------------------------------
 phases = [
     "Opponent's Turn",
@@ -17,10 +17,10 @@ phases = [
 storyPhases = [
     "+++ Story: Active Player Commits +++",
     "+++ Story: Opponent Commits +++",
+    "+++ Story: Active Player Selects Story To Resolve +++",
     "+++ Story: Resolve Icon Struggles +++",
     "+++ Story: Determine Success +++",
-    "+++ Story: Reward Unopposed +++",
-    "+++ Story: Resolve Completed Stories +++"]
+    "+++ Story: Finish Story +++"]
 
     
 mdict = dict( # A dictionary which holds all the hard coded markers (in the markers file)
@@ -51,7 +51,7 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
                   RollX =              re.compile(r'(?<![<,+-])Roll([0-9]+)'),
                   RequestInt =         re.compile(r'(?<![<,+-])RequestInt'),
                   DiscardX =           re.compile(r'(?<![<,+-])Discard[0-9]+'),
-                  TokensX =            re.compile(r'(?<![<,+-])(Put|Remove|Refill|Use|Infect)([0-9]+)'),
+                  TokensX =            re.compile(r'(?<![<,+-])(Put|Remove|Refill|Use|Infect|Transfer)([0-9]+)'),
                   TransferX =          re.compile(r'(?<![<,+-])Transfer([0-9]+)'),
                   DrawX =              re.compile(r'(?<![<,+-])Draw([0-9]+)'),
                   ShuffleX =           re.compile(r'(?<![<,+-])Shuffle([A-Za-z& ]+)'),
@@ -59,10 +59,11 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
                   TraceX =             re.compile(r'(?<![<,+-])Trace([0-9]+)'),
                   InflictX =           re.compile(r'(?<![<,+-])Inflict([0-9]+)'),
                   RetrieveX =          re.compile(r'(?<![<,+-])Retrieve([0-9]+)'),
-                  ModifyStatus =       re.compile(r'(?<![<,+-])(Rez|Derez|Expose|Trash|Uninstall|Possess|Exile|Rework|Install|Score)(Target|Host|Multi|Myself)'),
+                  ModifyStatus =       re.compile(r'(?<![<,+-])(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Score)(Target|Host|Multi|Myself)'),
                   SimplyAnnounce =     re.compile(r'(?<![<,+-])SimplyAnnounce'),
                   ChooseKeyword =      re.compile(r'(?<![<,+-])ChooseKeyword'),
                   CustomScript =       re.compile(r'(?<![<,+-])CustomScript'),
+                  GameX =              re.compile(r'(?<![<,+-])(Lose|Win)Game'),
                   UseCustomAbility =   re.compile(r'(?<![<,+-])UseCustomAbility'))
 				  
 automatedMarkers = [] #Used in the Inspect() command to let the player know if the card has automations based on the markers it puts out.
@@ -78,6 +79,58 @@ StealthColor = "#000000" # Cards which are in play but not active yer (e.g. see 
 UnpaidColor = "#ffd700"
 UnpaidAbilityColor = "#40e0d0"
 ReadyEffectColor = "#eeeeee"
+EngagedColor = "#0000aa"
 
 Xaxis = 'x'
 Yaxis = 'y'
+
+storyDecks = {
+	'Core Story Deck':[
+		'45f006f4-02ed-4b8d-b095-eb5efe58d156',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d157',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d158',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d159',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d160',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d161',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d162',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d163',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d164',
+		'45f006f4-02ed-4b8d-b095-eb5efe58d165'],
+	'Ancient Relics Story Deck':[
+		'f26280d4-6260-4475-9f94-e496394af001',
+		'f26280d4-6260-4475-9f94-e496394af002',
+		'f26280d4-6260-4475-9f94-e496394af003',
+		'f26280d4-6260-4475-9f94-e496394af004',
+		'f26280d4-6260-4475-9f94-e496394af005',
+		'f26280d4-6260-4475-9f94-e496394af006',
+		'f26280d4-6260-4475-9f94-e496394af007',
+		'f26280d4-6260-4475-9f94-e496394af008',
+		'f26280d4-6260-4475-9f94-e496394af009',
+		'f26280d4-6260-4475-9f94-e496394af010',
+		'f26280d4-6260-4475-9f94-e496394af011',
+		'f26280d4-6260-4475-9f94-e496394af012'],
+	'Secrets of Arkham Story Deck':[
+		'ff1087a7-9c94-463e-8359-8e0483f99e51',
+		'ff1087a7-9c94-463e-8359-8e0483f99e52',
+		'ff1087a7-9c94-463e-8359-8e0483f99e53',
+		'ff1087a7-9c94-463e-8359-8e0483f99e54',
+		'ff1087a7-9c94-463e-8359-8e0483f99e55',
+		'ff1087a7-9c94-463e-8359-8e0483f99e56',
+		'ff1087a7-9c94-463e-8359-8e0483f99e57',
+		'ff1087a7-9c94-463e-8359-8e0483f99e58',
+		'ff1087a7-9c94-463e-8359-8e0483f99e59',
+		'ff1087a7-9c94-463e-8359-8e0483f99e60']
+	}
+
+storyPositions = {	'Story 1':[-131,-43],
+				'Story 2':[-31,-43],
+				'Story 3': [68,-43],
+				'Conspiracy 1':[-231,-43],
+				'Conspiracy 2':[168,-43]}
+				
+domainPositions = {	'Domain 1':["f22ee55c-8f47-4174-a7a4-985731a74d30",-528,20],
+				'Domain 2':["a8cec1b8-1121-4612-80c4-c66a437cc2e0",-528,94],
+				'Domain 3':["d8a151e4-28c8-4653-b826-ebda237b776b",-528,168],
+				'SpareDom 1':['None',-528,242],
+				'SpareDom 2':['None',-528,316]}
+				

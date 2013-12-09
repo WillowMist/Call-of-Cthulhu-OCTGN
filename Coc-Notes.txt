@@ -1,0 +1,86 @@
+whileScored
+whileInPlay
+whileCommitted
+whileInsane
+whileExhausted
+
+-onlyOnce
+-onTriggerCard
+-AutoTargeted
+
+Timed:
+atTurnPreStart
+atTurnStart
+atTurnPreEnd
+atTurnEnd
+atResolve
+
+-excludeDummy
+-onlyforDummy
+-isOptional -- Add to AS
+-onlyOnce
+Target
+
+
+
+(Gain|Lose|SetTo)([0-9]+) - AS Timed EAS(Redirected)
+CreateDummy -  EAS(Redirected)
+Reshuffle([A-Za-z& ]+) - EAS(Redirected)
+Roll([0-9]+) - Timed EAS(Redirected)
+RequestInt - Timed EAS(Redirected)
+Discard[0-9]+ - Timed EAS(Redirected)
+(Put|Remove|Refill|Use|Infect)([0-9]+) - AS Timed EAS(Redirected)
+Transfer([0-9]+) - AS Timed
+Draw([0-9]+) - AS Timed EAS(Redirected)
+Shuffle([A-Za-z& ]+)- EAS(Redirected)
+Run([A-Za-z& ]+)
+Trace([0-9]+)
+Inflict([0-9]+) - AS Timed
+Retrieve([0-9]+) - Timed EAS(Redirected) (prepareRestrictions as 'retrieve')
+(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Score)(Target|Host|Multi|Myself) - AS Timed EAS(Redirected)
+SimplyAnnounce - Timed EAS(Redirected)
+ChooseKeyword  EAS(Redirected)
+CustomScript - AS Timed EAS
+UseCustomAbility - AS 
+(Lose|Win)Game - EAS(Redirected)
+
+NOTE: EAS calls Redirect
+
+StorySuccess
+StoryUnopposed
+StoryFailed
+StruggleResolved
+CardPlayed
+CharacterCommits
+CardDestroyed
+StoryWon
+StoryResolved
+
+CheckCardRestrictions: - AS
+
+CheckSpecialRestrictions: - AS
+
+ChkPlayer: - AS Timed
+
+findTarget: - AS (prepareRestrictions as 'type') Timed Redirect
+-fromHand
+-fromTopDeckMine
+-fromTopDeckOpponents
+-onHost
+DemiAutoTargeted
+-choose([1-9])
+noTargetingError
+target(Opponents|Mine)
+
+
+
+ChkWarn: - EAS
+
+
+
+
+Unfinished cards:
+
+Paul Lemond (Core - Agency)
+
+

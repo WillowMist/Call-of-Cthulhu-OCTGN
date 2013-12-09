@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Forgotten Lore" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba000" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.0.0.1" version="2.0.0.1">
+  <packaging />
+  <markers />
   <cards>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba001" name="* Captain George Thorfinnsen">
+    <card name="* Captain George Thorfinnsen" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba001">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Veteran Whaler" />
       <property name="Cost" value="3" />
@@ -14,8 +16,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba002" name="* The Barque Miskatonic">
+    <card name="* The Barque Miskatonic" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba002">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Sturdy Transport" />
       <property name="Cost" value="2" />
@@ -28,8 +33,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba003" name="* Professor Lake">
+    <card name="* Professor Lake" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba003">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Obsessed with Footprints" />
       <property name="Cost" value="3" />
@@ -42,8 +50,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba004" name="Notebook Sketches">
+    <card name="Notebook Sketches" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba004">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Crude but Salient" />
       <property name="Cost" value="1" />
@@ -56,8 +67,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba005" name="{ Heavy Furs">
+    <card name="{ Heavy Furs" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba005">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -70,8 +84,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba006" name="Specimen Bags">
+    <card name="Specimen Bags" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba006">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -84,8 +101,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba007" name="} Hand Camera">
+    <card name="} Hand Camera" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba007">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -98,8 +118,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba008" name="Cave Mouth">
+    <card name="Cave Mouth" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba008">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -112,8 +135,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba009" name="Giant Albino Penguin">
+    <card name="Giant Albino Penguin" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba009">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Antarctic Monstrosity" />
       <property name="Cost" value="2" />
@@ -126,8 +152,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba010" name="White Out">
+    <card name="White Out" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba010">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -140,8 +169,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba011" name="Polar Mirage">
+    <card name="Polar Mirage" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba011">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -154,8 +186,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba012" name="Forgotten Shoggoth">
+    <card name="Forgotten Shoggoth" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba012">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -168,8 +203,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba013" name="Reawakened Elder Thing">
+    <card name="Reawakened Elder Thing" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba013">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -182,8 +220,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba014" name="Antarctic Yeti">
+    <card name="Antarctic Yeti" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba014">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -196,8 +237,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba015" name="Snow Graves">
+    <card name="Snow Graves" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba015">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -210,8 +254,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Opponent" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba016" name="Alaskan Sledge Dog">
+    <card name="Alaskan Sledge Dog" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba016">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -224,8 +271,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba017" name="Hypothermia">
+    <card name="Hypothermia" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba017">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -238,8 +288,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba018" name="Antarctic Wind">
+    <card name="Antarctic Wind" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba018">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -252,8 +305,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba019" name="Polar Fog">
+    <card name="Polar Fog" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba019">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -266,8 +322,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba020" name="Realm of Ice and Death">
+    <card name="Realm of Ice and Death" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba020">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -280,8 +339,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba021" name="Safari Hunter">
+    <card name="Safari Hunter" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba021">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -294,8 +356,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba022" name="Ammunitions Expert">
+    <card name="Ammunitions Expert" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba022">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -308,8 +373,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba023" name="* Mr. Ngambe">
+    <card name="* Mr. Ngambe" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba023">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Urban Investigator" />
       <property name="Cost" value="4" />
@@ -322,8 +390,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba024" name="Cafeteria Lady">
+    <card name="Cafeteria Lady" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba024">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -336,8 +407,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba025" name="* Norm Grzbowski">
+    <card name="* Norm Grzbowski" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba025">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Football Coach" />
       <property name="Cost" value="3" />
@@ -350,8 +424,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba026" name="* Professor Albert Wilmarth">
+    <card name="* Professor Albert Wilmarth" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba026">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="On Sabbatical" />
       <property name="Cost" value="4" />
@@ -364,8 +441,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba027" name="* Richard Finchington III">
+    <card name="* Richard Finchington III" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba027">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Exotic Collector" />
       <property name="Cost" value="2" />
@@ -378,8 +458,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba028" name="Demented Caretaker">
+    <card name="Demented Caretaker" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba028">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -392,8 +475,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba029" name="Island Hermit">
+    <card name="Island Hermit" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba029">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -406,8 +492,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba030" name="* Bokrug">
+    <card name="* Bokrug" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba030">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="The Great Water Lizard" />
       <property name="Cost" value="6" />
@@ -420,8 +509,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba031" name="*Ghatanothoa">
+    <card name="*Ghatanothoa" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba031">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Lord of the Volcano" />
       <property name="Cost" value="6" />
@@ -434,8 +526,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba032" name="Aspiring Artist">
+    <card name="Aspiring Artist" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba032">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -448,8 +543,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba033" name="* Atlach-Nacha">
+    <card name="* Atlach-Nacha" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba033">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="The Spider God" />
       <property name="Cost" value="6" />
@@ -462,8 +560,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba034" name="Bringer of Fire">
+    <card name="Bringer of Fire" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba034">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -476,8 +577,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba035" name="* Cthugha">
+    <card name="* Cthugha" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba035">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Fiery Conflagration" />
       <property name="Cost" value="6" />
@@ -490,8 +594,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba036" name="Tcho-Tcho Tribe">
+    <card name="Tcho-Tcho Tribe" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba036">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="5" />
@@ -504,8 +611,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba037" name="Opener of the Gate">
+    <card name="Opener of the Gate" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba037">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -518,8 +628,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba038" name="*Nyogtha">
+    <card name="*Nyogtha" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba038">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="The Sentient Void" />
       <property name="Cost" value="6" />
@@ -532,8 +645,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba039" name="Ghoulish Worshipper">
+    <card name="Ghoulish Worshipper" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba039">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -546,8 +662,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba040" name="Dark Druid">
+    <card name="Dark Druid" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba040">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -560,8 +679,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba041" name="Shadow Team">
+    <card name="Shadow Team" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba041">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -574,8 +696,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba042" name="__ Torch the Joint!">
+    <card name="__ Torch the Joint!" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba042">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -588,8 +713,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba043" name="Omega Alumnus">
+    <card name="Omega Alumnus" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba043">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -602,8 +730,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba044" name="Unspeakable Research">
+    <card name="Unspeakable Research" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba044">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -616,8 +747,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba045" name="Danny O'Bannion's Crony">
+    <card name="Danny O'Bannion's Crony" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba045">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -630,8 +764,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba046" name="Gun Runner's Club">
+    <card name="Gun Runner's Club" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba046">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -644,8 +781,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba047" name="Cthuloid Spawn">
+    <card name="Cthuloid Spawn" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba047">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -658,8 +798,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba048" name="The Sleeper Awakens!">
+    <card name="The Sleeper Awakens!" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba048">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -672,8 +815,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba049" name="Obscene Byakhee">
+    <card name="Obscene Byakhee" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba049">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -686,8 +832,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba050" name="Altar of Madness">
+    <card name="Altar of Madness" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba050">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -700,8 +849,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba051" name="Elder Thing">
+    <card name="Elder Thing" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba051">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -714,8 +866,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba052" name="Revelation of the Spheres">
+    <card name="Revelation of the Spheres" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba052">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -728,8 +883,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba053" name="Dreamlands Messenger">
+    <card name="Dreamlands Messenger" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba053">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -742,8 +900,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba054" name="Glimpse of the Void">
+    <card name="Glimpse of the Void" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba054">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -756,8 +917,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba055" name="Student of the Profane">
+    <card name="Student of the Profane" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba055">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -770,8 +934,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba056" name="Ghost of Perdition">
+    <card name="Ghost of Perdition" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba056">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -784,8 +951,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba057" name="Arkham Inmate">
+    <card name="Arkham Inmate" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba057">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -798,8 +968,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba058" name="Artifact of the Lost Cities">
+    <card name="Artifact of the Lost Cities" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba058">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -812,8 +985,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Support" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba059" name="Written in the Sky">
+    <card name="Written in the Sky" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba059">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -826,8 +1002,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba060" name="The Greatest Fear">
+    <card name="The Greatest Fear" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba060">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -840,8 +1019,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba061" name="* 607 Walter Street">
+    <card name="* 607 Walter Street" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba061">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Dockside Proterty" />
       <property name="Cost" value="2" />
@@ -854,8 +1036,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba062" name="Artists Colony">
+    <card name="Artists Colony" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba062">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -868,8 +1053,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba063" name="* Basil Elton">
+    <card name="* Basil Elton" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba063">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Lighthouse Keeper" />
       <property name="Cost" value="2" />
@@ -882,8 +1070,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba064" name="Called to the Sea">
+    <card name="Called to the Sea" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba064">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -896,8 +1087,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba065" name="* Charles Dexter Ward">
+    <card name="* Charles Dexter Ward" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba065">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Unfortunate Fool" />
       <property name="Cost" value="3" />
@@ -910,8 +1104,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba066" name="* Mentor to Vaughn">
+    <card name="* Mentor to Vaughn" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba066">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Without Equal" />
       <property name="Cost" value="3" />
@@ -924,8 +1121,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba067" name="* Granny Orne">
+    <card name="* Granny Orne" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba067">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Tough Old Bird" />
       <property name="Cost" value="1" />
@@ -938,8 +1138,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba068" name="Dreams in Limbo">
+    <card name="Dreams in Limbo" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba068">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -952,8 +1155,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba069" name="* Neil's Curiosity Shop">
+    <card name="* Neil's Curiosity Shop" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba069">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Collection of Bizarre Antiquities" />
       <property name="Cost" value="2" />
@@ -966,8 +1172,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba070" name="*Nodens">
+    <card name="*Nodens" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba070">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Potent and Archaic" />
       <property name="Cost" value="5" />
@@ -980,8 +1189,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba071" name="* St. Erasmus' Home for Mariners">
+    <card name="* St. Erasmus' Home for Mariners" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba071">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Retirement Community...or worse?" />
       <property name="Cost" value="3" />
@@ -994,8 +1206,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba072" name="* The Hall School">
+    <card name="* The Hall School" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba072">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Institution of Higher Learning" />
       <property name="Cost" value="2" />
@@ -1008,8 +1223,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba073" name="* The Rope and Anchor Tavern">
+    <card name="* The Rope and Anchor Tavern" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba073">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Seedy and Rundown" />
       <property name="Cost" value="3" />
@@ -1022,8 +1240,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba074" name="* The Seventh House on the Left">
+    <card name="* The Seventh House on the Left" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba074">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Avoid at all Costs" />
       <property name="Cost" value="3" />
@@ -1036,8 +1257,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba075" name="* The Terrible Old Man">
+    <card name="* The Terrible Old Man" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba075">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Ancient Hermit" />
       <property name="Cost" value="1" />
@@ -1050,8 +1274,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba076" name="* Thomas Olney">
+    <card name="* Thomas Olney" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba076">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Traveler with a Purpose" />
       <property name="Cost" value="3" />
@@ -1064,8 +1291,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba077" name="Thunder in the East">
+    <card name="Thunder in the East" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba077">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -1078,8 +1308,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba078" name="* Tulzscha">
+    <card name="* Tulzscha" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba078">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="The Green Flame" />
       <property name="Cost" value="6" />
@@ -1092,8 +1325,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba079" name="Visitor from the Spheres">
+    <card name="Visitor from the Spheres" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba079">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -1106,8 +1342,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba080" name="* William Bain">
+    <card name="* William Bain" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba080">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="&quot;The One&quot;" />
       <property name="Cost" value="3" />
@@ -1120,8 +1359,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba081" name="A Conspiracy of Scholars">
+    <card name="A Conspiracy of Scholars" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba081">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1134,8 +1376,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba082" name="Beneath the Mire">
+    <card name="Beneath the Mire" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba082">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1148,8 +1393,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba083" name="Blood Magician">
+    <card name="Blood Magician" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba083">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1162,8 +1410,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba084" name="Broken Space, Broken Time">
+    <card name="Broken Space, Broken Time" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba084">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -1176,8 +1427,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba085" name="* Crazy Eddie">
+    <card name="* Crazy Eddie" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba085">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Don't call him Ed..." />
       <property name="Cost" value="0" />
@@ -1190,8 +1444,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba086" name="Displaced Cthonian">
+    <card name="Displaced Cthonian" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba086">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -1204,8 +1461,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba087" name="Dreamlands Conspiracy">
+    <card name="Dreamlands Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba087">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1218,8 +1478,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba088" name="Flare Gun">
+    <card name="Flare Gun" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba088">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1232,8 +1495,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba089" name="* Kitab Al-Azif">
+    <card name="* Kitab Al-Azif" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba089">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="The Original Necronomicon" />
       <property name="Cost" value="4" />
@@ -1246,8 +1512,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba090" name="* Mr. Grey">
+    <card name="* Mr. Grey" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba090">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Corrupt Politician" />
       <property name="Cost" value="2" />
@@ -1260,8 +1529,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba091" name="Mutant Spawn">
+    <card name="Mutant Spawn" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba091">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="(Soft and Cuddly.)" />
       <property name="Cost" value="3" />
@@ -1274,8 +1546,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba092" name="Ol' Lazy Eyes">
+    <card name="Ol' Lazy Eyes" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba092">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Inbred but not Inept" />
       <property name="Cost" value="2" />
@@ -1288,8 +1563,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba093" name="Seeker of the Profane">
+    <card name="Seeker of the Profane" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba093">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -1302,8 +1580,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba094" name="Shrieking Byakhee">
+    <card name="Shrieking Byakhee" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba094">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -1316,8 +1597,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba095" name="The Blackwood Conspiracy">
+    <card name="The Blackwood Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba095">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1330,8 +1614,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba096" name="The Hidden Conspiracy">
+    <card name="The Hidden Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba096">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1344,8 +1631,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba097" name="The R'lyeh Conspiracy">
+    <card name="The R'lyeh Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba097">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1358,8 +1648,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba098" name="The Ritual Conspiracy">
+    <card name="The Ritual Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba098">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1372,8 +1665,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba099" name="The Underground Conspiracy">
+    <card name="The Underground Conspiracy" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba099">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1386,8 +1682,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba100" name="Tragic Celebrity">
+    <card name="Tragic Celebrity" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba100">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1400,8 +1699,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba101" name="Ancient Gold">
+    <card name="Ancient Gold" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba101">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1414,8 +1716,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba102" name="Canine Guardian">
+    <card name="Canine Guardian" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba102">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1428,8 +1733,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba103" name="* Cold Spring Glen">
+    <card name="* Cold Spring Glen" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba103">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Unsettlingly Desolate" />
       <property name="Cost" value="2" />
@@ -1442,8 +1750,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba104" name="Development Camp">
+    <card name="Development Camp" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba104">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -1456,8 +1767,11 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba105" name="* Devil's Hop Yard">
+    <card name="* Devil's Hop Yard" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba105">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Bleak and Blasted" />
       <property name="Cost" value="2" />
@@ -1470,8 +1784,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba106" name="Feathery Watchers">
+    <card name="Feathery Watchers" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba106">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="3" />
@@ -1484,8 +1801,11 @@
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba107" name="Hack Journalist">
+    <card name="Hack Journalist" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba107">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -1498,8 +1818,11 @@
       <property name="Resource Icon" value="}" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba108" name="*Lavinia Whateley">
+    <card name="*Lavinia Whateley" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba108">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Somewhat Deformed" />
       <property name="Cost" value="3" />
@@ -1512,8 +1835,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba109" name="Negotium Perambulans in Tenebris">
+    <card name="Negotium Perambulans in Tenebris" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba109">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -1526,8 +1852,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ %" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba110" name="Noises in the Hills">
+    <card name="Noises in the Hills" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba110">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
@@ -1540,8 +1869,11 @@
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba111" name="Pocket Telescope">
+    <card name="Pocket Telescope" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba111">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="0" />
@@ -1554,8 +1886,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba112" name="* Professor Armitage">
+    <card name="* Professor Armitage" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba112">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Old and White-bearded" />
       <property name="Cost" value="4" />
@@ -1568,8 +1903,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba113" name="* Professor Morgan">
+    <card name="* Professor Morgan" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba113">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Lean and Youngish" />
       <property name="Cost" value="5" />
@@ -1582,8 +1920,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba114" name="* Professor Rice">
+    <card name="* Professor Rice" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba114">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Stocky and Iron Grey" />
       <property name="Cost" value="3" />
@@ -1596,8 +1937,11 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba115" name="* Sentinel Hill">
+    <card name="* Sentinel Hill" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba115">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Where Your Doom Awaits" />
       <property name="Cost" value="2" />
@@ -1610,8 +1954,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba116" name="The Bootleg Whiskey Cover-Up">
+    <card name="The Bootleg Whiskey Cover-Up" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba116">
       <property name="Type" value="Conspiracy" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -1624,8 +1971,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="@ # $ #" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba117" name="* The Dunwich Horror">
+    <card name="* The Dunwich Horror" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba117">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Bigger 'n a barn..." />
       <property name="Cost" value="4" />
@@ -1638,8 +1988,11 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba118" name="* The Stone on the Peak">
+    <card name="* The Stone on the Peak" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba118">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="That Shocking Altar-Stone" />
       <property name="Cost" value="1" />
@@ -1652,8 +2005,11 @@
       <property name="Resource Icon" value="&gt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba119" name="* Whateley's Diary">
+    <card name="* Whateley's Diary" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba119">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Cryptic Text" />
       <property name="Cost" value="3" />
@@ -1666,8 +2022,11 @@
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
-    <card id="cb3bec6a-8e46-4d1e-a46f-db4b52dba120" name="* Wilbur Whateley">
+    <card name="* Wilbur Whateley" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba120">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Preternaturally Intelligent" />
       <property name="Cost" value="3" />
@@ -1680,6 +2039,9 @@
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
     </card>
   </cards>
 </set>
