@@ -1,5 +1,12 @@
 =====Message of the Day======
 
+Release 2.1.0.23
 
+This is an interim release that includes
+Terror in Venice, resource and domain management.
+
+Several automation features are present, but disabled.
+Please understand that these features are unfinished,
+and may not all work as expected.
 
 =============================
