@@ -5,7 +5,7 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.183"
-	version="2.1.0.23"
+	version="2.1.0.24"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -20,7 +20,7 @@
 		<script src="scripts/constants.py" />
 		<script src="scripts/meta.py" />
 		<script src="scripts/generic.py" />
-		<script src="scripts/random.py" />
+
 	</scripts>
 	<events>
 		<event name="OnMoveCard" action="triggerMoveCard"/>
@@ -47,7 +47,9 @@
 		<globalvariable name="resolutionPending" value = "False" />
 		<globalvariable name="awaitingPlayers" value = "False" />
 		<globalvariable name="storyResolve" value = "False" />
-        <globalvariable name="cardModifiers" value = "{}" />
+          <globalvariable name="cardModifiers" value = "{}" />
+          <globalvariable name="lastStruggleResults" value = "(0,0)" />
+          <globalvariable name="firstPlayer" value = "-1" />
 
 
 	  </globalvariables>
@@ -70,9 +72,10 @@
 	</card>
 	<table name="Table" visibility="undefined" ordered="False" width="800" height="600" board="Table/tabletop.png" boardPosition="-400,-300,800,600" background="table/background.jpg" backgroundStyle="uniformToFill">
 		<groupactions menu="Game...">
+			<groupaction menu="Choose First Player (Random Player Decides)" default="False" execute="determineFirstPlayer" />
+			<groupaction menu="Choose First Player (I Decide)" default="False" execute="determineFirstPlayerNoRandom" />
 			<groupaction menu="Set up" default="False" shortcut="Ctrl+Shift+S" execute="intSetup" />
-			<groupaction menu="Start Game (Random Player)" default="False" execute="startGameRandom" />
-			<groupaction menu="Start Game (Me)" default="False" execute="startGameMe" />
+               <groupaction menu="Start Game" default="False" execute="startGame" />
 			<groupaction menu="Concede" default="False" shortcut="Ctrl+Shift+C" execute="concede" />
 			<groupaction menu="Debug" default="False" shortcut="Ctrl+Shift+D" execute="TrialError" /> 
              <groupaction menu="Switch Play Automation ON/OFF" default="False" execute="switchPlayAutomation" />  
@@ -85,6 +88,7 @@
 
 		</groupactions>
 		<groupaction menu="Move to Next phase." default="False" shortcut="Ctrl+Enter" execute="nextPhase" />
+            <groupaction menu="Refresh all your cards." default="False" execute="autoRefresh" />
 		<groupactions menu="Phases...">
 			<groupaction menu="Jump to Refresh Phase." default="False" shortcut="F1" execute="goToRefresh" />
 			<groupaction menu="Jump to Draw Phase." default="False" shortcut="F2" execute="goToDraw" />
@@ -114,7 +118,7 @@
 			<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
 		</cardactions>
 	</table>
-	<player summary="{#Success Story 1} / {#Success Story 2} / {#Success Story 3} / {#Stories Won} / {#Hand}">
+	<player summary="{#Story 1} / {#Story 2} / {#Story 3} / {#Conspiracy 1} / {#Conspiracy 2} / {#Stories Won} / {#Hand}">
 		<globalvariable name="handSize" value="" />
 		<globalvariable name="resourcesToPlay" value="3" />
 		<globalvariable name="gameReady" value="False" />
@@ -140,11 +144,13 @@
 			<groupaction menu="Mulligan" default="False" shortcut="Ctrl+M" execute="mulligan" />
 			<cardaction menu="Play as Resource" default="False" shortcut="Ctrl+Q" execute="playResource" />
 			<cardaction menu="Play Card" default="True" shortcut="Ctrl+W" execute="play" />
+                <cardaction menu="Put on Bottom of Deck" default = "False" execute = "bottomOfDeck" />
 		</hand>
 		<group name="Deck" visibility="none" ordered="False" width="63" height="88" icon="groups/drawpile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
 			<groupaction menu="Draw" default="True" shortcut="Ctrl+D" execute="draw" />
 			<groupaction menu="Draw X" default="False" shortcut="Ctrl+Shift+D" execute="drawMany" />
+                <cardaction menu="Put on Bottom of Deck" default = "False" execute = "bottomOfDeck" />
 		</group>
 		<group name="Discard Pile" visibility="all" ordered="False" width="63" height="88" icon="groups/discardpile.png" collapsed="False">
 			<groupaction menu="Shuffle" default="False" shortcut="Ctrl+S" execute="shuffle" />
@@ -154,8 +160,8 @@
 		<counter name="Story 1" default="0" reset="False" icon="counters/story1.png" />
 		<counter name="Story 2" default="0" reset="False" icon="counters/story2.png" />
 		<counter name="Story 3" default="0" reset="False" icon="counters/story3.png" />
-          <counter name="Conspiracy 1" default="0" reset="False" icon="counters/wins.png" />
-          <counter name="Conspiracy 2" default="0" reset="False" icon="counters/wins.png" />
+          <counter name="Conspiracy 1" default="0" reset="False" icon="counters/conspiracy1.png" />
+          <counter name="Conspiracy 2" default="0" reset="False" icon="counters/conspiracy2.png" />
 		<counter name="Stories Won" default="0" reset="False" icon="counters/wins.png" />
 	</player>
 	<shared>

@@ -4,6 +4,7 @@
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f61" name="Wound" />
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f62" name="Success" />
 		<marker id="4a247d69-b2cc-4de9-b4d1-c447bea01f63" name="Drain" />
+          <marker id="2396ca41-2ddd-4d7b-92de-7a182968209b" name="Wound Prevention" />
 		<marker id="a5173cd9-bafe-4be2-ae6f-11464f7260cf" name="Cthulhu Resource" />
 		<marker id="3911052d-c25b-471d-92af-8aae4a18cce1" name="Hastur Resource" />
 		<marker id="c9e080cd-fa2e-4397-a054-031945af4d8e" name="Shub-Niggurath Resource" />

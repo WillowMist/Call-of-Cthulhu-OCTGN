@@ -16,7 +16,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="whileCommitted:DestroyTarget-DemiAutoTargeted-atVillainous_or_Cultist-choose1-ofOpponent-alsoCommitted-foreachStoryResolved" />
+      <property name="AutoScript" value="whileCommitted:DestroyTarget-DemiAutoTargeted-atVillainous_or_Cultist-choose1-ofOpponent-alsoCommitted-foreachStoryResolved-isOptional" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -68,7 +68,7 @@
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoAction" value="CustomScript" />
       <property name="Instructions" value="" />
     </card>
     <card name="* Professor Hermann Mulder" id="45f006f4-02ed-4b8d-b095-eb5efe58d005">
@@ -84,7 +84,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="whileInPlay:CustomScript-foreachCardPlayed-typeCharacter" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -102,7 +102,7 @@
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoAction" value="Drain2-isCost-StruggleWon2$$Deal1Wound-DemiAutoTargeted-atCharacter-hasProperty{Skill}le2-choose1" />
       <property name="Instructions" value="" />
     </card>
     <card name="__Undercover Security" id="45f006f4-02ed-4b8d-b095-eb5efe58d007">
@@ -186,7 +186,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="whileInPlay:Add1WillpowerKeyword-affectsSelf-ifOrigHasAttachments" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -203,7 +203,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:Deal1Wound-DemiAutoTargeted-atCharacter-choose1" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -237,7 +237,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="Placement:Character" />
+      <property name="AutoScript" value="Placement:Character||onPlay:CustomScript" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -254,7 +254,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="Placement:Character||Bonus1ToughnessKeyword" />
+      <property name="AutoScript" value="Placement:Character||Bonus1ToughnessKeyword||onPlay:CustomScript" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -271,7 +271,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:Deal1Wound-DemiAutoTargeted--atCharacter-hasProperty{Skill}le2" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -288,7 +288,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:Deal7Wound-DemiAutoTargeted-atCharacter-choose1-duringMyOperations" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -300,12 +300,12 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="" />
-      <property name="Card Text" value="Play during tour operations phase. Action: Choose and destroy a non _ resource or a LOCATION support card." />
+      <property name="Card Text" value="Play during your operations phase. Action: Choose and destroy a non _ resource or a LOCATION support card." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:DestroyCard-atResource-notAgency_or_Location-includeResources-duringMyOperations" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -322,7 +322,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:CustomScript" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -339,7 +339,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:Add|# #|Icons-untilPhaseEnd-atCharacter-ifNotOverPaid||onPlay:Add|# # $ %|Icons-untilPhaseEnd-atCharacter-ifOverPaid" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>

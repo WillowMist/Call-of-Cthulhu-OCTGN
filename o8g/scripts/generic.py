@@ -419,10 +419,7 @@ def multiChoice(title, options,card): # This displays a choice where the player 
     debugNotify(">>> multiChoice()".format(title))
     if Automations['WinForms']: # If the player has not disabled the custom WinForms, we use those
         Application.EnableVisualStyles() # To make the window look like all other windows in the user's system
-        if card.Type == 'ICE': CPType = 'Intrusion Countermeasures Electronics'  # Just some nice fluff
-        elif re.search(r'Icebreaker', card.Keywords): CPType = 'ICEbreaker GUI'
-        elif card.Type == 'Hardware': CPType = 'Dashboard'
-        else: CPType = 'Control Panel'
+        CPType = 'Choices'
         form = MultiChoiceWindow(title, options, CPType) # We create an object called "form" which contains an instance of the MultiChoice windows form.
         form.ShowDialog() # We bring the form to the front to allow the user to make their choices
         choices = form.getIndex() # Once the form is closed, we check an internal variable within the form object to grab what choices they made
@@ -443,12 +440,13 @@ def multiChoice(title, options,card): # This displays a choice where the player 
 #---------------------------------------------------------------------------
 
 def debugNotify(msg = 'Debug Ping!', level = 2):
-    if not re.search(r'<<<',msg) and not re.search(r'>>>',msg):
-        hashes = '#' 
-        for iter in range(level): hashes += '#' # We add extra hashes at the start of debug messages equal to the level of the debug+1, to make them stand out more
-        msg = hashes + ' ' +  msg
-    else: level = 1
-    if debugVerbosity >= level: notify(msg)
+    if debugVerbosity > 0:
+        if not re.search(r'<<<',msg) and not re.search(r'>>>',msg):
+            hashes = '#' 
+            for iter in range(level): hashes += '#' # We add extra hashes at the start of debug messages equal to the level of the debug+1, to make them stand out more
+            msg = hashes + ' ' +  msg
+        else: level = 1
+        if debugVerbosity >= level: whisper(msg)
 
 def num (s):
     #debugNotify(">>> num(){}".format(extraASDebug())) #Debug
@@ -495,22 +493,23 @@ def displaymatch(match):
         return None
     return '<Match: {}, groups={}>'.format(match.group(), match.groups())
     
-def fetchProperty(card, property): # REMOVE POSSIBLY
+def fetchProperty(card, property): 
     mute()
-    debugNotify(">>> fetchProperty(){}".format(extraASDebug())) #Debug
+    debugNotify(">>> fetchProperty(){}".format(extraASDebug()),4) #Debug
     currentValue = card.properties[property]
-    debugNotify('Property: {}'.format(currentValue))
+    debugNotify('{} {}: {}'.format(card.name, property, currentValue),4)
     modifiers = eval(getGlobalVariable('cardModifiers')).get(card._id,{})
-    debugNotify('Modifiers: '.format('modifiers'))
+    debugNotify('Modifiers: {}'.format(modifiers),4)
     for entry in modifiers.keys():
         search = re.search(r'(Add|Remove|Replace)({})'.format(property),entry)
         if search:
             if search.group(1) == 'Add':
                 if search.group(2) == 'Skill' or search.group(2) == 'Cost': currentValue += num(modifiers[entry])
-                elif search.group(2) == 'Autoscript' and currentValue != '' and currentValue != None: currentValue += "||{}".format(modifiers[entry])
+                elif (search.group(2) == 'AutoScript' or search.group(2) == 'AutoAction') and currentValue != '' and currentValue != None: currentValue += "||{}".format(modifiers[entry])
                 else: currentValue += modifiers[entry]
             elif search.group(1) == 'Remove':
-                currentValue = ''
+                if search.group(2) == 'Skill' or search.group(2) == 'Cost':currentValue -= num(modifiers[entry])
+                else: currentValue = ''
             elif search.group(1) == 'Replace':
                 currentValue = modifiers[entry]
         # add code to blank a text box.
@@ -528,9 +527,43 @@ def fetchProperty(card, property): # REMOVE POSSIBLY
             currentValue = card.properties[property]
             debugNotify("Grabbing {}'s {} manually: {}.".format(card,property,card.properties[property]), 3)
             #storeProperties(card) # Commented out because putting it here can cause an infinite loop
-    debugNotify("<<< fetchProperty() by returning: {}".format(currentValue), 3)
+    debugNotify("<<< fetchProperty() by returning: {}".format(currentValue), 4)
     if not currentValue: currentValue = ''
     return currentValue
+
+def modifyCard(card, modifier, property, duration, modification):
+    debugNotify(">>> modifyCard()")
+    cardModifiers = eval(getGlobalVariable('cardModifiers'))
+    modifiers = {}
+    existingModifier = '?'
+    ourKey = "{}{}-until{}".format(modifier,property,duration)
+    debugNotify("All Modifiers: {} - {} - {}".format(cardModifiers, len(cardModifiers),existingModifier))
+    debugNotify("Key: {}".format(ourKey))
+    if len(cardModifiers) > 0:
+        modifiers = cardModifiers.get(card._id,{})
+        debugNotify('Current Modifiers: {} - {}'.format(modifiers, len(modifiers)))
+        for entry in modifiers.keys():
+            debugNotify("Key: |{}| |{}|".format(entry,ourKey))
+            if str(entry) == ourKey: 
+                debugNotify("Key Match")
+                existingModifier = modifiers.get(entry,'?')
+        debugNotify('Existing Modifier: {}'.format(existingModifier))
+    newModification = ''
+    if existingModifier != '?':
+        debugNotify("Modifier exists.")
+        if modifier == 'Add' or modifier == 'Remove':
+            if property == 'Skill' or property == 'Cost': newModification = str(num(modification) + num(existingModifier))
+            else: newModification = "{} {}".format(existingModifier,modification)
+        else:
+            newModification = str(modification)
+    else:
+        newModification = str(modification)
+    modifiers[ourKey] = newModification
+    debugNotify("modifiers: {}".format(modifiers))
+    cardModifiers[card._id] = modifiers
+    debugNotify("cardModifiers: {}".format(cardModifiers))
+    setGlobalVariable('cardModifiers',str(cardModifiers))
+    debugNotify("<<< modifyCard()")
 
 def clearCovers(): # Functions which goes through the table and clears any cover cards
     debugNotify(">>> clearCovers()") #Debug
@@ -557,7 +590,7 @@ def sortPriority(cardList):
     if debugVerbosity >= 3: 
         tlist = []
         for cardTarget in cardList: tlist.append(fetchProperty(cardTarget, 'name')) # Debug   
-        notify(">>> sortPriority() - {}".format(tlist)) #Debug
+        debugNotify(">>> sortPriority() - {}".format(tlist)) #Debug
     priority1 = []
     priority2 = []
     priority3 = []
@@ -575,7 +608,7 @@ def sortPriority(cardList):
     if debugVerbosity >= 3: 
         tlist = []
         for sortTarget in sortedList: tlist.append(fetchProperty(sortTarget, 'name')) # Debug   
-        notify("<<< sortPriority() returning {}".format(tlist)) #Debug
+        debugNotify("<<< sortPriority() returning {}".format(tlist)) #Debug
     return sortedList
     
 def oncePerTurn(card, x = 0, y = 0, silent = False, act = 'manual'):
@@ -631,14 +664,7 @@ def chkModulator(card, modulator, scriptType = 'onPlay'): # Checks the card's au
     debugNotify("<<< chkModulator() with return {}".format(ModulatorExists)) #Debug
     return ModulatorExists
 
-def fetchHost(card):
-    debugNotify(">>> fetchHost()") #Debug
-    host = None
-    hostCards = eval(getGlobalVariable('Host Cards'))
-    hostID = hostCards.get(card._id,None)
-    if hostID: host = Card(hostID) 
-    debugNotify("<<< fetchHost() with return {}".format(host)) #Debug
-    return host
+
 #---------------------------------------------------------------------------
 # Card Placement functions
 #---------------------------------------------------------------------------

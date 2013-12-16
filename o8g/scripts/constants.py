@@ -27,8 +27,9 @@ mdict = dict( # A dictionary which holds all the hard coded markers (in the mark
 	     Wound = ("Wound", "4a247d69-b2cc-4de9-b4d1-c447bea01f61"),
 	     Success = ("Success", "4a247d69-b2cc-4de9-b4d1-c447bea01f62"),
 	     Drain = ("Drain", "4a247d69-b2cc-4de9-b4d1-c447bea01f63"),
-	     Activation = ("Activation", "ea7418bc-6847-4e8a-9cc3-0230dc27d19b")
-	     )
+	     Activation = ("Activation", "ea7418bc-6847-4e8a-9cc3-0230dc27d19b"),
+         WoundPrevention = ("Wound Prevention","2396ca41-2ddd-4d7b-92de-7a182968209b")
+         )
 	     
 resdict = {
 		'Resource:Cthulhu':						("Cthulhu Resource", "a5173cd9-bafe-4be2-ae6f-11464f7260cf"),
@@ -50,8 +51,9 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
                   ReshuffleX =         re.compile(r'(?<![<,+-])Reshuffle([A-Za-z& ]+)'),
                   RollX =              re.compile(r'(?<![<,+-])Roll([0-9]+)'),
                   RequestInt =         re.compile(r'(?<![<,+-])RequestInt'),
+                  DrainX =              re.compile(r'(?<![<,+-])Drain[0-9]+'),
                   DiscardX =           re.compile(r'(?<![<,+-])Discard[0-9]+'),
-                  TokensX =            re.compile(r'(?<![<,+-])(Put|Remove|Refill|Use|Infect|Transfer)([0-9]+)'),
+                  TokensX =            re.compile(r'(?<![<,+-])(Put|Remove|Refill|Use|Deal|Transfer)([0-9]+)'),
                   TransferX =          re.compile(r'(?<![<,+-])Transfer([0-9]+)'),
                   DrawX =              re.compile(r'(?<![<,+-])Draw([0-9]+)'),
                   ShuffleX =           re.compile(r'(?<![<,+-])Shuffle([A-Za-z& ]+)'),
@@ -59,7 +61,8 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
                   TraceX =             re.compile(r'(?<![<,+-])Trace([0-9]+)'),
                   InflictX =           re.compile(r'(?<![<,+-])Inflict([0-9]+)'),
                   RetrieveX =          re.compile(r'(?<![<,+-])Retrieve([0-9]+)'),
-                  ModifyStatus =       re.compile(r'(?<![<,+-])(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Score)(Target|Host|Multi|Myself)'),
+                  ModifyStatus =       re.compile(r'(?<![<,+-])(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Score|Insane|Restore)(Target|Host|Multi|Myself)'),
+                  ModifyProperty =      re.compile(r'(?<![<,+-])(Add|Remove|Replace)|([A-Za-z0-9 @#$%]+)|([A-Za-z ]+)-until([A-Za-z0-9]+)'),
                   SimplyAnnounce =     re.compile(r'(?<![<,+-])SimplyAnnounce'),
                   ChooseKeyword =      re.compile(r'(?<![<,+-])ChooseKeyword'),
                   CustomScript =       re.compile(r'(?<![<,+-])CustomScript'),
@@ -79,6 +82,7 @@ StealthColor = "#000000" # Cards which are in play but not active yer (e.g. see 
 UnpaidColor = "#ffd700"
 UnpaidAbilityColor = "#40e0d0"
 ReadyEffectColor = "#eeeeee"
+OverpaidEffectColor = "#efefef"
 EngagedColor = "#0000aa"
 
 Xaxis = 'x'
