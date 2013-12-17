@@ -1,6 +1,11 @@
 =====Message of the Day======
 
-Release 2.1.0.24
+Release 2.1.0.25 - Dec 17, 2013
+
+Fixed a couple of bugs introduced in 2.1.0.24
+
+
+Release 2.1.0.24 - Dec 16, 2013
 
 Update to the interim release.  Mostly fixes for non-automated play.
 
@@ -12,15 +17,5 @@ Update to the interim release.  Mostly fixes for non-automated play.
 * Added the ability to refresh all (if you have Turn/Phase animations on
   this is automatic)
 * Worked out several card automations. Most of The Agency in Core Set now works.
-
-
-Release 2.1.0.23
-
-This is an interim release that includes
-Terror in Venice, resource and domain management.
-
-Several automation features are present, but disabled.
-Please understand that these features are unfinished,
-and may not all work as expected.
 
 =============================

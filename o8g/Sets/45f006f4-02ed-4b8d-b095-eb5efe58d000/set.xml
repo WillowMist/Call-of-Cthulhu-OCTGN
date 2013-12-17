@@ -2009,7 +2009,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Unspeakable Ressurrection" id="45f006f4-02ed-4b8d-b095-eb5efe58d119">
+    <card name="Unspeakable Resurrection" id="45f006f4-02ed-4b8d-b095-eb5efe58d119">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="X" />

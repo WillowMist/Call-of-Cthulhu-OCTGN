@@ -977,7 +977,7 @@ def defaultAction(card, x = 0, y = 0):
             if card.orientation == Rot0: participate(card, targetedStories[0])
             elif card.orientation == Rot90: clearParticipation(card, targetedStories[0])
     elif fetchProperty(card,'AutoAction') != '' and Automations['Play/Resolve']: useAbility(card)
-    elif cardType == 'Character':
+    elif cardType == 'Character' or (cardType == 'Support' and not Automations['Play/Resolve']):
         status = cardStatus(card)
         if status == "InPlay":
             exhaustCard(card,x,y,True)
@@ -1557,7 +1557,7 @@ def selectFirstPlayer(message = "Choose who plays first"):
         playerList.append(player.name)
         playerIDs.append(player._id)
     choice = SingleChoice(message, playerList)
-    if not choice:
+    if choice == None:
         notify("{} did not choose a starting player.".format(me.name))
         return
     else:
