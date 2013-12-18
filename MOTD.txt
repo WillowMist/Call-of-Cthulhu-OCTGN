@@ -1,9 +1,9 @@
 =====Message of the Day======
 
-Release 2.1.0.25 - Dec 17, 2013
+Release 2.1.0.25 and 26 - Dec 17, 2013
 
-Fixed a couple of bugs introduced in 2.1.0.24
-
+* Fixed a couple of bugs introduced in 2.1.0.24
+* Added manual "Drain Domain" action.
 
 Release 2.1.0.24 - Dec 16, 2013
 
