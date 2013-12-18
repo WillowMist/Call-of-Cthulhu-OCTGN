@@ -1199,7 +1199,7 @@ def checkStory(card):
      debugNotify("Checking story: {}".format(storyScores))
      if storyScores[card._id] >= 5:
            if card.controller != me: card.setController(me)
-           notify("{} has won the story: {}".format(me,card.name))
+           notify("{} has won the {}: {}".format(me,card.type,card.name))
            attachments = getAttachments(card)
            attList = [c for c in table if c._id in attachments]
            for c in attList:
@@ -1211,7 +1211,7 @@ def checkStory(card):
            replenishStoryCards()
      debugNotify("<<< checkStory()")
            
-def replenishStoryCards():
+def replenishStoryCards(group = table, x = 0, y =0):
      activeStories = eval(getGlobalVariable('activeStories'))
      # notify("Stories: {}".format(activeStories))
      for key in storyPositions:
@@ -1274,6 +1274,7 @@ def playStoryCard(location, card = None):
                        activeStories[location] = card._id
                  setGlobalVariable('activeStories',str(activeStories))
 def checkForWinner():
+    debugNotify(">>> checkForWinner()")
     winners = []
     for player in getPlayers():
         if len(player.piles['ScoringPile']) >= 3:

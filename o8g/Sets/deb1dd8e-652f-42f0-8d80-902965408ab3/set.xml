@@ -15,6 +15,10 @@
 		<marker id="f5cfe322-21a4-4427-91ff-cd5b880c5848" name="Silver Twilight Resource" />
 		<marker id="e6d100e4-f79b-4b91-9853-16974ea47fb0" name="Neutral Resource" />
 		<marker id="94dc59b3-409e-419d-be97-cb4877cdd507" name="Zoog Resource" />
+          <marker id="9ce0fd34-7310-40b2-9b7a-d12271288621" name="Terror Icon" />
+          <marker id="c64afe44-671c-4fcb-b14d-737a6aca25ad" name="Combat Icon" />
+          <marker id="a05477c4-9519-40bc-a599-7b12801d6470" name="Arcane Icon" />
+          <marker id="08c86792-2582-46b6-9ae9-85c604e010da" name="Investigation Icon" />
 	</markers>
 <cards>
     <card id="f22ee55c-8f47-4174-a7a4-985731a74d30" name="Domain 1">

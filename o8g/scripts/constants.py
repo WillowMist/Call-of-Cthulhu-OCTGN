@@ -24,13 +24,17 @@ storyPhases = [
 
     
 mdict = dict( # A dictionary which holds all the hard coded markers (in the markers file)
-	     Wound = ("Wound", "4a247d69-b2cc-4de9-b4d1-c447bea01f61"),
-	     Success = ("Success", "4a247d69-b2cc-4de9-b4d1-c447bea01f62"),
-	     Drain = ("Drain", "4a247d69-b2cc-4de9-b4d1-c447bea01f63"),
-	     Activation = ("Activation", "ea7418bc-6847-4e8a-9cc3-0230dc27d19b"),
-         WoundPrevention = ("Wound Prevention","2396ca41-2ddd-4d7b-92de-7a182968209b")
+         Wound = ("Wound", "4a247d69-b2cc-4de9-b4d1-c447bea01f61"),
+         Success = ("Success", "4a247d69-b2cc-4de9-b4d1-c447bea01f62"),
+         Drain = ("Drain", "4a247d69-b2cc-4de9-b4d1-c447bea01f63"),
+         Activation = ("Activation", "ea7418bc-6847-4e8a-9cc3-0230dc27d19b"),
+         WoundPrevention = ("Wound Prevention","2396ca41-2ddd-4d7b-92de-7a182968209b"),
+         TerrorIcon = ("Terror Icon","9ce0fd34-7310-40b2-9b7a-d12271288621"),
+         CombatIcon = ("Combat Icon","c64afe44-671c-4fcb-b14d-737a6aca25ad"),
+         ArcaneIcon = ("Arcane Icon","a05477c4-9519-40bc-a599-7b12801d6470"),
+         InvestigationIcon = ("Investigation Icon","08c86792-2582-46b6-9ae9-85c604e010da")
          )
-	     
+
 resdict = {
 		'Resource:Cthulhu':						("Cthulhu Resource", "a5173cd9-bafe-4be2-ae6f-11464f7260cf"),
 		'Resource:Hastur':						("Hastur Resource", "3911052d-c25b-471d-92af-8aae4a18cce1"),

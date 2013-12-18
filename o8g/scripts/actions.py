@@ -150,6 +150,11 @@ def goToRefresh(group = table, x = 0, y = 0): # Go directly to the Refresh phase
     me.setGlobalVariable('Phase','1')
     me.setGlobalVariable('resourcesToPlay','1')
     me.setGlobalVariable('restoredInsane','0')
+    for key in storyPositions:
+        story = activeStories.get(key,'?')
+        if story != '?':
+            storyCard = Card(story)
+            storyCard.setController(me)
     showCurrentPhase()
     if not Automations['Start/End-of-Turn/Phase']: return
     autoRefresh(verbose = False)
@@ -359,7 +364,9 @@ def goToDetermineSuccess(group = table, x = 0, y = 0):
 
 
 def finishStory():
+    mute()
     debugNotify(">>> finishStory()")
+    if not Automations['Start/End-of-Turn/Phase'] or num(getGlobalVariable('Story Phase')) == -1: return
     for player in getPlayers():
         if player != me: 
             remoteCall(player,'clearCommitted',[])
@@ -369,7 +376,7 @@ def finishStory():
             clearIconTotals()
     currentStory = num(getGlobalVariable('Current Story'))
     tempStories = eval(getGlobalVariable('Committed Stories'))
-    tempStories.remove(currentStory)
+    if currentStory != 'None': tempStories.remove(currentStory)
     setGlobalVariable('Committed Stories',str(tempStories))
     setGlobalVariable('Current Story',"None")
     if len(tempStories) > 0: setGlobalVariable('Story Phase',"2")
