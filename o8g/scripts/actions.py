@@ -150,6 +150,7 @@ def goToRefresh(group = table, x = 0, y = 0): # Go directly to the Refresh phase
     me.setGlobalVariable('Phase','1')
     me.setGlobalVariable('resourcesToPlay','1')
     me.setGlobalVariable('restoredInsane','0')
+    activeStories = eval(getGlobalVariable('activeStories'))
     for key in storyPositions:
         story = activeStories.get(key,'?')
         if story != '?':
@@ -157,7 +158,7 @@ def goToRefresh(group = table, x = 0, y = 0): # Go directly to the Refresh phase
             storyCard.setController(me)
     showCurrentPhase()
     if not Automations['Start/End-of-Turn/Phase']: return
-    autoRefresh(verbose = False)
+    autoRefresh(verbose = False, auto = True)
     atTimedEffects(Time = 'afterCardRefreshing') 
     nextPhase()
 
@@ -264,7 +265,7 @@ def goToIconStruggles(group = table, x = 0, y = 0):
                 if fastFound and not multiFastFound:
                     notify("{} Struggle: Icons tied, but {} has a character with the Fast keyword.".format(currentStruggle, player.name))
                     tempWinner = player
-            if not tempWinner:
+            if not tempWinner or tempTotal == 0:
                 notify("{} Struggle: No Winner, play responses or proceed to the next action (Ctrl-Enter)".format(currentStruggle))
                 del storyIcons[0]
                 setGlobalVariable('struggleIcons',str(storyIcons))
@@ -432,7 +433,7 @@ def struggleResults(type, originator):
     setGlobalVariable('resolutionPending',"False")
     if type == 'Terror':
         notify("Resolve Terror Struggle: {} must drive one character insane.".format(me))
-        tempCards = [c for c in table if c._id in committedCharacters and (cardStatus(c) == "InPlay" or cardStatus(c) == "Exhausted") and getIcons(c,"Terror") == 0] 
+        tempCards = [c for c in table if c._id in committedCharacters and (cardStatus(c) == "InPlay" or cardStatus(c) == "Exhausted") and getIcons(c,"Terror") == 0 and hasKeyword(c,'Willpower') == 0] 
         if len(tempCards) > 0:
             cardIDs = []
             cardNames = []
@@ -450,7 +451,7 @@ def struggleResults(type, originator):
             notify("Terror Resolution: {} doesn't have any eligible characters to be driven insane.".format(me))
     elif type == 'Combat':
         notify("Resolve Combat Struggle: {} must wound one character.".format(me))
-        tempCards = [c for c in table if c._id in committedCharacters and (cardStatus(c) == "InPlay" or cardStatus(c) == "Exhausted")] 
+        tempCards = [c for c in table if c._id in committedCharacters and (cardStatus(c) == "InPlay" or cardStatus(c) == "Exhausted") and hasKeyword(c,'Invulnerability') == 0] 
         if len(tempCards) > 0:
             cardIDs = []
             cardNames = []
@@ -554,7 +555,7 @@ def intSetup(group, x = 0, y = 0):
         if num(me.getGlobalVariable('playerside')) == -1:
             whisper("Please wait until first player has been chosen.")
             return
-        elif confirm("First player has not yet been chosen.  Do you wish to do so now?  A random player will be given the choice of first player.  Once that has been done, please re-run Setup (Ctrl-Shift-S)"):
+        elif len(getPlayers()) == 1 or confirm("First player has not yet been chosen.  Do you wish to do so now?  A random player will be given the choice of first player.  Once that has been done, please re-run Setup (Ctrl-Shift-S)"):
             determineFirstPlayer()
         else:
             return
@@ -728,8 +729,8 @@ def clearCommitted():
     tempCommitted = eval(me.getGlobalVariable('committedCharacters'))
     del tempCommitted[currentStory._id]
     me.setGlobalVariable('committedCharacters',str(tempCommitted))
-def autoRefresh(group = table, x = 0, y = 0, verbose = True):
-    if Automations['Start/End-of-Turn/Phase']: 
+def autoRefresh(group = table, x = 0, y = 0, verbose = True, auto = False):
+    if Automations['Start/End-of-Turn/Phase'] and not auto: 
         whisper("NOTICE: This action is only to be used if you're not using Phase automations.")
         return
     insaneCards = [card for card in table if card.controller == me and cardStatus(card) == "Insane"]
@@ -738,7 +739,7 @@ def autoRefresh(group = table, x = 0, y = 0, verbose = True):
     restoredInsane = int(me.getGlobalVariable('restoredInsane'))
     debugNotify("Insane card count: {}".format(len(insaneCards)))
     if verbose: notify("{} automatically refreshes their side of the table.".format(me))
-    if len(insaneCards) >= restorableCharacters():
+    if len(insaneCards) > restorableCharacters():
         while restoredInsane < restorableCharacters() and len(insaneCards) > 0:
             remaining = restorableCharacters() - restoredInsane
             plural = 's'
@@ -752,7 +753,7 @@ def autoRefresh(group = table, x = 0, y = 0, verbose = True):
                 restoredInsane += 1
                 me.setGlobalVariable('restoredInsane', str(restoredInsane))
     elif len(insaneCards) > 0:
-        for card in insaneCards():
+        for card in insaneCards:
             restoreCard(card)
             restoredInsane += 1
             me.setGlobalVariable('restoredInsane',str(restoredInsane))
@@ -760,17 +761,20 @@ def autoRefresh(group = table, x = 0, y = 0, verbose = True):
         notify(":> {} readied all their eligible cards".format(me))
         for card in exhaustedCards:
             readyCard(card)
+    clearedDomains = 0
+    Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
     for card in myDomains:
-        clearedDomains = 0
+
         att = getAttachments(card)
         if len(att) > 0:
+            
             for subatt in att:
                 if Card(subatt).name == "Drain Token":
                     Stored_Attachments[subatt] = ""
                     setGlobalVariable('Stored_Attachments',str(Stored_Attachments))
                     destroyCard(Card(subatt), auto=True)
                     clearedDomains += 1
-            if clearedDomains: notify("{} refreshed {} domains.".format(me,clearedDomains))
+    if clearedDomains: notify("{} refreshed {} domains.".format(me,clearedDomains))
 
 #---------------------------------------------
 # Pile Actions
@@ -875,6 +879,7 @@ def restoreCard(card, x = 0, y = 0, verbose = False): # Restores an insane chara
         card.isFaceUp = True
         card.orientation = Rot90
         if verbose:notify("{} restored {} to sanity.".format(me,card.name))
+        executePlayScripts(card,'RESTORE')
     else: 
         debugNotify("Tried to restore a non-insane card: {}".format(card.name))
         return 'ABORT'
@@ -884,6 +889,7 @@ def makeInsane(card, x = 0, y = 0, verbose=False):
     debugNotify(">>> makeInsane({})".format(card.name))
     if cardStatus(card) == "InPlay" or cardStatus(card) == "Exhausted" or cardStatus(card) == "Insane":
         if verbose: notify("{}'s {} is driven insane.".format(me,card.name))
+        executePlayScripts(card,'INSANE')
         card.isFaceUp = False
         card.orientation = Rot90
         for player in getPlayers():
@@ -905,13 +911,17 @@ def readyCard(card, x = 0, y = 0,verbose=False):
     if cardStatus(card) == "Exhausted":
         card.orientation = Rot0
         if verbose:notify("{} readied {}".format(me,card.name))
-    else: debugNotify("Tried to ready a non-exhausted card: {}".format(card.name))
-
+    else: 
+        debugNotify("Tried to ready a non-exhausted card: {}".format(card.name))
+        return 'ABORT'
+        
 def exhaustCard(card, x=0, y=0, verbose=False):
     if cardStatus(card) == "InPlay":
         card.orientation = Rot90
         if verbose: notify("{} exhausted {}".format(me,card.name))
-    else: debugNotify("Tried to exhaust a non-ready card: {}".format(card.name))
+    else: 
+        debugNotify("Tried to exhaust a non-ready card: {}".format(card.name))
+        return 'ABORT'
 def defaultAction(card, x = 0, y = 0):
     cardType = fetchProperty(card,'Type')
     Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
@@ -1026,12 +1036,7 @@ def defaultAction(card, x = 0, y = 0):
                     wasdrained = True
             if wasdrained == False:
                 if Automations['Play/Resolve']: generate(card)
-                else:
-                    xp, yp = card.position
-                    token = table.create("d42706b4-2721-439e-a41f-0611d6beb449", xp , yp , 1)
-                    storeAttachment(token,card)
-                    arrangeAttachments(card)
-                    notify("{} drained a domain.".format(me))
+                else: drainDomain(card)
     elif (cardType == 'Story' or cardType == 'Conspiracy') and Automations['Play/Resolve']:
         showScore(card)
     else: whisper(":::ERROR::: There is nothing to do with this card at this moment!")
@@ -1042,7 +1047,33 @@ def drainDomain(card, x=0, y=0, verbose = True):
         token = table.create("d42706b4-2721-439e-a41f-0611d6beb449", xp , yp , 1)
         storeAttachment(token,card)
         arrangeAttachments(card)
+        att = getAttachments(card)
+        for subatt in att:
+            c = Card(subatt)
+            resourceCount = len(c.properties['Resource Icon'])
+            if resourceCount == 2:
+                notify('{} drained a domain with a transient resource.  Discarding {}.'.format(me,c.name))
+                verbose = False
+                remResource(card,c)
+                destroyCard(c,auto=True)
+                arrangeAttachments(card)
         if verbose: notify("{} drained a domain.".format(me))
+def clearDomain(card, x=0, y=0, verbose = True):
+    Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
+    if cardStatus(card) == 'Domain':
+        att = getAttachments(card)
+        clearedDomains = 0
+        if len(att) > 0:
+            for subatt in att:
+                if Card(subatt).name == "Drain Token":
+                    Stored_Attachments[subatt] = ""
+                    setGlobalVariable('Stored_Attachments',str(Stored_Attachments))
+                    destroyCard(Card(subatt), auto=True)
+                    clearedDomains += 1
+        if clearedDomains > 0:
+            if verbose: notify("{} cleared a drain token from a domain.".format(me))
+        else:
+            return 'ABORT'
 def showScore(card, x = 0, y = 0):
     whisper("Current Score for {}".format(card.name))
     for player in getPlayers():
@@ -1116,6 +1147,27 @@ def findUnpaidCard():
     debugNotify("<<< findUnpaidCard()") #Debug
     return None # If not unpaid card is found, return None
 
+def commitOrUncommit(card,x=0, y=0, silent = False):
+    cardType = fetchProperty(card,'Type')
+    targets = [c for c in table if c.targetedBy and c.targetedBy == me and (fetchProperty(c,'Type') == 'Story' or fetchProperty(c,'Type')=='Conspiracy')]
+    if cardType != 'Character':
+        whisper("You can't commit {} cards.".format(cardType))
+        return
+    committedCharacters = eval(me.getGlobalVariable('committedCharacters'))
+    committedStory = None
+    for key,value in committedCharacters.iteritems():
+        if card._id in value:
+            target = Card(key)
+            clearParticipation(card, target)
+            return
+    if len(targets)==0:
+        whisper("Please target a Story or Conspiracy to commit to")
+        return
+    if len(targets) > 1:
+        whisper("Please only target one Story or Conspiracy.")
+        return
+    participate(card,targets[0])
+        
 def participate(card, target, x = 0, y = 0, silent = False):
     debugNotify(">>> participate(){}".format(extraASDebug())) #Debug
     mute()
@@ -1176,7 +1228,23 @@ def chooseAndDrainDomain(resources):
         return 'ABORT'
     else: chosenDomain = domainList[domainChoice]
     drainDomain(chosenDomain)
-    return 
+    return
+
+def chooseAndClearDomain(resources):
+    domainList = [c for c in table if c.controller == me and cardStatus(c) == 'Domain' and countResources(c) >= resources and getAvailableResources(c) == 0]
+    if len(domainList) == 0:
+        whisper("Sorry, you have no available domains to ready for this effect.")
+        return 'ABORT'
+    dChoiceList = makeChoiceListfromCardList(domainList)
+    debugNotify("Domain Choices: {}".format(dChoiceList))
+    domainChoice = SingleChoice("Choose a domain to ready for this effect.",dChoiceList)
+    if domainChoice == None: 
+        whisper("No choice made. Aborting")
+        return 'ABORT'
+    else: chosenDomain = domainList[domainChoice]
+    clearDomain(chosenDomain, verbose = False)
+    return
+    
 
 def addMarker(card, tokenType,count = 1, silent = False):
    debugNotify(">>> addMarker() with tokenType = {}".format(tokenType))
@@ -1204,7 +1272,7 @@ def addMarker(card, tokenType,count = 1, silent = False):
    if not silent: notify("{} adds {} {} to {}.".format(me, count, tokenType, card))
    if tokenType == 'Success' or tokenType == 'Wound':
       executePlayScripts(card, 'MARKERADD{}'.format(tokenType.upper()))
-      remoteCall(card.controller, checkMarkers, [card])
+      remoteCall(card.controller, 'checkMarkers', [card])
       #autoscriptOtherPlayers('{}MarkerAdded'.format(tokenType),card,count) # Don't need it yet, so I reduce the load
    debugNotify("<<< addMarker()")
 
@@ -1431,36 +1499,12 @@ def generate(card, x = 0, y = 0):
                 unpaidC.markers[cMarkerKey] += card.markers[cMarkerKey]
     resResult = checkPaidResources(unpaidC)
     if resResult == 'OK': 
-        xp, yp = card.position
-        token = table.create("d42706b4-2721-439e-a41f-0611d6beb449", xp , yp , 1)
-        storeAttachment(token,card)
-        arrangeAttachments(card)
-        notify("{} drained a domain to pay for {}.".format(me,unpaidC))
-        for subatt in att:
-            c = Card(subatt)
-            resourceCount = len(c.properties['Resource Icon'])
-            if resourceCount == 2:
-                notify('{} drained a domain with a transient resource.  Discarding {}.'.format(me,c.name))
-                remResource(card,c)
-                destroyCard(c,auto=True)
-                arrangeAttachments(card)
+        drainDomain(card)
         #executePlayScripts(card, 'GENERATE')
         #runAutoScripts('ResourceGenerated',card)
         purchaseCard(unpaidC, manual = False)
     elif (resResult == 'USEOK' or resResult == 'USEOKOP'): 
-        xp, yp = card.position
-        token = table.create("d42706b4-2721-439e-a41f-0611d6beb449", xp , yp , 1)
-        storeAttachment(token,card)
-        arrangeAttachments(card)
-        notify("{} drained a domain to pay for {}'s effect.".format(me,unpaidC))
-        for subatt in att:
-            c = Card(subAtt)
-            resourceCount = len(c.properties['Resource Icon'])
-            if resourceCount == 2:
-                notify('{} drained a domain with a transient resource.  Discarding {}.'.format(me,c.name))
-                remResource(card,c)
-                destroyCard(c,auto=True)
-                arrangeAttachments(card)
+        drainDomain(card)
         #executePlayScripts(card, 'GENERATE')
         #runAutoScripts('ResourceGenerated',card)
         Overpaid = False
@@ -1496,6 +1540,7 @@ def destroyCard(card, x=0, y=0, auto=False):
             destroyCard(Card(subatt),auto=True)
         freeCardPlacement(card)
         runAutoScripts('CardDestroyed',card)
+        executePlayScripts(card,'TRASH')
         clearCardModifiers('{}LeavesPlay'.format(card._id))
         card.moveTo(card.owner.piles['Discard Pile'])
     else: return

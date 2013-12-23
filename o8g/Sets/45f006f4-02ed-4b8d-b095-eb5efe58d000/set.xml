@@ -50,8 +50,8 @@
       <property name="Resource Icon" value="__" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="onTrash:CreateDummy||whileInPlay:TrashMyself-foreachPhaseEnd" />
-      <property name="AutoAction" value="1:Retrieve1Card-grabLocal Sherrif-fromDiscard$$TrashMyself" />
+      <property name="AutoScript" value="onTrash:CreateDummy-nonUnique-excludeDummy||whileInPlay:DestroyMyself-atEndPhase-onlyforDummy" />
+      <property name="AutoAction" value="Drain1-isCost-onlyforDummy$$Retrieve1Card-grabLocal Sheriff-fromDiscard$$DestroyMyself" />
       <property name="Instructions" value="" />
     </card>
     <card name="* Paul Lemond" id="45f006f4-02ed-4b8d-b095-eb5efe58d004">
@@ -341,7 +341,7 @@
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="onPlay:Add|# #|Icons-untilPhaseEnd-atCharacter-ifNotOverPaid||onPlay:Add|# # $ %|Icons-untilPhaseEnd-atCharacter-ifOverPaid" />
       <property name="AutoAction" value="" />
-      <property name="Instructions" value="" />
+      <property name="Instructions" value="onPlay[Add Two Combat Icons|-|Add One Arcane and One Investigation Icon]" />
     </card>
     <card name="* Professor Albert Wilmarth" id="45f006f4-02ed-4b8d-b095-eb5efe58d021">
       <property name="Type" value="Character" />
@@ -356,7 +356,7 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onCommit:CustomScript||whileCommitted:Remove1TerrorIcon-affectsStory-CommittedStory-perMarker{Terror}||whileCommitted:Remove1CombatIcon-affectsStory-CommittedStory-perMarker{Combat}||whileCommitted:Remove1ArcaneIcon-affectsStory-CommittedStory-perMarker{Arcane}||whileCommitted:Remove1InvestigationIcon-affectsStory-CommittedStory-perMarker{Investigation}" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -373,7 +373,7 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onCommit:Draw1Card" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -390,7 +390,7 @@
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="whileCommitted:Remove9ToughnessKeyword-affectsCharacter" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -419,12 +419,12 @@
       <property name="Icons" value="# $ %" />
       <property name="Skill" value="3" />
       <property name="Subtypes" value="Investigator." />
-      <property name="Card Text" value="Lower the cost for you to play INVESTIGATOR character by 1. INVESTIGATOR characters you controll gain %." />
+      <property name="Card Text" value="Lower the cost for you to play INVESTIGATOR character by 1. INVESTIGATOR characters you control gain %." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="whileInPlay:Reduce1CostPlay-affectsCharacter_and_Investigator-forMe||whileInPlay:Add1InvestigationIcon-affectsCharacter_and_Investigator-targetMine" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -441,8 +441,8 @@
       <property name="Resource Icon" value="{{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoScript" value="onTrash:CreateDummy-nonUnique-excludeDummy||whileInPlay:DestroyMyself-atEndPhase-onlyforDummy" />
+      <property name="AutoAction" value="Drain1-isCost-onlyforDummy$$Retrieve1Card-grabVisiting Author-fromDiscard$$DestroyMyself" />
       <property name="Instructions" value="" />
     </card>
     <card name="Mad Genius" id="45f006f4-02ed-4b8d-b095-eb5efe58d027">
@@ -458,9 +458,9 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onRestore:Put1Success-atStory-DemiAutoTargeted-choose1" />
       <property name="AutoAction" value="" />
-      <property name="Instructions" value="" />
+      <property name="Instructions" value="onRestore:Choose a story to add a success token to." />
     </card>
     <card name="Strange Librarian" id="45f006f4-02ed-4b8d-b095-eb5efe58d028">
       <property name="Type" value="Character" />
@@ -476,7 +476,7 @@
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoAction" value="ExhaustMyself-isCost$$Retrieve1Card-ofEither-toBottomofDeck-onTop3Cards" />
       <property name="Instructions" value="" />
     </card>
     <card name="Laboratory Assistant" id="45f006f4-02ed-4b8d-b095-eb5efe58d029">
@@ -510,7 +510,7 @@
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoAction" value="SacrificeMyself-isCost$$Drain1$$Undrain1" />
       <property name="Instructions" value="" />
     </card>
     <card name="{{ Natural Philosopher" id="45f006f4-02ed-4b8d-b095-eb5efe58d031">
@@ -526,7 +526,7 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onPlay:Draw1Card$$Discard1Card-ofEachPlayer" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>

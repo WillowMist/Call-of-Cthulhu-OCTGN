@@ -521,7 +521,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="Environment." />
-      <property name="Card Text" value="Action: Exhaust Things in the Ground to discard the top 2 cards of each player's deck. Any characters that would be discarded by this effect are instead put into play insane." />
+      <property name="Card Text" value="Action: Exhaust and sacrifice Things in the Ground to discard the top 2 cards of each player's deck. Any characters that would be discarded by this effect are instead put into play insane." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="&lt;" />
       <property name="Collector Info" value="F" />
@@ -623,7 +623,7 @@
       <property name="Icons" value="@ @" />
       <property name="Skill" value="2" />
       <property name="Subtypes" value="Monster." />
-      <property name="Card Text" value="Poltergeist cannot commit to stories. Insane characters you control do not restore. Action: Pay 2 to give control of Poltergeist to any opponent." />
+      <property name="Card Text" value="Poltergeist cannot commit to stories.&#xD;&#xA;&#xD;&#xA;Insane characters you control do not restore during the Refresh Phase. &#xD;&#xA;&#xD;&#xA;Action: Pay 2 to give control of Poltergeist to any opponent." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />

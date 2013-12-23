@@ -51,7 +51,7 @@ debugVerbosity = 0 # At -1, means no debugging messages display
 
 startupMsg = False # Used to check if the player has checked for the latest version of the game.
 
-
+costModifiers = []
 
 
 #---------------------------------------------------------------------------
@@ -59,27 +59,42 @@ startupMsg = False # Used to check if the player has checked for the latest vers
 #---------------------------------------------------------------------------
 
 def ofwhom(Autoscript, controller = me): 
-     debugNotify(">>> ofwhom(){}".format(extraASDebug(Autoscript))) #Debug
-     targetPL = None
-     if re.search(r'o[fn]Opponent', Autoscript):
-           if len(getPlayers()) > 1:
-                 if controller == me: # If we're the current controller of the card who's scripts are being checked, then we look for our opponent
-                       for player in getPlayers():
-                            if int(player.getGlobalVariable('playerside')) == 0: continue # This is a spectator 
-                            elif player != me and int(player.getGlobalVariable('playerside')) != int(me.getGlobalVariable('playerside')):
-                                  targetPL = player # Opponent needs to be not us, and of a different type. 
-                                                                    # In the future I'll also be checking for teams by using a global player variable for it and having players select their team on startup.
-                 else: targetPL = me # if we're not the controller of the card we're using, then we're the opponent of the player (i.e. we're trashing their card)
-           else: 
-                 debugNotify("There's no valid Opponents! Selecting myself.",1)
-                 targetPL = me
-     else: 
-           if len(getPlayers()) > 1:
-                 if controller != me: targetPL = controller         
-                 else: targetPL = me
-           else: targetPL = me
-     debugNotify("<<< ofwhom() returns {}".format(targetPL))
-     return targetPL
+    debugNotify(">>> ofwhom(){}".format(extraASDebug(Autoscript))) #Debug
+    targetPL = None
+    if re.search(r'o[fn]Opponent', Autoscript):
+        if len(getPlayers()) > 1:
+            if controller == me: # If we're the current controller of the card who's scripts are being checked, then we look for our opponent
+                for player in getPlayers():
+                    if int(player.getGlobalVariable('playerside')) == 0: continue # This is a spectator 
+                    elif player != me and int(player.getGlobalVariable('playerside')) != int(me.getGlobalVariable('playerside')):
+                        targetPL = player # Opponent needs to be not us, and of a different type. 
+                                                            # In the future I'll also be checking for teams by using a global player variable for it and having players select their team on startup.
+            else: targetPL = me # if we're not the controller of the card we're using, then we're the opponent of the player (i.e. we're trashing their card)
+        else: 
+             debugNotify("There's no valid Opponents! Selecting myself.",1)
+             targetPL = me
+    elif re.search(r'o[fn]Either',Autoscript):
+        if len(getPlayers()) > 1:
+            players = []
+            playerNames = []
+            for player in getPlayers():
+                playerNames.append(player.name)
+                players.append(player)
+            choice = SingleChoice("Choose a player for this effect. Cancelling will choose you.",playerNames)
+            if choice == None: targetPL = me
+            else: targetPL = players[choice]
+        else: targetPL = me
+    elif re.search(r'o[fn]EachPlayer',Autoscript):
+        if len(getPlayers()) > 1:
+            return getPlayers()
+        else: targetPL = me
+    else: 
+       if len(getPlayers()) > 1:
+             if controller != me: targetPL = controller         
+             else: targetPL = me
+       else: targetPL = me
+    debugNotify("<<< ofwhom() returns {}".format(targetPL))
+    return targetPL
      
 def chooseWell(limit, choiceText, default = None):
      debugNotify(">>> chooseWell(){}".format(extraASDebug())) #Debug
@@ -375,9 +390,10 @@ def reduceCost(card, action = 'PLAY', fullCost = 0, dryRun = False):
      debugNotify("### About to gather cards on the table")
      ### Now we check if any card on the table has an ability that reduces costs
      if not eval(me.getGlobalVariable('gatheredCardList')): # A global variable that stores if we've scanned the tables for cards which reduce costs, so that we don't have to do it again.
-           costModifiers = eval(me.getGlobalVariable('costModifiers'))
+           global costModifiers
            del costModifiers[:]
-           RC_cardList = sortPriority([c for c in table if c.isFaceUp and c.orientation != Rot270])
+           RC_cardList = sortPriority([c for c in table if c.isFaceUp and c.orientation != Rot270 and c.highlight != UnpaidColor])
+           debugNotify("Cardlist: {}".format(RC_cardList))
            reductionRegex = re.compile(r'(Reduce|Increase)([0-9#X]+)Cost({}|All)-affects([A-Z][A-Za-z ]+)(-not[A-Za-z_& ]+)?'.format(type)) # Doing this now, to reduce load.
            for c in RC_cardList: # Then check if there's other cards in the table that reduce its costs.
                  Autoscripts = c.AutoScript.split('||')
@@ -402,7 +418,7 @@ def reduceCost(card, action = 'PLAY', fullCost = 0, dryRun = False):
                                   debugNotify("Adding card to cost Modifiers list")
                                   costModifiers.append((c,reductionSearch,autoS)) # Cost increasing cards go into the main list we'll check in a bit, as we need to check them first. 
                                                                                                                              # In each entry we store a tuple of the card object and the search result for its cost modifying abilities, so that we don't regex again later. 
-           if len(costReducers): costModifiers.extend(costReducers)
+           if len(costReducers) > 0: costModifiers.extend(costReducers)
      for cTuple in costModifiers: # Now we check what kind of cost modification each card provides. First we check for cost increasers and then for cost reducers
            debugNotify("### Checking next cTuple",4) #Debug
            c = cTuple[0]
@@ -464,7 +480,6 @@ def reduceCost(card, action = 'PLAY', fullCost = 0, dryRun = False):
                        if orig_reduction != reduction: # If the current card actually reduced or increased the cost, we want to announce it
                             if reduction > 0 and not dryRun: notify(" -- {} reduces cost by {}".format(c,reduction - orig_reduction))
                             elif reduction < 0 and dryRun: notify(" -- {} increases cost by {}".format(c,abs(reduction - orig_reduction)))
-     me.setGlobalVariable('costModifiers',str(costModifiers))
      debugNotify("<<< reduceCost(). final reduction = {}".format(reduction)) #Debug
      return reduction
 
@@ -609,7 +624,7 @@ def placeCard(card):
                                   arrangeAttachments(host[0])
                                   host[0].target(False)
                        else:
-                            supportAmount = len([c for c in table if fetchProperty(c,'Type') == 'Support' and c.controller == me and c.orientation != Rot270 and not hasSubType(c,'Attachment.')])
+                            supportAmount = len([c for c in table if fetchProperty(c,'Type') == 'Support' and c.controller == me and c.highlight != UnpaidColor and c.highlight != DummyColor and c.orientation != Rot270 and not hasSubType(c,'Attachment.')]) - 1
                             debugNotify("my supportAmount is: {}.".format(supportAmount)) #Debug
                             freePositions = eval(me.getGlobalVariable('freeSupportPositions')) # We store the currently released position
                             debugNotify(" my freeSupportPositions is: {}.".format(freePositions),2) #Debug
@@ -990,18 +1005,19 @@ def getStoryIcons(card, printedOnly = False):
            icons = card.properties['Struggle Icons']
            tmpIcons = icons.split(' ')
            attachments  = getAttachments(card)
-           if len(attachments) > 0:
-                 for a in attachments:
-                       att = Card(a)
-                       tmpIcons.extend(att.properties['Struggle Icons'].split(' '))
-           if getGlobalVariable('Current Story') == card._id:
-                 for player in getPlayers():
-                       currentStory = Card(num(getGlobalVariable('Current Story')))
-                       committedCharacters = eval(me.getGlobalVariable('committedCharacters')).get(currentStory._id,[])
-                       if len(committedCharacters) > 0:
-                            for charid in committedCharacters:
-                                  char = Card(charid)
-                                  tmpIcons.extend(att.properties['Struggle Icons'].split(' '))
+           if not printedOnly:
+               if len(attachments) > 0:
+                     for a in attachments:
+                           att = Card(a)
+                           tmpIcons.extend(att.properties['Struggle Icons'].split(' '))
+               if getGlobalVariable('Current Story') == card._id:
+                     for player in getPlayers():
+                           currentStory = Card(num(getGlobalVariable('Current Story')))
+                           committedCharacters = eval(me.getGlobalVariable('committedCharacters')).get(currentStory._id,[])
+                           if len(committedCharacters) > 0:
+                                for charid in committedCharacters:
+                                      char = Card(charid)
+                                      tmpIcons.extend(att.properties['Struggle Icons'].split(' '))
            for icon in tmpIcons:
                  if icon == '@': tmpTerror.append('Terror')
                  elif icon == '#':tmpCombat.append('Combat')
@@ -1193,6 +1209,7 @@ def remSuccess(card, x=0, y=0):
     debugNotify("<<< remSuccess()")
 
 def checkStory(card):
+     mute()
      debugNotify(">>> checkStory()")
      if not Automations['Damage/Scoring']: return
      storyScores = eval(me.getGlobalVariable('storyScores'))
@@ -1209,6 +1226,8 @@ def checkStory(card):
            finishStory()
            checkForWinner()
            replenishStoryCards()
+           for player in getPlayers():
+               remoteCall(player,'updateScores',[])
      debugNotify("<<< checkStory()")
            
 def replenishStoryCards(group = table, x = 0, y =0):
@@ -1329,17 +1348,22 @@ def restorableCharacters():
 #-------------------------------------------
 # Switches
 #-------------------------------------------
-
+def setAutomation(type, bool = False):
+    Automations[type] = bool
+    
 def switchAutomation(type,command = 'Off', warn = ''):
+    mute()
     debugNotify(">>> switchAutomation(){}".format(extraASDebug())) #Debug
     global Automations
     if (Automations[type] and command == 'Off') or (not Automations[type] and command == 'Announce'):
-        notify ("--> {}'s {} automations are OFF.".format(me,type))
-        if command != 'Announce': Automations[type] = False
+        notify ("--> {} turned {} automations OFF.".format(me,type))
+        if command != 'Announce': 
+            for player in getPlayers(): remoteCall(player,'setAutomations'[type, False])
     else:
         if warn != '' and not confirm(warn): return
-        notify ("--> {}'s {} automations are ON.".format(me,type))
-        if command != 'Announce': Automations[type] = True
+        notify ("--> {} turned {} automations ON.".format(me,type))
+        if command != 'Announce': 
+            for player in getPlayers(): remoteCall(player,'setAutomation',[type, True])
     
 def switchPlayAutomation(group,x=0,y=0):
     msg = "Play automations are still in beta, and may not work the way you intend.  Continue?"

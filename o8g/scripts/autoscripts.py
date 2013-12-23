@@ -74,6 +74,8 @@ def executePlayScripts(card, action):
     elif action == 'SCORE': trigger = 'onScore'
     elif action == 'TRASH': trigger = 'onTrash'
     elif action == 'WOUND': trigger = 'onWound'
+    elif action == 'INSANE': trigger = 'onInsane'
+    elif action == 'RESTORE': trigger = 'onRestore'
     else: trigger = 'N/A'
     debugNotify ('trigger = {}'.format(trigger)) # Debug
     if trigger != 'N/A': # If there's a possibility of a multiple choice trigger, we do the check
@@ -114,6 +116,8 @@ def executePlayScripts(card, action):
              (effectType.group(1) == 'onLiberation' and action != 'LIBERATE') or
              (effectType.group(1) == 'onTrash' and action != 'TRASH' and action!= 'UNINSTALL' and action != 'DEREZ') or
              (effectType.group(1) == 'onWound' and action != 'WOUND') or
+             (effectType.group(1) == 'onInsane' and action != 'INSANE') or
+             (effectType.group(1) == 'onRestore' and action != 'RESTORE') or
              (effectType.group(1) == 'onDerez' and action != 'DEREZ')): 
             debugNotify("Rejected {} because {} does not fit with {}".format(autoS,effectType.group(1),action))
             continue 
@@ -219,7 +223,7 @@ def executePlayScripts(card, action):
                 elif regexHooks['ModifyProperty'].search(passedScript): 
                     if ModifyProperty(passedScript, announceText, card, targetC, notification = 'Quick', n = X) == 'ABORT': return
             if eval(me.getGlobalVariable('failedRequirement')): break # If one of the Autoscripts was a cost that couldn't be paid, stop everything else.
-            debugNotify("Loop for scipt {} finished".format(passedScript), 2)
+            debugNotify("Loop for script {} finished".format(passedScript), 2)
 
 #------------------------------------------------------------------------------
 # Card Use trigger
@@ -796,7 +800,7 @@ def redirect(Autoscript, card, action, X = 0,targetC = None):
         if DrawX(Autoscript, announceText, card, targetC, notification = 'Quick', n = X) == 'ABORT': return 'ABORT'
     elif regexHooks['RetrieveX'].search(Autoscript): 
         debugNotify("in RetrieveX hook")
-        if RetrieveX(Autoscript, announceText, card, targetC, notification = 'Quick', n = X) == 'ABORT': return 'ABORT'
+        if RetrieveX(Autoscript, announceText, card, targetC, notification = 'Quick', n = X)[0] == 'ABORT': return 'ABORT'
     elif regexHooks['TokensX'].search(Autoscript): 
         debugNotify("in TokensX hook")
         if TokensX(Autoscript, announceText, card, targetC, notification = 'Quick', n = X) == 'ABORT': return 'ABORT'
@@ -1053,11 +1057,11 @@ def DrawX(Autoscript, announceText, card, targetCards = None, notification = Non
         source = targetPL.piles['Discard Pile']
         sourcePath =  " from their Discard Pile"
     else: 
-        source = targetPL.piles['Command Deck']
+        source = targetPL.piles['Deck']
         sourcePath =  ""
     debugNotify("### Setting Destination",3)
     if re.search(r'-toDeck', Autoscript): 
-        destination = targetPL.piles['Command Deck']
+        destination = targetPL.piles['Deck']
         destiVerb = 'move'
     elif re.search(r'-toDiscard', Autoscript):
         destination = targetPL.piles['Discard Pile']
@@ -1065,7 +1069,7 @@ def DrawX(Autoscript, announceText, card, targetCards = None, notification = Non
     else: destination = targetPL.hand
     debugNotify("### Setting Destination",3)
     preventDraw = False
-    if source == targetPL.piles['Command Deck'] and destination == targetPL.hand: # We need to look if there's card on the table which prevent card draws.
+    if source == targetPL.piles['Deck'] and destination == targetPL.hand: # We need to look if there's card on the table which prevent card draws.
         debugNotify("About to check for Draw Prevention",2)
         for c in table:
             if preventDraw: break #If we already found a card effect which prevents draws, don't check any more cards on the table.
@@ -1076,7 +1080,7 @@ def DrawX(Autoscript, announceText, card, targetCards = None, notification = Non
                     preventDraw = True
                     notify(":> {}'s {} draw effects were blocked by {}".format(card.controller,card,c))
     if not preventDraw:
-        if destiVerb == 'draw' and ModifyDraw > 0 and not confirm("You have a card effect in play that modifies the amount of cards you draw. Do you want to continue as normal anyway?\n\n(Answering 'No' will abort this action so that you can prepare for the special changes that happen to your draw."): return 'ABORT'
+        # if destiVerb == 'draw' and ModifyDraw > 0 and not confirm("You have a card effect in play that modifies the amount of cards you draw. Do you want to continue as normal anyway?\n\n(Answering 'No' will abort this action so that you can prepare for the special changes that happen to your draw."): return 'ABORT'
         draw = num(action.group(1))
         if draw == 999:
             multiplier = 1
@@ -1107,16 +1111,23 @@ def DrawX(Autoscript, announceText, card, targetCards = None, notification = Non
 def DrainX(Autoscript, announceText, card, targetCards = None, notification = None, n = 0):
     debugNotify(">>> DrainX(){}".format(extraASDebug(Autoscript)))
     if targetCards is None: targetCards = []
-    action = re.search(r'\bDrain([0-9]+)', Autoscript)
+    action = re.search(r'\b(Undrain|Drain)([0-9]+)', Autoscript)
     targetPL = ofwhom(Autoscript, card.controller)
     if targetPL != me: otherTXT = ' force {} to'.format(targetPL)
     else: otherTXT = ''
-    drainNR = num(action.group(1))
-    if chooseAndDrainDomain(drainNR) == 'ABORT': 
+    drainNR = num(action.group(2))
+    verb = ''
+    if action.group(1) == 'Undrain': 
+        verb = 'clear'
+        result = chooseAndClearDomain(drainNR)
+    else: 
+        verb = 'drain'
+        result = chooseAndDrainDomain(drainNR)
+    if result == 'ABORT': 
         me.setGlobalVariable('failedRequirement',"True")
         return ('ABORT',0)
-    if notification == 'Quick': announceString = "{} drains a domain worth at least {}".format(announceText,drainNR)
-    else: announceString = "{}{} drain a domain worth at least {}".format(announceText,otherTXT, drainNR)
+    if notification == 'Quick': announceString = "{} {}s a domain worth at least {}".format(announceText,verb,drainNR)
+    else: announceString = "{}{} {} a domain worth at least {}".format(announceText,otherTXT, verb, drainNR)
     if notification: notify(':> {}.'.format(announceString))
     debugNotify("<<< DrainX()")
     return (announceString, drainNR)
@@ -1125,35 +1136,46 @@ def DiscardX(Autoscript, announceText, card, targetCards = None, notification = 
     debugNotify(">>> DiscardX(){}".format(extraASDebug(Autoscript))) #Debug
     if targetCards is None: targetCards = []
     action = re.search(r'\bDiscard([0-9]+)Card', Autoscript)
-    targetPL = ofwhom(Autoscript, card.controller)
-    if targetPL != me: otherTXT = ' force {} to'.format(targetPL)
-    else: otherTXT = ''
-    discardNR = num(action.group(1))
-    if discardNR == 999:
-        multiplier = 1
-        discardNR = len(targetPL.hand) # 999 means we discard our whole hand
-    if re.search(r'-isRandom',Autoscript): # the -isRandom modulator just discard as many cards at random.
-        multiplier = per(Autoscript, card, n, targetCards, notification)
-        count = handRandomDiscard(targetPL.hand, discardNR * multiplier, targetPL, silent = True)
-        if re.search(r'isCost', Autoscript) and count < discardNR:
-            whisper("You do not have enough cards in your hand to discard")
-            me.setGlobalVariable('failedRequirement',"True")
-            return ('ABORT',0)
-    else: # Otherwise we just discard the targeted cards from hand  
-        multiplier = 1
-        count = len(targetCards)
-        if re.search(r'isCost', Autoscript) and count < discardNR:
-            whisper("You do not have enough cards in your hand to discard")
-            me.setGlobalVariable('failedRequirement',"True")
-            return ('ABORT',0)
-        for targetC in targetCards: handDiscard(targetC)
-        debugNotify("Finished discarding targeted cards from hand")
-    if count == 0: 
-        debugNotify("Exiting because count == 0")
-        return (announceText,count) # If there are no cards, then we effectively did nothing, so we don't change the notification.
-    if notification == 'Quick': announceString = "{} discards {} cards".format(announceText, count)
-    else: announceString = "{}{} discard {} cards from their hand".format(announceText,otherTXT, count)
-    if notification and multiplier > 0: notify(':> {}.'.format(announceString))
+    targetPLList = ofwhom(Autoscript, card.controller)
+    if type(targetPLList) is not list:
+        templist = []
+        templist.append(targetPLList)
+        targetPLList = templist
+    iter = 0
+    for targetPL in targetPLList:
+        iter += 1
+        connector = ''
+        if iter < len(targetPLList): connector = ' and'
+        targetPL = ofwhom(Autoscript, card.controller)
+        if targetPL != me: otherTXT = ' force {} to'.format(targetPL)
+        else: otherTXT = ''
+        discardNR = num(action.group(1))
+        if discardNR == 999:
+            multiplier = 1
+            discardNR = len(targetPL.hand) # 999 means we discard our whole hand
+        if re.search(r'-isRandom',Autoscript): # the -isRandom modulator just discard as many cards at random.
+            multiplier = per(Autoscript, card, n, targetCards, notification)
+            count = handRandomDiscard(targetPL.hand, discardNR * multiplier, targetPL, silent = True)
+            if re.search(r'isCost', Autoscript) and count < discardNR:
+                whisper("You do not have enough cards in your hand to discard")
+                me.setGlobalVariable('failedRequirement',"True")
+                return ('ABORT',0)
+        else: # Otherwise we just discard the targeted cards from hand  
+            multiplier = 1
+            count = len(targetCards)
+            if re.search(r'isCost', Autoscript) and count < discardNR:
+                whisper("You do not have enough cards in your hand to discard")
+                me.setGlobalVariable('failedRequirement',"True")
+                return ('ABORT',0)
+            for targetC in targetCards: handDiscard(targetC)
+            debugNotify("Finished discarding targeted cards from hand")
+        if count == 0: 
+            debugNotify("Skipping because count == 0")
+            continue # If there are no cards, then we effectively did nothing, so we don't change the notification.
+        if notification == 'Quick': announceText = "{} discards {} cards{}".format(announceText, count,connector)
+        else: announceText = "{}{} discard {} cards from their hand{}".format(announceText,otherTXT, count,connector)
+        if notification and multiplier > 0: notify(':> {}.'.format(announceText))
+    announceString = announceText
     debugNotify("<<< DiscardX()")
     return (announceString,count)
             
@@ -1305,7 +1327,7 @@ def CreateDummy(Autoscript, announceText, card, targetCards = None, notification
             debugNotify('### about to pop information') # debug
             information('The dummy card just created is meant for your opponent. Please right-click on it and select "Pass control to {}"'.format(targetPL))
         debugNotify('### Finished warnings. About to announce.') # debug
-        dummyCard = table.create(card.model, int(me.getGlobalVariable('playerside')) * 360, yaxisMove(card) + (20 * playerside * len([c for c in table if c.controller == targetPL and c.highlight == DummyColor])), 1) # This will create a fake card like the one we just created.
+        dummyCard = table.create(card.model, int(me.getGlobalVariable('playerside')) * 360, yaxisMove(card) + (60 * int(me.getGlobalVariable('playerside')) * len([c for c in table if c.controller == targetPL and c.highlight == DummyColor])), 1) # This will create a fake card like the one we just created.
         dummyCard.highlight = DummyColor
     debugNotify('### About to move to discard pile if needed') # debug
     if not re.search(r'doNotDiscard',Autoscript): card.moveTo(card.owner.piles['Discard Pile'])
@@ -1362,7 +1384,7 @@ def ModifyStatus(Autoscript, announceText, card, targetCards = None, notificatio
     if targetCards is None: targetCards = []
     targetCardlist = '' # A text field holding which cards are going to get tokens.
     extraTXT = ''
-    action = re.search(r'\b(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Insane|Restore)(Target|Host|Multi|Myself)[-to]*([A-Z][A-Za-z&_ ]+)?', Autoscript)
+    action = re.search(r'\b(Destroy|BringToPlay|SendToBottom|Commit|Uncommit|Sacrifice|Takeover|Insane|Restore|Exhaust|Refresh)(Target|Host|Multi|Myself)[-to]*([A-Z][A-Za-z&_ ]+)?', Autoscript)
     if action.group(2) == 'Myself': 
         del targetCards[:] # Empty the list, just in case.
         targetCards.append(card)
@@ -1413,8 +1435,14 @@ def ModifyStatus(Autoscript, announceText, card, targetCards = None, notificatio
             elif action.group(1) == 'Takeover': 
                 targetCard.setController(me)
                 placeCard(targetCard)
-            elif action.group(1) == 'Insane':makeInsane(targetCard)
-            elif action.group(1) == 'Restore':restoreCard(targetCard)
+            elif action.group(1) == 'Insane': 
+                if makeInsane(targetCard) == 'ABORT' and re.search(r'-isCost',Autoscript): return 'ABORT'
+            elif action.group(1) == 'Restore':
+                if restoreCard(targetCard) == 'ABORT' and re.search(r'-isCost',Autoscript): return 'ABORT'
+            elif action.group(1) == 'Exhaust':
+                if exhaustCard(targetCard) == 'ABORT' and re.search(r'-isCost',Autoscript): return 'ABORT'
+            elif action.group(1) == 'Refresh':
+                if refreshCard(targetCard) == 'ABORT' and re.search(r'-isCost',Autoscript): return 'ABORT'
             else: return 'ABORT'
             if action.group(2) != 'Multi': break # If we're not doing a multi-targeting, abort after the first run.
     debugNotify("Finished Processing Modifications. About to announce",2)
@@ -1483,26 +1511,29 @@ def RetrieveX(Autoscript, announceText, card, targetCards = None, notification =
     debugNotify("### Setting Source")
     if re.search(r'-fromDiscard', Autoscript):
         source = targetPL.piles['Discard Pile']
-        sourcePath =  "from their Discard Pile"
+        sourcePath =  "from {}'s Discard Pile".format(targetPL.name)
     else: 
-        source = targetPL.piles['Command Deck']
-        sourcePath =  "from their Command Deck"
+        source = targetPL.piles['Deck']
+        sourcePath =  "from {}'s Deck".format(targetPL.name)
     debugNotify("### Setting Destination")
     if re.search(r'-toTable', Autoscript):
         destination = table
-        destiVerb = 'play'   
+        destiVerb = 'play'
+    elif re.search(r'-toBottomofDeck', Autoscript):
+        destination = source
+        destiverb ='bury'
     else: 
         destination = targetPL.hand
         destiVerb = 'retrieve'
     debugNotify("### Fetching Script Variables")
+    restrictions = prepareRestrictions(Autoscript, seek = 'retrieve')
     count = num(action.group(1))
     multiplier = per(Autoscript, card, n, targetCards, notification)
     if source != targetPL.piles['Discard Pile']: # The discard pile is anyway visible.
-        debugNotify("### Turning Pile Face Up")
-        cover = table.create("8b5a86df-fb10-4e5e-9133-7dc03fbae22d",0,0,1,True) # Creating a dummy card to cover that player's source pile
-        cover.moveTo(source) # Moving that dummy card on top of their source pile
-        for c in source: c.isFaceUp = True # We flip all cards in the player's deck face up so that we can grab their properties
-    restrictions = prepareRestrictions(Autoscript, seek = 'retrieve')
+        if debugVerbosity >= 2: notify("### Moving to Scripting Pile")
+        for c in source: c.moveToBottom(me.ScriptingPile)  # If the source is the Deck, then we move everything to the scripting pile in order to be able to read their properties. We move each new card to the bottom to preserve card order
+        source = me.ScriptingPile
+        rnd(1,10) # We give a delay to allow OCTGN to read the card properties before we proceed with checking them    restrictions = prepareRestrictions(Autoscript, seek = 'retrieve')
     cardList = []
     countRestriction = re.search(r'-onTop([0-9]+)Cards', Autoscript)
     if countRestriction: topCount = num(countRestriction.group(1))
@@ -1523,10 +1554,11 @@ def RetrieveX(Autoscript, announceText, card, targetCards = None, notification =
             del cardChoices[:]
             del cardTexts[:]
             for c in cardList:
-                if c.Text not in cardTexts: # we don't want to provide the player with a the same card as a choice twice.
+                cText = card.properties['Card Text']
+                if cText not in cardTexts: # we don't want to provide the player with a the same card as a choice twice.
                     debugNotify("### Appending card",4)
                     cardChoices.append(c)
-                    cardTexts.append(c.Text) # We check the card text because there are cards with the same name in different sets (e.g. Darth Vader)            
+                    cardTexts.append(cText) # We check the card text because there are cards with the same name in different sets (e.g. Darth Vader)            
             choice = SingleChoice("Choose card to retrieve{}".format({1:''}.get(count,' {} {}'.format(iter + 1,count))), makeChoiceListfromCardList(cardChoices), type = 'button')
             chosenCList.append(cardChoices[choice])
             cardList.remove(cardChoices[choice])
@@ -1534,6 +1566,7 @@ def RetrieveX(Autoscript, announceText, card, targetCards = None, notification =
     debugNotify("### chosenCList: {}".format(chosenCList))
     for c in chosenCList:
         if destination == table: placeCard(c)
+        elif re.search(r'-toBottomofDeck',Autoscript): c.moveToBottom(destination)
         else: c.moveTo(destination)
     if source != targetPL.piles['Discard Pile']:
         debugNotify("### Turning Pile Face Down")
@@ -1544,7 +1577,7 @@ def RetrieveX(Autoscript, announceText, card, targetCards = None, notification =
     else: announceString = "{} {} {} {}.".format(announceText, destiVerb, [c.name for c in chosenCList], sourcePath)
     if notification and multiplier > 0: notify(':> {}.'.format(announceString))
     debugNotify("<<< RetrieveX()")
-    return announceString
+    return (announceString, chosenCList)
 #------------------------------------------------------------------------------
 # Helper Functions
 #------------------------------------------------------------------------------
@@ -1584,6 +1617,7 @@ def findTarget(Autoscript, fromHand = False, card = None): # Function for findin
                             reversePlayerChk = True
                             me.setGlobalVariable('reversePlayerChk',reversePlayerChk)
                         if (re.search(r'whileCommitted',Autoscript) and re.search(r'-alsoCommitted',Autoscript)) and (getCommitted(card) != getCommitted(targetLookup)): continue # If this requires both the triggering and targeted cards to be committed to the same story, fail if they aren't.
+                        if (re.search(r'CommittedStory',Autoscript) and getCommitted(card) != targetLookup._id): continue
                     if not checkSpecialRestrictions(Autoscript,targetLookup): continue
                     reversePlayerChk = False # We return things to normal now.
                     me.setGlobalVariable('reversePlayerChk',reversePlayerChk)
@@ -2022,11 +2056,11 @@ def chkPlayer(Autoscript, controller, manual, targetChk = False, player = me): #
         if manual or len(getPlayers()) == 1: 
             debugNotify("!!! Force Succeeding for Manual/Debug")         
             validPlayer = 1 # On a manual or debug run we always succeed
-        if not me.getGlobalVariable('reversePlayerChk'): 
+        if not eval(me.getGlobalVariable('reversePlayerChk')): 
             debugNotify("<<< chkPlayer() with validPlayer: {}".format(validPlayer)) # Debug
             return validPlayer
         else: # In case reversePlayerChk is set to true, we want to return the opposite result. This means that if a scripts expect the one running the effect to be the player, we'll return 1 only if the one running the effect is the opponent. See Decoy at Dantoine for a reason
-            debugNotify("<<< chkPlayer() reversed!") # Debug      
+            debugNotify("<<< chkPlayer() reversed! {} - {} - {} - {}".format(validPlayer,manual, byOpponent, byMe)) # Debug      
             if validPlayer == 0 or len(getPlayers()) == 1 or manual or (not byOpponent and not byMe): return 1 # For debug purposes, I want it to be true when there's  only one player in the match
             else: return 0
     except: 

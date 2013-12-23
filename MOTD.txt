@@ -1,21 +1,13 @@
 =====Message of the Day======
 
-Release 2.1.0.25 and 26 - Dec 17, 2013
+Release 2.1.0.28 - December 23, 2013
 
-* Fixed a couple of bugs introduced in 2.1.0.24
-* Added manual "Drain Domain" action.
+Minor bug fixes.
 
-Release 2.1.0.24 - Dec 16, 2013
-
-Update to the interim release.  Mostly fixes for non-automated play.
-
-* Move to Bottom of Deck added
-* Rewrote first player selection method.  Now determines player
-  before cards are drawn.
-* Fixed Mulligan and Random Discard
-* Fixed the ability to exhaust Support cards
-* Added the ability to refresh all (if you have Turn/Phase animations on
-  this is automatic)
-* Worked out several card automations. Most of The Agency in Core Set now works.
-
+* Toggling automations now affects both players.  This is to reduce the chance of 
+  things not working because one player has automations enabled while the other
+  doesn't.
+* Fixed some resourcing issues, streamlined draining domains.
+* Fixed some scoring issues.
+* Added some more core set automations.
 =============================

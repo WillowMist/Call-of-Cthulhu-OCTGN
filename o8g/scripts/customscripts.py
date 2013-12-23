@@ -94,6 +94,8 @@ def CustomScript(card, action = 'PLAY'): # Scripts that are complex and fairly u
                         if addMarker(c, 'Wound', silent = True) == 'ABORT': return 'ABORT'
                         else: woundName = c.name
                 notify("{} plays {}, driving {} insane, and wounding {}.".format(me,card.name, insaneName, woundName))
+    elif card.name == '* Professor Albert Wilmarth':
+        debugNotify("Add Code to put an icon on Albert.") # ---
     else: notify("{} uses {}'s ability".format(me,card)) # Just a catch-all.
 
 def markerScripts(card, action = 'USE'):

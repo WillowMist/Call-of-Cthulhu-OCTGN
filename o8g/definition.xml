@@ -5,7 +5,7 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.183"
-	version="2.1.0.26"
+	version="2.1.0.28"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -114,6 +114,7 @@
                <cardaction menu="Remove Wound" default="False" execute="remWound" />
                <cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
                <cardaction menu="Remove Success" default="False" execute="remSuccess" />
+               <cardaction menu="(Un)Commit to Story" default="False" shortcut="Ctrl+C" execute="commitOrUncommit" />
                <cardaction menu="Drain Domain" default="False" execute="drainDomain" />
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
 			<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 

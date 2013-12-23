@@ -149,5 +149,21 @@
       <property name="AutoScript" value="" />
       <property name="AutoAction" value="" />
     </card>
+    <card id="35db1afe-924f-4778-80f4-e41bfc5c1bee" name="Cover Card">
+      <property name="Type" value="Token" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="" />
+      <property name="Faction" value="" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="" />
+      <property name="Collector Info" value="F" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+    </card>
   </cards>
 </set>
