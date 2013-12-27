@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f019">{{{ College Prospect</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f015">Alternative Historian</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d029">Laboratory Assistant</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d152">Dabbler in the Unknown</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d027">Mad Genius</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f014">Cub Reporter</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f003">* Richard Pike</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f009">* Lucas Tetlow</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f010">* Maurice Diggs</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f012">Catacombs Docent</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f016">Ghost Hunter</card>
+    <card qty="1" id="2c34a288-13d6-4931-9ceb-84cd6519f002">* Whitton Greene</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f008">* James "Cookie" Fredericks</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f004">* Roald Ellsworth</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f007">* Matthew Alexander</card>
+    <card qty="1" id="2c34a288-13d6-4931-9ceb-84cd6519f005">* Brette Wulffsen</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f026">* Ultima Thule</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f025">* Atlantis</card>
+    <card qty="1" id="2c34a288-13d6-4931-9ceb-84cd6519f028">* Apocalyptic Visions</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d034">Open for Inspection</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f031">{{{ Daring Buju</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f029">A Voros Hal'l Jon</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f033">Zero Visibility</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d154">Eldritch Nexus</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

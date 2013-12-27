@@ -141,4 +141,25 @@ domainPositions = {	'Domain 1':["f22ee55c-8f47-4174-a7a4-985731a74d30",-528,20],
 				'Domain 3':["d8a151e4-28c8-4653-b826-ebda237b776b",-528,168],
 				'SpareDom 1':['None',-528,242],
 				'SpareDom 2':['None',-528,316]}
-				
+
+restrictedCards = [ 
+                            'Itinerant Scholar',
+                            'Shocking Transformation',
+                            'Negotium Perambulans in Tenebris',
+                            '* Infernal Obsession',
+                            'Descendant of Eibon',
+                            'Twilight Gate',
+                            '* Nyarlathotep',
+                            '* Guardian Pillar',
+                            '* James Logan',
+                            'Museum Curator',
+                            'Broken Space, Broken Time',
+                            'Doppelganger',
+                            '* Khopesh of the Abyss',
+                            'Initiate of Huang Hun',
+                            '* Stygian Eye',
+                            '>>> Feed Her Young',
+                            '* Marcus Jamburg',
+                            '[ Por XV 14:19',
+                            '* The Festival'           
+                            ]

@@ -20,7 +20,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="* Claud Owen" id="d9ad4983-e3c7-4a37-b3a5-5edd91e3f46c">
+    <card name="* Claude Owen" id="d9ad4983-e3c7-4a37-b3a5-5edd91e3f46c">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="Trying to Conquer Death" />
       <property name="Cost" value="3" />

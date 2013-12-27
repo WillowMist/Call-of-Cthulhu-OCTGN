@@ -394,7 +394,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Obsesive Insomniac" id="fe26b1c0-8f1d-4452-b234-3902c1747024">
+    <card name="Obsessive Insomniac" id="fe26b1c0-8f1d-4452-b234-3902c1747024">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />

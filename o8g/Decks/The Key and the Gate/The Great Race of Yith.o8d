@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d106">Cannibal Ghast</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d152">Dabbler in the Unknown</card>
+    <card qty="2" id="fcfc05fa-c5fa-45a6-89cf-ab848366498d">Hungry Star Vampire</card>
+    <card qty="2" id="b08b4b3d-6e6c-4452-8eba-9f8240e73326">* Jeanne D'Ys</card>
+    <card qty="3" id="ad3e169f-93b0-4044-a997-3f94e7cce97a">Keeper of the Great Library</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d104">Living Mummy</card>
+    <card qty="3" id="8b3f8144-b781-42d5-8178-089bccbc2655">Lost Oracle</card>
+    <card qty="3" id="65605dbe-0e26-485d-bb9e-1be7e0c98d40">* Professor Nathaniel Peaslee</card>
+    <card qty="3" id="3a55ee5a-5775-41df-92c2-75795a5be017">* Nikola Tesla</card>
+    <card qty="3" id="c5e76210-a354-4cb3-ac40-fe1ceefaaefb">Scholar from Yith</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d112">Servant of Nodens</card>
+    <card qty="3" id="5c6893d0-c8af-40fd-9768-abeba5316af6">Wentshukumishiteu</card>
+    <card qty="3" id="b0f8a0b6-2131-4cc3-8413-81be3a4504a8">&lt;&lt; Yithian Scout</card>
+    <card qty="3" id="5f6bc932-acef-4583-a9af-0195ffafbdb9">* Elder Chasm</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d114">Blackmoor Estate</card>
+    <card qty="2" id="3503a953-46d5-4379-bea0-458185105f0c">Displaced</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d113">Forbidden Shrine</card>
+    <card qty="2" id="4ef00631-38e6-49cb-a6b5-c6bc98a51392">* Lost City of Pnakotus</card>
+    <card qty="2" id="a9083b11-ea42-4c15-b2df-bf330a961053">&lt;&lt;&lt; * Rite of the Silver Key</card>
+    <card qty="3" id="4b894b82-6623-4e88-95ad-35bd7995a757">Interstellar Migration</card>
+    <card qty="2" id="059a25f3-3fd1-49ef-a555-d850a9475c1c">Return to Yith</card>
+    <card qty="2" id="ffbc45ba-4049-411b-bfb7-a4f9702d22dc">&lt;&lt;&lt; Studying the Void</card>
+    <card qty="3" id="0d239875-c5e9-435f-be31-4bd683b94d29">Temporal Slip</card>
+    <card qty="2" id="f2b4340e-d757-4641-b264-fac959b5868a">Vortex of Time</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

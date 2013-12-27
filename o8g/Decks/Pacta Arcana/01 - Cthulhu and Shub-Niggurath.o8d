@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af015">* Aziz Chatuluka</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f049">* Nug</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2114">* Shub-Niggurath</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f045">* Cthylla</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d131">Hungry Dark Young</card>
+    <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e24">The Mother's Hand</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec091">Ya-te-veo</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec040">* Marcus Jamburg</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba108">*Lavinia Whateley</card>
+    <card qty="2" id="c7f0b3f4-a099-44db-8905-86a33a5b9328">Grasping Chthonian</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747047">Dreamlands Fanatic</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec105">Naaginn</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747007">Beings of Ib</card>
+    <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872049">Muddy Waters</card>
+    <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872036">Under the Porch</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba015">Snow Graves</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af039">Forms of the Ether</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d140">Shocking Transformation</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d137">Burrowing Beneath</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba077">Thunder in the East</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-cops-and-robbers-r583]]></notes>
+</deck>

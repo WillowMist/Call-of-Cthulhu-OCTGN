@@ -343,7 +343,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Rampaging Dark Young." id="ff1087a7-9c94-463e-8359-8e0483f99e21">
+    <card name="Rampaging Dark Young" id="ff1087a7-9c94-463e-8359-8e0483f99e21">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="5" />

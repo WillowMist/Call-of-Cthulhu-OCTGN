@@ -1,5 +1,19 @@
 =====Message of the Day======
 
+Release 2.1.0.30 - December 27, 2013
+
+* Corrected several card names in the database
+* Fixed a glitch in deck legality checking
+* Added restricted list checking to deck check
+
+Release 2.1.0.28 - December 24, 2013
+
+Added several preconstructed decks.
+
+* 2 Preconstructed Decks from the Seekers of Knowledge rules insert.
+* 2 Preconstructed Decks from the Key and the Gate.
+* 13 Preconstructed Decks from the Pacta Arcana article series on CardGameDB.com
+
 Release 2.1.0.28 - December 23, 2013
 
 Minor bug fixes.

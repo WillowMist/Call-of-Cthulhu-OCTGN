@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d066">Clover Club Torch Singer</card>
+    <card qty="2" id="5c240a80-00d1-486a-9a77-adf0395a3f07">Faceless Abductor</card>
+    <card qty="3" id="0c32b8a9-1006-45ef-ab94-8789aefaed53">* Fthaggua</card>
+    <card qty="2" id="fcfc05fa-c5fa-45a6-89cf-ab848366498d">Hungry Star Vampire</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af043">* Mr. David Pan</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d107">Spell-bound Shoggoth</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d106">Cannibal Ghast</card>
+    <card qty="2" id="ff1087a7-9c94-463e-8359-8e0483f99e13">Elite Hit Squad</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af027">* The Large Man</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec033">* MIranda Keeper</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec040">* Marcus Jamburg</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747105">* Gregory Gry</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2057">Bound and Gagged</card>
+    <card qty="3" id="16245612-01db-4960-b5d7-6fcc9df56338">&lt;&lt;&lt; * De Vermis Mysteriis</card>
+    <card qty="2" id="b76b60d4-4e1e-4f34-9f95-d7ca2d55f062">Summon Spectral Hunter</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba046">Gun Runner's Club</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba015">Snow Graves</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af083">Ice Shaft</card>
+    <card qty="2" id="18753a83-03ff-4b0b-b685-3f2b3be894bd">* Prism of Many Views</card>
+    <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e32">Calling Down the Ancients</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d077">Panic</card>
+    <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872086">Tear Gas</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d115">Journey to the Other Side</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-the-meatgrinder-r670]]></notes>
+</deck>

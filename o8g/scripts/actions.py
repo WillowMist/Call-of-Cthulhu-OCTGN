@@ -639,15 +639,21 @@ def checkDeck(group):
     debugNotify("About to check each card in the deck", 4) #Debug
     counts = collections.defaultdict(int)
     CardLimit = {}
+    restrictedCollection = []
     for card in me.ScriptingPile:
         counts[card.name] += 1
-    if counts[card.name] > 3:
-     notify(":::ERROR::: Only 3 copies of {} allowed.".format(card.name))
-     ok = False
+        if counts[card.name] > 3:
+            notify(":::ERROR::: Only 3 copies of {} allowed.".format(card.name))
+            ok = False
+        if card.name in restrictedCards and not card.name in restrictedCollection:
+            restrictedCollection.append(card.name)
+    if len(restrictedCollection) > 1:
+        notify(":::ERROR::: The following cards are restricted: {} -- You should only have one of those cards in your deck.".format(restrictedCollection))
+        ok = False
     if len(getPlayers()) > 1: random = rnd(1,100) # Fix for multiplayer only. Makes Singleplayer setup very slow otherwise.
     for card in me.ScriptingPile: card.moveToBottom(group) # We use a second loop because we do not want to pause after each check
     if ok: notify("-> Deck of {} is OK!".format(me))
-    debugNotify("<<< checkDeckNoLimit() with return: {}.".format(ok), 3) #Debug
+    debugNotify("<<< checkDeck() with return: {}.".format(ok), 3) #Debug
     return (ok)
     
 def startGame(group, x = 0, y = 0):

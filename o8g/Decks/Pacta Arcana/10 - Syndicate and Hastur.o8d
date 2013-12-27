@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d087">Performance Artist</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d065">Clover Club Bouncer</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d070">Patsy</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d084">Demon Lover</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2086">Dangerous Inmate</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d069">Hard Case</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d066">Clover Club Torch Singer</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d082">* Victoria Glasser</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747085">Clover Club Executive</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f053">* Peter Clover</card>
+    <card qty="1" id="f26280d4-6260-4475-9f94-e496394af043">* Mr. David Pan</card>
+    <card qty="1" id="9b4e4ae1-2d65-4841-b537-a13742bc2005">Crazed Arsonist</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba107">Hack Journalist</card>
+    <card qty="1" id="e43156b1-baf7-4896-acc3-dc3223eeee90">* The Supernal Prism</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d073">Dutch Courage</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af096">* Stygian Eye</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747030">* The Seventy Steps</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2057">Bound and Gagged</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f052">} Hanyatl's 12:3</card>
+    <card qty="2" id="b63e56cf-648e-4887-9c37-d4d4f58b7a7a">The Unspeakable Oath</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af076">Apeirophobia</card>
+    <card qty="1" id="d2b3f0bb-f285-4d08-9c5b-1e3dbaaa73b1">The Mage's Machinations</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-at-the-cuckoo-cabana-r867]]></notes>
+</deck>

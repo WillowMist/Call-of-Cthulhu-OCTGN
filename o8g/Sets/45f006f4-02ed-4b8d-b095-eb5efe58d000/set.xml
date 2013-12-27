@@ -258,7 +258,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Shoutgun Blast" id="45f006f4-02ed-4b8d-b095-eb5efe58d016">
+    <card name="Shotgun Blast" id="45f006f4-02ed-4b8d-b095-eb5efe58d016">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="X" />
@@ -407,8 +407,8 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoScript" value="onTrash:CreateDummy-nonUnique-excludeDummy||whileInPlay:DestroyMyself-atEndPhase-onlyforDummy" />
+      <property name="AutoAction" value="Drain2-isCost-onlyforDummy$$SimplyAnnounce{Bring into play all characters in your discard pile that entered it this phase.}$$DestroyMyself" />
       <property name="Instructions" value="" />
     </card>
     <card name="Anthropology Advisor" id="45f006f4-02ed-4b8d-b095-eb5efe58d025">
@@ -543,7 +543,7 @@
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
-      <property name="AutoScript" value="" />
+      <property name="AutoScript" value="onRestore:Draw1Card-isOptional$$Discard1Card-ofEachPlayer" />
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
@@ -561,7 +561,7 @@
       <property name="Collector Info" value="F" />
       <property name="Struggle Icons" value="" />
       <property name="AutoScript" value="" />
-      <property name="AutoAction" value="" />
+      <property name="AutoAction" value="ExhaustMyself-isCost$$Drain0-isCost$$UncommitTarget-DemiAutoTargeted-atCommitted-hasProperty{Cost}leX-choose1" />
       <property name="Instructions" value="" />
     </card>
     <card name="Open for Inspection" id="45f006f4-02ed-4b8d-b095-eb5efe58d034">
@@ -1873,7 +1873,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Disciple of the Gateg" id="45f006f4-02ed-4b8d-b095-eb5efe58d111">
+    <card name="Disciple of the Gate" id="45f006f4-02ed-4b8d-b095-eb5efe58d111">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af122">*Magnus Stiles</card>
+    <card qty="1" id="ff1087a7-9c94-463e-8359-8e0483f99e28">* Carl Stanford</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af062">* Erasmus Manor</card>
+    <card qty="1" id="f26280d4-6260-4475-9f94-e496394af023">* Nigel St. James</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba066">* Mentor to Vaughn</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba120">* Wilbur Whateley</card>
+    <card qty="3" id="5c240a80-00d1-486a-9a77-adf0395a3f24">High Wizard of the Order</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec094">Magical Theorist</card>
+    <card qty="2" id="5c240a80-00d1-486a-9a77-adf0395a3f22">Arcane Hunter</card>
+    <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872071">Shadow Sorceress</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba083">Blood Magician</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2080">Cultist of the Key</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba055">Student of the Profane</card>
+    <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872077">Struggling Artist</card>
+    <card qty="2" id="d912ca73-0e06-41a3-890d-90fdf2029074">Flesh Ward</card>
+    <card qty="1" id="89a01b0d-2e67-4153-af62-844976928d90">Song of the Spheres</card>
+    <card qty="1" id="7f38aedf-2f1d-4449-b0bb-0331907be69c">Elder Binding</card>
+    <card qty="1" id="9b4e4ae1-2d65-4841-b537-a13742bc2020">Speak to the Dead</card>
+    <card qty="2" id="0d239875-c5e9-435f-be31-4bd683b94d29">Temporal Slip</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d117">A Single Glimpse</card>
+    <card qty="2" id="9735c090-9fa8-4c8a-ba3d-3157798772f4">Fist of Yog-Sothoth</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2019">Casting off the Skin</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d118">Gathering at the Stones</card>
+    <card qty="1" id="ff1087a7-9c94-463e-8359-8e0483f99e32">Calling Down the Ancients</card>
+    <card qty="1" id="f2b4340e-d757-4641-b264-fac959b5868a">Vortex of Time</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d115">Journey to the Other Side</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba068">Dreams in Limbo</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d120">Dampen Light</card>
+    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-the-yoggy-bottom-boys-r848]]></notes>
+</deck>

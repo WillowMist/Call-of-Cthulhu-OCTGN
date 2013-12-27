@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="5ddfd4b0-e5e3-4a51-a9b8-c25ccd2bc015">* Savio Corvi</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec061">* Jenica Capra</card>
+    <card qty="2" id="e79fc0be-9be0-4591-b380-a72e1f6b5e5d">Baleful Reveler</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747001">Night-shift Security</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747101">Agency Bodyguard</card>
+    <card qty="1" id="2c34a288-13d6-4931-9ceb-84cd6519f040">* Amaranth</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d131">Hungry Dark Young</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747013">Twilight Cannibal</card>
+    <card qty="3" id="c7f0b3f4-a099-44db-8905-86a33a5b9328">Grasping Chthonian</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d122">* Y'Golonac</card>
+    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec051">Corrupted Midwife</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba092">Ol' Lazy Eyes</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec101">* Elena Belskaia</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec021">* Teodor Corvin</card>
+    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec029">Black Dog</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec072">&gt;&gt; Abhorrent Spore</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec052">* Book of Iod</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747020">The Setting Sun</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747082">_Behind Bars</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d016">Shotgun Blast</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d140">Shocking Transformation</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d137">Burrowing Beneath</card>
+    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec071">&gt;&gt; Into The Woods</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba087">Dreamlands Conspiracy</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-the-double-agent-r880]]></notes>
+</deck>

@@ -258,7 +258,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="* Kopesh of the Abyss" id="f26280d4-6260-4475-9f94-e496394af016">
+    <card name="* Khopesh of the Abyss" id="f26280d4-6260-4475-9f94-e496394af016">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Manifested Malice" />
       <property name="Cost" value="2" />
@@ -1227,7 +1227,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="* Temple f R'lyeh" id="f26280d4-6260-4475-9f94-e496394af073">
+    <card name="* Temple of R'lyeh" id="f26280d4-6260-4475-9f94-e496394af073">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="Frozen in Time" />
       <property name="Cost" value="2" />

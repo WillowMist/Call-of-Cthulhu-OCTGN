@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="2" id="0fc0163f-b71a-4de4-9c43-aa3aeb5050e0">* Andrew Chapman</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d106">Cannibal Ghast</card>
+    <card qty="2" id="d9ad4983-e3c7-4a37-b3a5-5edd91e3f46c">* Claude Owen</card>
+    <card qty="2" id="a4bf047a-5faa-4eb3-b1c1-bfebf5bc8016">Decrepit Wizard</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d111">Disciple of the Gate</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d105">&lt;&lt; Fishers from Outside</card>
+    <card qty="2" id="0c32b8a9-1006-45ef-ab94-8789aefaed53">* Fthaggua</card>
+    <card qty="3" id="8b3f8144-b781-42d5-8178-089bccbc2655">Lost Oracle</card>
+    <card qty="2" id="0dbec9c2-2bdb-460f-9a0f-8d4eaabeb240">* Nadine Eskiy</card>
+    <card qty="3" id="65605dbe-0e26-485d-bb9e-1be7e0c98d40">* Professor Nathaniel Peaslee</card>
+    <card qty="2" id="e2bbf10a-6f2e-4b4a-9ad5-65742c804bcf">Quantum Theorist</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d112">Servant of Nodens</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d107">Spell-bound Shoggoth</card>
+    <card qty="2" id="5c6893d0-c8af-40fd-9768-abeba5316af6">Wentshukumishiteu</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba120">* Wilbur Whateley</card>
+    <card qty="2" id="b44d0b0a-3489-40f0-a9b2-104da9d6a287">* Yog-Sothoth</card>
+    <card qty="2" id="47d10b73-6252-41c1-918f-b56001ffcf56">Frozen Time</card>
+    <card qty="2" id="3b503c7a-1f72-4ce7-ab0c-2c54451259e3">* Rite of the Silver Gate</card>
+    <card qty="2" id="6ef0c337-c50a-41da-8d95-a39bd25fee66">* Ys</card>
+    <card qty="2" id="89a01b0d-2e67-4153-af62-844976928d90">Song of the Spheres</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d117">A Single Glimpse</card>
+    <card qty="2" id="c545d552-2216-40f4-a834-01ffae87cfef">Calling the Williwaw</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d120">Dampen Light</card>
+    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d115">Journey to the Other Side</card>
+    <card qty="2" id="619d6d8a-96c1-4d33-a347-fb04d3062437">&lt;&lt;&lt; Mists of Lethe</card>
+    <card qty="3" id="0d239875-c5e9-435f-be31-4bd683b94d29">Temporal Slip</card>
+    <card qty="2" id="f2b4340e-d757-4641-b264-fac959b5868a">Vortex of Time</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

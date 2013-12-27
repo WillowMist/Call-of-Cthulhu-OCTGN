@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="91c363ba-a458-4714-8d4a-bebea2ef75ef">* Don Lagorio</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747047">Dreamlands Fanatic</card>
+    <card qty="3" id="d823b9a4-3a11-4215-996a-6cdf8c3ae1b5">] Somnambulant Dreamer</card>
+    <card qty="3" id="f494f890-0c3b-4391-8e2c-0f8f80ce7b5d">Lurking Deep One</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2004">Brood of Yig</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba091">Mutant Spawn</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba092">Ol' Lazy Eyes</card>
+    <card qty="2" id="c4b495e3-5899-46f2-999a-936a696633cb">Moonbound Byakhee</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2108">Fledgling Byakhee</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d087">Performance Artist</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec025">Deranged Diva</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747030">* The Seventy Steps</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af096">* Stygian Eye</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747020">The Setting Sun</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d056">Deep One Assault</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d057">[[ Pulled Under</card>
+    <card qty="2" id="9625cf0a-9fdd-48ca-8934-40fb90fcd904">Solar Eclipse</card>
+    <card qty="2" id="6d9c595d-c88e-4eea-8dbc-941b02670c7f">Misguided Dreams</card>
+    <card qty="1" id="fe26b1c0-8f1d-4452-b234-3902c1747048">Midnight Rendezvous</card>
+    <card qty="1" id="9b4e4ae1-2d65-4841-b537-a13742bc2105">Feeding Frenzy</card>
+    <card qty="3" id="fa943819-5fce-41da-9082-9fc097c0bf50">Mass Hysteria</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-dark-waters-damp-graves-r755]]></notes>
+</deck>
