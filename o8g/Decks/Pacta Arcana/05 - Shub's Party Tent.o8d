@@ -1,32 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
   <section name="Draw Deck" shared="False">
-    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2070">Museum Curator</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d131">Hungry Dark Young</card>
-    <card qty="2" id="c7f0b3f4-a099-44db-8905-86a33a5b9328">Grasping Chthonian</card>
-    <card qty="2" id="5c240a80-00d1-486a-9a77-adf0395a3f18">* Lord Jeffrey Farrington</card>
-    <card qty="3" id="4d474f60-36d3-4bea-baf7-2168e643deb5">Many-angled Thing</card>
     <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec029">Black Dog</card>
-    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec049">* Dr. Mya Badry</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af101">Master of the Myths</card>
-    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec040">* Marcus Jamburg</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af061">* Dirk Sharpe</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747047">Dreamlands Fanatic</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d131">Hungry Dark Young</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af101">Master of the Myths</card>
+    <card qty="3" id="505de501-c3bb-4545-ac6f-fee3c13778bf">Stalking Hound</card>
+    <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872067">The Terror of the Tides</card>
+    <card qty="2" id="b04a357d-9289-45cf-935d-a03d51998fec">* The Mage Known as Magnus</card>
     <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba063">* Basil Elton</card>
-    <card qty="1" id="4e3f37b8-673b-4bf1-8bab-c74e71736db5">Harvesting Mi-Go</card>
-    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d082">* Victoria Glasser</card>
-    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d122">* Y'Golonac</card>
-    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec090">* The Necronomicon</card>
-    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
-    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747074">* The Vale of Pnath</card>
-    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747078">* Guardian Pillar</card>
-    <card qty="1" id="f26280d4-6260-4475-9f94-e496394af096">* Stygian Eye</card>
+    <card qty="3" id="c7f0b3f4-a099-44db-8905-86a33a5b9328">Grasping Chthonian</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d122">* Y'Golonac</card>
+    <card qty="2" id="4e3f37b8-673b-4bf1-8bab-c74e71736db5">Harvesting Mi-Go</card>
+    <card qty="2" id="4d474f60-36d3-4bea-baf7-2168e643deb5">Many-angled Thing</card>
+    <card qty="2" id="5c240a80-00d1-486a-9a77-adf0395a3f18">* Lord Jeffrey Farrington</card>
+    <card qty="1" id="f7360b96-d409-436a-a4e9-cbbf5b014632">* B. Ramsdale Brown</card>
     <card qty="3" id="0f5911a5-c8fd-4a3a-a6b4-d55fa7fdd6a7">* The Festival</card>
-    <card qty="1" id="f26280d4-6260-4475-9f94-e496394af063">^ * The Doorway</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d140">Shocking Transformation</card>
-    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d137">Burrowing Beneath</card>
-    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747012">Twilight Gate</card>
-    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d119">Unspeakable Resurrection</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec092">* The Three Bells</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af039">Forms of the Ether</card>
     <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba077">Thunder in the East</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d119">Unspeakable Resurrection</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
   </section>
   <section name="Story Deck" shared="True" />
-  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-the-sideboard-sideshow-r644]]></notes>
+  <notes><![CDATA[]]></notes>
 </deck>

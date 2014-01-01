@@ -1,27 +1,16 @@
 =====Message of the Day======
 
+Release 2.1.0.31 - December 31, 2013
+
+* Updated the first 6 Pacta Arcana decks to the newest version, as posted on CardGameDB.com
+* Added new preconstructed Pacta Arcana deck
+* More scripting of core set cards
+* Happy New Year :)
+
 Release 2.1.0.30 - December 27, 2013
 
 * Corrected several card names in the database
 * Fixed a glitch in deck legality checking
 * Added restricted list checking to deck check
 
-Release 2.1.0.28 - December 24, 2013
-
-Added several preconstructed decks.
-
-* 2 Preconstructed Decks from the Seekers of Knowledge rules insert.
-* 2 Preconstructed Decks from the Key and the Gate.
-* 13 Preconstructed Decks from the Pacta Arcana article series on CardGameDB.com
-
-Release 2.1.0.28 - December 23, 2013
-
-Minor bug fixes.
-
-* Toggling automations now affects both players.  This is to reduce the chance of 
-  things not working because one player has automations enabled while the other
-  doesn't.
-* Fixed some resourcing issues, streamlined draining domains.
-* Fixed some scoring issues.
-* Added some more core set automations.
 =============================

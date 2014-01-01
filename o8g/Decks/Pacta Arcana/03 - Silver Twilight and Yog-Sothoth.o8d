@@ -6,25 +6,21 @@
     <card qty="3" id="5c240a80-00d1-486a-9a77-adf0395a3f18">* Lord Jeffrey Farrington</card>
     <card qty="3" id="f26280d4-6260-4475-9f94-e496394af101">Master of the Myths</card>
     <card qty="3" id="505de501-c3bb-4545-ac6f-fee3c13778bf">Stalking Hound</card>
-    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f055">* Umr at-Tawil</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f055">* Umr at-Tawil</card>
     <card qty="3" id="34dcd99d-21d6-424f-9004-a864f3ff0999">Constricting Elder Thing</card>
-    <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872075">Descendant of Eibon</card>
     <card qty="3" id="4d474f60-36d3-4bea-baf7-2168e643deb5">Many-angled Thing</card>
-    <card qty="1" id="95c4e239-f052-4d7f-b1ee-5a6b63e3d2ce">* Glaaki</card>
-    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba070">*Nodens</card>
-    <card qty="1" id="45f006f4-02ed-4b8d-b095-eb5efe58d102">Servant from Out of Time</card>
-    <card qty="1" id="f26280d4-6260-4475-9f94-e496394af027">* The Large Man</card>
     <card qty="2" id="5c240a80-00d1-486a-9a77-adf0395a3f34">Lodge Housekeeper</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af063">^ * The Doorway</card>
-    <card qty="3" id="18753a83-03ff-4b0b-b685-3f2b3be894bd">* Prism of Many Views</card>
+    <card qty="2" id="f7360b96-d409-436a-a4e9-cbbf5b014632">* B. Ramsdale Brown</card>
+    <card qty="3" id="8b3f8144-b781-42d5-8178-089bccbc2655">Lost Oracle</card>
+    <card qty="3" id="b0f8a0b6-2131-4cc3-8413-81be3a4504a8">&lt;&lt; Yithian Scout</card>
+    <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872075">Descendant of Eibon</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af063">^ * The Doorway</card>
     <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba015">Snow Graves</card>
     <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af128">Song of Charybdis</card>
-    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747012">Twilight Gate</card>
-    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba084">Broken Space, Broken Time</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af108">Ritual of Bellephar</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af128">Song of Charybdis</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af108">Ritual of Bellephar</card>
     <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d118">Gathering at the Stones</card>
   </section>
   <section name="Story Deck" shared="True" />
-  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-deal-with-the-dweller-r600]]></notes>
+  <notes><![CDATA[]]></notes>
 </deck>

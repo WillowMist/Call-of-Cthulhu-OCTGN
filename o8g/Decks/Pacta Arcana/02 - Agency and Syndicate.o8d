@@ -3,24 +3,25 @@
   <section name="Draw Deck" shared="False">
     <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba045">Danny O'Bannion's Crony</card>
     <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e18">Fixer</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d011">Peeler</card>
-    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d069">Hard Case</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d069">Hard Case</card>
     <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e17">Anarchist</card>
     <card qty="3" id="1a750452-8821-41ba-96be-d6a1e1872001">Government Exorcist</card>
     <card qty="2" id="f26280d4-6260-4475-9f94-e496394af044">* Lady Lu Chu</card>
     <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d067">Triggerman</card>
     <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d007">__Undercover Security</card>
-    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba028">Demented Caretaker</card>
-    <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e44">Diseased Sewer Rats</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d070">Patsy</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba075">* The Terrible Old Man</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d004">* Paul Lemond</card>
     <card qty="1" id="fe26b1c0-8f1d-4452-b234-3902c1747062">* Price Manor</card>
-    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af105">} Fortifying Ouzo</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af050">* Eliot Ness' Handcuffs</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af105">} Fortifying Ouzo</card>
     <card qty="2" id="9e9be060-19e1-43d3-adc9-d6e09e9f44ca">} Expensive Guitar</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d073">Dutch Courage</card>
-    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d016">Shotgun Blast</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d079">Low Blow</card>
-    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec118">}} The Night Job</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2012">* The Yuggoth Contract</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba046">Gun Runner's Club</card>
+    <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872119">Foiled!</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d019">Small Price to Pay</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747082">_Behind Bars</card>
+    <card qty="3" id="ff1087a7-9c94-463e-8359-8e0483f99e16">Intimidate</card>
   </section>
   <section name="Story Deck" shared="True" />
-  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-cops-and-robbers-r583]]></notes>
+  <notes><![CDATA[]]></notes>
 </deck>

@@ -4,24 +4,24 @@
     <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f015">Alternative Historian</card>
     <card qty="3" id="f26280d4-6260-4475-9f94-e496394af097">Archaeology Interns</card>
     <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2005">Crazed Arsonist</card>
-    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2086">Dangerous Inmate</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2086">Dangerous Inmate</card>
     <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec025">Deranged Diva</card>
     <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872003">* Dr. Carson</card>
-    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec008">* Dr. Laban Shrewsbury</card>
-    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f009">* Lucas Tetlow</card>
-    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2070">Museum Curator</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec008">* Dr. Laban Shrewsbury</card>
     <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d087">Performance Artist</card>
-    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec048">Professor of Folklore</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec048">Professor of Folklore</card>
     <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d082">* Victoria Glasser</card>
-    <card qty="1" id="4eb5c15d-eff5-49d0-a078-d5c9408ec090">* The Necronomicon</card>
-    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
-    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747078">* Guardian Pillar</card>
-    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af096">* Stygian Eye</card>
-    <card qty="2" id="1a750452-8821-41ba-96be-d6a1e1872051">* Infernal Obsession</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2070">Museum Curator</card>
+    <card qty="2" id="facc655d-e7ee-4548-a576-3769d7d59610">* Bruno Carioli</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747030">* The Seventy Steps</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
     <card qty="3" id="f29ef791-b202-410d-a8ad-09fa269eaa24">Flux Stabilizer</card>
+    <card qty="1" id="fe26b1c0-8f1d-4452-b234-3902c1747037">*The Enchanted Wood</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d146">Arkham Asylum</card>
+    <card qty="2" id="2e50b8ff-81a7-4cb6-903f-39a8cd72c4bc">* San Servolo</card>
     <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d036">Binding</card>
-    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d097">Scotophobia</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d096">Agoraphobia</card>
   </section>
   <section name="Story Deck" shared="True" />
-  <notes><![CDATA[http://www.cardgamedb.com/index.php/index.html/_/call-of-cthulhu/pacta-arcana-a-study-in-yellow-r615]]></notes>
+  <notes><![CDATA[]]></notes>
 </deck>

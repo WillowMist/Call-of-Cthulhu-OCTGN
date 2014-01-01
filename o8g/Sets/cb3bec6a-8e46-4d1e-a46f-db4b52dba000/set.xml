@@ -535,10 +535,10 @@
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
       <property name="Faction" value="Hastur" />
-      <property name="Icons" value="$" />
-      <property name="Skill" value="2" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="0" />
       <property name="Subtypes" value="Cultist." />
-      <property name="Card Text" value="Response: After you play Aspiring Artist, draw 2 cards. Use the ability only if there are no story cards in your won story pile." />
+      <property name="Card Text" value="Response: After you play Aspiring Artist, draw 1 card. Use the ability only if there are no story cards in your won story pile." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="]" />
       <property name="Collector Info" value="F" />
