@@ -1,16 +1,17 @@
 =====Message of the Day======
 
+Release 2.1.0.32 - January 8, 2014
+
+* Several minor bug fixes
+* Added Pacta Arcana deck 14
+* Reorganized card actions menu
+* You can now add domains from the top of your deck
+
 Release 2.1.0.31 - December 31, 2013
 
 * Updated the first 6 Pacta Arcana decks to the newest version, as posted on CardGameDB.com
 * Added new preconstructed Pacta Arcana deck
 * More scripting of core set cards
 * Happy New Year :)
-
-Release 2.1.0.30 - December 27, 2013
-
-* Corrected several card names in the database
-* Fixed a glitch in deck legality checking
-* Added restricted list checking to deck check
 
 =============================
