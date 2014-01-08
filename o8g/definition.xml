@@ -5,7 +5,7 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.183"
-	version="2.1.0.31"
+	version="2.1.0.32"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -106,8 +106,9 @@
 			<groupaction menu="Declare Start of Turn" default="False" shortcut="F1" execute="goToSot" />
 			<groupaction menu="Declare End of Turn" default="False" shortcut="F12" execute="goToEndTurn" />
 		</groupactions>
+          <groupaction menu="Add Domain" default="False" execute="addDomain" />
 		<cardaction menu="Smart Action (Action/Drain/Participate...)" default="True" shortcut="Ctrl+S" execute="defaultAction" />
-		<cardactions menu="Manual Card Actions">
+        <cardactions menu="Character Actions">
 			<cardaction menu="Ready/Exhaust" default="False" shortcut= "Ctrl+R" execute="toggleExhausted" />
 			<cardaction menu="Make (in)Sane" default="False" shortcut="Ctrl+I" execute="insaneOrSane" />
                <cardaction menu="Add Wound" default="False" shortcut="Ctrl+W" execute="addWound" />
@@ -115,7 +116,24 @@
                <cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
                <cardaction menu="Remove Success" default="False" execute="remSuccess" />
                <cardaction menu="(Un)Commit to Story" default="False" shortcut="Ctrl+C" execute="commitOrUncommit" />
+			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
+        </cardactions>
+        <cardactions menu="Support Actions">
+               <cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
+               <cardaction menu="Remove Success" default="False" execute="remSuccess" />
+			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
+        </cardactions>
+        <cardactions menu="Story Actions">
+               <cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
+               <cardaction menu="Remove Success" default="False" execute="remSuccess" />
+        </cardactions>
+        <cardactions menu="Domain/Resource Actions">
                <cardaction menu="Drain Domain" default="False" execute="drainDomain" />
+               <cardaction menu="Remove Resource" default="False" execute="removeResource" />
+			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
+                <cardaction menu="Add resource from top of deck" default="False" execute="addResourceFromDeck" />
+        </cardactions>
+		<cardactions menu="Other Card Actions">
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
 			<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
 		</cardactions>

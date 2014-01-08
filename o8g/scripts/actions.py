@@ -1,5 +1,5 @@
      # Python Scripts for the Call of Cthulhu LCG definition for OCTGN
-     # Copyright (C) 2013  Jason Cline
+     # Copyright (C) 2013-2014  Jason Cline
 
      # This python script is free software: you can redistribute it and/or modify
      # it under the terms of the GNU General Public License as published by
@@ -70,12 +70,6 @@ def nextPhase(group = table, x = 0, y = 0, setTo = None):
             showCurrentPhase()
             if not setTo:
                 if phase == 1: 
-                    myStories = eval(me.getGlobalVariable('committedCharacters'))
-                    if len(myStories) > 0 and len(eval(getGlobalVariable('Committed Stories'))) == 0:
-                        committedStories = []
-                        for key, val in myStories.iteritems():
-                            committedStories.append(num(key))
-                        setGlobalVariable('Committed Stories',str(committedStories))
                     if len(eval(getGlobalVariable('Committed Stories'))) > 0:
                         notify("{} may now commit characters to stories.  Target the story (shift-click) and then double click the characters to commit to it. Ctrl-Enter or 'Next Phase' to continue.".format(opponent))
                     else:
@@ -506,18 +500,11 @@ def createStartingCards():
         debugNotify(">>> createStartingCards()") #Debug
         activeDomains = eval(me.getGlobalVariable('activeDomains'))
         # notify("Stories: {}".format(activeStories))
+        checkDomains()
         for key, val in domainPositions.iteritems():
             debugNotify('Key: {}'.format(key))
             if re.search('Domain',key):
                 dom = activeDomains.get(key,'?')
-                debugNotify(dom,2)
-                # notify('Story: {}'.format(story))
-                if dom != '?':
-                    cardOnTable = [c for c in table if c._id == dom]
-                    if len(cardOnTable) == 0: 
-                        dom = '?'
-                        del activeDomains[key]
-                        me.setGlobalVariable('activeDomains',str(activeDomains))
                 if dom == '?':
                     notify('Playing Domain Card')
                     domainCard, x, y = val
@@ -532,6 +519,50 @@ def createStartingCards():
     except: 
         e = sys.exc_info()
         notify("!!!ERROR!!! {} - In createStartingCards()\n!!! PLEASE INSTALL MARKERS SET FILE !!!".format(e))
+
+def checkDomains():
+    debugNotify(">>> checkDomains()")
+    activeDomains = eval(me.getGlobalVariable('activeDomains'))
+    debugNotify("Active Domains: {}".format(activeDomains))
+    for key, val in domainPositions.iteritems():
+        dom = activeDomains.get(key,'?')
+        debugNotify("{} - {}".format(dom, key))
+        if dom != '?':
+            cardOnTable = [c for c in table if c._id == dom]
+            if len(cardOnTable) == 0: 
+                del activeDomains[key]
+                me.setGlobalVariable('activeDomains',str(activeDomains))
+    debugNotify("<<< checkDomains()")
+    
+def addDomain(group=table, x=0, y=0):
+    mute()
+    debugNotify(">>> addDomain")
+    checkDomains()
+    activeDomains = eval(me.getGlobalVariable('activeDomains'))
+    spotFound = None
+    newPosition = (0,0)
+    if len(me.piles['Deck']) == 0:
+        whisper("There are no cards in your deck.")
+        return
+    for key in domainKeys:
+        val = domainPositions.get(key, '?')
+        if val != '?':
+            debugNotify("{} - {}".format(key,val))
+            if not spotFound:
+                dom = activeDomains.get(key,'?')
+                if dom == '?':
+                    spotFound = key
+                    newPosition = (val[1],val[2])
+            debugNotify("{} - {}".format(spotFound,newPosition))
+    if spotFound != None:
+        card = me.piles['Deck'].top()
+        debugNotify("Card: {}".format(card.name))
+        newPos = positionOffset(card,newPosition[0],newPosition[1])
+        card.moveToTable(newPos[0],newPos[1],True)
+        card.orientation = Rot270
+        activeDomains[spotFound] = card._id
+        me.setGlobalVariable('activeDomains',str(activeDomains))
+        notify("{} gains a domain.".format(me))
 
 def intSetup(group, x = 0, y = 0):
     debugNotify(">>> intSetup(){}".format(extraASDebug())) #Debug
@@ -584,15 +615,18 @@ def intSetup(group, x = 0, y = 0):
             for key, val in storyDecks.iteritems():
                 story.append(key)
                 sd.append(val)
+            debugNotify('{}'.format(sd))
             deckchoice = SingleChoice("Choose a Story Deck to load",story)
             if deckchoice == None:
                 whisper("Please load a story deck before continuing.")
                 return
             else:
                 storyload = sd[deckchoice]
+                debugNotify('Deck: {}'.format(storyload))
                 for id in storyload:
                     card = table.create(id,0,0,1,True)
                     card.moveTo(shared.piles['Story Deck'])
+                temp = rnd(1,2)
                 shared.piles['Story Deck'].shuffle()
                 notify("{} loaded the {}".format(me,story[deckchoice]))
         elif len(storyDeck) < 10 and not confirm("The Story Deck should have at least 10 cards.\n\nContinue?"):
@@ -782,6 +816,9 @@ def autoRefresh(group = table, x = 0, y = 0, verbose = True, auto = False):
                     clearedDomains += 1
     if clearedDomains: notify("{} refreshed {} domains.".format(me,clearedDomains))
 
+
+    
+
 #---------------------------------------------
 # Pile Actions
 #---------------------------------------------
@@ -894,8 +931,13 @@ def makeInsane(card, x = 0, y = 0, verbose=False):
     Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
     debugNotify(">>> makeInsane({})".format(card.name))
     if cardStatus(card) == "InPlay" or cardStatus(card) == "Exhausted" or cardStatus(card) == "Insane":
+        if card.markers[mdict['Wound']] >= 1:
+            if verbose: notify("{}'s {} would be driven insane, but is killed instead (wounded).".format(me, card.name))
+            destroyCard(card,auto=True)
+            return
         if verbose: notify("{}'s {} is driven insane.".format(me,card.name))
         executePlayScripts(card,'INSANE')
+        card.markers[mdict['Success']] = 0
         card.isFaceUp = False
         card.orientation = Rot90
         for player in getPlayers():
@@ -1041,7 +1083,7 @@ def defaultAction(card, x = 0, y = 0):
                     notify("{} refreshed {} domains.".format(me,clearedDomains))
                     wasdrained = True
             if wasdrained == False:
-                if Automations['Play/Resolve']: generate(card)
+                if Automations['Payment']: generate(card)
                 else: drainDomain(card)
     elif (cardType == 'Story' or cardType == 'Conspiracy') and Automations['Play/Resolve']:
         showScore(card)
@@ -1107,9 +1149,10 @@ def addWound(card, x=0, y=0):
 def remWound(card, x=0, y=0):
     addRemWound(card,-1)
 def addRemWound(card, amount = 1, x = 0, y = 0):
+    mute()
     matchCard = [c for c in table if c._id == card._id]
     if len(matchCard) > 0:
-        notify("Amount: {} - Markers: {}".format(amount,card.markers[mdict['Wound']]))
+        debugNotify("Amount: {} - Markers: {}".format(amount,card.markers[mdict['Wound']]))
         if amount < 0 and abs(amount) > card.markers[mdict['Wound']]: 
             notify("{} removed all of the wounds ({}) from {}".format(me,card.markers[mdict['Wound']], card.name))
             card.markers[mdict['Wound']] = 0
@@ -1136,8 +1179,8 @@ def checkMarkers(card, x = 0, y = 0):
         fated = hasKeyword(card,"Fated")
         if fated > 0:
             if card.markers[mdict['Success']] >= fated:
-                notify("{}'s {} meets their fate.  Discarding.".format(me,card.name))
-                destroyCard(card,auto=True)
+                notify("{}'s {} meets their fate.  Moving to bottom of deck.".format(me,card.name))
+                card.moveToBottom(card.owner.piles['Deck'])
         
     
 def findUnpaidCard():
@@ -1188,15 +1231,20 @@ def participate(card, target, x = 0, y = 0, silent = False):
     exhaustCard(card)
     committedCharacters = eval(me.getGlobalVariable('committedCharacters'))
     chars = committedCharacters.get(target._id, [])
-    notify("Chars: {}".format(chars))
+    debugNotify("Chars: {}".format(chars))
     chars.append(card._id)
     committedCharacters[target._id] = chars
     notify("Info: {} - {}".format(str(committedCharacters),target))
     me.setGlobalVariable('committedCharacters',str(committedCharacters))
     card.arrow(target, True)
-    notify("{} commits {} to story: {}".format(me,card,target))
+    debugNotify("{} commits {} to story: {}".format(me,card,target))
     executePlayScripts(card, 'COMMIT')
     runAutoScripts('CharacterCommits',card)
+    if len(committedCharacters) > 0 and me.isActivePlayer:
+        committedStories = []
+        for key, val in committedCharacters.iteritems():
+            committedStories.append(num(key))
+        setGlobalVariable('Committed Stories',str(committedStories))
     debugNotify("<<< participate()") #Debug
     
 def clearParticipation(card, target, x=0,y=0,silent = False): # Clears a unit from participating in a battle, to undo mistakes
@@ -1220,6 +1268,11 @@ def clearParticipation(card, target, x=0,y=0,silent = False): # Clears a unit fr
         if not stillCommitted:
             setGlobalVariable('Current Story',"None")
             setGlobalVariable('Story Phase',"-1")
+        if me.isActivePlayer:
+            committedStories = []
+            for key, val in committedCharacters.iteritems():
+                committedStories.append(num(key))
+            setGlobalVariable('Committed Stories',str(committedStories))
     else: whisper(":::ERROR::: Character is not currently committed to this story!")
 def chooseAndDrainDomain(resources):
     domainList = [c for c in table if c.controller == me and cardStatus(c) == 'Domain' and getAvailableResources(c) >= resources]
@@ -1298,6 +1351,42 @@ def subMarker(card, tokenType,count = 1,silent = False):
 def bottomOfDeck(card, x = 0, y = 0, group = me.piles['Deck']):
     notify("{} moved {} to the bottom of {}".format(me,card,group.name))
     card.moveToBottom(group)
+def removeResource(card, x=0, y=0):
+    if cardStatus(card) != 'Resource':
+        return
+    else:
+        host = getAttached(card)
+        hostname = 'Error'
+        removeAttachment(card)
+        card.orientation =  Rot0
+        x,y = card.position
+        playerside = num(card.controller.getGlobalVariable('playerside'))
+        debugNotify("Position: {} - Playerside: {}".format(card.position,playerside))
+        newx = x + (card.height() * playerside)
+        card.moveToTable(newx, y)
+        if host != None:
+            hostname = host.name
+            remResource(host, card)
+            arrangeAttachments(host)
+            notify("{} removes {} from {}.  It is no longer considered a resource.".format(me.name, card.name, hostname))
+        else:
+            notify("{} removes {}.  It is no longer considered a resource.".format(me.name, card.name))
+def addResourceFromDeck(card, x=0, y=0):
+    if cardStatus(card) != "Domain":
+        whisper("You may only do that to a domain.")
+        return
+    if len(me.piles['Deck']) == 0:
+        whisper("You can't do that with no cards in your deck.")
+        return
+    resourceCard = me.piles['Deck'].top()
+    x,y = card.position
+    resourceCard.moveToTable(x,y)
+    resourceCard.orientation = Rot270
+    addResource(card,resourceCard)
+    storeAttachment(resourceCard, card, False, True)
+    debugNotify("Arranging")
+    arrangeAttachments(card)
+    notify("{} brings in a {} resource from the top of their deck.".format(me.name, resourceCard.faction))
 #------------------------------------------------------------------------------
 # Hand Actions
 #------------------------------------------------------------------------------
@@ -1326,7 +1415,7 @@ def playResource(card, x = 0, y = 0):
                 return
             x,y = target[0].position
             card.moveToTable(x,y)
-            card.orientation ^= Rot270
+            card.orientation = Rot270
             addResource(target[0],card)
             resourcesToPlay -= 1
             storeAttachment(card,target[0],False,True)

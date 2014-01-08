@@ -1,5 +1,5 @@
      # Python Scripts for the Call of Cthulhu LCG definition for OCTGN
-     # Copyright (C) 2013  Jason Cline
+     # Copyright (C) 2013-2014  Jason Cline
      # Based heavily on the Python Scripts for the Android:Netrunner LCG definition for OCTGN
      # Copyright (C) 2012  Konstantine Thoukydides
 
@@ -19,7 +19,7 @@
 ###==================================================File Contents==================================================###
 # This file contains the autoscripting of the game. These are the actions that trigger automatically
 #  when the player plays a card, double-clicks on one, or goes to Start/End ot Turn/Run
-# * [Play/Score/Destroy trigger] is basically used when the a card enters or exist play in some way 
+# * [Play/Resolve trigger] is basically used when the a card enters or exist play in some way 
 # * [Card Use trigger] is used when a card is being used while on the table. I.e. being double-clicked.
 # * [Other Player trigger] is used when another player plays a card or uses an action. The other player basically do your card effect for you
 # * [Core Commands] is the primary place where all the autoscripting magic happens.
@@ -29,7 +29,7 @@
 import re
 
 #------------------------------------------------------------------------------
-# Play/Score/Destroy trigger
+# Play/Resolve trigger
 #------------------------------------------------------------------------------
 
 def executePlayScripts(card, action):

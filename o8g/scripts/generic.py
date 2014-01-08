@@ -1,5 +1,5 @@
      # Python Scripts for the Call of Cthulhu LCG definition for OCTGN
-     # Copyright (C) 2013  Jason Cline
+     # Copyright (C) 2013-2014  Jason Cline
      # Based (almost entirely) on the Python Scripts for Android: Netrunner Copyright (C) 2012  Konstantine Thoukydides
 
      # This python script is free software: you can redistribute it and/or modify
@@ -706,3 +706,4 @@ def positionOffset(card, oldx, oldy):
 def clearTargets():
     for card in table:
         if card.targetedBy: card.target(False)
+        card.arrow(card,False)

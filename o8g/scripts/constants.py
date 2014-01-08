@@ -75,19 +75,16 @@ regexHooks = dict( # A dictionary which holds the regex that then trigger each c
 				  
 automatedMarkers = [] #Used in the Inspect() command to let the player know if the card has automations based on the markers it puts out.
 
-ScoredColor = "#00ff44"
 SelectColor = "#009900"
 EmergencyColor = "#fff600"
 DummyColor = "#9370db" # Marks cards which are supposed to be out of play, so that players can tell them apart.
 RevealedColor = "#ffffff"
 PriorityColor = "#ffd700"
 InactiveColor = "#888888" # Cards which are in play but not active yer (e.g. see the shell traders)
-StealthColor = "#000000" # Cards which are in play but not active yer (e.g. see the shell traders)
 UnpaidColor = "#ffd700"
 UnpaidAbilityColor = "#40e0d0"
 ReadyEffectColor = "#eeeeee"
 OverpaidEffectColor = "#efefef"
-EngagedColor = "#0000aa"
 
 Xaxis = 'x'
 Yaxis = 'y'
@@ -136,11 +133,16 @@ storyPositions = {	'Story 1':[-131,-43],
 				'Conspiracy 1':[-231,-43],
 				'Conspiracy 2':[168,-43]}
 				
+domainKeys = ['Domain 1','Domain 2','Domain 3', 'SpareDom 1', 'SpareDom 2', 'SpareDom 3', 'SpareDom 4', 'SpareDom 5']
+
 domainPositions = {	'Domain 1':["f22ee55c-8f47-4174-a7a4-985731a74d30",-528,20],
 				'Domain 2':["a8cec1b8-1121-4612-80c4-c66a437cc2e0",-528,94],
 				'Domain 3':["d8a151e4-28c8-4653-b826-ebda237b776b",-528,168],
 				'SpareDom 1':['None',-528,242],
-				'SpareDom 2':['None',-528,316]}
+				'SpareDom 2':['None',-668,20],
+                'SpareDom 3':['None',-668,94],
+                'SpareDom 4':['None',-668,168],
+                'SpareDom 5':['None',-668,242]}
 
 restrictedCards = [ 
                             'Itinerant Scholar',

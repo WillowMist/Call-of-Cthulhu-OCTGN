@@ -666,7 +666,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Guardian of the Dawn" id="92733a60-3263-4555-b473-37991284334d">
+    <card name="Guardian of Dawn" id="92733a60-3263-4555-b473-37991284334d">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />

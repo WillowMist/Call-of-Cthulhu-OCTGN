@@ -1,5 +1,5 @@
        # Python Scripts for the Call of Cthulhu LCG definition for OCTGN
-       # Copyright (C) 2013  Jason Cline
+       # Copyright (C) 2013-2014  Jason Cline
        # Based heavily on the scripts for Android:Netrunner and Star Wars by Konstantine Thoukydides
 
        # This python script is free software: you can redistribute it and/or modify
@@ -169,7 +169,18 @@ def storeAttachment(card, attachee, forced = False, resource = False):
                  debugNotify("Could not store attachment because it is hidden from us")
                  return 'ABORT'
      except: notify("!!!ERROR!!! In storeAttachment()")
-                 
+
+def removeAttachment(card):
+    mute()
+    debugNotify(">>> removeAttachment")
+    Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
+    Stored_Resource = eval(getGlobalVariable('Stored_Resource'))
+    if Stored_Attachments.get(card._id,'?') != '?':
+        del Stored_Attachments[card._id]
+        setGlobalVariable('Stored_Attachments',str(Stored_Attachments))
+    if Stored_Resource.get(card._id,'?') != '?':
+        del Stored_Resource[card._id]
+        setGlobalVariable('Stored_Resource',str(Stored_Resource))
 def getAttachments(card):
      Stored_Attachments = eval(getGlobalVariable('Stored_Attachments'))
      att = [c for c in table if c._id in Stored_Attachments and Stored_Attachments.get(c._id,'?') == card._id]
@@ -1191,6 +1202,7 @@ def addSuccess(card, x=0, y=0, verbose=False):
         card.markers[mdict['Success']] += 1
         markerEffects('afterSuccessAdd')
     notify("{} adds one success to {}.".format(me,card.name))
+    checkMarkers(card)
     debugNotify("<<< addSuccess()")
     
 def remSuccess(card, x=0, y=0):
@@ -1206,6 +1218,7 @@ def remSuccess(card, x=0, y=0):
        card.markers[mdict['Success']] -= 1
        markerEffects('afterSuccessAdd')
     notify("{} removes one success from {}.".format(me,card.name))
+    checkMarkers(card)
     debugNotify("<<< remSuccess()")
 
 def checkStory(card):
@@ -1325,7 +1338,9 @@ def triggerTableLoad():
     setGlobalVariable('firstPlayer',"-1")
 
 def triggerNewTurn(player, turnNumber):
+    me.setGlobalVariable('committedCharacters','{}')
     if player == me:
+        clearTargets()
         debugNotify("New Turn - Player: {}".format(player.name),4)
         nextPhase()
 def loadDeck(player,groups):    
@@ -1358,7 +1373,7 @@ def switchAutomation(type,command = 'Off', warn = ''):
     if (Automations[type] and command == 'Off') or (not Automations[type] and command == 'Announce'):
         notify ("--> {} turned {} automations OFF.".format(me,type))
         if command != 'Announce': 
-            for player in getPlayers(): remoteCall(player,'setAutomations'[type, False])
+            for player in getPlayers(): remoteCall(player,'setAutomation'[type, False])
     else:
         if warn != '' and not confirm(warn): return
         notify ("--> {} turned {} automations ON.".format(me,type))

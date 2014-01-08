@@ -1601,7 +1601,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Incospicuous Zoog" id="fe26b1c0-8f1d-4452-b234-3902c1747095">
+    <card name="Inconspicuous Zoog" id="fe26b1c0-8f1d-4452-b234-3902c1747095">
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="2" />
