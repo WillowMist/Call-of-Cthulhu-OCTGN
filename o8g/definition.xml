@@ -5,7 +5,7 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.183"
-	version="2.1.0.32"
+	version="2.1.0.33"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -85,7 +85,6 @@
              <groupaction menu="Switch Start/End-of-Turn/Phase Automation ON/OFF" default="False" execute="switchStartEndAutomation" />  
              <groupaction menu="Switch Automatic Placement ON/OFF" default="False" execute="switchPlacement" />  
              <groupaction menu="Switch All Automations ON/OFF" default="False" execute="switchAll" />  
-
 		</groupactions>
 		<groupaction menu="Move to Next phase." default="False" shortcut="Ctrl+Enter" execute="nextPhase" />
             <groupaction menu="Refresh all your cards." default="False" execute="autoRefresh" />
@@ -102,10 +101,6 @@
 			<groupaction menu="Actions?" default="False" execute="BUTTON_Actions" shortcut="Ctrl+3"/>
 			<groupaction menu="Pass." default="False" execute="declarePass" shortcut="Ctrl+Space"/>
 		</groupactions>
-		<groupactions menu="Turns...">
-			<groupaction menu="Declare Start of Turn" default="False" shortcut="F1" execute="goToSot" />
-			<groupaction menu="Declare End of Turn" default="False" shortcut="F12" execute="goToEndTurn" />
-		</groupactions>
           <groupaction menu="Add Domain" default="False" execute="addDomain" />
 		<cardaction menu="Smart Action (Action/Drain/Participate...)" default="True" shortcut="Ctrl+S" execute="defaultAction" />
         <cardactions menu="Character Actions">
@@ -119,7 +114,8 @@
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
         </cardactions>
         <cardactions menu="Support Actions">
-               <cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
+               <cardaction menu="Ready/Exhaust" default="False" shortcut= "Ctrl+R" execute="toggleExhausted" />
+			<cardaction menu="Add Success" default="False" shortcut="Ctrl+A" execute="addSuccess" />
                <cardaction menu="Remove Success" default="False" execute="remSuccess" />
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
         </cardactions>
@@ -138,7 +134,7 @@
 			<cardaction menu="Debug Card" default="False" execute="DebugCard" /> 
 		</cardactions>
 	</table>
-	<player summary="{#Story 1} / {#Story 2} / {#Story 3} / {#Conspiracy 1} / {#Conspiracy 2} / {#Stories Won} / {#Hand}">
+	<player summary="S1: {#Story 1} / S2: {#Story 2} / S3: {#Story 3} / C1: {#Conspiracy 1} / C2: {#Conspiracy 2} / Won: {#Stories Won} / Hand: {#Hand}">
 		<globalvariable name="handSize" value="" />
 		<globalvariable name="resourcesToPlay" value="3" />
 		<globalvariable name="gameReady" value="False" />

@@ -1,3 +1,7 @@
+
+
+
+
 To Do:  Rewrite way struggle icons are checked.  Check attachments and other table cards for modifiers.  As stories are resolved, add resolved
 stories to a list, grab struggles each iteration, and remove resolved stories.  This will allow dynamic changes to story resolution, in case a card like 
 Professor Albert Wilmarth leaves the struggle.

@@ -1,11 +1,11 @@
 =====Message of the Day======
-
-Release 2.1.0.32 - January 8, 2014
+Release 2.1.0.32-33 - January 8, 2014
 
 * Several minor bug fixes
 * Added Pacta Arcana deck 14
 * Reorganized card actions menu
 * You can now add domains from the top of your deck
+* Added story designators to the board (to decrease player 2 confusion)
 
 Release 2.1.0.31 - December 31, 2013
 
