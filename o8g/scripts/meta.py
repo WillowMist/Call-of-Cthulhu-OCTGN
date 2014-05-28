@@ -44,7 +44,7 @@ Automations = {'Play/Resolve'    : False, # If True, game will automatically tri
            'Triggers'               : False, # If True, game will search the table for triggers based on player's actions, such as installing a card, or trashing one.
            'WinForms'               : True, # If True, game will use the custom Windows Forms for displaying multiple-choice menus and information pop-ups
            'Damage/Scoring'                 : False,
-           'Placement'		:False,
+           'Placement'		:True,
            'Payment'           :False}
 
 debugVerbosity = 0 # At -1, means no debugging messages display
@@ -262,7 +262,7 @@ def addRemResource(domainCard,resourceCard, amount=1):
            debugNotify(">>> addRemResource()\nFaction: {}\nDomain: {}\nResource: {}\nAmount: {}".format(resourceCard.faction,domainCard.name,resourceCard.name,amount),3)
            resourceType = getResources(resourceCard)[1]
            debugNotify("Type: {}".format(resourceType))
-           domainCard.markers[resdict['Resource:{}'.format(resourceType)]] += amount
+           domainCard.markers[resdict['Resource:{}'.format(resourceType)]] = getAvailableResources(domainCard, resourceType, True)
      else:
            debugNotify("### Tried to add resources to a non-domain target.")
            return
@@ -1042,7 +1042,7 @@ def getStoryIcons(card, printedOnly = False):
            return struggleIcons
      
      
-def getAvailableResources(card, type = 'All'):
+def getAvailableResources(card, type = 'All',potential = False):
     debugNotify(">>> getAvailableResources() {}".format(card.name))
     cStatus = cardStatus(card)
     if cStatus != 'Domain': return 0
@@ -1056,7 +1056,7 @@ def getAvailableResources(card, type = 'All'):
             cardResources = getResources(attCard)
             if type == 'All' or type == cardResources[1]:
                 resources += cardResources[0]
-    if isDrained: resources = 0
+    if isDrained and potential == False: resources = 0
     debugNotify("<<<< getAvailableResources() {}".format(resources),3)
     return resources
             
@@ -1328,9 +1328,13 @@ def checkForWinner():
 #  Event Handlers
 #-------------------------------------------
 
-def triggerMoveCard(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove):
+def triggerMoveCard(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove, highlight = None, markers = "{}"):
+    #whisper("OnMoveCard: Card: {} - Scripted {}".format(card, isScriptMove))
     if card.controller == me and not isScriptMove:
         arrangeAttachments(card)
+        
+def triggerScriptedMoveCard(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove, highlight = None, markers = "{}"):
+    whisper("OnScriptedMoveCard: Card: {} - Scripted {}".format(card, isScriptMove))
            
 def triggerTableLoad():
     chooseSide()
@@ -1351,6 +1355,7 @@ def loadDeck(player,groups):
             whisper("Once first player has been determined.  Please run setup (Ctrl-Shift-S).")
             return
         if  len(me.piles['Deck']) >= 50 and ((me.getGlobalVariable('playerside')) == -1 or len(shared.piles['Story Deck']) > 0 or confirm("Do you want to set up the table now?  Select No only if you want to load a custom Story Deck.")): intSetup(table)
+        
 #-------------------------------------------
 #  Other Stuff
 #-------------------------------------------

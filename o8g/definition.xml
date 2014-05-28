@@ -5,7 +5,8 @@
 	name="Call of Cthulhu" 
 	id="43054c18-2362-43e0-a434-72f8d0e8477c" 
 	octgnVersion="3.1.72.183"
-	version="2.1.0.33"
+	version="2.1.1.6"
+    scriptVersion="3.1.0.0"
 	tags="CoC LCG"
 	description="Call of Cthulhu: The Card Game"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/coclcg/call-of-cthulhu-set-images/ "
@@ -128,6 +129,7 @@
                <cardaction menu="Remove Resource" default="False" execute="removeResource" />
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />
                 <cardaction menu="Add resource from top of deck" default="False" execute="addResourceFromDeck" />
+                <cardaction menu="Turn card into a resource" default="False" execute="turnCardIntoResource" />
         </cardactions>
 		<cardactions menu="Other Card Actions">
 			<cardaction menu="Send card to Discard Pile" default="False" execute="destroyCard" />

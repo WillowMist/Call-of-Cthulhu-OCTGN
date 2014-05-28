@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba032">Aspiring Artist</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d087">Performance Artist</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2086">Dangerous Inmate</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d082">* Victoria Glasser</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2027">Harbringer of Insanity</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d111">Disciple of the Gate</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d103">Son of Yeb</card>
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2080">Cultist of the Key</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af047">Key-seeker</card>
+    <card qty="2" id="a4bf047a-5faa-4eb3-b1c1-bfebf5bc8016">Decrepit Wizard</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af053">Obsessive Sycophant</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af096">* Stygian Eye</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
+    <card qty="2" id="47d10b73-6252-41c1-918f-b56001ffcf56">Frozen Time</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
+    <card qty="3" id="b63e56cf-648e-4887-9c37-d4d4f58b7a7a">The Unspeakable Oath</card>
+    <card qty="2" id="c545d552-2216-40f4-a834-01ffae87cfef">Calling the Williwaw</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2019">Casting off the Skin</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

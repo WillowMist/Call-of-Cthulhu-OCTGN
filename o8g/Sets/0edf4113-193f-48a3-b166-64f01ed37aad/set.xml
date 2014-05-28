@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Denizens of the Underworld" id="0edf4113-193f-48a3-b166-64f01ed37aad" gameId="43054c18-2362-43e0-a434-72f8d0e8477c" gameVersion="2.1.0.34" version="2.1.0.34">
+  <packaging />
+  <markers />
+  <cards>
+    <card name="}} A Cunning Ruse" id="4961aec2-5f8b-47fb-a7a0-7477ee26fafe">
+      <property name="Type" value="Conspiracy" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="When a player succeeds at this conspiracy, he may place a success token at another story at which no characters are committed" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F37" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="&gt;&gt;&gt; Ambush" id="a644cc35-9bc2-4289-8a27-d4e96306ca65">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Play a character card with cost 3 or lower from your hand. If that character is still in play at the end of the phase, sacrifice it." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F51" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Calculated Mutation" id="169836cb-d0f6-458c-8694-adf605a6a0a8">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Play during the story phase after you have committed characters to stories.&#xD;&#xA;Action: Change any number of $ icons on characters you control into icons of a single type (your choice) until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F45" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Deep Undercover" id="1ad5ded8-f520-4677-93c5-39ac72fa8be2">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Choose a character and name a subtype on an opponent's card. Until the end of the phase that character gains that subtype, Invulnerability, and Willpower. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F43" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Forced Compliance" id="d5fd0ebd-592c-4d6f-a548-c2d8d285de03">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during your operations phase.&#xD;&#xA;&#xD;&#xA;Action: Choose a character without a [Terror] icon. The controller of that character must either sacrifice that character or give you control of it until the end of the turn. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F33" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="]] Hali's Directive" id="a4121b23-54fe-4513-838c-69c37e72195c">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Disrupt: Cancel the effects of a character card just triggered. Then, drive that character insane, if able." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F47" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="^ Hoarding Knowledge" id="72f4270b-944e-4bc7-a32a-25dda8d4f1d7">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Response: After a character is exhausted, choose a card in your hand and add it to a domain that has only ^ resources attached. &#xD;&#xA;Then, return a card from the same domain to your hand. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F53" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="}} Immurement" id="70771406-4f03-4e39-817b-02354dd78918">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Drain a domain you control with the most resources to choose a support card or a non-Ancient One character an opponent controls. That card's owner attaches it to a domain of his choice as a resource. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F30" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Mind Swap" id="44d9f1e0-a451-4de9-8855-17bded1b024d">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Spell. Tactic." />
+      <property name="Card Text" value="Action: Choose a character you control and a character an opponent controls. Those characters trade struggle icons until the end of the phase. &#xD;&#xA;Then draw a card." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F55" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="} On the Lam" id="3bd3ad9a-2fd3-4525-bf2f-d316801f4963">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Choose a non-Ancient One character. That card cannot be readied or exhausted until the beginning of your next turn. (Limit 1 per turn.) " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F31" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Outmaneuvered" id="f5fcf6c3-5fd4-4311-8bbe-967f797e45b1">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Disrupt: Cancel the effects of an event card that targets a character you control. The owner of that event refreshes the domain used to play that event. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F41" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Strategic Planning" id="cbcbdfa7-05fe-4e96-9dc2-1476860f64d8">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Choose a Student or Faculty character you control. That character gains Willpower, Invulnerability, and does not exhaust to commit to stories until the end of the turn. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F49" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="} Pay Tribute" id="04c3117d-f69c-4aa0-873f-ef4811969f72">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play during your operations phase.&#xD;&#xA;&#xD;&#xA;Action: Exhaust a non-Ancient One character, then put this card on the bottom of your deck.&#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F34" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="}}} Reallocate" id="6b368796-d78c-4633-8b30-d6914330ef95">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Tactic." />
+      <property name="Card Text" value="Action: Each player removes all resources attached to their domains, then attaches them one at a time to the domain he controls with the fewest resources attached. (If multiple domains are tied for the fewest, all are a legal choice.). Then gain a domain and attach Reallocate to it as a resource. &#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F32" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Roll the Dice" id="1ce84f4e-5aa9-4d3b-906d-4eaf8240dac1">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Action: Each player reveals cards from the top of his deck until he reveals a character. Then each player that revealed a character with the lowest skill exhausts all characters he controls. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F36" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Turf War" id="82f8347e-631a-49c3-a2a8-4b1f16934107">
+      <property name="Type" value="Event" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="" />
+      <property name="Card Text" value="Play only after both players have committed to stories.&#xD;&#xA;&#xD;&#xA;Action: Each player chooses and sacrifices a character committed to each story where both players have characters committed.&#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F35" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="City Map" id="25d42fe6-c16f-4cfd-beb9-65bf43c3f80b">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Item." />
+      <property name="Card Text" value="Action: Exhaust City Map to search the top 5 cards of your deck for a Tactic event card and add it to your hand. Put the rest of the cards on the bottom of your deck in any order. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F24" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Concrete and Chains" id="b5025b4f-0f72-4e94-9a8b-894a99e34489">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item." />
+      <property name="Card Text" value="Attach to a character. &#xD;&#xA;&#xD;&#xA;Attached character gets –1 skill for every success token on Concrete and Chains. &#xD;&#xA;Forced Response: At the beginning of each turn put a success token on Concrete and Chains. If attached character has 0 skill, destroy it. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F25" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="} Danny O'Bannion's Office" id="d961bd4c-4300-41c3-8f10-6c81e520bc07">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Response: After a character you control is destroyed, draw a card. Limit once per phase. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F21" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="House Advantage" id="67d24e7d-0989-4f35-94fd-db5c39a5edff">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Condition." />
+      <property name="Card Text" value="If you control only } cards, House Advantage is immune to your opponent's card effects.&#xD;&#xA;&#xD;&#xA;Disrupt: Before you would draw a card, look at the top card of your deck. You may instead draw a card from the bottom of your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F23" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="}} Indebted" id="8422fa3a-36a8-44ee-b0d6-2745dd4f328a">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Condition." />
+      <property name="Card Text" value="Attach to a non-Ancient One character.&#xD;&#xA;&#xD;&#xA;Attached character gains, &quot;Forced Response: After your resource phase ends, pay 2 or sacrifice this character.&quot; " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F26" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_nonAncient One" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* La Bella Luna" id="5fdd80eb-d8c5-4273-988c-865833208364">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Response: At the beginning of each opponent's turn, ready a Criminal character you control. If it is Day ready all Criminal characters you control. &#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F28" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="}} Length of Pipe" id="acc85294-b0a2-4cd7-87f7-9c2485c44397">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="0" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Item. Weapon." />
+      <property name="Card Text" value="Attach to a } character you control.&#xD;&#xA;&#xD;&#xA;Disrupt: After you win a struggle at a story where attached character is committed, discard Length of Pipe to wound a character at that story." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F27" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_Syndicate-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Made Man" id="4cf7c01b-8cf8-4d80-952e-64a4629b329b">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Condition." />
+      <property name="Card Text" value="Attach to a Criminal character you control.&#xD;&#xA;&#xD;&#xA;Response: When the attached character is destroyed, destroy a character controlled by an opponent with skill is equal to or lower than the attached character. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F29" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Character_and_Criminal-targetMine" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* The Clover Club" id="b51a4468-414b-4ca7-8b09-a78d4e896636">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="Den of Iniquity" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Location." />
+      <property name="Card Text" value="Response: At the beginning of your operations phase, exhaust The Clover Club to give each of your opponent's characters –1 skill until the end of the turn." />
+      <property name="Keyword" value="Loyal." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F20" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Under Cover of Darkness" id="68165512-338d-4baf-86e3-8f5fd6d57028">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Attachment. Environment." />
+      <property name="Card Text" value="Attach to a story card.&#xD;&#xA;&#xD;&#xA;Night. It is Night. Destroy all Day cards in play.&#xD;&#xA;&#xD;&#xA;Your } characters can commit to this story while exhausted. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F22" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="Placement:Story" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Sarnath" id="3a821e1a-0843-4c85-acc4-1be461e488a0">
+      <property name="Type" value="Support" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="" />
+      <property name="Subtypes" value="Lost Civilization." />
+      <property name="Card Text" value="You may choose not to ready Sarnath during the refresh phase&#xD;&#xA;.&#xD;&#xA;Response: After a character is readied, exhaust Sarnath and pay 2 to exhaust that character. While Sarnath is exhausted that character may not be readied. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F40" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Cat Burglar" id="671e20e8-542d-4251-b607-5cd7930a0455">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="%" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="While it is Night Cat Burglar gains &quot;Response: After you succeed at a story where Cat Burglar was committed, search the top 5 cards of your opponent's deck for a support card and put it into play under your control. Shuffle the remaining cards back into their owner's deck.&quot; " />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F16" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Clover Club High Roller" id="6177b86d-5c40-49ff-a603-65b49a9382d8">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="%" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After you succeed at a story where Clover Club High Roller is committed, wound Clover Club High Roller to add a success token to that story. &#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F10" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Clover Club Pit Boss" id="9448d662-4760-4ecb-b50f-763b4dc268eb">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Each Criminal character you control gains Willpower.&#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F12" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Clover Club Ringer" id="3276cfab-8660-440b-9f68-6d43cca6f313">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Disrupt: When an opponent wins a struggle at a story where Clover Club Ringer is committed, you also win that struggle. (The active player resolves their struggle first.) &#xD;&#xA;Limit once per turn." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F11" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Crooked Attorney" id="6a91fa6e-6c4e-4de3-a288-c7a45544af85">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Day. It is Day. Destroy all Night cards.&#xD;&#xA;&#xD;&#xA;Each Criminal character you control gains [Arcane] and +1 skill. " />
+      <property name="Keyword" value="Villainous." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F17" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Fall Guy" id="230dcd31-f2cd-46f9-a2a3-716dc24aa902">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Disrupt: When a struggle at a story would resolve, sacrifice Fall Guy to cancel the results of each struggle you would lose at that story until the end of the phase." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F14" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Henry Knoll" id="40f8f0f3-1ee9-4431-8e7f-2cc3ba08e28f">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="A Real Wiseguy" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="$ $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal. Independent." />
+      <property name="Card Text" value="Response: When you ready Henry Knoll, choose a character. Until the end of the turn. that character gets –1 skill and gains the text &quot;If this character has 0 skill it is destroyed.&quot; " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F07" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Isaac Miles" id="a050453b-bfd6-475f-87df-66ab63c28dbd">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Willing to Lend an Ear" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="$ %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="When a character card would be put into a discard pile, put it on the bottom of its owner's deck instead. &#xD;&#xA;" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F09" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Jacob Finnegan" id="bf38388c-fd5a-4dc4-82c5-81bc392a1f1c">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="In Over His Head" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal. Student." />
+      <property name="Card Text" value="Forced Response: When you succeed at a story at which Jacob Finnegan is commited, add an additional success token to that story.&#xD;&#xA;&#xD;&#xA;Forced Response: When you do not succeed at a story where Jacob Finnegan is committed, put him on the bottom of his owner's deck. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F06" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Lena Di Boerio" id="a8a7a847-c605-4acc-b05b-fc4ee5fb015a">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Occult Consultant" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Criminal. Sorcerer." />
+      <property name="Card Text" value="Action: Pay 1 to choose a character. Until the end of the phase, that character gets –1 skill and loses an icon of your choice, and Lena Di Boerio gets +1 skill and gains the chosen icon. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F05" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Marine Salvager" id="de07d8a3-ef3e-4bf3-ac2f-7ca2038c4db9">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Action: Exhaust Marine Salvager and pay X to choose a support card in any player's discard pile. Then, put that support card into play under your control. X is equal to the printed cost of the support card. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F15" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Martin Herring" id="973fbc9d-9c7e-4e5d-a658-3ae3fb9fb669">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="&quot;Quick Kip&quot;" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Play with the top card of your deck revealed.&#xD;&#xA;Characters your opponent controls with the same cost as the top card of your deck cannot commit to the same story as Martin Herring. " />
+      <property name="Keyword" value="Fast." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F08" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Melisande LeBeau" id="419256f9-fbf3-4ff5-ae45-f7251ac61cf4">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Playing with Fire" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# # $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal. Independent." />
+      <property name="Card Text" value="Forced Response: After you succeed at a story where Melisande Lebeau is commited, choose and destroy a support card. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F02" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Naomi O'Bannion" id="f2592f08-12a7-4371-a3dc-8ef1988dac85">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Ruthless Tactician" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# # %" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Action: Ready Naomi O'Bannion to choose and trigger a Tactic event card in any discard pile. Then, put it on the bottom of its owner's deck. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F01" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Numbers Runner" id="846c4c92-3a82-4b37-a6d9-c04022086f47">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="$ $" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Response: When you ready Numbers Runner, choose and exhaust a character with lower skill." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F13" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* O'Bannion's Inner Council" id="bc3eaa61-4f50-4bf1-9c08-a6ab91432e14">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Blood is Thicker" />
+      <property name="Cost" value="4" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# $ %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="O'Bannion's Inner Council gains +1 skill for each Criminal character you control&#xD;&#xA;.&#xD;&#xA;Characters with lower skill than O'Bannion's Inner Council committed to the same story do not count their icons at that story. " />
+      <property name="Keyword" value="Willpower. Toughness +2." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F03" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="}} * Tommy Malloy" id="ef25b11f-007c-44f3-a2af-07a206ef1be5">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="&quot;The Big Palooka&quot;" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="# #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Disrupt: Before a # struggle resolves at a story where you have at least one character committed, you may play Tommy Malloy from your hand committed to that story. " />
+      <property name="Keyword" value="Fast. Toughness +1." />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F04" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Wheelman" id="5de72ebb-98ae-4193-98ae-1509911a6350">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="#" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Disrupt: Before a struggle at a story would resolve, choose a character you control committed to the same story as Wheelman. Commit Wheelman and that character to any other story where characters are committed. &#xD;&#xA;Limit once per turn. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F19" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Bill Strauss" id="fbc61c7f-a6bb-4af7-beed-a399f87340fc">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Blessed of Shub-Niggurath" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Shub-Niggurath" />
+      <property name="Icons" value="@ # #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Cultist. Servitor." />
+      <property name="Card Text" value="Response: When Bill Strauss commits to a story, reveal the top card of your deck. If the revealed card is a character add it to your hand; otherwise discard it." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&gt;" />
+      <property name="Collector Info" value="F50" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Elijah Conrad" id="d23e3b9a-7984-4d51-88aa-37e672148b34">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Distinguished Alumnus" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Miskatonic University" />
+      <property name="Icons" value="$ % %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Response: After Elijah Conrad enters play, put a Location support card into play from &#xD;&#xA;either your discard pile or your hand. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="{" />
+      <property name="Collector Info" value="F48" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Jeff Harson" id="b4effa62-9e52-40e9-9fb0-8519603805b2">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Manic Musician" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Hastur" />
+      <property name="Icons" value="$ $" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Artist. Lunatic." />
+      <property name="Card Text" value="Action: During your operations phase drive Jeff Harson insane to look at your opponent's hand. Then you may choose and play an event card from his hand, ignoring all costs" />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="]" />
+      <property name="Collector Info" value="F46" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Josef Meiger" id="1c348729-df84-4cde-8915-d7437ef3b60a">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Metaphysicist" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="The Order of the Silver Twilight" />
+      <property name="Icons" value="# $ %" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal. Government. Lodge." />
+      <property name="Card Text" value="When Josef Meiger leaves play, destroy all Artifact and Ritual support cards you control.&#xD;&#xA;&#xD;&#xA;Response: When Josef Meiger commits to a story, search your deck for an Artifact or Ritual support card and put it into play.&#xD;&#xA;Then, shuffle your deck. " />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="^" />
+      <property name="Collector Info" value="F52" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Robert Friendly" id="d60a0a73-8954-4484-8530-a1e29066df55">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Disgruntled Dockworker" />
+      <property name="Cost" value="3" />
+      <property name="Faction" value="Cthulhu" />
+      <property name="Icons" value="@ # $" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Cultist. Deep One." />
+      <property name="Card Text" value="Each Government and Investigator character committed to the same story as Robert Friendly loses all % icons.&#xD;&#xA;" />
+      <property name="Keyword" value="Villainous." />
+      <property name="Resource Icon" value="[" />
+      <property name="Collector Info" value="F44" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Sebastion Blake" id="8757f819-ea12-4829-8204-ff778a234a0b">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Attuned to the Universe" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="Yog-Sothoth" />
+      <property name="Icons" value="@ #" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Sorcerer." />
+      <property name="Card Text" value="Response: After you succeed at a story where Sebastion Blake is committed, put any one card from your discard pile on the top of your deck." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="&lt;" />
+      <property name="Collector Info" value="F54" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Special Agent Callahan" id="d5cbaa00-b3f2-4da1-88c5-977d9df49dd7">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Always Gets His Man" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Agency" />
+      <property name="Icons" value="# %" />
+      <property name="Skill" value="2" />
+      <property name="Subtypes" value="Government." />
+      <property name="Card Text" value="If Special Agent Callahan is committed to the same story where an opponent has a Criminal character committed, he gains #% and Fast." />
+      <property name="Keyword" value="Loyal. Heroic. Toughness +1." />
+      <property name="Resource Icon" value="_" />
+      <property name="Collector Info" value="F42" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Wandering Tinker" id="f7f1a837-54fd-4f82-9ca5-efb8c9be5092">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="1" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="$" />
+      <property name="Skill" value="1" />
+      <property name="Subtypes" value="Independent." />
+      <property name="Card Text" value="Disrupt: When a character would leave play, exhaust Wandering Tinker to choose a non-Relic support card attached to that character. Take control of that attachment and move it to another character." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F38" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="* Zstylzhemgni" id="a0b61c14-e2a0-4c04-82e7-0b6ca04c5764">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="Matriarch of Swarms" />
+      <property name="Cost" value="6" />
+      <property name="Faction" value="Neutral" />
+      <property name="Icons" value="@ # # # #" />
+      <property name="Skill" value="4" />
+      <property name="Subtypes" value="Ancient One." />
+      <property name="Card Text" value="Disrupt: After you win a # struggle at a story Zstylzhemgni is committed to, wound all other characters at that story." />
+      <property name="Keyword" value="Villainous. Toughness +2." />
+      <property name="Resource Icon" value="?" />
+      <property name="Collector Info" value="F39" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+    <card name="Hatchet Man" id="abf20d15-95d8-4c5f-a8b5-64c27dcf47e9">
+      <property name="Type" value="Character" />
+      <property name="Descriptor" value="" />
+      <property name="Cost" value="2" />
+      <property name="Faction" value="The Syndicate" />
+      <property name="Icons" value="" />
+      <property name="Skill" value="3" />
+      <property name="Subtypes" value="Criminal." />
+      <property name="Card Text" value="Response: After Hatchet Man commits to a story, choose a struggle at that story.  Count the total skill of all participating characters instead of the icons to determine the winner of that struggle." />
+      <property name="Keyword" value="" />
+      <property name="Resource Icon" value="}" />
+      <property name="Collector Info" value="F18" />
+      <property name="Struggle Icons" value="" />
+      <property name="AutoScript" value="" />
+      <property name="AutoAction" value="" />
+      <property name="Instructions" value="" />
+    </card>
+  </cards>
+</set>

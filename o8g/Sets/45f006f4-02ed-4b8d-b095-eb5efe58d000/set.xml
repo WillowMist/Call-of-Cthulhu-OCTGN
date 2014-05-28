@@ -300,7 +300,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="" />
-      <property name="Card Text" value="Play during your operations phase. Action: Choose and destroy a non _ resource or a LOCATION support card." />
+      <property name="Card Text" value="Play during your operations phase. &#xD;&#xA;&#xD;&#xA;Action: Choose and destroy a non _ resource or a LOCATION support card." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="_" />
       <property name="Collector Info" value="F" />
@@ -674,7 +674,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="Research." />
-      <property name="Card Text" value="Play during your operations phase. Action: Draw 3 cards." />
+      <property name="Card Text" value="Play during your operations phase.&#xD;&#xA;&#xD;&#xA;Action: Draw 3 cards." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="{" />
       <property name="Collector Info" value="F" />
@@ -912,7 +912,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="Attachment. Weapon." />
-      <property name="Card Text" value="Attach to a character. Attached character gains @ #." />
+      <property name="Card Text" value="Attach to a character.&#xD;&#xA;Attached character gains @ #." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F" />
@@ -972,7 +972,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Get if Off!" id="45f006f4-02ed-4b8d-b095-eb5efe58d058">
+    <card name="Get it Off!" id="45f006f4-02ed-4b8d-b095-eb5efe58d058">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />
@@ -1368,7 +1368,7 @@
       <property name="Descriptor" value="The King in Yellow" />
       <property name="Cost" value="6" />
       <property name="Faction" value="Hastur" />
-      <property name="Icons" value="@ @ $ $" />
+      <property name="Icons" value="@ @ @ $ $" />
       <property name="Skill" value="6" />
       <property name="Subtypes" value="Ancient One." />
       <property name="Card Text" value="Action: Pay 3 to choose a character. That character goes insane." />
@@ -1958,7 +1958,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Opening the Limbo Gate." id="45f006f4-02ed-4b8d-b095-eb5efe58d116">
+    <card name="Opening the Limbo Gate" id="45f006f4-02ed-4b8d-b095-eb5efe58d116">
       <property name="Type" value="Event" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
@@ -2544,7 +2544,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="" />
       <property name="Subtypes" value="Attachment. Item." />
-      <property name="Card Text" value="Attach to a character you control. Attached character gains @ @. Response: After Tcho-Tcho Talisman is placed into any discard pile from play, pay 1 to return it to its owner's hand." />
+      <property name="Card Text" value="Attach to a character you control. &#xD;&#xA;&#xD;&#xA;Attached character gains @ @. &#xD;&#xA;&#xD;&#xA;Response: After Tcho-Tcho Talisman is placed into any discard pile from play, pay 1 to return it to its owner's hand." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="?" />
       <property name="Collector Info" value="F" />

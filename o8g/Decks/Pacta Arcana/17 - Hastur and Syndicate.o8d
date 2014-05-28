@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="9b4e4ae1-2d65-4841-b537-a13742bc2086">Dangerous Inmate</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec025">Deranged Diva</card>
+    <card qty="2" id="b4effa62-9e52-40e9-9fb0-8519603805b2">* Jeff Harson</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec106">The Marked</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba092">Ol' Lazy Eyes</card>
+    <card qty="2" id="a050453b-bfd6-475f-87df-66ab63c28dbd">* Isaac Miles</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d087">Performance Artist</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba100">Tragic Celebrity</card>
+    <card qty="2" id="f2592f08-12a7-4371-a3dc-8ef1988dac85">* Naomi O'Bannion</card>
+    <card qty="2" id="419256f9-fbf3-4ff5-ae45-f7251ac61cf4">* Melisande LeBeau</card>
+    <card qty="2" id="9b4e4ae1-2d65-4841-b537-a13742bc2117">Tattooed Thug</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec029">Black Dog</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747049">* The Cavern of Flame</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747030">* The Seventy Steps</card>
+    <card qty="1" id="fe26b1c0-8f1d-4452-b234-3902c1747037">*The Enchanted Wood</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d146">Arkham Asylum</card>
+    <card qty="2" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba046">Gun Runner's Club</card>
+    <card qty="1" id="fe26b1c0-8f1d-4452-b234-3902c1747078">* Guardian Pillar</card>
+    <card qty="2" id="04c3117d-f69c-4aa0-873f-ef4811969f72">} Pay Tribute</card>
+    <card qty="3" id="3bd3ad9a-2fd3-4525-bf2f-d316801f4963">} On the Lam</card>
+    <card qty="3" id="2c34a288-13d6-4931-9ceb-84cd6519f046">] Hamu XX 15:14</card>
+    <card qty="2" id="70771406-4f03-4e39-817b-02354dd78918">}} Immurement</card>
+    <card qty="2" id="35eaac48-c517-49d7-84e0-f1260de77c46">Unending Festivities</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

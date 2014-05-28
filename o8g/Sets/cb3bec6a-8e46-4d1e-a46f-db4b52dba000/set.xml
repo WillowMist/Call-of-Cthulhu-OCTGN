@@ -1809,7 +1809,7 @@
       <property name="Type" value="Character" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="4" />
-      <property name="Faction" value="The Agency" />
+      <property name="Faction" value="The Syndicate" />
       <property name="Icons" value="$" />
       <property name="Skill" value="1" />
       <property name="Subtypes" value="Criminal. Investigator." />

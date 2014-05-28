@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="8b3f8144-b781-42d5-8178-089bccbc2655">Lost Oracle</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba063">* Basil Elton</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec051">Corrupted Midwife</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af106">Pawn Broker</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d122">* Y'Golonac</card>
+    <card qty="2" id="c7f0b3f4-a099-44db-8905-86a33a5b9328">Grasping Chthonian</card>
+    <card qty="3" id="b0f8a0b6-2131-4cc3-8413-81be3a4504a8">&lt;&lt; Yithian Scout</card>
+    <card qty="3" id="5c240a80-00d1-486a-9a77-adf0395a3f07">Faceless Abductor</card>
+    <card qty="3" id="4d474f60-36d3-4bea-baf7-2168e643deb5">Many-angled Thing</card>
+    <card qty="3" id="f26280d4-6260-4475-9f94-e496394af101">Master of the Myths</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d102">Servant from Out of Time</card>
+    <card qty="2" id="34dcd99d-21d6-424f-9004-a864f3ff0999">Constricting Elder Thing</card>
+    <card qty="2" id="f26280d4-6260-4475-9f94-e496394af047">Key-seeker</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec019">* Library of Alexandria</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec052">* Book of Iod</card>
+    <card qty="2" id="fe26b1c0-8f1d-4452-b234-3902c1747079">* The Book of Black Stones</card>
+    <card qty="3" id="0f5911a5-c8fd-4a3a-a6b4-d55fa7fdd6a7">* The Festival</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba077">Thunder in the East</card>
+    <card qty="2" id="f2b4340e-d757-4641-b264-fac959b5868a">Vortex of Time</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d119">Unspeakable Resurrection</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

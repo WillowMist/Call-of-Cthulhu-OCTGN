@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="43054c18-2362-43e0-a434-72f8d0e8477c">
+  <section name="Draw Deck" shared="False">
+    <card qty="3" id="5c240a80-00d1-486a-9a77-adf0395a3f07">Faceless Abductor</card>
+    <card qty="2" id="65605dbe-0e26-485d-bb9e-1be7e0c98d40">* Professor Nathaniel Peaslee</card>
+    <card qty="1" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba070">*Nodens</card>
+    <card qty="2" id="95c4e239-f052-4d7f-b1ee-5a6b63e3d2ce">* Glaaki</card>
+    <card qty="3" id="505de501-c3bb-4545-ac6f-fee3c13778bf">Stalking Hound</card>
+    <card qty="3" id="b0f8a0b6-2131-4cc3-8413-81be3a4504a8">&lt;&lt; Yithian Scout</card>
+    <card qty="3" id="fe26b1c0-8f1d-4452-b234-3902c1747047">Dreamlands Fanatic</card>
+    <card qty="2" id="4eb5c15d-eff5-49d0-a078-d5c9408ec029">Black Dog</card>
+    <card qty="3" id="4d474f60-36d3-4bea-baf7-2168e643deb5">Many-angled Thing</card>
+    <card qty="2" id="34dcd99d-21d6-424f-9004-a864f3ff0999">Constricting Elder Thing</card>
+    <card qty="2" id="2c34a288-13d6-4931-9ceb-84cd6519f045">* Cthylla</card>
+    <card qty="2" id="b04a357d-9289-45cf-935d-a03d51998fec">* The Mage Known as Magnus</card>
+    <card qty="1" id="a0b61c14-e2a0-4c04-82e7-0b6ca04c5764">* Zstylzhemgni</card>
+    <card qty="2" id="8757f819-ea12-4829-8204-ff778a234a0b">* Sebastion Blake</card>
+    <card qty="2" id="3b503c7a-1f72-4ce7-ab0c-2c54451259e3">* Rite of the Silver Gate</card>
+    <card qty="3" id="47d10b73-6252-41c1-918f-b56001ffcf56">Frozen Time</card>
+    <card qty="2" id="2bf83104-a0b8-4afd-a499-67fd6cde0929">Hermetic Text</card>
+    <card qty="3" id="cb3bec6a-8e46-4d1e-a46f-db4b52dba084">Broken Space, Broken Time</card>
+    <card qty="2" id="619d6d8a-96c1-4d33-a347-fb04d3062437">&lt;&lt;&lt; Mists of Lethe</card>
+    <card qty="3" id="45f006f4-02ed-4b8d-b095-eb5efe58d115">Journey to the Other Side</card>
+    <card qty="3" id="4eb5c15d-eff5-49d0-a078-d5c9408ec120">Pushed into the Beyond</card>
+    <card qty="2" id="45f006f4-02ed-4b8d-b095-eb5efe58d116">Opening the Limbo Gate.</card>
+  </section>
+  <section name="Story Deck" shared="True" />
+  <notes><![CDATA[]]></notes>
+</deck>

@@ -130,7 +130,7 @@
       <property name="Icons" value="" />
       <property name="Skill" value="3" />
       <property name="Subtypes" value="Deep One." />
-      <property name="Card Text" value="Action:If it is NIGHT, pay 2 to give Poleman @ @ $ until the end of the phase. Limit once per turn." />
+      <property name="Card Text" value="Action:If it is NIGHT, pay 2 to give Poleman # # $ until the end of the phase. Limit once per turn." />
       <property name="Keyword" value="" />
       <property name="Resource Icon" value="[" />
       <property name="Collector Info" value="F08" />

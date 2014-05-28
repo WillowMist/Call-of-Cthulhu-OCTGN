@@ -615,7 +615,7 @@
       <property name="AutoAction" value="" />
       <property name="Instructions" value="" />
     </card>
-    <card name="Blackmarker Artifact" id="f26280d4-6260-4475-9f94-e496394af037">
+    <card name="Blackmarket Artifact" id="f26280d4-6260-4475-9f94-e496394af037">
       <property name="Type" value="Support" />
       <property name="Descriptor" value="" />
       <property name="Cost" value="1" />

@@ -674,6 +674,7 @@ def checkDeck(group):
     counts = collections.defaultdict(int)
     CardLimit = {}
     restrictedCollection = []
+    #group.setVisibility("me")
     for card in me.ScriptingPile:
         counts[card.name] += 1
         if counts[card.name] > 3:
@@ -685,6 +686,7 @@ def checkDeck(group):
         notify(":::ERROR::: The following cards are restricted: {} -- You should only have one of those cards in your deck.".format(restrictedCollection))
         ok = False
     if len(getPlayers()) > 1: random = rnd(1,100) # Fix for multiplayer only. Makes Singleplayer setup very slow otherwise.
+    #group.setVisibility("none")
     for card in me.ScriptingPile: card.moveToBottom(group) # We use a second loop because we do not want to pause after each check
     if ok: notify("-> Deck of {} is OK!".format(me))
     debugNotify("<<< checkDeck() with return: {}.".format(ok), 3) #Debug
@@ -1382,11 +1384,31 @@ def addResourceFromDeck(card, x=0, y=0):
     x,y = card.position
     resourceCard.moveToTable(x,y)
     resourceCard.orientation = Rot270
+    storeAttachment(resourceCard, card, True, True)
     addResource(card,resourceCard)
-    storeAttachment(resourceCard, card, False, True)
     debugNotify("Arranging")
     arrangeAttachments(card)
     notify("{} brings in a {} resource from the top of their deck.".format(me.name, resourceCard.faction))
+    
+def turnCardIntoResource(card, x=0, y=0):
+    status = cardStatus(card)
+    if status == "Domain" or status == "Resource": return
+    target = [c for c in table if c.targetedBy and c.controller == me and c.targetedBy == me and cardStatus(c) == "Domain"]
+    if len(target) != 1:
+        whisper("Please select a domain to attach the card to.")
+        return
+    x,y = target[0].position
+    card.moveToTable(x,y)
+    card.isFaceUp = True
+    card.orientation = Rot270
+    storeAttachment(card, target[0], True, True)
+    addResource(target[0], card)
+    debugNotify("Arranging")
+    arrangeAttachments(target[0])
+    target[0].target(False)
+    notify("{} attaches {} to a domain as a resource.".format(me.name, card.name))
+    
+    
 #------------------------------------------------------------------------------
 # Hand Actions
 #------------------------------------------------------------------------------
@@ -1399,13 +1421,16 @@ def currentHandSize(player = me):
     
 def playResource(card, x = 0, y = 0):
     mute()
+    override = False
     src = card.group
     resourcesToPlay = num(me.getGlobalVariable('resourcesToPlay'))
     currentPhase = num(me.getGlobalVariable('Phase'))
     if currentPhase != -1 and currentPhase != 3:
-        whisper("You may only play resources before the game begins and during your Resource phase.")
-        return
-    if resourcesToPlay > 0 or not Automations['Placement']:
+        if confirm("You may normally only play resources before the game begins and during your Resource phase. Override?"): override = True
+        else: return
+    if resourcesToPlay == 0 and Automations['Placement'] and not override:
+        if confirm("You've already played all of your resources for this turn.  Override?"): override = True
+    if resourcesToPlay > 0 or not Automations['Placement'] or override:
         target = [c for c in table if c.targetedBy and c.controller == me and c.targetedBy == me and cardStatus(c) == "Domain"]
         debugNotify("Target: {}".format(len(target)),4)
         if len(target) == 1:
@@ -1416,9 +1441,9 @@ def playResource(card, x = 0, y = 0):
             x,y = target[0].position
             card.moveToTable(x,y)
             card.orientation = Rot270
+            storeAttachment(card,target[0],True,True)
             addResource(target[0],card)
             resourcesToPlay -= 1
-            storeAttachment(card,target[0],False,True)
             debugNotify("Arranging",2)
             arrangeAttachments(target[0])
             target[0].target(False)
@@ -1429,8 +1454,10 @@ def playResource(card, x = 0, y = 0):
                 else:
                     notify("{} brings in an initial {} resource from their hand.  They are ready to begin.".format(me, card.faction))
                     me.setGlobalVariable('gameReady',True)
-            else: 		
-                notify("{} brings in a {} resource from their hand.".format(me, card.Faction))				
+            else: 
+                if override: ortext = " (Override)"
+                else: ortext = ""
+                notify("{} brings in a {} resource from their hand.{}".format(me, card.Faction, ortext))				
             me.setGlobalVariable('resourcesToPlay',resourcesToPlay)
             phase = num(me.getGlobalVariable('Phase'))
             if phase == 3 and Automations['Start/End-of-Turn/Phase']: nextPhase()
